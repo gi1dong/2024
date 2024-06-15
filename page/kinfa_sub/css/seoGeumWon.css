@@ -1,0 +1,220 @@
+@charset "utf-8";
+/*common color */
+:root {
+  --chr1:#333;
+  --chr2:#fff;
+  --chr3:#503B26;
+  --chr4:#888888;
+  --chr6:#898989;
+  --chr7:#AAAAAA;
+  --chr8:#F8F8F8;
+  --chr9:#CFCFCF;
+  --chr10:#F5F5F5;
+  --chr11:#606060;
+  --chr12:#D5D5d5;
+  --point1:#3351A7;
+  --point2:#5990D9;
+  --point3:#595ED9;
+  --point4:#DEF6FF;
+  }
+
+/* 서금원 */
+/* 01. 목표 및 전략seoGeumWon1_01 */
+.sub_txt_title{margin: 70px auto 10px; text-align: left;font-size: 18px; }
+.seoGeumWon1_01 .business_goals_box{width: 100%;}
+.seoGeumWon1_01 .business_goals_box h3{font-size: 20px; font-weight: 600; text-align: left; margin: 0 auto 12px;}
+.seoGeumWon1_01 .business_goals_box .sub_txt{ border-radius: 12px; background: var(--point1); color: #fff; padding: 31px 0; margin: 0 auto; text-align: center;}
+.seoGeumWon1_01 .corporate_goals_wrap{width: 100%; display: flex; justify-content: space-between; text-align: center; margin: 30px auto;}
+.seoGeumWon1_01 .corporate_goals_wrap .corporate_goals_box{width: calc(50% - 6px); }
+.seoGeumWon1_01 .corporate_goals_wrap .corporate_goals_box p{padding: 30px; height: 195px; display: flex; align-items: center; border: 1px solid #CFCFCF; border-radius: 0 0 12px 12px; margin: 0 auto;}
+.seoGeumWon1_01 .business_direction_sub_title_txt{font-size: 18px; display: block; margin: 9px auto 23px;}
+.seoGeumWon1_01 .business_direction_box{width: 100%; display: flex; justify-content: space-between; margin: 0 auto; text-align: center;}
+.seoGeumWon1_01 .business_direction_box .business_direction_item{width: calc(25% - 6px); line-height:75px; border-radius: 12px; text-align: center; font-weight: 500; font-size: 20px; height: 75px;}
+.seoGeumWon1_01 .business_direction_box .business_direction_item:nth-child(1), .seoGeumWon1_01 .business_direction_box.circle li:nth-child(1){background:rgba(190, 223, 185, 100%);}
+.seoGeumWon1_01 .business_direction_box .business_direction_item:nth-child(2),.seoGeumWon1_01 .business_direction_box.circle li:nth-child(2){background:rgba(167,176,197,100%);}
+.seoGeumWon1_01 .business_direction_box .business_direction_item:nth-child(3),.seoGeumWon1_01 .business_direction_box.circle li:nth-child(3){background:rgba(249,206,218,100%);}
+.seoGeumWon1_01 .business_direction_box .business_direction_item:nth-child(4),.seoGeumWon1_01 .business_direction_box.circle li:nth-child(4){background: rgba(197, 217, 242);}
+.seoGeumWon1_01 .business_direction_box.circle li{width: 220px; padding: 85px 0; border-radius: 100%; text-align: center; display: flex; align-items: center; flex-direction: column;}
+.seoGeumWon1_01 .business_direction_box.circle li h4{font-size: 15px; display: block; }
+.seoGeumWon1_01 .business_direction_box.circle li h3{margin: 0; display: block;}
+.seoGeumWon1_01 .business_direction_box.third{display: flex; flex-wrap: wrap; justify-content: space-between;}
+.seoGeumWon1_01 .business_direction_box.third li{width: calc(25% - 15px); font-size: 16px; line-height: 1.5; padding: 10px 0; border-radius: 12px; background: rgba(208, 208, 208,35%); margin: 12px auto;}
+
+/* 02. 연혁 seoGeumWon1_02 */
+.seoGeumWon1_02 .since_wrap{position: relative; margin: 80px auto; width: 100%;}
+.seoGeumWon1_02 .since_wrap .since_box{ width: 100%; flex-direction: column;  display: flex; justify-content: space-between; text-align: left; margin: 0 auto 100px;}
+.seoGeumWon1_02 .since_wrap .since_box .sub_subject{width: 100%; max-width: 100px; padding: 8px 28px; box-sizing: border-box; position: absolute; border-radius: 12px;}
+.seoGeumWon1_02 .since_wrap .since_box .history{width: calc(100% - 130px); margin-left: 130px; display: flex; justify-content: space-between; flex-direction: column;}
+.seoGeumWon1_02 .history .history_txt .color{display: inline-block; max-width: 55px; text-align: left; margin-right: 10px;}
+.seoGeumWon1_02 .history .history_txt{ display: block; font-size: 16px; line-height: 1.875; color: #333; width: 100%;}
+.seoGeumWon1_02 .since_wrap .since_box:last-child{margin-bottom: 0;}
+.seoGeumWon1_02 .since_wrap .since_box .sub_subject::after{content: ""; display: block; position: absolute; bottom: -230px; width: 4px; background: #333; height: 241px; left: 50%; transform: translateX(-50%);}
+.seoGeumWon1_02 .since_wrap .since_box.last .sub_subject::after{display: none;}
+
+/* 03. 상징·캐릭터seoGeumWon1_03 */
+.seoGeumWon1_03 .service_box{display: flex; justify-content: space-between;margin: 80px auto 0; -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between;  width: 100%;}
+.seoGeumWon1_03 .service_box .service_itm{ position: relative; width: calc(33.3% - 13.33333333333333px); background: var(--point4); border-radius: 12px; padding: 56px 24px 0 24px; box-sizing: border-box;}
+.seoGeumWon1_03 .service_box .service_itm .sub_cta{display: block; text-align: left; font-size: 15px; font-weight: 300; line-height: 1.733333333333333; padding: 0; letter-spacing: -0.03rem; color: #333; width: 100%;}
+.seoGeumWon1_03 .service_box .service_itm .consultationSupport_logo.first, .seoGeumWon1_03 .service_box .service_itm .consultationSupport_logo.second, .seoGeumWon1_03 .service_box .service_itm .consultationSupport_logo.third{position: absolute; top:-15px; left: 50%; transform: translateX(-50%);}
+.seoGeumWon1_03 .service_box .service_itm .consultationSupport_logo.first{top: -55px;}
+.seoGeumWon1_03 .service_box .service_itm .consultationSupport_logo.second{top: -33px;}
+.seoGeumWon1_03 .service_box .service_itm .consultationSupport_logo.third{}
+.seoGeumWon1_03 .btn_wrap{display: flex; justify-content:center; align-items: center; flex-direction: row; margin: 50px auto;}
+.seoGeumWon1_03 .btn_wrap .btn{ width:235px; height: 50px; padding: 0; line-height: 50px; text-align: center; display: block;}
+.btn_wrap{display: flex; justify-content:center; align-items: center; flex-direction: row; margin: 50px auto;}
+.btn_wrap .btn{ width:235px; height: 50px; padding: 0; line-height: 50px; text-align: center; display: block;}
+.seoGeumWon1_03 .notice_box{color:var(--chr11); text-align: left; display: block; width: 100%;line-height: 1.733333333333333;margin: 0 auto 80px;}
+.seoGeumWon1_03 .notice_box.second{color: #333;}
+.seoGeumWon1_03 .notice_box.second dt{font-weight: 600; font-size: 20px; color: #333;}
+.seoGeumWon1_03 .logo_wrap{ display: flex; justify-content: space-between; width: 100%;}
+.seoGeumWon1_03 .logo_wrap img{display: block; width: 100%;}
+
+/* 04. 조직도 seoGeumWon1_04 */
+.seoGeumWon1_04{display:block; width:100%;}
+.seoGeumWon1_04 .seoGeumWon04_img.pc{display: block;}
+.seoGeumWon1_04 .seoGeumWon04_img.mo{display: none;}
+.seoGeumWon1_04 .seoGeumWon04_img img{display: block; width: 100%; height: 100%;}
+
+/* 오시는 길 05 seoGeumWon1_05 */
+.seoGeumWon1_05{}
+.seoGeumWon1_05 .map_wrap{padding: 30px; border-radius: 12px; border: 1px solid #CFCFCF; margin: 0 auto 80px; }
+.seoGeumWon1_05 .map_wrap .map_box{padding: 25px 20px 20px 20px; border-radius: 12px;background: var(--chr10); }
+.seoGeumWon1_05 .map_wrap .map_box iframe{height: 36vh;}
+.seoGeumWon1_05 .map_wrap .map_box .map_info_txt{margin: 20px auto 0;}
+.seoGeumWon1_05 .map_wrap .public_institutions{font-size: 20px; font-weight: 600;}
+.seoGeumWon1_05 .map_wrap .address{font-size: 15px; text-align: left;margin: 4px auto;}
+.seoGeumWon1_05 .map_btn_wrap{margin: 24px auto 33px;}
+/* 오시는 길 05--- seoGeumWon1_05 - 지도보기 버튼 */
+.seoGeumWon1_05 .map_wrap .map_btn_wrap{width: 100%; display: flex; justify-content: right;}
+.seoGeumWon1_05 .map_wrap .map_btn_wrap .map_btn_box{max-width: 235px; width: 100%; text-align: left; font-size: 18px; color: #333; height: 50px; line-height: 50px; display: flex; justify-content: center; border: 1px solid #CFCFCF; border-radius: 12px;}
+.seoGeumWon1_05 .map_wrap .map_btn_wrap .map_btn_box:nth-child(1){margin-right: 20px;}
+.seoGeumWon1_05 .map_wrap .map_btn_wrap .map_btn_box .map_icon{ display:inline-block; width: 45px;height: 45px;}
+.seoGeumWon1_05 .map_wrap .map_btn_wrap .map_btn_box .map_icon.first{background: url(../images/map_icon01.png) no-repeat 0/contain; background-position: center; width: 40px; height: 40px; margin-right: 8px;}
+.seoGeumWon1_05 .map_wrap .map_btn_wrap .map_btn_box .map_icon.second{margin-right: 8px;background: url(../images/map_icon02.png) no-repeat 0/contain; background-position: center; width: 40px; height: 40px;}
+.seoGeumWon1_05 .map_wrap .map_btn_wrap .map_btn_box .map_icon img{ display: block; width: 100%; height: 100%;}
+.seoGeumWon1_05 .tab_menu02_detail ul{ display: flex; width: 100%; justify-content: space-between;}
+.seoGeumWon1_05 .tab_menu02_detail ul li{width: calc(50% - 6px); border-radius: 12px; border: 1px solid var(--chr10);}
+.seoGeumWon1_05 .sub_subject{background: var(--point1);}
+.seoGeumWon1_05 .tab_menu02_detail ul li .box_line{padding: 30px 10px;}
+.seoGeumWon1_05 .tab_menu02_detail ul li .bus_etc{display: block; width: 100%; margin: 12px auto 0;}
+.seoGeumWon1_05 .tab_menu02_detail ul li .bus_etc.first{margin: 4px auto 40px;}
+
+  /* 인권경영 추진 로드맵 seoGeumWon1_06 */
+.seoGeumWon1_06 .human_rights_management_content{margin: 40px auto 0; width: 100%;}
+.human_rights_management_title{font-size: 20px; text-align: left; font-weight: 600; margin: 0 auto 20px; width: 100%; display: block;}
+.human_rights_management_title.second{margin: 80px auto 20px;}
+.seoGeumWon1_06 .roadmap_wrap{width: 100%; display: flex; justify-content: space-between; flex-wrap: nowrap; flex-direction: row;}
+.seoGeumWon1_06 .roadmap_wrap .roadmap_box{ width: calc(33.3% - 12px); text-align: center; background: var(--point4); border-radius: 12px; padding-top: 30px;}
+.human_rights_management_txt{font-size: 24px; font-weight: 300; padding: 30px 0; border-radius: 12px; background: var(--point1); color: #fff; text-align: center; position: relative; letter-spacing: -0.03rem; overflow: hidden;}
+.human_rights_management_txt::before{content: ""; display: block; position: absolute; left: 0; bottom: 0; background: url(../images/bg_r.png) no-repeat 0/cover; transform: rotate(45deg); background-position: center; width: 130px; height: 50px;}
+.human_rights_management_txt::after{content: ""; display: block; width: 130px; height: 85px;position: absolute; right: 0; top: 0;background: url(../images/bg_l.png) no-repeat 0/cover; background-position: center;}
+.seoGeumWon1_06 .sub_cta{margin: 16px auto 0; display: block; font-size: 16px; padding-bottom: 20px; border-bottom: 1px solid #fff; width: calc(100% - 30px);}
+.seoGeumWon1_06 .sub_subject.notBg{color: var(--point1); font-weight: 600; display: block;}
+.seoGeumWon1_06 .roadmap_detailed_txt{display: block; font-size: 16px; line-height: 1.875; padding: 30px 0 30px 0;}
+
+/* 인권경영위원회 seoGeumWon1_08 */
+.seoGeumWon1_08 figcaption{color: transparent;}
+.seoGeumWon1_08 .management_committee_wrap{width: 100%; display: block;}
+.seoGeumWon1_08 .management_committee_wrap img{width: 100%; display: block;}
+.seoGeumWon1_08 .management_committee_name{font-size: 20px; font-weight: 600; line-height: 1.8; text-align: center; margin: 0 auto 20px; }
+.seoGeumWon1_08 .management_committee_box{padding: 30px 20px; border-radius: 12px; background: #F8F8F8;}
+.seoGeumWon1_08 .management_committee_box.first{margin-bottom: 80px;}
+.seoGeumWon1_08 .management_committee_txt{display: flex; width: 100%; justify-content: flex-start; text-align: left; margin: 45px auto 0;}
+.seoGeumWon1_08 .management_committee_txt dt{font-size: 15px; color: var(--point1); font-weight: 500; max-width: 170px; width: 100%;}
+.seoGeumWon1_08 .management_committee_txt dd{font-size: 15px; font-weight: 300; color: #333; display: block; line-height: 1.533333333333333;}
+
+/*********************(max-width:767px *********************/    
+@media all and (max-width:800px) {
+  /* 02. 연혁 seoGeumWon1_02 */
+  .seoGeumWon1_02 .since_wrap .since_box{margin: 0 auto 50px;}
+  .seoGeumWon1_02 .since_wrap .since_box .sub_subject::after{height: 245px; z-index: -1;}
+
+/* 03 seoGeumWon1_03 */
+  .contents.seoGeumWon1_03{width: calc(100% - 30px); margin: 0 auto;}
+  .seoGeumWon1_03 .btn_wrap{flex-wrap: wrap;}
+  .btn_wrap{flex-wrap: wrap;}
+}
+
+/*********************(max-width:767px *********************/    
+@media all and (max-width:767px) {
+  /* 01. 목표 및 전략 seoGeumWon1_01 */
+  .seoGeumWon1_01 .business_goals_box .sub_txt{padding: 20px 0;}
+  .seoGeumWon1_01 .business_direction_box{flex-wrap: wrap;}
+  .seoGeumWon1_01 .corporate_goals_wrap{flex-wrap: wrap;}
+  .seoGeumWon1_01 .corporate_goals_wrap .corporate_goals_box{width: 100%;}
+  .seoGeumWon1_01 .corporate_goals_wrap .corporate_goals_box.mission{margin-bottom: 20px;}
+  .seoGeumWon1_01 .business_direction_box .business_direction_item{width: calc(33.3% - 6.66667px); margin: 10px auto;}
+  .seoGeumWon1_01 .business_direction_box .business_direction_item:nth-child(1), .seoGeumWon1_01 .business_direction_box .business_direction_item:nth-child(2){margin-bottom: 20px;}
+  .seoGeumWon1_01 .business_direction_box .business_direction_item:last-child{margin: 0;}
+  .seoGeumWon1_01 .business_direction_box.circle li{margin-bottom: 20px;}
+  .seoGeumWon1_01 .business_direction_box.third li{width: calc(50% - 10px);}
+  .seoGeumWon1_01 .business_direction_box.circle{justify-content: center;}
+
+  /*상징.캐릭터 03 seoGeumWon1_03 */
+  .seoGeumWon1_02 .since_wrap .since_box{width: 100%; flex-wrap: wrap;}
+  .seoGeumWon1_02 .since_wrap .since_box .sub_subject::after, .seoGeumWon1_02 .since_wrap .since_box .sub_subject::after{display: none;}
+  .seoGeumWon1_03 .service_box {flex-wrap: wrap;}
+  .seoGeumWon1_03 .service_box .service_itm{width: calc(50% - 12px); padding: 50px 10px 10px 10px; margin:0;}
+  .seoGeumWon1_03 .service_box .service_itm:last-child,.seoGeumWon1_03 .btn_wrap .btn:last-child{margin: 20px 0 0 0;}
+  .seoGeumWon1_03 .logo_wrap{flex-wrap: wrap; justify-content: center;}
+  .seoGeumWon1_03 .btn_wrap{flex-wrap: wrap; justify-content: space-between; flex-direction: column; }
+  .seoGeumWon1_03 .btn_wrap .btn{margin: 20px auto; justify-content: center;}
+
+  .btn_wrap .btn:last-child{margin: 20px 0 0 0;}
+  .btn_wrap{flex-wrap: wrap; justify-content: space-between; flex-direction: column; }
+  .btn_wrap .btn{margin: 20px auto; justify-content: center;}
+
+  /* 조직도 04 seoGeumWon1_04 */
+  .seoGeumWon1_04 .seoGeumWon04_img.pc{display: none;}
+  .seoGeumWon1_04 .seoGeumWon04_img.mo{display: block;}
+
+  /* 오시는 길 05 seoGeumWon1_05 */
+  .seoGeumWon1_05 .tab_menu02_detail ul{flex-wrap: wrap;}
+  .seoGeumWon1_05 .tab_menu02_detail ul li{width: 100%;margin:0 auto 20px;}
+  .seoGeumWon1_05 .tab_menu02_detail ul li{width: 100%;margin:0 auto 20px;}
+  .seoGeumWon1_05 .tab_menu02_detail ul li .bus_etc.first{margin: 12px auto 40px;}
+
+  /* 경영추진 로드맵 06 seoGeumWon06.html */
+  .human_rights_management_txt{font-size: 18px;}
+
+  /* 클린신고센터 seoGeumWon1_09 */
+  .seoGeumWon2_05 .service_box .service_itm{width: 100%;}
+
+  /* 인권경영위원회 seoGeumWon1_08 */
+  .contents_title_inner{margin: 0 auto 20px;}
+  .seoGeumWon1_08 .management_committee_txt{flex-wrap: wrap; text-align: center;}
+  .seoGeumWon1_08 .management_committee_txt dt,.seoGeumWon1_08 .management_committee_txt dd{display: block; width: 100%;}
+  .seoGeumWon1_08 .management_committee_txt dt{max-width: unset;margin: 0 auto 10px;}
+}
+
+/*********************(max-width:600px *********************/    
+@media all and (max-width:600px) {
+  /* 02. 연혁 seoGeumWon1_02 */
+.seoGeumWon1_02 .since_wrap{margin: 30px auto 0;}
+.seoGeumWon1_02 .since_wrap .since_box{display: block;}
+.seoGeumWon1_02 .since_wrap .since_box .sub_subject{position: unset; display: block; margin: 0; }
+.seoGeumWon1_02 .since_wrap .since_box .history{display: block; width: 100%;margin-left: 0;}
+.seoGeumWon1_02 .history .history_txt{margin: 0 auto 10px;}
+.seoGeumWon1_02 .history .history_txt .color{display: block;}  
+
+  /* 상징.캐릭터 03 seoGeumWon1_03 */
+  .seoGeumWon1_03 .service_box .service_itm{width:100%; height: unset; }
+  .seoGeumWon1_03 .service_box .service_itm:nth-child(2){margin: 50px auto;height: unset;}
+  .seoGeumWon1_03 .service_box .human_rights_management_title{ font-size: 20px; font-weight: 600; text-align: left;}
+
+  /* 경영추진 로드맵 06 seoGeumWon06.html */
+  .seoGeumWon1_06 .roadmap_wrap{flex-wrap: wrap;}
+  .seoGeumWon1_06 .roadmap_wrap .roadmap_box{width: 100%; margin: 20px auto;}
+}
+
+/*********************(max-width:500px *********************/    
+@media all and (max-width:500px) {
+
+/* 01. 목표 및 전략 seoGeumWon1_01 */
+.seoGeumWon1_01 .business_direction_box .business_direction_item{width: calc(50% - 7.5px); margin: 0;}
+.seoGeumWon1_01 .business_direction_box.circle{justify-content: center;}
+.seoGeumWon1_01 .business_direction_box.third li{width: 100%; display: block;}
+
+
+
+}

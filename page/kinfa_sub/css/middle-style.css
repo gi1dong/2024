@@ -1,0 +1,261 @@
+@charset "utf-8";
+
+/* content */
+.contents{ margin: 80px auto 0; font-weight: 350; width: 100%; max-width:900px;}
+.content-head .title{font-size:2rem; font-weight: 600;}
+.content-head .use{margin-bottom:1rem; display: flex; justify-content: flex-end; gap:.5rem;}
+.content-head .use li span{display: block; width:15px; height:15px; background-size:contain;}
+.content-head .use li:nth-child(1) span{background: url(/images/path_icon01.png) no-repeat; background-size: contain;}
+.content-head .use li:nth-child(2) span{background: url(/images/path_icon02.png) no-repeat;background-size: contain;}
+.content-head .path{display:flex; justify-content: flex-end;gap:1rem;}
+.content-head .path li{position: relative;}
+.content-head .path li::after{content: "";position: absolute; right:-1rem; top:50%; transform: translateY(-40%);
+display: block; border-bottom: .3rem solid transparent; border-top: .3rem solid transparent; border-left: .3rem solid #AAAAAA; border-right: .3rem solid transparent;}
+.content-head .path li:last-child::after{display: none;}
+.content-head .path li a{color:#AAAAAA;}
+
+.content .content-box{width: 100%;display: block; margin: 0 auto;}
+.content .content-box .box-title{font-size:1.250em ;font-weight: 600; color: #333;}
+.content .content-box .box-sub-paragraph-title{font-size:0.938em; font-weight: 350; line-height: 1.533333333333333;}
+.content .content-box .box-title + .box-text{margin-top:1rem;}
+.content .content-box .box-text + .box-text{margin-top:.5rem;}
+.content .content-box .box-sub-title{color:var(--point1);font-weight:700;}
+
+/********************* tab ***************************/
+.tab{display: flex;flex-wrap: wrap;}
+.tab .tab-box{padding-top:1.5rem;padding-bottom:1.5rem; border:1px solid #E5E5E8;text-align:center;}
+.tab .tab-box.active{ background-color: var(--point1);color:#fff;}
+.tab .tab-box + .tab-box{margin-left:-1px;}
+
+/* tab 박스 4개 */
+.tab-5 .tab-box{width:20%;}
+.tab-4 .tab-box{width:25%;}
+.tab-2 .tab-box{width:50%;}
+
+/* box */
+.kinfa-blue-box{overflow:hidden; border: 1px solid var(--point1); border-radius: 1rem; background: var(--point1); color:#fff; position: relative;}
+.virtual-element .kinfa-blue-box::before{content: ""; display: block; position: absolute; top: 20%; left: 5%; background: url(../images/bg.png) no-repeat 0/cover; width: 131px; height: 86px; background-position: center;  transform: rotate(90deg);} 
+.virtual-element .min-blue-box::before{content: ""; display: block; position: absolute; top: 8%; left: 5%; background: url(../images/bg.png) no-repeat 0/cover; width: 131px; height: 86px; background-position: center;  transform: rotate(90deg);} 
+.virtual-element .kinfa-blue-box::after{content: ""; display: block; position: absolute; top: 0; right: 10%; background: url(../images/bg.png) no-repeat 0/cover; width: 131px; height: 86px; background-position: center; transform: rotate(15deg);}
+.virtual-element .min-blue-box::after{content: ""; display: block; position: absolute; top: 10px; right: 10%; background: url(../images/bg.png) no-repeat 0/cover; width: 131px; height: 86px; background-position: center; transform: rotate(15deg);}
+.border-gray-box{overflow:hidden; border:1px solid #E5E5E8; border-radius: 1rem;}
+.fourth-row-box{border:1px solid #CFCFCF; border-radius: 16px; color: #333;}
+.fourth-row-box a:hover, .fourth-row-box a{color:#333;}
+
+/*  box */
+.apply .box-wrap{height: 180px;}
+.apply .bg{height: 180px; background: var(--point1); color: #fff;}
+.apply .box-wrap::after{content: ""; display: block; position: absolute; top: 50%; right: -8px;  width: 10px;  height: 10px; border-top: 3px solid #333; border-right: 3px solid #333; transform: translateY(-20%) rotate(45deg);}
+.five-box::after{content: ""; display: block; position: absolute; top: 50%; right: -30px;  width: 10px;  height: 10px; border-top: 3px solid #333; border-right: 3px solid #333; transform: translateY(-20%) rotate(45deg);}
+.apply .bg.box-wrap::after, .livelihood-funds.box-wrap::after{display: none;}
+.bg{background: var(--point1); color: #fff;}
+.gray-bg{background: #F8F8F8;}
+.border-radius{border-radius:0.750em;}
+
+/* text common*/
+.box-in-main-txt{color: #333;  font-size: 1.250em; font-weight: 600;}
+.box-in-main-txt.procedure{font-size:1.4em; font-weight: 500; line-height: 1;}
+.box-in-main-txt.consulting{font-size: 1em;}
+.box-in-main-txt.bg{background: var(--point1); color: #fff;}
+.box-in-sub-txt{color: #333; font-size:1em; font-weight: 350; line-height: 1.5; display: block;}
+.box-in-sub-txt-color-chr1{color: #333; font-size:1.2em; line-height: 1.3;}
+.box-in-sub-txt.bg{background: var(--point1); color: #fff;}
+.tell-icon{display: block; color: #333;}
+.customer-engagement img{vertical-align: bottom;}
+.bank .icon-wrap{width: 140px;}
+.bank .icon-wrap img{display: block; width: 100%;}
+.red{color: #FC497F;}
+.line-height-1{ line-height: 1; }
+.line-height-2{ line-height: 1.5; }
+
+/* box height */
+.h-380{height: 380px; position: relative;}
+.h-95{height: 95px;}
+.h-135{height: 135px;}
+.h-160{height: 160px;}
+.h-155,.three-box{height: 155px;}
+.h-225{height: 225px;}
+.h-210{height: 210px;}
+.h-496{height: 496px;}
+dt{font-size:1.125em;line-height: 1.5rem;}
+dd{line-height: 1.5rem; font-size:1.000em; color:#333; font-weight: 350;}
+
+.tell-icon{display:block;}
+.blind{display: none;}
+.border-top-line{border-top: 2px solid #333;}
+.border-top-line-table{border-top: 3px solid var(--point1); background: #F8F8F8;border-bottom:1px solid var(--chr12); }
+.border-top-line-table-content-line{border-right: 1px solid var(--chr12); border-bottom:1px solid var(--chr12);}
+
+.border-line{border-top: 1px solid #CFCFCF; border-bottom: 1px solid #CFCFCF;}
+.border-line-all{border: 1px solid var(--chr12); padding: 1rem;}
+.border-line-all-cfcfcf{border: 1px solid #CFCFCF;}
+
+.txt-left{text-align: left; width: 100%; display: block;}
+.txt-center{text-align: center; width: 100%; display: block; margin: 0 auto;}
+.text-point1{color: var(--point1); font-weight: 500;}
+.area-sub-txt{font-size:1.125em; display: block; color: #898989;}
+.area-sub-txt.chr1{color: #333; line-height: 1.2; font-size: 0.95em;font-weight: 350; }
+.area-sub-txt.chr6{color: #898989; line-height: 1.4; font-size: 0.95em;font-weight: 350; }
+.s-size-txt{color: #898989; font-size: 0.875em; display: block; line-height: 1.3;}
+.m-size-txt{font-size: 1.5em;}
+.define{max-width: 80px; width: 100%; text-align: left;}
+.area-margin-center{margin: 0 auto;}
+.min-blue-box{overflow:hidden; border:1px solid var(--point4); border-radius: 1rem; background: var(--point4);}
+.min-blue-box .blue-title{padding: 1rem; font-size: 1rem; color:var(--point1);}
+.blue-title{font-size: 1rem; color:var(--point1);}
+.min-blue-box .blue-title + .blue-text{padding:.5rem;}
+.line-black-box .title{padding:1rem; font-size:1rem; background: #333; color: #fff;}
+.line-black-box .text{padding:1.5rem; min-height: 7rem;}
+
+/** button **/
+.btn-wrap{margin:1rem 0;}
+.btn-kinfa-blue{border:1px solid var(--point1);border-radius: .5rem;color:#fff;background: var(--point1);}
+.border-radius-4{border-radius: 4px; border:1px solid #CFCFCF; line-height: 1.000em;}
+.apply-btn{ max-width: 234px; width: 100%; border: none; background: var(--point3); font-size: 1rem; color: #fff;}
+.btn-width{max-width: 234px; width: 100%;}
+.gray-bg .apply-btn-absolute{left: 50%; bottom: 10%; transform: translatex(-50%);border-radius:4px; border-radius: 4px; max-width: 234px; width: 100%;}
+.apply-btn.point1-bg{border: none; background: var(--point1); border-radius:.5rem; margin: 0 auto 0; display: flex; flex-direction: column; align-items: flex-end; width: calc(100% - 60px);}
+.border-line-all-btn{border:1px solid var(--point3); color: var(--point3);}
+/* 서금원 2 -원장실 */
+.left-area-bottom-txt-wrap .sign{text-align: left; color: var(--point1); font-weight: 700; font-size: 20px; line-height: 1; letter-spacing: -0.2rem;}
+.img-wrap img{display: block; width: 100%; height: 100%;}
+
+/* 모달창 -신고유형 */
+.dimed{z-index: 2; position: fixed; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100%; background: rgba(0,0,0, 46%);}
+.modal_window.report{position: absolute; z-index: 3; top: 50%; left: 50%; transform: translate(-50%,-50%); max-width: 655px; width: 100%; border-radius: .5rem; background: #fff;}
+.modal_window.report .modal_bottom{padding: 30px;}
+.modal_window.report .modal_title{padding: 30px; border-radius:.5rem  .5rem 0 0;}
+.modal_window.report input{border: 1px solid #CFCFCF; width: 100%; height:35px; line-height: 35px;}
+.modal_window.report .search_box_name{font-size:16px; display: block; text-align: left; margin-bottom: 10px;}
+.modal_window.report .description_txt{font-size: 14px; display: block; line-height: 1.785714285714286;margin: 2px auto 12px; text-align: left; width: 100%;}
+.modal_window.report .modal_btn_wrap{display: flex; margin: 0 auto; justify-content: space-between; width: 100%;  padding: 20px;}
+.modal_window.report .modal_btn_wrap .modal_btn{width: 50%;}
+.modal_window.report .modal_btn_wrap .modal_btn:nth-child(1){position: relative;}
+.modal_window.report .modal_btn_wrap .modal_btn:nth-child(1)::after{position: absolute; content: ""; display: block; width:1px; height: 46px; background:#333; right: 0; top: 50%; transform: translateY(-50%);}
+.modal_window.report .info_box{width: 100%;}
+.modal_window.report .info_box>dl dt{line-height: 1.533333333333333; color: #333; text-align: left; font-size: 16px; font-weight: 500;}
+.modal_window.report .info_box dl dd{text-align: left; line-height: 1.533333333333333; font-size: 15px; font-weight: 350; color: #898989; }
+
+/* 생계자금 livelihood-funds*/
+.livelihood-funds .box-in-main-txt{ font-size: 1.3em; border-bottom: 1px solid #AAAAAA;}
+.height-380 .apply-btn.point1-bg{position: absolute; bottom: 20px; left: 30px;}
+.show::after{content: ""; display: block; position: absolute; top: 50%; right: 10px; width: 10px;  height: 10px; border-top: 2px solid #333; border-right: 2px solid #333; transform: translateY(-50%) rotate(135deg);}
+.box-in-sub-txt-show{color: #333;}
+.box-in-sub-txt-show::after{content: ""; display: block; position: absolute; top: 50%; right: 30px; width: 10px;  height: 10px; border-top: 2px solid #333; border-right: 2px solid #333; transform: translateY(-50%) rotate(135deg);}
+
+/* 햇살론 (근로자) -tab 메뉴 1번째 */
+.content .content-box .worker-sunshine .icon{width: 116px; height: 116px; display: block; margin: 0 auto;}
+.content .content-box .worker-sunshine .icon img{display: block; width: 100%; height: 100%;}
+.content .content-box .worker-sunshine .box-title{font-size:1em; font-weight: 500;}
+
+/* 고객참여 의견제시 */
+.border-gray-box .icon-wrap{width: 40px; display: inline-block; vertical-align: bottom;}
+.border-gray-box .icon-wrap img{width: 100%; height: 100%; display: block;}
+
+/* 서민금융사칭 신고센터 */
+.min-blue-box-wrap .mb-3{display: none;}
+/*상담지원 - 신용 부채관리 컨설팅  */
+.consulting .box-bg-after{height: 30vh; width: 100%;}
+.box-bg-after img{display: block; width: 100%; height:100%;}
+.consulting h4{left: 5%; top: 10%; color:#333; display: block; z-index: 1;}
+
+/* table */
+.table-left{width: 70%;}
+.table-right{width: 30%;}
+.table-first{border-left:1px solid var(--chr12);}
+.table-txt{font-size:1em; color: #333; border-right:1px solid var(--chr12);height: 50px; line-height: 50px; }
+tbody tr td>div{border-bottom: 1px solid #CFCFCF;}
+.paginate{max-width: 200px; width: 100%;}
+.paginate a{color: var(--chr11);}
+.paginate a.active{color: #fff; background: var(--point1); text-align: center; padding: .5rem;}
+
+/* 검색어 */
+input{outline: none; border:none;}
+.privacy-consent input[type="checkbox"]{width: 20px; height: 20px;}
+.privacy-consent .input-txt{width:calc(100% - 30px);}
+select{outline: none; border: none;}
+.privacy-consent-list select{width:calc(20% - 3px); flex: 1; outline: none;  border:1px solid #CFCFCF; cursor: pointer; color: #898989; font-size: 16px; text-align: left; margin-right: 6px; border-radius: 4px;}
+.privacy-consent-list select option{outline: none; color: #898989; font-size: 16px; text-align: left; line-height: 1.5625;}
+
+.privacy-consent-list input{width:calc(80% - 3px); outline: none; border:1px solid #CFCFCF;  cursor: pointer; flex: 5; border-radius: 4px; color: #898989; font-size: 16px;}
+
+/* insurance */
+
+
+@media (max-width:940px) {
+  .apply .box-wrap.second::after{display: none;}
+  .mb{display: block; margin-bottom: 3rem;}
+
+/* 게시판 */
+thead{display: none;}
+tbody{text-align: left;border-top: 2px solid var(--point1); }
+.table-txt{border-right: unset; line-height: 30px; height: unset;}
+.table-first{border-left: unset;}
+tbody tr td>div{padding:0.5rem; border-bottom: 1px solid var(--chr12); text-align: left;}
+.mo-none{display: none;}
+.table-title{font-weight: 600;}
+
+
+}
+
+@media (max-width:767px) {
+  /* common */
+  .m-gap{gap:.5rem;}
+  .mt-6{margin-top: 3rem;}
+  .h-225{height: unset; padding: 1rem;}
+  .h-155{height: unset; }
+  .tab-4 .tab-box{width:50%;}
+  .content-head .title{font-size: 1.7rem;}
+  .content-head .path{gap: 0.8rem;}
+  .content-head{border-bottom: 1px solid #CFCFCF; padding-bottom: .5em;}
+  .five-box.three::after{right:0;}
+  .five-box.one::after{right: 0;}
+  .five-box.two::after, .five-box.four::after{display: none;}
+  .five-box.three::after{right:0;}
+
+ /* 핵심 서비스  */
+dd br{display: none;}
+.explanation br{display: block;}
+.customer-engagement .h-100, .customer-engagement .h-50{height: auto;}
+.kinfa-blue-box br{display: none;}
+
+/* 서민금융사칭 신고센터 */
+.min-blue-box-wrap .mb-3{display: block;}
+.gray-bg .apply-btn-absolute{ bottom: 5%;}
+
+/* 자영업컨설팅 */
+.apply .box-wrap::after{top: unset; bottom: -8px; right: unset; right: unset; left:50%; transform:translateX(-50%) rotate(135deg);}
+.apply .box-wrap.second::after{display: block;}
+
+/*금융상품 2 -개인정보 동의 페이지 취소 버튼  */
+.privacy-consent input[type="checkbox"]{display: block; margin: 1rem auto 0;}
+.privacy-consent .input-txt{width:100%; text-align: center;}
+.privacy-consent br{display: none; }
+.privacy-consent .min-blue-box .box-in-sub-txt{text-align: center;}
+
+ /* 제안 목록 검색창 */ 
+ .search_box form input{flex: unset; width:100%; }
+ .privacy-consent-list select{ flex: unset; width:100%; margin-bottom: 20px;}
+
+ .s-size-txt br{display:none;}
+}
+
+@media (max-width:700px) {
+}
+
+@media (max-width:600px) {
+  .show::after{right: 5px;}
+  .five-box.two::after, .five-box.four::after{display: block;}
+  .five-box::after{top: unset; bottom: -8px; right: unset; right: unset; left:50%; transform:translateX(-50%) rotate(135deg);}
+
+}
+
+@media (max-width:550px) {
+.btn-wrap button:first-child{margin-bottom: 20px;}
+}
+
+@media(max-width:400px) {
+
+
+
+}

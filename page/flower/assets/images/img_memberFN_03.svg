@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="211" viewBox="0 0 220 211">
+  <g id="그룹_18729" data-name="그룹 18729" transform="translate(17164 14104)">
+    <g id="사각형_5115" data-name="사각형 5115" transform="translate(-17164 -14104)" fill="#f8f8f8" stroke="#cfcfcf" stroke-width="1">
+      <rect width="220" height="211" rx="12" stroke="none"/>
+      <rect x="0.5" y="0.5" width="219" height="210" rx="11.5" fill="none"/>
+    </g>
+    <path id="다각형_20" data-name="다각형 20" d="M10,0,20,20H0Z" transform="translate(-17068 -13975) rotate(180)" fill="#de51a3"/>
+    <text id="소개팅_기능" data-name="소개팅 기능" transform="translate(-17054 -13947)" fill="#de51a3" font-size="28" font-family="NotoSansCJKkr-Bold, Noto Sans CJK KR" font-weight="700" letter-spacing="-0.03em"><tspan x="-65.478" y="0">소개팅</tspan><tspan y="0" xml:space="preserve" fill="#333"> 기능</tspan></text>
+    <text id="커플매니저가_진행하는" data-name="커플매니저가 진행하는" transform="translate(-17054 -14043)" fill="#333" font-size="18" font-family="NotoSansCJKkr-Bold, Noto Sans CJK KR" font-weight="700" letter-spacing="-0.03em"><tspan x="-82.143" y="0">커플매니저가 진행하는</tspan></text>
+    <g id="그룹_18727" data-name="그룹 18727" transform="translate(-17258 -14285)">
+      <rect id="사각형_5113" data-name="사각형 5113" width="82" height="32" rx="8" transform="translate(139 268)" fill="#de51a3"/>
+      <text id="사용가능" transform="translate(180 291)" fill="#fff" font-size="16" font-family="NotoSansCJKkr-DemiLight, Noto Sans CJK KR DemiLight" font-weight="300" letter-spacing="-0.03em"><tspan x="-28.72" y="0">사용가능</tspan></text>
+    </g>
+  </g>
+</svg>

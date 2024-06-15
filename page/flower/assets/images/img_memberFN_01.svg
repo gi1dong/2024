@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="211" viewBox="0 0 220 211">
+  <g id="그룹_18730" data-name="그룹 18730" transform="translate(-70 -158)">
+    <g id="사각형_5111" data-name="사각형 5111" transform="translate(70 158)" fill="#f8f8f8" stroke="#cfcfcf" stroke-width="1">
+      <rect width="220" height="211" rx="12" stroke="none"/>
+      <rect x="0.5" y="0.5" width="219" height="210" rx="11.5" fill="none"/>
+    </g>
+    <path id="다각형_17" data-name="다각형 17" d="M10,0,20,20H0Z" transform="translate(190 298) rotate(180)" fill="#3c7df2"/>
+    <text id="전체_사용자의" data-name="전체 사용자의" transform="translate(180 230)" fill="#333" font-size="28" font-family="NotoSansCJKkr-Bold, Noto Sans CJK KR" font-weight="700" letter-spacing="-0.03em"><tspan x="-77.938" y="0">전체 사용자의</tspan></text>
+    <text id="_68_" data-name="68%" transform="translate(180 320)" fill="#333" font-size="28" font-family="NotoSansCJKkr-Bold, Noto Sans CJK KR" font-weight="700" letter-spacing="-0.03em"><tspan x="-29.134" y="0">68%</tspan></text>
+    <g id="그룹_18724" data-name="그룹 18724" transform="translate(0 -13)">
+      <rect id="사각형_5113" data-name="사각형 5113" width="82" height="32" rx="8" transform="translate(139 268)" fill="#3c7df2"/>
+      <text id="추천회원" transform="translate(180 291)" fill="#fff" font-size="16" font-family="NotoSansCJKkr-DemiLight, Noto Sans CJK KR DemiLight" font-weight="300" letter-spacing="-0.03em"><tspan x="-28.72" y="0">추천회원</tspan></text>
+    </g>
+  </g>
+</svg>

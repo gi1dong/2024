@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>웹퍼블리셔 포트폴리오 김보미</title>
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" > -->
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+	<script src="js/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script> -->
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+	<script src="js/custom.js"></script>
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+	<link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="./img/fabicon.ico">
+  <script type="text/javascript">
+
+    // <![CDATA[
+    var colour="#ff8e99";
+    var sparkles=20;
+    var lower_sparkles=1;
+    
+    
+    /****************************
+    *  Tinkerbell Magic Sparkle *
+    *(c)2005-13 mf2fm web-design*
+    *  http://www.mf2fm.com/rv  *
+    * DON'T EDIT BELOW THIS BOX *
+    ****************************/
+    var x=ox=400;
+    var y=oy=300;
+    var swide=800;
+    var shigh=600;
+    var sleft=sdown=0;
+    var tiny=new Array();
+    var star=new Array();
+    var starv=new Array();
+    var starx=new Array();
+    var stary=new Array();
+    var tinyx=new Array();
+    var tinyy=new Array();
+    var tinyv=new Array();
+    
+    window.onload=function() { if (document.getElementById) {
+      var i, rats, rlef, rdow;
+      for (var i=0; i<sparkles; i++) {
+        var rats=createDiv(3, 3);
+        rats.style.visibility="hidden";
+        rats.style.zIndex="999";
+        document.body.appendChild(tiny[i]=rats);
+        starv[i]=0;
+        tinyv[i]=0;
+        var rats=createDiv(5, 5);
+        rats.style.backgroundColor="transparent";
+        rats.style.visibility="hidden";
+        rats.style.zIndex="999";
+        var rlef=createDiv(1, 5);
+        var rdow=createDiv(5, 1);
+        rats.appendChild(rlef);
+        rats.appendChild(rdow);
+        rlef.style.top="2px";
+        rlef.style.left="0px";
+        rdow.style.top="0px";
+        rdow.style.left="2px";
+        document.body.appendChild(star[i]=rats);
+      }
+      set_width();
+      sparkle();
+    }}
+    
+    function sparkle() {
+      var c;
+      if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+        ox=x;
+        oy=y;
+        for (c=0; c<sparkles; c++) if (!starv[c]) {
+          star[c].style.left=(starx[c]=x)+"px";
+          star[c].style.top=(stary[c]=y+1)+"px";
+          star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+          star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newColour():colour;
+          star[c].style.visibility="visible";
+          starv[c]=50;
+          break;
+        }
+      }
+      for (c=0; c<sparkles; c++) {
+        if (starv[c]) update_star(c);
+        if (tinyv[c]) update_tiny(c);
+      }
+      setTimeout("sparkle()", 40);
+    }
+    
+    function update_star(i) {
+      if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+      if (starv[i]) {
+        stary[i]+=1+Math.random()*3;
+        starx[i]+=(i%5-2)/5;
+        if (stary[i]<shigh+sdown) {
+          star[i].style.top=stary[i]+"px";
+          star[i].style.left=starx[i]+"px";
+        }
+        else {
+          star[i].style.visibility="hidden";
+          starv[i]=0;
+          return;
+        }
+      }
+      else {
+        tinyv[i]=50;
+        tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+        tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+        tiny[i].style.width="2px";
+        tiny[i].style.height="2px";
+        tiny[i].style.backgroundColor=star[i].childNodes[0].style.backgroundColor;
+        star[i].style.visibility="hidden";
+        tiny[i].style.visibility="visible"
+      }
+    }
+    
+    function update_tiny(i) {
+      if (--tinyv[i]==25) {
+        tiny[i].style.width="1px";
+        tiny[i].style.height="1px";
+      }
+      if (tinyv[i]) {
+        tinyy[i]+=1+Math.random()*3;
+        tinyx[i]+=(i%5-2)/5;
+        if (tinyy[i]<shigh+sdown) {
+          tiny[i].style.top=tinyy[i]+"px";
+          tiny[i].style.left=tinyx[i]+"px";
+        }
+        else {
+          tiny[i].style.visibility="hidden";
+          tinyv[i]=0;
+          return;
+        }
+      }
+      else tiny[i].style.visibility="hidden";
+    }
+    
+    document.onmousemove=mouse;
+    function mouse(e) {
+      if (e) {
+        y=e.pageY;
+        x=e.pageX;
+      }
+      else {
+        set_scroll();
+        y=event.y+sdown;
+        x=event.x+sleft;
+      }
+    }
+    
+    window.onscroll=set_scroll;
+    function set_scroll() {
+      if (typeof(self.pageYOffset)=='number') {
+        sdown=self.pageYOffset;
+        sleft=self.pageXOffset;
+      }
+      else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+        sdown=document.body.scrollTop;
+        sleft=document.body.scrollLeft;
+      }
+      else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+        sleft=document.documentElement.scrollLeft;
+        sdown=document.documentElement.scrollTop;
+      }
+      else {
+        sdown=0;
+        sleft=0;
+      }
+    }
+    
+    window.onresize=set_width;
+    function set_width() {
+      var sw_min=999999;
+      var sh_min=999999;
+      if (document.documentElement && document.documentElement.clientWidth) {
+        if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+        if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+      }
+      if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+        if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+        if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+      }
+      if (document.body.clientWidth) {
+        if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+        if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+      }
+      if (sw_min==999999 || sh_min==999999) {
+        sw_min=800;
+        sh_min=600;
+      }
+      swide=sw_min;
+      shigh=sh_min;
+    }
+    
+    function createDiv(height, width) {
+      var div=document.createElement("div");
+      div.style.position="absolute";
+      div.style.height=height+"px";
+      div.style.width=width+"px";
+      div.style.overflow="hidden";
+      return (div);
+    }
+    
+    function newColour() {
+      var c=new Array();
+      c[0]=255;
+      c[1]=Math.floor(Math.random()*256);
+      c[2]=Math.floor(Math.random()*(256-c[1]/2));
+      c.sort(function(){return (0.5 - Math.random());});
+      return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
+    }
+    // ]]>
+    </script> 
+</head>
+<body>
+  <header>
+    <div class="header">
+      <h1 class="logo">
+        <a href="javascript:;">Kimbomi</a>
+      </h1>
+      <div class="menu_btn">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <aside class="aside ">
+      <nav>
+        <ul class="nav_inner">
+          <li>
+            <a class="" href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="javascript:;">cafe24 <span class="arrow"></span></a>
+            <div class="sub_menu">
+              <ul>
+                <li><a href="http://chamchi0517.cafe24.com"  target="_blank">참치현</a></li>
+                <li><a href="http://taeback0609.cafe24.com"  target="_blank">태백 철학관</a></li>
+                <li><a href="https://dongyang0622.cafe24.com"  target="_blank">동양 철학관</a></li>
+                <li><a href="https://ganeshi0707.cafe24.com"  target="_blank">도도한 주얼리</a></li>
+                <li><a href="http://grandapple818.cafe24.com" target="_blank">그랜드애플</a></li>
+                <li><a  href="https://soniafurni0712.cafe24.com/index.html"  target="_blank">소니아퍼니처</a></li>
+                <li><a href="https://chaeum0719.cafe24.com"  target="_blank">채움닷컴</a></li>
+                <li><a href="https://giltamjeong0906.cafe24.com/index.html"  target="_blank">길탐정</a></li>
+                <li><a href="http://qhal1231.cafe24.com/"  target="_blank">Keds</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:;">PC<span class="arrow"></span></a>
+              <div class="sub_menu">
+                <ul>
+                  <li><a href="./page/wooalong/index.html" target="_blank">Wooalong</a></li>
+                  <li><a href="https://qhal1231.cafe24.com" target="_blank">Keds</a></li>
+                </ul>
+              </div>
+          </li>
+          <li>
+            <a href="javascript:;">MO<span class="arrow"></span></a>
+            <div class="sub_menu">
+              <ul>
+                <li>
+                  <a href="./page/mobile_screen02/screen02.html" target="_blank">Aesop</a>
+                </li>
+                <li>
+                  <a href="./page/mobile_screen/screen.html" target="_blank">Fila</a>            
+                </li>
+                <li>
+                  <a href="./page/flower/index.html" target="_blank">[APP]꽃중년</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:;">Responsive<span class="arrow"></span></a>
+            <div class="sub_menu">
+              <ul>
+                <li>
+                  <a href="./page/tiffany_co/index.html" target="_blank">Tiffany&Co</a>
+                </li>
+                <li>
+                  <a href="./page/gentleMonster/index.html" target="_blank">gentleMonster</a>
+                </li>
+                <li>
+                  <a href="https://bombombom111.cafe24.com/" target="_blank">hedn(반응형진행중)</a>
+                </li>
+                <li>
+                  <a href="./page/kinfa_sub/index.html"  target="_blank">서민금융진흥원(취합중)</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  </header>
+  <div class="dimed"></div>
+	<main>
+    <div class="main_area">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide section01">
+            <div class="bg"></div>
+            <div class="bg_opac"></div> 
+            <div class="main_intro">
+              <span class="txt01">Web Publishing</span>
+              <div class="txt02"><strong><span><i>감</i><i>각</i><i>적</i><i>인</i></span> 웹퍼블리셔 <br>김보미 입니다.</strong></div>
+              <p class="date">항상 "할 수 있다"는 자신감으로 <br />스스로 발전하는 모습을 보여드리겠습니다.</p>
+              <div class="btn_wrap">
+                <a href="./resume.pdf" class="btn01">
+                  <span>Go To portfolio</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide section02">
+            <div class="bg"></div>
+            <div class="bg_opac"></div>
+            <div class="main_intro">
+              <span class="txt01">PC사이트 리뉴얼</span>
+              <div class="txt02"><strong>WOOALONG</strong></div>
+              <p class="date">제작기간 : 22.02.14 - 22.02.21<br>기획 100% / 디자인 100% / 퍼블리싱 100%</p>
+              <div class="btn_wrap">
+                <a href="./page/wooalong/index.html" class="btn01 btn_base btn_ef01" target="_blank">
+                  <span>사이트 바로가기</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide section03">
+            <div class="main_intro_wrap">
+              <span class="txt01">cafe24 활용 반응형 사이트 제작</span>
+              <div class="cafe24_responsive_box">
+                <div class="swiper mySwiper cafe24">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="one">
+                      <div class="information">
+                        <div class="txt02">
+                          <strong>참치현</strong>
+                        </div>
+                        <p class="date">제작기간 : 22.05.01 - 22.06.01<br>퍼블리싱 100%</p>
+                        <div class="cafe24_button">
+                          <a href="http://chamchi0517.cafe24.com" class="btn01_cafe24 btn_base btn_ef01" target="_blank">
+                            <span>사이트 바로가기</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    </div>	
+                    <div class="swiper-slide ">
+                      <div class="two">
+                      <div class="information">
+                        <div class="txt02">
+                          <strong>태백 철학관</strong>
+                        </div>
+                        <p class="date">제작기간 : 22.06.02 - 22.06.23<br> 퍼블리싱 100%</p>
+                        <div class="cafe24_button">
+                          <a href="http://taeback0609.cafe24.com" class="btn01_cafe24 btn_base btn_ef01" target="_blank">
+                            <span>사이트 바로가기</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide ">
+                      <div class="three" >
+                      <div class="information" >
+                        <div class="txt02">
+                          <strong>동양 철학관</strong>
+                        </div>
+                        <p class="date">제작기간 : 22.06.24 - 22.07.08<br>퍼블리싱 100%</p>
+                        <div class="cafe24_button">
+                          <a href="https://dongyang0622.cafe24.com" class="btn01_cafe24 btn_base btn_ef01" target="_blank">
+                            <span>사이트 바로가기</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide ">
+                      <div class="four">
+                      <div class="information">
+                      <div class="txt02"><strong>도도한 주얼리</strong></div>
+                      <p class="date">제작기간 : 22.07.11 - 22.07.29<br>퍼블리싱 100%</p>
+                      <div class="cafe24_button">
+                        <a href="https://ganeshi0707.cafe24.com" class="btn01_cafe24 btn_base btn_ef01" target="_blank">
+                          <span>사이트 바로가기</span>
+                        </a>
+                      </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide ">
+                      <div class="five">
+                      <div class="information">
+                      <div class="txt02"><strong>그랜드 애플</strong></div>
+                      <p class="date">제작기간 : 22.08.01 - 22.08.12<br>퍼블리싱 100%</p>
+                      <div class="cafe24_button">
+                        <a href="http://grandapple818.cafe24.com" class="btn01_cafe24 btn_base btn_ef01" target="_blank">
+                          <span>사이트 바로가기</span>
+                        </a>
+                      </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide ">
+                      <div class="six">
+                      <div class="information">
+                        <div class="txt02"><strong>소니아퍼니처</strong></div>
+                        <p class="date">제작기간 : 22.08.16 - 22.08.31<br>퍼블리싱 100%</p>
+                        <div class="cafe24_button">
+                          <a href="https://soniafurni0712.cafe24.com/index.html" class="btn01_cafe24 btn_base btn_ef01" target="_blank">
+                            <span>사이트 바로가기</span>
+                          </a>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide ">
+                      <div class="seven">
+                      <div class="information">
+                        <div class="txt02"><strong>채움닷컴</strong></div>
+                        <p class="date">제작기간 : 22.08.16 - 22.08.31<br>퍼블리싱 100%</p>
+                        <div class="cafe24_button">
+                          <a href="https://chaeum0719.cafe24.com" class="btn01_cafe24 btn_base btn_ef01" target="_blank">
+                            <span>사이트 바로가기</span>
+                          </a>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide ">
+                      <div class="eight">
+                      <div class="information">
+                        <div class="txt02"><strong>어반가든</strong></div>
+                        <p class="date">제작기간 : 22.09.01 - 22.09.30<br>퍼블리싱 100%</p>
+                        <div class="cafe24_button">
+                          <a href="https://urbangarden0628.cafe24.com" class="btn01_cafe24 btn_base btn_ef01" target="_blank">
+                            <span>사이트 바로가기</span>
+                          </a>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide ">
+                      <div class="nine">
+                      <div class="information">
+                      <div class="txt02"><strong>길탐정</strong></div>
+                      <p class="date">제작기간 : 22.09.06 - 22.09.30<br>퍼블리싱 100%</p>
+                      <div class="cafe24_button">
+                        <a href="https://giltamjeong0906.cafe24.com/index.html" class="btn01_cafe24 btn_base btn_ef01" target="_blank">
+                          <span>사이트 바로가기</span>
+                        </a>
+                      </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide " >
+                      <div class="ten">
+                      <div class="information">
+                        <div class="txt02"><strong>Keds</strong></div>
+                        <p class="date">제작기간 : 22.03.20 - 22.03.27<br>기획 100% / 디자인 100% / 퍼블리싱 100%</p>
+                          <a href="http://qhal1231.cafe24.com/" class="cafe24_button btn_base btn_ef01" target="_blank">
+                            <span>사이트 바로가기</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide section04">
+            <div class="bg"></div>
+            <div class="bg_opac"></div>
+            <div class="main_intro">
+              <span class="txt01">Mobile사이트 리뉴얼</span>
+              <div class="txt02"><strong>Aesop</strong></div>
+              <p class="date">제작기간 : 22.02.22 - 22.03.02<br>기획 100% / 디자인 100% / 퍼블리싱 100%</p>
+              <div class="btn_wrap">
+                <a href="./page/aesop_screen/aesop_screen.html" class="btn01 btn_base btn_ef01" target="_blank">
+                  <span>사이트 바로가기</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide section05">
+            <div class="bg"></div>
+            <div class="bg_opac"></div>
+            <div class="main_intro">
+              <span class="txt01">Responsive사이트 리뉴얼</span>
+              <div class="txt02"><strong>Tiffany&Co</strong></div>
+              <p class="date">제작기간 : 22.03.04 - 22.03.11<br>기획 100% / 디자인 100% / 퍼블리싱 100%</p>
+              <div class="btn_wrap">
+                <a href="./page/tiffany_co/index.html" class="btn01 btn_base btn_ef01" target="_blank">
+                  <span>사이트 바로가기</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide section06">
+            <div class="bg"></div>
+            <div class="bg_opac"></div>
+            <div class="main_intro">
+              <span class="txt01">Mobile사이트 리뉴얼</span>
+              <div class="txt02"><strong>Fila</strong></div>
+              <p class="date">제작기간 : 22.03.12 - 22.03.19<br>기획 100% / 디자인 100% / 퍼블리싱 100%</p>
+              <div class="btn_wrap">
+                <a href="./page/fila_screen/fila_screen.html" class="btn01 btn_base btn_ef01" target="_blank">
+                  <span>사이트 바로가기</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide section07">
+            <div class="bg"></div>
+            <div class="bg_opac"></div>
+            <div class="main_intro">
+              <span class="txt01">Responsive 사이트 리뉴얼</span>
+              <div class="txt02"><strong>gentleMonster</strong></div>
+              <p class="date">제작기간 : 22.03.30 - 22.04.06<br>기획 100% / 디자인 100% / 퍼블리싱 100%</p>
+              <div class="btn_wrap">
+                <a href="./page/gentleMonster/index.html" class="btn01 btn_base btn_ef01" target="_blank">
+                  <span>사이트 바로가기</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide section08">
+            <div class="bg"></div>
+            <div class="bg_opac"></div>
+            <div class="main_intro">
+              <span class="txt01">application 제작</span>
+              <div class="txt02"><strong>꽃중년</strong></div>
+              <p class="date">제작기간 : 22.12.01 - 22.12.10<br>중년 데이트 매칭앱<br>
+            Android Studio 제작 예정<br> 퍼블리싱 100%</p>
+              <div class="btn_wrap">
+                <a style="background:#FFD5D9;" href="./page/flower/index.html" class="btn01 btn_base btn_ef01" target="_blank">
+                  <span>보러가기</span>
+                </a>
+              </div>
+            </div>
+            <div class="svg">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132.29166 132.29167" height="500" width="500">
+                <defs>
+                  <filter id='squiggly-0'>
+                    <feturbulence basefrequency='0.02' id='turbulence' numoctaves='3' result='noise' seed='0'></feturbulence>
+                    <fedisplacementmap id='displacement' in2='noise' in='SourceGraphic' scale='2'></fedisplacementmap>
+                  </filter>
+                  <filter id='squiggly-1'>
+                    <feturbulence basefrequency='0.02' id='turbulence' numoctaves='3' result='noise' seed='1'></feturbulence>
+                    <fedisplacementmap in2='noise' in='SourceGraphic' scale='3'></fedisplacementmap>
+                  </filter>
+                  <filter id='squiggly-2'>
+                    <feturbulence basefrequency='0.02' id='turbulence' numoctaves='3' result='noise' seed='2'></feturbulence>
+                    <fedisplacementmap in2='noise' in='SourceGraphic' scale='2'></fedisplacementmap>
+                  </filter>
+                  <filter id='squiggly-3'>
+                    <feturbulence basefrequency='0.02' id='turbulence' numoctaves='3' result='noise' seed='3'></feturbulence>
+                    <fedisplacementmap in2='noise' in='SourceGraphic' scale='3'></fedisplacementmap>
+                  </filter>
+                  <filter id='squiggly-4'>
+                    <feturbulence basefrequency='0.02' id='turbulence' numoctaves='3' result='noise' seed='4'></feturbulence>
+                    <fedisplacementmap in2='noise' in='SourceGraphic' scale='1'></fedisplacementmap>
+                  </filter>
+                </defs>
+                <defs id="morphs">
+                  <g id="morph-stretched">
+                    <path id="path878"
+                        d="M 29.428815,16.067324 V 116.16587 h 15.822568 v -9.14446 h -7.41057 V 16.067324 Z" />
+                    <path id="path880"
+                        d="m 46.73411,21.036914 v 90.217826 c 0,3.09869 3.776974,5.37885 9.284831,5.37885 5.407713,0 9.284831,-2.2217 9.284831,-5.37885 V 21.036914 c 0,-3.157152 -3.877118,-5.378851 -9.284831,-5.378851 -5.507857,0 -9.284831,2.280165 -9.284831,5.378851 z m 8.411998,87.867296 V 23.387444 c 0,-0.409261 0.07169,-0.818521 0.872833,-0.818521 0.700999,0 0.872833,0.292329 0.872833,0.818521 v 85.516766 c 0,0.5262 -0.171834,0.81852 -0.872833,0.81852 -0.801143,0 -0.872833,-0.40926 -0.872833,-0.81852 z" />
+                    <path id="path882"
+                        d="M 81.807925,16.067324 78.503211,88.042801 75.198497,16.067324 H 66.786499 L 71.79364,116.16587 H 85.312924 L 90.320066,16.067324 Z" />
+                    <path id="path884"
+                        d="M 91.802793,16.067324 V 116.16587 h 15.822537 v -8.08613 h -7.41057 V 70.484192 h 6.48083 v -9.144456 h -6.48083 V 24.153448 h 7.41057 v -8.086124 z" />
+                  </g>
+                  <g id="morph-stretched-bold">
+                    <path d="M 13.382437,16.067324 V 116.16587 H 34.521769 V 97.49641 H 25.883236 V 16.067324 Z"
+                        id="path886" />
+                    <path
+                        d="m 36.850596,21.036914 v 90.217826 c 0,3.09869 5.34943,5.37885 13.150355,5.37885 7.659088,0 13.150354,-2.2217 13.150354,-5.37885 V 21.036914 c 0,-3.157152 -5.491266,-5.378851 -13.150354,-5.378851 -7.800925,0 -13.150355,2.280165 -13.150355,5.378851 z M 48.764734,108.90421 V 23.387444 c 0,-0.409261 0.101539,-0.818521 1.236217,-0.818521 0.992843,0 1.236217,0.292329 1.236217,0.818521 v 85.516766 c 0,0.5262 -0.243374,0.81852 -1.236217,0.81852 -1.134681,0 -1.236217,-0.40926 -1.236217,-0.81852 z"
+                        id="path888" />
+                    <path
+                        d="M 85.750935,16.067324 81.291357,88.042801 76.831779,16.067324 H 65.480134 L 72.237065,116.16587 H 90.480787 L 97.237714,16.067324 Z"
+                        id="path890" />
+                    <path
+                        d="M 99.566538,16.067324 V 116.16587 H 118.90924 V 97.496407 h -5.04533 V 75.775859 h 3.96153 v -19.72779 h -3.96153 V 34.736781 h 5.04533 V 16.067324 Z"
+                        id="path892" />
+                  </g>
+                  <g id="morph-stretched-bolder">
+                    <path id="path914"
+                        d="M 2.7028009,9.7173241 V 122.51587 H 28.120863 V 103.84641 H 17.733838 V 9.7173241 Z" />
+                    <path id="path916"
+                        d="M 30.921058,14.686914 V 117.60474 c 0,3.09869 6.432188,5.37885 15.812067,5.37885 9.209335,0 15.812066,-2.2217 15.812066,-5.37885 V 14.686914 c 0,-3.157152 -6.602731,-5.3788509 -15.812066,-5.3788509 -9.379879,0 -15.812067,2.2801649 -15.812067,5.3788509 z M 45.246691,115.25421 V 17.037444 c 0,-0.409261 0.122091,-0.818521 1.486434,-0.818521 1.193801,0 1.486435,0.292329 1.486435,0.818521 v 98.216766 c 0,0.5262 -0.292634,0.81852 -1.486435,0.81852 -1.364347,0 -1.486434,-0.40926 -1.486434,-0.81852 z" />
+                    <path id="path918"
+                        d="M 89.719124,9.7173241 84.356901,94.392801 78.994677,9.7173241 H 65.34539 L 73.469965,122.51587 H 95.406327 L 103.5309,9.7173241 Z" />
+                    <path id="path920"
+                        d="M 106.33109,9.7173241 V 122.51587 h 23.25778 v -18.66946 h -6.06653 V 75.775859 h 4.76336 v -19.72779 h -4.76336 V 28.386781 h 6.06653 V 9.7173241 Z" />
+                  </g>
+                </defs>
+                <g id="original" style="fill:#fff;">
+                  <path d="m 29.428815,42.525657 v 47.181876 h 15.822568 v -9.144457 h -7.41057 V 42.525657 Z"
+                      id="path857" />
+                  <path
+                      d="m 46.73411,47.495247 v 37.301162 c 0,3.098687 3.776974,5.37885 9.284831,5.37885 5.407713,0 9.284831,-2.221703 9.284831,-5.37885 V 47.495247 c 0,-3.157152 -3.877118,-5.378851 -9.284831,-5.378851 -5.507857,0 -9.284831,2.280165 -9.284831,5.378851 z M 55.146108,82.44588 V 49.845777 c 0,-0.409261 0.07169,-0.818521 0.872833,-0.818521 0.700999,0 0.872833,0.292329 0.872833,0.818521 V 82.44588 c 0,0.526193 -0.171834,0.818516 -0.872833,0.818516 -0.801143,0 -0.872833,-0.409258 -0.872833,-0.818516 z"
+                      id="path859" />
+                  <path
+                      d="M 81.807925,42.525657 78.503211,72.167801 75.198497,42.525657 h -8.411998 l 5.007141,47.181876 h 13.519284 l 5.007142,-47.181876 z"
+                      id="path861" />
+                  <path
+                      d="m 91.802793,42.525657 v 47.181876 h 15.822537 v -8.086124 h -7.41057 V 70.484192 h 6.48083 v -9.144456 h -6.48083 V 50.611781 h 7.41057 v -8.086124 z"
+                      id="path863" />
+                </g>
+              </svg>
+                        
+              <div class="support">
+                <a href="https://twitter.com/DevLoop01" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://dribbble.com/devloop01" target="_blank"><i class="fab fa-dribbble"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide section09">
+            <div class="bg"></div>
+            <div class="bg_opac"></div>
+            <div class="main_intro">
+              <span class="txt01">Responsive 사이트 리뉴얼</span>
+              <div class="txt02"><strong>hedn</strong></div>
+              <p class="txt03">개인 프로젝트<br/>제작기간 : 반응형작업진행중 <br>기획, 디자인 :기존 사이트 동일 <br> 퍼블리싱 100%</p>
+              <div class="btn_wrap">
+                <a href="https://bombombom111.cafe24.com/" class="btn01 last btn_base btn_ef01" target="_blank">
+                  <span style="background: #003940; color: #fff;">사이트 바로가기(진행중)</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide section10">
+            <div class="bg"></div>
+            <div class="bg_opac"></div>
+            <div class="main_intro">
+              <span class="txt01">Responsive 사이트 리뉴얼 sub page 담당</span>
+              <div class="txt02"><strong>서민금융진흥원</strong></div>
+              <p class="date">제작기간 : 22.11.01 - 22.12.01<br>sub page 제작<br/>적응형 사이트 → 반응형 사이트<br>퍼블리싱 100%<br/></p>
+               <p >sub page 100여 페이지 제작 현재 취합 후<br/> 링크 추가 작업 중 </p>
+              <div class="btn_wrap">
+                <a style="background: #3351a7; color: #fff;" href="./page/kinfa_sub/index.html" class="btn01 btn_base btn_ef01" target="_blank">
+                  <span>사이트 바로가기</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="page_control">
+          <span class="prev_btn">PREV</span>
+          <i></i>
+          <span class="next_btn">NEXT</span>
+        </div>
+      </div>
+    </div>
+	</main>
+  
+</body>
+</html>
+ <!-- <script>
+  function resizeApply() {
+  var minWidth = 767;
+  var body = document.getElementsByTagName('body')[0];
+
+  if (window.innerWidth < minWidth) { body.style.zoom = (window.innerWidth / minWidth); }
+  else body.style.zoom = 2;
+  }
+  window.onload = function() {
+  window.addEventListener('resize', function() {
+    resizeApply();
+  });
+  }
+  resizeApply();
+</script>  -->

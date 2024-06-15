@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+/* 고객서비스 이행표준 publicParticipation03*/
+.publicParticipation03{}
+.publicParticipation03 .tab_menu01{ margin: 80px auto 0;}
+.publicParticipation03 .financial_education_list{background: var(--point4); padding: 32px 24px; display: flex; justify-content: space-between; width: 100%; margin-bottom: 40px; border-radius: 12px;}
+.publicParticipation03 .financial_education_list:last-child{margin-bottom: 0;}
+.publicParticipation03 .financial_education_list>dt{max-width: 180px; line-height: 2; width: 100%; color: var(--point1); text-align: left; font-weight: 600;}
+.publicParticipation03 .financial_education_list>dd{width: calc(100% - 180px); line-height: 1.6171875;}
+.publicParticipation03 .financial_education_list>dd p{display: block; width: 100%; color: #333; font-size: 16px; font-weight: 300; line-height: 1.875;}
+
+/*********************(max-width:767px *********************/    
+@media all and (max-width:767px) {
+  .publicParticipation03 .financial_education_list{flex-wrap: wrap;}
+  .publicParticipation03 .financial_education_list>dt,.publicParticipation03 .financial_education_list>dd{display: block;width: 100%;}
+}

@@ -1,0 +1,492 @@
+@charset "utf-8";
+/*common color */
+:root {
+  --chr1:#333333;
+  --chr2:#fff;
+  --chr3:#503B26;
+  --chr4:#888888;
+  --chr6:#898989;
+  --chr7:#AAAAAA;
+  --chr8:#F8F8F8;
+  --chr9:#CFCFCF;
+  --chr10:#F5F5F5;
+  --chr11:#606060;
+  --point1:#3351A7;
+  --point2:#5990D9;
+  --point3:#595ED9;
+  --point4:#DEF6FF;
+  }
+
+/* 금융지원 financial_support-일반금융상품 통합검색 */
+.contents .product_comparison{width: 100%; display: flex; margin: 110px auto 0;text-align: center; justify-content: space-between;-webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between;}
+.contents .product_comparison .product_box{width: calc(33.3% - 12px); margin: 0 auto; background: var(--point4); position: relative; border-radius: 20px;margin-right: 18px; display: flex; padding-top: 58px; box-sizing: border-box; flex-direction: column; align-items: center;}
+.contents .product_comparison .product_box.last{margin-right: 0;}
+.contents .product_comparison .product_box .top_icon{display: block; width:100px; height: 100px; position: absolute; top: -20%; }
+.contents .product_comparison .product_box .top_icon.one{background: url(../images/top_icon01.png) no-repeat 360px /cover; background-position: center;}
+.contents .product_comparison .product_box .top_icon.two{background: url(../images/top_icon02.png) no-repeat 360px /cover; background-position: center;}
+.contents .product_comparison .product_box .top_icon.three{background: url(../images/top_icon03.png) no-repeat 360px /cover; background-position: center;}
+.contents .product_comparison .product_box .box_title{text-align: center; font-size: 24px; font-weight: 300;color: var(--point1); margin: 16px auto 17px;}
+.contents .product_comparison .product_box .prd_box li a{font-size: 15px; color: #333; display: block; line-height: 1.733333333333333;}
+.contents .product_comparison .product_box:nth-child(1) .prd_box{margin: 0 auto 30px;}
+
+/* 금융교육 소개 financial_support02*/
+.financial_education_list{display: flex;  display: -ms-flexbox; margin: 0 auto 46px; justify-content: left; flex-direction: row; flex-wrap: nowrap; width:100%;line-height: 1.533333333333333;}
+.financial_support03 .financial_education_list dt{color: var(--point1); font-weight: 600; display: inline-block;max-width: 80px; width: 100%;}
+.financial_support03 .financial_education_list dd{font-weight: 300; display: block;}
+.education_box .education_item{position: relative; margin: 0 auto; background: var(--point4); width: calc(25% - 21px); margin-right: 28px; border-radius: 12px; padding: 41px 24px 34px 24px; box-sizing: border-box;}
+.education_box .education_item .top_icon{display: block; width: 100px; height: 100px;}
+.education_box .education_item .top_icon.first{ background: url(../images/financial_education01.png) no-repeat 360px /contain; background-position: center;}
+.education_box .education_item .top_icon.second{background: url(../images/financial_education02.png) no-repeat 360px /contain; background-position: center;}
+.education_box .education_item .top_icon.third{background: url(../images/financial_education03.png) no-repeat 360px /contain; background-position: center;}
+.education_box .education_item.last .top_icon.fourth{background: url(../images/financial_education04.png) no-repeat 360px /contain; background-position: center;}
+.education_box .education_item.last{margin-right: 0;}
+.menu_title{font-size: 20px; text-align: left; display: block; line-height: 1.8; font-weight: 600; color: #333;}
+.menu_title.first{margin: 36px auto 20px;}
+.menu_title.second{margin: 70px auto 50px;}
+.education_box{width: 100%; display: flex;  display: -ms-flexbox; justify-content: space-between; -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between; flex-direction: row; margin: 0 auto;}  
+.education_box .education_item .top_icon{position: absolute; display: block; width: 72px; height: 72px; margin: 0 auto;top: -30px; left: 50%; transform: translateX(-50%);}
+.education_title{ color:var(--point1); margin:5px auto 26px; display: block; letter-spacing: -0.03rem; font-size: 18px; font-weight: 300; }
+.education_details{font-size: 15px;line-height: 1.533333333333333; color:#333;}
+.tab_menu_content{width: 100%; display: block; margin: 0 auto;}
+.tab_menu02_top{display: none;}
+.tab_menu02_top>h2{font-size: 20px; font-weight: 500; text-align: left;margin:0 auto;}
+.tab_menu02_top>p{font-size: 16px;line-height: 2.25;}
+.tab_menu02_detail{display: flex;  display: -ms-flexbox; justify-content: left; margin: 0 auto 21px; width: 100%; flex-wrap: nowrap;margin-right: 16px;}
+.tab_menu02_detail.end{margin-bottom: 0;}
+.tab_menu02_detail ul:not(.one_menu){display: flex;  display: -ms-flexbox;justify-content: center; flex-direction: row; width: calc(100% - 135px);}
+.tab_menu02_detail ul li:not(.one_menu_li){width: calc(50% - 8px); text-align: center;}
+.tab_menu02_detail ul li:nth-child(1):not(.one_menu_li){margin-right: 16px; }
+.tab_menu02_detail ul .one_menu_li{margin-right: 0;}
+.tab_menu02_subject{font-size: 17px;color: #fff;padding: 0 30px; max-width: 125px; width: 100%;display: flex;  display: -ms-flexbox; align-items: center; text-align: center; background: var(--point1); font-weight: 500; border-radius: 16px; margin-right: 16px; line-height: 1.352941176470588; justify-content: center;}
+.tab_menu02_middle:nth-child(1){margin: 66px auto 80px; }
+.tab_menu02_detail ul li{border: 1px solid #E5E5E8; border-radius: 12px;}
+.tab_menu02_middle .tab_menu02_sub_title{margin: 0 auto 16px; color:var(--point1); font-weight: 500; display: block; text-align: left; width: 100%;}
+.tab_menu02_detail .one_menu{width: 100%;}
+.sub_cta_wrap{display: flex;  display: -ms-flexbox; justify-content: space-between; -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between; flex-direction: row; margin: 0 auto; width: 100%; flex-wrap: nowrap; text-align: center; align-items: center;}   
+.sub_cta_wrap .sub_cta{display: block;line-height: 2.25; padding: 28px 0; }
+.sub_cta{display: block;line-height: 2.25; padding: 28px 0; text-align: center;}
+.one_menu_li .sub_cta_wrap .sub_cta_left{display: block; line-height: 2.25; padding: 28px 0; box-sizing: border-box; width: 50%; margin-right: 16px;}
+.one_menu_li .sub_cta_wrap .sub_cta_right{ width:50%;}
+.financial_support02 .tab_menu02_middle.second{margin: 80px auto 0;}
+.tab_menu02_middle{margin-top: 30px;}
+.tab_menu02 .channel_title{font-size:20px; font-weight:600; display:block; text-align: left; margin: 80px auto 30px;}
+.go_to_channel{display: flex; margin: 0 auto; flex-direction: row; width: 100%;}
+.go_to_channel .channel_box{position: relative;margin: 0 auto;background: var(--point4);width: calc(33.3% - 12px);margin-right: 18px;border-radius: 12px;padding: 28px 23px; box-sizing: border-box;}
+
+/* 금융교육 소개 financial_support03*/
+.financial_support03{width: 100%; margin: 0 auto;}
+.financial_support03 .color_txt{font-size: 18px; text-align: center; color: var(--point1); margin: 0 auto 13px;}
+.financial_support03 .tab{justify-content: center;}
+.go_to_channel .channel_box>span{margin: 0 auto 30px; display: block; text-align: center;}
+.go_to_channel .channel_box .channel{display: block; border-radius: 8px; margin:0 auto; text-align: center; color:#fff;font-size: 15px; padding: 10px 0;  background:var(--point1);  }
+.go_to_channel .channel_box .arrow{ position: relative;  display: inline-block;padding-left: 10px;}
+.go_to_channel .channel_box .arrow::after{content: ""; right: 0; top: 50%;  width: 7px; display: inline-block; height: 7px; border-top: 2px solid #fff;border-right: 2px solid #fff; transform: translateY(-20%) rotate(45deg);}
+
+/* 채무조정제도 financial_support04 */
+.center_content .debt_adjustment_system_detail{display: flex;  display: -ms-flexbox; margin: 0 auto; justify-content: space-between; -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between; width: 100%; flex-wrap: wrap; -ms-flex-wrap: wrap;}
+.center_content .debt_adjustment_system_detail .debt_adj_system_detail_box{width: calc(50% - 12px); height: 260px; position: relative;
+background: #F8F8F8;border-radius: 20px; padding: 32px; box-sizing: border-box;margin: 0 auto 20px;}
+.center_content .debt_adjustment_system_detail .debt_adj_system_detail_box.first{margin-right: 24px;}
+.center_content .debt_adjustment_system_detail .debt_adj_system_detail_box.last{margin: 0;}
+.center_content .debt_adjustment_system_detail .detail_title{font-size: 20px; font-weight: 600; line-height: 1.45; padding-bottom: 12px; border-bottom: 1px solid #AAAAAA;display: block;}
+.center_content .debt_adjustment_system_detail .debt_adj_system_detail_box_last .debt_adjustment_system_site_btn{ position: absolute; left: 32px; bottom: 32px; text-align: center; color: #fff; display: block; border-radius: 8px; background: var(--point1); padding: 10px 0;  width: calc(100% - 64px);}
+.financial_support04 .debt_adjustment_system_site_btn, .financial_support06 .debt_adjustment_system_site_btn{text-align: center; color: #fff; display: block; border-radius: 8px; background: var(--point1); padding: 10px 0;  width: calc(100% - 64px);}
+.financial_support06 .debt_adjustment_system_site_btn{position: unset;}
+.debt_adjustment_system_site_btn{ position: absolute; left: 32px; bottom: 32px; text-align: center; color: #fff; display: block; border-radius: 8px; background: var(--point1); padding: 10px 0;  width: calc(100% - 64px);}
+.center_content .debt_adjustment_system_detail .debt_adjustment_system_site_btn{ position: absolute; left: 32px; bottom: 32px; text-align: center; color: #fff; display: block; border-radius: 8px; background: var(--point1); padding: 10px 0;  width: calc(100% - 64px);}
+.center_content .debt_adjustment_system_detail .detail_txt{display: inline-block; margin: 16px auto 0; font-size: 15px; text-align: left; line-height: 1.533333333333333;}
+.debt_adjustment_system_detail .debt_adj_system_detail_box .debt_adjustment_system_site_btn{text-align: center; color: #fff; display: block; border-radius: 8px; background: var(--point1); padding: 10px 0;  width: calc(100% - 64px); box-sizing: border-box; position: absolute; left: 32px; bottom: 32px;}
+.procedure_content{margin: 80px auto; width: 100%;}
+.procedure_content .procedure_inner{display: flex; justify-content: space-between; -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between; margin:0 auto;}
+.procedure_content .procedure_inner .procedure_box{width: calc(33.3% - 12px); border-radius: 12px; background: #F8F8F8; padding: 36px 0; box-sizing: border-box; text-align: center; padding-right: 18px; position: relative;}
+.procedure_content .procedure_inner .procedure_box::after{content: ""; display: block; position: absolute; top: 50%; right: -12px; width: 10px;  height: 10px; border-top: 3px solid #888888;border-right: 3px solid #888888; transform: translateY(-20%) rotate(45deg);}
+.procedure_content .procedure_inner .procedure_box.last{margin-right: 0; background: var(--point1); color: #fff; padding: 57px 0; text-align: center;}
+.procedure_content .procedure_inner .procedure_box.last::after{display: none;}
+.procedure_content .procedure_inner .procedure_box .procedure{font-size: 17px; font-weight: 500; margin: 0 auto 20px;}
+.procedure_content .procedure_inner .procedure_box .procedure_txt{font-size: 15px;line-height: 1.3; display: block; color:var(--chr11);}
+
+.compare{width: 100%; margin: 0 auto 100px;}
+.compare .debt_adjustment_system_detail{width: 100%; display: flex;  display: -ms-flexbox; justify-content: space-between; margin: 0 auto; flex-wrap: wrap; -ms-flex-wrap: wrap; -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between;}
+.compare .debt_adjustment_system_detail .financial_education_box{padding: 16px 0; box-sizing: border-box;}
+.compare .debt_adjustment_system_detail .debt_adj_system_detail_box{width: calc(50% - 12px);background: #F8F8F8; padding: 32px 20px 32px 20px;box-sizing: border-box; border-radius: 20px; display: block; margin-bottom: 20px; }* .compare .debt_adjustment_system_detail .debt_adj_system_detail_box:nth-child(3), .compare .debt_adjustment_system_detail .debt_adj_system_detail_box:nth-child(4){margin-bottom: 0;} 
+.compare .debt_adjustment_system_detail .debt_adj_system_detail_box.first{margin-right: 24px;}
+.compare .debt_adjustment_system_detail .debt_adj_system_detail_box .financial_education_list {margin: 0 auto 17px;}
+.compare .debt_adjustment_system_detail .debt_adj_system_detail_box .financial_education_list dt{font-size: 15px; font-weight: 500;color: var(--point1);line-height: 1.733333333333333; box-sizing: border-box; max-width: 80px; width: 100%;} 
+.compare .debt_adjustment_system_detail .debt_adj_system_detail_box .financial_education_list dd{font-weight: 300; text-align: left; color: #333; width: calc(100% - 80px);}
+.compare .debt_adjustment_system_detail .debt_adj_system_detail_box .financial_education_list dd a{display: inline-block; color: #333;}
+.compare .debt_adjustment_system_detail .debt_adj_system_detail_box .detail_title{font-size: 20px; font-weight: 600;text-align: left; padding:0 45px 12px 0; box-sizing: border-box; display: block; border-bottom: 1px solid #AAAAAA; margin: 0 auto;}
+.compare .financial_education_list a{display: inline-block;}
+
+/* 분할상환제도 financial_support05.html */
+.center_content_first {}
+.center_content_first .supported{display: flex;  display: -ms-flexbox; justify-content: space-between;-webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between; margin: 0 auto; }
+.center_content_first .supported .supported_box{ width: calc(50% - 6px);background:var(--point4);padding: 37px 0; box-sizing: border-box; border-radius: 12px; font-size: 16px; font-weight: 300; text-align: center;}
+.center_content_first .supported .supported_box.first{margin-right: 12px;} 
+.center_content_second{margin: 60px auto;}
+.center_content_second .subheading_txt{margin: 0 auto 12px;}
+.center_content_second .procedure_inner li{line-height: 1.5625; font-size: 16px;} 
+.center_content_third{width: 100%;display: flex;  display: -ms-flexbox; flex-direction: column;}
+.center_content_third .subheading_txt{text-align: left;display: block; width: 100%;}
+.center_content_third .procedure_inner{width: 100%; display: flex;  display: -ms-flexbox; margin: 0 auto; justify-content: space-between;-webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between;}
+.center_content_third .procedure_inner .procedure_box:not(.procedure_box.last){width: calc(25% - 21px); background: #F8F8F8;margin-right: 24px;border-radius: 12px; padding: 24px 6px 20px 6px; text-align: center; position:relative;}
+.center_content_third .procedure_inner .procedure_box:not(.procedure_box.last)::after{content: ""; display: block; position: absolute; top: 50%; right: -12px;  width: 10px;  height: 10px; border-top: 3px solid #888888;border-right: 3px solid #888888; transform: translateY(-20%) rotate(45deg);}
+.financial_support05 .center_content_third .procedure_inner .procedufpostscriptre_box:not(.procedure_box.last)::after{content: ""; display: block; position: absolute; top: 50%; right: -16px;  width: 10px;  height: 10px; border-top: 3px solid #888888;border-right: 3px solid #888888; transform: translateY(-20%) rotate(45deg);}
+.center_content_third .procedure_inner .procedure_box.last{display: flex;  display: -ms-flexbox;flex-direction: column; justify-content: center; background: var(--point1); color:#fff; text-align: center; margin-right: 0;border-radius: 12px;   width: calc(25% - 21px);}
+
+.center_content_third .procedure_inner .procedure{font-size: 15px; font-weight: 600; line-height: 1.666666666666667; margin: 0 auto 13px; display: block;}
+.center_content_third .procedure_inner .procedure.sub_txt{font-weight: 300;color:#333; }
+.center_content_third .procedure_inner .procedure_box.last .procedure.sub_txt{color:var(--chr10);}
+.center_content_third .procedure_inner .procedure_box.last .procedure_completion{font-size: 15px;font-weight: 500;line-height: 1.666666666666667; margin: 0 auto 13px; color:#fff; }
+.center_content_third .btn.application{margin: 32px auto 0; display: inline-block; }
+.center_content_fourth{width: 100%; display: block; margin: 0 auto;}
+.center_content_fourth .procedure_inner .procedure_box{ text-align: left; color: #898989; line-height: 1.5625; font-weight: 300; font-size: 16px;}
+.center_content_fifth{margin: 60px auto 0;}
+.center_content_fifth .contact_us{display: flex; width: 100%;  margin: 0 auto; flex-direction: row; justify-content: space-between;}
+.center_content_fifth .contact_us>li{width: calc(50% - 6px); border-radius: 12px; background: var(--point4); display: flex; align-items: center;flex-direction: column;padding-bottom: 28px; box-sizing: border-box; position: relative; }
+.center_content_fifth .contact_us>li{width: calc(50% - 6px); border-radius: 12px; background: var(--point4); display: flex; align-items: center;flex-direction: column;padding-bottom: 28px; box-sizing: border-box; position: relative; }
+.center_content_fifth .contact_us>li:nth-child(1){margin-right: 12px; }
+.center_content_fifth .contact_us>li:nth-child(1)>p{margin-bottom: 32px;margin-top: 41px;}
+.center_content_fifth .contact_us>li:nth-child(2)>p{margin-top: 53px; margin-bottom: 43px;}
+.center_content_fifth .contact_us>li>p{font-size: 15px; line-height: 1.533333333333333; text-align: center; font-weight: 300; color: #333; }
+.center_content_fifth .contact_us>li a:not(.financial_support06 .debt_adjustment_system_site_btn, .financial_support05 .debt_adjustment_system_site_btn){background: var(--point1); padding: 10px 0; display: block; width: calc(100% - 192px); margin: 0 auto; text-align: center; color: #fff; font-size: 15px;line-height: 1.4;border-radius: 8px;}
+.financial_support05 .debt_adjustment_system_site_btn{bottom: 10px;}
+.center_content_six{margin: 30px auto 0; width: 100%; padding: 36px 0 36px 82px; box-sizing: border-box; border-radius: 20px; background: #F8F8F8;}
+.center_content_six .financial_education_list{margin: 0 auto 21px; width: 100%; display: flex; justify-content: space-between;-webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between;}
+.center_content_six>.financial_education_list>dt{max-width: 175px; width: 100%; text-align: left; margin-right: 0; color: var(--point1);}
+.center_content_six>.financial_education_list>dd{width: calc(100% - 175px); text-align: left;}
+
+/* 맞춤대출서비스 financial_support07.html */
+.tab_menu_content .btn.web{margin: 16px auto 0; display: flex; justify-content: center; max-width:234px; padding: 12px 0; box-sizing: border-box;}
+.tab_menu_content .img_wrap{margin: 60px auto 0; display: block; width: calc(100% - 198px);}
+.tab_menu_content .img_wrap img{ display: block; width: 100%; height: 100%;}
+.menu_title.second{margin: 80px auto 50px; display: block; text-align: left;}
+.financial_support07 .tab_menu02_middle.second{margin: 0 auto;}
+.financial_support07 .service_box{display: flex; display: -ms-flexbox; width: 100%; margin: 0 auto; justify-content: space-between; -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between;flex-wrap: wrap; -ms-flex-wrap: wrap;}
+.financial_support07 .service_box>.service_itm:not(.service_itm:last-child){width: calc(50% - 10px); border-left: 1px solid #CFCFCF; border-right: 1px solid #CFCFCF; border-bottom: 1px solid #CFCFCF; border-radius: 12px; margin-bottom:28px;}
+.tab_menu_content .service_itm:nth-child(2n-1){margin-right: 20px;}
+.financial_support07 .service_box>.service_itm:last-child{width: calc(50% - 10px); margin-right: 0; margin-bottom: 0;margin: 0;border: 1px solid #CFCFCF; border-radius: 12px; }
+.financial_support07 .service_box>.service_itm .sub_subject{background: var(--point1); padding: 12px 0;}
+.financial_support07 .service_box>.service_itm .sub_cta{line-height:1.8125; font-size: 16px; padding: 28px 32px 32px 28px; box-sizing: border-box;}
+.financial_support07 .bank_title{padding-bottom:8px; text-align: left; display: block; border-bottom:1px solid #898989;line-height: 1.8; font-size: 20px; font-weight: 500;}
+.several_bank_box{padding: 17px 0 0 0; width: 100%; overflow: hidden; margin: 0 auto;}
+.several_bank_box>li{margin:0 10px 12px 0; float: left; width:calc(25% - 7.5px); }
+.several_bank_box>li>a{display: block; width: 100%;}
+.several_bank_box>li>a>img{display: block; width: 100%; height: 100%;}
+.several_bank_box>li:nth-child(4n){margin: 0 auto 0;}
+.partnership_bank_box.second{margin: 60px auto 40px;}
+.partnership_bank_box.fourth{margin: 40px auto 40px;}
+.partnership_bank_box.fifth .several_bank_box.etc>li{margin: 0;}
+
+/* 휴면계좌찾아줌 financial_support08.html */
+.financial_support08 .color_txt{display: inline-block; color: #3953C4; font-size: 16px;}
+.prd_info_sec_title{font-size: 20px; font-weight: 600;color: #333; margin-bottom:12px; display: block;}
+.tab_menu_content{margin: 30px auto 80px; width: 100%;}
+.product_information_first{display: flex; justify-content: space-between;-webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between; align-items: center; width: 100%;}
+.product_information_first .product_information_box{width: calc(33.3% - 12px); background: var(--point4); padding: 40px 20px; box-sizing: border-box; border-radius: 20px;}
+.product_name{display: block; font-size: 20px; font-weight: 600; text-align: left; line-height: 1.8; margin: 0 auto 24px; color: var(--point1);}
+.product_explanation{font-size: 15px;line-height: 1.733333333333333; display: block; color: #333; }
+.product_information_second{display: flex; margin: 80px auto 40px;flex-direction: column; width: 100%; text-align: left;}
+.product_information_second .prd_info_sec_title{font-size: 20px; font-weight: 600;color: #333;margin-bottom:12px; }
+.product_information_second .btn_apply{max-width: 234px; display: flex; width: 100%; text-align: center; justify-content: center; padding: 12px 5px; font-size: 16px; background: var(--point3); line-height: 1;letter-spacing: -.1rem; color: #fff; border-radius: 12px;}
+.financial_support08 .prd_info_sec_title.second_area{margin-top: 80px;}
+.financial_support08 .prd_info_sec_sub_txt{line-height: 1.5625; font-size: 16px; font-weight: 300; display: block; margin: 0 auto 20px; }
+.info_box{background: #F8F8F8; width: 100%; padding: 30px;}
+.info_box>dl{display: flex; justify-content: left; flex-direction: row; width: 100%; margin: 0 auto 20px;}
+.info_box>dl dt{max-width: 120px; display: block; width: 100%; line-height: 1.533333333333333; color: var(--point1); text-align: left; font-size: 15px; font-weight: 500;}
+.info_box dl dd{text-align: left; line-height: 1.533333333333333; display: block; font-size: 15px; font-weight: 300; } 
+.picture_info{margin: 36px auto 0; width: 100%; display: flex; justify-content: space-between; -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between;}
+.picture_info.bottom .people_box{width: 26%;}
+.picture_info .people_box{font-size: 17px; text-align: center; font-weight: 500; color:#333; background: var(--point4); border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 70px 0; width: 33.3%;}
+.picture_info.bottom .process{width: 50%;}
+.picture_info.bottom .process .process01 {display: flex; width: 100%;}
+.picture_info.bottom .process .process01 .left>span, .picture_info.bottom .process .process01 .right>span{display: inline-block; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+
+.process{width: 33.3%; margin: 0 auto; position: relative;}
+.process .process01 img,.process .process02 img{display: block; width: 100%;}
+.process span[class*="txt"]{display: inline-block; background: #333; color: #fff; font-size: 15px;  z-index: 1;left: 50%; transform: translateX(-50%); position: absolute; top: 50%; transform: translateY(-50%); border-radius: 4px; padding: 2px 10px; box-sizing: border-box;}
+.process .process01 .txt.apply{left: 40%;}
+.process .process02 .txt.payments{left: 45%;}
+.process .process02{display: block; width: 100%; bottom: 10px; left: 0; position: absolute;}
+.procedure_use{margin: 80px auto 0; text-align: left; width: 100%; display: block;}
+.procedure_use ul{width: 100%; display: flex; justify-content: space-between;-webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between; margin: 0 auto;}
+.procedure_use ul>li{border-radius: 12px; width: calc(16.66666666666667% - 11.66666666666667px); text-align: center; height: 101px; display: flex; display: -ms-flexbox; align-items: center; justify-content: center; font-size: 15px; font-weight: 300; position: relative; line-height: 1.666666666666667;}
+.procedure_use ul>li:not(.last_li){background: #F8F8F8; color:#333;}
+.procedure_use ul .last_li{background: var(--point1); color: #fff;}
+.application_for_payment{margin: 66px auto 36px; width: 100%;}
+.application_for_payment .application_for_payment_title{font-weight: 600; display: block;}
+.application_for_payment dl dd,.application_for_payment dl dt{font-size: 16px;}
+.application_for_payment dl dt{font-weight: 500; display: block;}
+.application_for_payment dl dd{font-weight: 300; line-height: 1.5625; display: block;}
+.procedure_use ul>li::after{content: ""; display: block; position: absolute; top: 50%; right: -12px;  width: 10px;  height: 10px; border-top: 3px solid #888888; border-right: 3px solid #888888; transform: translateY(-20%) rotate(45deg);}
+.procedure_use ul>.last_li::after{display: none;}
+.process .process01 .color_box{text-align: center; display: inline-block; padding: 17px 49px;box-sizing: border-box; border-radius: 12px; background: var(--point4); max-width: 221px; width: 100%;margin: 0 auto;}
+.content_bottom_num{display: inline-block; text-align: left; font-size: 15px; color: #898989; margin:16px auto 0;}
+.process .process01 .left, .process .process01 .right{display: block; width: 33.3%; position: relative; }
+.process .process01 .left>span, .process .process01 .right>span{display: block;  border-radius: 4px; padding: 2px 10px; box-sizing: border-box; background: #333; color: #fff; font-size: 15px;}
+.inquire_three_box{display: flex; display: -ms-flexbox; width: 100%;margin:65px auto 60px;justify-content:center; }
+.inquire_three_box>li{width: calc(33.3% - 12px); text-align: center; display: flex; flex-direction: column; -ms-flex-direction: column; align-items: center; margin: 0 auto; border-radius: 12px; border: 1px solid #CFCFCF; position: relative;}
+.inquire_three_box>li::after{content: ""; display: block; position: absolute; right: -18px; top: 50%; transform: translateY(-50%); background: #333; width: 18px;}
+.inquire_three_box .sub_subject{text-align: center; padding: 12px 0; box-sizing: border-box;}
+.inquire_three_box>li .sub_cta{font-size: 15px; line-height: 1.533333333333333; color: #333;}
+.inquire_three_box>li:nth-child(1),.inquire_three_box>li:nth-child(2){margin-right: 18px;}
+.tab_menu_content .tab_menu02_title{font-size: 20px; text-align: left; font-weight: 600; color: #333; margin: 0 auto 20px;}
+.tab_menu02_title{font-size: 20px; text-align: left; font-weight: 600; color: #333; margin: 0 auto 20px;}
+.tab_menu_content .tab_menu02 .tab_menu02_inquire_txt{padding: 32px; border-radius: 12px; background-color: var(--point4); position: relative; overflow: hidden;}
+.tab_menu_content .tab_menu02 .tab_menu02_inquire_txt>p{font-size: 16px; font-weight: 300; text-align: left; color: #333; line-height: 1.5625; margin: 0 auto 12px; letter-spacing: -.05rem;}
+.tab_menu_content .tab_menu02 .tab_menu02_inquire_txt>span{font-size: 16px; display: block; color: #898989;margin-bottom: 20px; line-height: 1.5625;}
+.tab_menu_content .tab_menu02 .tab_menu02_inquire_txt .color_txt_link{display: inline-block; color: var(--point3); text-decoration: underline;}
+.tab_menu_content .tab_menu02 .tab_menu02_inquire_txt::before{content: ""; display: block; position: absolute; top: 22.7px; left: 50px;transform: rotate(45deg);  background: url(../images/bg_l.png) no-repeat 0/ contain; width:106px; height: 102px; background-position: center;}
+.tab_menu_content .tab_menu02 .tab_menu02_inquire_txt::after{content: ""; display: block; position: absolute; top: -34px; right: 54px; width: 131px; height: 86px; background-position: center; background: url(../images/bg_r.png) no-repeat 0 /contain;    transform: rotate(-60deg);}
+.tab_menu02_inquire_box.inquiry_of_heirs_of_dormant_deposits{margin: 80px auto;}
+.tab_menu_content .tab_menu03 .inquiry_of_heirs_of_dormant_deposits .inquire_btn{padding: 12px 0; font-size: 18px; display: flex; justify-content: center;position: absolute; bottom: 32px; right:32px;}
+.inquire_btn{max-width: 234px; width: 100%; color: #fff; background:  var(--point3); padding: 12px 0; box-sizing: border-box; border-radius: 12px; float: right; text-align: center;}
+.inquire_btn.first{padding: 12px 5px; margin-left: 28px;}
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_box.bg{ background: var(--point1); padding: 32px; position: relative; border-radius: 12px;}
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_box.bg .tab_menu02_inquire_txt{background: var(--point1);}
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_box.bg .tab_menu02_inquire_txt>strong{display: block; margin: 0 auto 16px;line-height: 1.333333333333333;  font-size:24px; font-weight: 600; color: #fff;}
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_box.bg .tab_menu02_inquire_txt::before{content: ""; display: block; position: absolute; top: 22.7px; left: 50px;transform: rotate(45deg);  background: url(../images/bg_l.png) no-repeat 0/ contain; width:106px; height: 102px; background-position: center;}
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_box.bg .tab_menu02_inquire_txt{color: #fff; text-align: center; font-size: 24px; font-weight: 600;position: relative;}
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_box.bg .tab_menu02_inquire_txt::after{content: ""; display: block; position: absolute; top: -34px; right: 54px; width: 131px; height: 86px; background-position: center; background: url(../images/bg_r.png) no-repeat 0 /contain; transform: rotate(-60deg);}
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_box.bg .tab_menu02_inquire_txt>span{ display: block; text-align: center; color: #fff; margin-right:0; margin-bottom: 0; font-size: 16px; line-height: 1.5;}
+.tab_menu_content .tab_menu03 .inquiry_of_heirs_of_dormant_deposits{margin: 80px auto; }
+.tab_menu_content .tab_menu03 .inquiry_of_heirs_of_dormant_deposits .donation{background: var(--point4); padding: 32px; border-radius: 12px; position: relative; }
+.tab_menu_content .tab_menu03 .inquiry_of_heirs_of_dormant_deposits .donation::before{content: ""; display: block; position: absolute; top: 22.7px; left: 50px;transform: rotate(45deg);  background: url(../images/bg_l.png) no-repeat 0/ contain; width:106px; height: 102px; background-position: center;}
+.tab_menu_content .tab_menu03 .inquiry_of_heirs_of_dormant_deposits .donation::after{content: ""; display: block; position: absolute; top: -34px; right: 54px; width: 131px; height: 86px; background-position: center; background: url(../images/bg_r.png) no-repeat 0 /contain;    transform: rotate(-60deg);}
+.tab_menu_content .tab_menu03 .inquiry_of_heirs_of_dormant_deposits .donation>p{font-size: 16px; text-align: left; color: #333; width: 100%; display: block; margin:0 auto 60px; line-height: 1.5;}
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_txt{padding: 32px; margin:80px auto; border-radius: 12px; background-color: var(--point4); box-sizing: border-box; overflow: hidden; position: relative;}
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_txt::before {content: "";display: block;position: absolute;top: 22.7px;left: 50px;transform: rotate(45deg); background: url(../images/bg_l.png) no-repeat 0/ contain;width: 106px; height: 102px;background-position: center;}
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_txt::after{content: "";display: block;position: absolute;top: -34px;right: 54px;width: 131px;height: 86px; background-position: center; background: url(../images/bg_r.png) no-repeat 0 /contain; transform: rotate(-60deg);}
+
+/*------------------ 서금원2 채용절차(seoGeumWon2_19.html) ---------------------------------------- */
+.employment .tab_menu02_inquire_txt{padding: 32px; margin:20px auto; border-radius: 12px; background-color: var(--point4); box-sizing: border-box; overflow: hidden; position: relative; line-height: 1.5;}
+.employment .tab_menu02_inquire_txt::before {content: "";display: block;position: absolute;top: 22.7px;left: 50px;transform: rotate(45deg); background: url(../images/bg_l.png) no-repeat 0/ contain;width: 106px; height: 102px;background-position: center;}
+.employment .tab_menu02_inquire_txt::after{content: "";display: block;position: absolute;top: -34px;right: 54px;width: 131px;height: 86px; background-position: center; background: url(../images/bg_r.png) no-repeat 0 /contain; transform: rotate(-60deg);}
+.tab_menu02_inquire_box.employment{margin: 80px auto;}
+/*------------------ ///서금원2 채용절차(seoGeumWon2_19.html) ---------------------------------------- */
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_txt .inquire_btn{padding: 12px;}
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_txt>p{text-align: left; color: #333;margin: 0 auto 103px; }
+
+/*********************(max-width:767px *********************/    
+@media all and (max-width:850px) {
+  .debt_adjustment_system_site_btn{position: unset;}
+
+/* 금융교육 소개financialSupport07_02.html*/
+.financial_support03 .tab_menu02_middle.second{margin: 20px auto;}
+
+/* 휴먼 예금 찾아줌 financialSupport08.html */
+.financial_support08 .info_box>dl{flex-wrap: wrap;}
+.financial_support08 .info_box>dl dt{margin-bottom: 10px;}
+
+}
+/*********************(max-width:767px *********************/    
+@media all and (max-width:767px) {
+/* 일반금융상품 통합검색 */
+.contents .product_comparison{flex-wrap: wrap;-ms-flex-wrap: wrap;}
+.contents .product_comparison .product_box{width: calc(50% - 18px); margin-right: 0;}
+.contents .product_comparison .product_box:nth-child(1){margin-right: 18px;}
+.contents .product_comparison .product_box:nth-child(2){margin-left:18px;}
+.contents .product_comparison .product_box.last{margin: 80px 0 0 0; padding-bottom: 30px;}
+.contents .product_comparison .product_box .box_title{font-size: 20px;}
+.tab_menu02_detail ul:not(.one_menu){width: 100%;}
+.tab_menu_content{width:100%;}
+.tab_menu_content .tab_menu02_inquire_txt{padding: 32px 10px; margin: 0 auto;}
+.inquire_btn{float: none; margin: 0 auto; display: inline-block; max-width: none;}
+
+/* 금융교육 소개 financial_support03.html*/
+/* .tab .menu{padding: 15px 0; font-size: 14px;} */
+.tab_menu02_subject{display: block; padding: 0; margin-bottom:20px; background: transparent; color: #333; text-align: left;}
+.tab_menu02_middle .tab_menu02_sub_title{display: none;}
+.tab_menu02_subject br{display: none;}
+.financial_support03 .financial_education_list{display: block;}
+.financial_support03 .financial_education_list dt{display: block;}
+.financial_support03 .financial_education_list dd{display: block; margin-right: 0;}
+.education_box {flex-wrap: wrap;-ms-flex-wrap: wrap;}
+.education_box .education_item{margin: 0 auto 60px;}
+.education_box .education_item:nth-child(1),.education_box .education_item:nth-child(3){width: calc(50% - 14px); margin-right: 28px;}
+.education_box .education_item:nth-child(2),.education_box .education_item:nth-child(4){width: calc(50% - 14px); margin-right: 0;}
+.tab_menu02_detail{flex-wrap: wrap;-ms-flex-wrap: wrap; margin-right: 0;}
+.tab_menu02_detail ul:not(.one_menu){flex-wrap: wrap; -ms-flex-wrap: wrap; flex-direction: column; -webkit-box-direction: column; -ms-flex-direction:column;}
+.tab_menu02_detail ul li:nth-child(1):not(.one_menu_li){width: 100%; margin-right: 0;}
+.tab_menu02_detail ul li:not(.one_menu_li):nth-child(2){margin-top: 20px;}
+.tab_menu02_detail ul li:not(.one_menu_li){width: 100%;}
+.tab_menu02 .channel_title{margin: 50px auto 20px;}
+.go_to_channel{flex-wrap: wrap; -ms-flex-wrap: wrap; flex-direction: column; margin: 0 auto;}
+.go_to_channel .channel_box{width: 100%;margin-right: 0; margin: 0 auto 20px;}
+.procedure_content .procedure_inner .procedure_box.last .procedure_completion{color: #fff;}
+
+/* 채무 조정 제도 financial_support04.html */
+.contents_title_inner{margin: 30px auto 30px;}
+.center_content .debt_adjustment_system_detail{flex-wrap: wrap;-ms-flex-wrap: wrap; justify-content: center;}
+.center_content .debt_adjustment_system_detail .debt_adj_system_detail_box{width: 100%; margin: 0 auto 30px; padding: 20px; height: 230px;}
+.center_content .debt_adjustment_system_detail .debt_adj_system_detail_box.first{margin-right: 0;}
+.debt_adjustment_system_detail .debt_adj_system_detail_box .debt_adjustment_system_site_btn{font-size: 13px; padding: 10px; bottom: unset; margin: 40px auto 0; width: 100%; display: block; position: unset; left: unset;}
+.procedure_content .procedure_inner{flex-wrap: wrap; -ms-flex-wrap: wrap; justify-content: center; align-items: center;}
+.debt_adjustment_system_site_btn{font-size: 13px; padding: 10px; bottom: unset; margin: 40px auto 0; width: 100%; display: block; position: unset; left: unset; bottom: unset;}
+.procedure_content .procedure_inner{flex-wrap: wrap; -ms-flex-wrap: wrap; justify-content: center; align-items: center;}
+.procedure_content .procedure_inner .procedure_box{width: 100%;}
+.procedure_content .procedure_inner .procedure_box:nth-child(1){margin: 20px auto;}
+.procedure_content .procedure_inner .procedure_box:nth-child(2){margin: 0 auto 20px;}
+.procedure_content .procedure_inner .procedure_box.last{margin: 0;}
+.subheading_txt, .center_content .debt_adjustment_system_detail .detail_title{font-size: 18px;}
+.compare .debt_adjustment_system_detail .debt_adj_system_detail_box{width: 100%; margin-right: 0;margin-left: 0; margin-bottom: 20px;}
+.procedure_content .procedure_inner .procedure_box::after{top:unset; bottom: -15px; right: 50%; transform: translateY(0) rotate(135deg); }
+.compare .debt_adjustment_system_detail .debt_adj_system_detail_box.first{margin-right: 0; margin-bottom: 20px; }
+.compare .debt_adjustment_system_detail .debt_adj_system_detail_box.first.one{margin-right: 0; margin-bottom: 16px;}
+.financial_education_list{flex-wrap: wrap;-ms-flex-wrap: wrap;}
+.procedure_content .procedure_inner .procedure_box.last .procedure_completion{display: block;}
+
+/* 분할상환제도financial_support05.html */
+.center_content_first .btn{margin: 30px auto 0;}
+.financial_support05 .debt_adjustment_system_site_btn{bottom: unset; }
+.center_content_first .supported{flex-wrap: wrap;-ms-flex-wrap: wrap;}
+.center_content_first .supported .supported_box.first{margin-right: 0; width: 100%; margin: 0 auto 20px;}
+.center_content_first .supported .supported_box{width: 100%;}
+.center_content_first .supported .supported_box{font-size: 14px;}
+.center_content_third .procedure_inner{flex-wrap: wrap;-ms-flex-wrap: wrap; justify-content:none;}
+.center_content_third .procedure_inner .procedure_box:not(.procedure_box.last){width: 100%; margin-right: 0; margin: 0 auto 20px;}
+.center_content_third .procedure_inner .procedure_box.last{width: 100%; align-items: center; padding: 24px 6px 20px 6px;}
+.center_content_third .procedure_inner .procedure_box:not(.procedure_box.last)::after, .financial_support05 .center_content_third .procedure_inner .procedure_box:not(.procedure_box.last)::after{display: none;}
+.center_content_fourth{margin: 60px auto 0;}
+.center_content_fifth .contact_us{flex-wrap:wrap;}
+.center_content_fifth .contact_us>li{width: 100%; display: block; margin: 0 auto 20px;}
+.financial_support05 .center_content_fifth .contact_us>li{position: relative; padding: 0 20px 20px 20px;}
+.center_content_fifth .contact_us>li:nth-child(1){margin-right: 0; width: 100%;}
+.center_content_fifth .contact_us>li a:not(.financial_support06 .debt_adjustment_system_site_btn){width: calc(100% - 30px); margin: 0 auto;}
+.center_content_six{padding: 16px 32px;}
+.center_content_six>.financial_education_list>dt{font-size: 15px;}
+.center_content_six .financial_education_list dd{font-size: 15px; font-weight: 300;}
+
+/*분할상환유예제도   financial_support06*/
+.center_content_six .financial_education_list{margin: 0 auto 10px; width: 100%; display: block;}
+.center_content_six>.financial_education_list>dt{max-width: 175px; width: 100%; text-align: left; display: block; margin-right: 0; color: var(--point1);}
+.center_content_six>.financial_education_list>dd{width: 100%; text-align: left;}
+.center_content_six>.financial_education_list>dd br{display: none;}
+
+/*맞춤대출서비스 financial_support07*/
+.financial_support07 .tab{justify-content: center;}
+.menu_sub_title{font-size: 14px; line-height: 1.733333333333333;}
+.tab_menu_content .img_wrap{width: 100%;}
+.financial_support07 .menu_title.second{margin: 40px auto 20px;}
+.financial_support07 .service_box>.service_itm:not(.service_itm:last-child), .financial_support07 .service_box>.service_itm:last-child{width: 100%; display: block; margin: 0 auto 20px;}
+.financial_support07 .service_box{flex-wrap: wrap; -ms-flex-wrap: wrap; display: flex; justify-content: center; width: 100%;}
+.several_bank_box>li{width: calc(33.3% - 10px); margin-right: 10px;}
+.several_bank_box>li:nth-child(4n){margin:0 10px 12px 0;}
+.several_bank_box>.third_li{margin:0 0px 12px 0;}
+.inquire_three_box{flex-wrap: wrap; justify-content:unset;}
+.inquire_three_box>li{width: calc(50% - 9px);}
+.inquire_three_box>li:nth-child(1){margin-left: 0;}
+.inquire_three_box>li:nth-child(1), .inquire_three_box>li:nth-child(2){margin-right: 0;}
+.inquire_three_box>li:last-child{margin: 0; margin-top: 20px; display: block;}
+.financial_support07 .menu_title.first{margin: 0 auto 20px;}
+
+/* 맞춤대출서비스 제휴금융회사 financial_support07_02.html */
+.partnership_bank_box.second, .partnership_bank_box.fourth {margin: 0;}
+
+/*휴면예금 찾아줌 financial_support08*/
+.financial_support08 .tab{-webkit-justify-content: space-between; display: -ms-flexbox; display: flex; justify-content: space-between; width: 100%;}
+.product_information_first{flex-wrap: wrap;}
+.product_information_first .product_information_box{width: 100%; margin-bottom: 20px;}
+.product_information_first .product_information_box.insurance{margin-bottom: 0;}
+.financial_support08 .product_information_second{margin: 60px auto 30px;}
+.process{margin: 0 auto; display: flex; flex-wrap: nowrap; justify-content: space-between; -webkit-box-pack: space-between; -ms-flex-pack: space-between; -webkit-justify-content: space-between; width: 100%;}
+.picture_info{flex-wrap: wrap;}
+.picture_info .people_box{display: block; width: 100%; padding: 20px 0; margin: 20px auto;}
+.picture_info.bottom{display: flex; flex-direction: column; margin: 0 auto;}
+.picture_info.bottom .people_box{padding: 0;}
+.process .process01{display: flex; position: unset; max-width: 83px; width: 100%;}
+.process .process02{position: unset; left: unset; bottom: unset;}
+.process .process01>img,.process .process02>img{display: none;}
+.process span[class*="txt"]{top: unset; left: unset; padding: 2px 3px; text-align: center;  max-width: 70px; width: 100%;}
+.process .process02::after{content: ""; display: block; clear: both;}
+.process .process02 .txt.payments{right: 0; left: unset;}
+.process .process01 .txt.apply{left: 0;}  
+.procedure_use{margin: 30px auto;}
+.procedure_use ul{flex-wrap: wrap; justify-content: space-between;}
+.procedure_use ul>li:not(.last_li, .third_li){width: calc(33.3% - 9.333333333333333px); margin-right: 14px; display: flex;justify-content: center;}
+.procedure_use ul .last_li{width: calc(33.3% - 9.333333333333333px); margin-right:0; }
+.procedure_use ul>li:nth-child(5), .procedure_use ul>li:nth-child(6){margin-top:20px;}
+.procedure_use ul>li:nth-child(4){margin-top:20px;}
+.procedure_use ul>.third_li{margin-right: 0; width: calc(33.3% - 9.333333333333333px);}
+.procedure_use ul>.last_li::after,.procedure_use ul>.third_li::after{display: none;}
+.tab_menu_content .tab_menu03 .inquiry_of_heirs_of_dormant_deposits .inquire_btn{position: unset; left: unset;bottom: unset; display: block;}
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_txt{margin: 30px auto; padding: 20px;}
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_txt.last{margin: 30px auto 0;}
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_txt .inquire_btn.first{margin: 0 auto 30px;}
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_txt>p{margin-bottom: 20px;}
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_box.bg .tab_menu02_inquire_txt{padding:0;margin: 0;}
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_box.bg .tab_menu02_inquire_txt>strong{font-size: 18px;}
+
+.application_for_payment_information{line-height: 1.5625; display: block; width: 100%;}
+.picture_info.bottom{display: none;}
+.picture_info.bottom .process{width: 30%; position: relative;}
+.process .process01 .color_box{max-width: unset; width: 100%; position: absolute; padding: 17px 0;} 
+.process .process01 img, .process .process02 img{display: none;}
+.picture_info.bottom .process .process01 .left>span, .picture_info.bottom .process .process01 .right>span{left: unset; top: unset; transform: unset;} 
+.process .process01 .right{right: 0; top: 10%;}
+.picture_info.bottom .process .process01 .left>span{left: -10%; top: 30%;}
+.product_information_second .prd_info_sec_title.second_area{margin-top: 40px;}
+
+/*------------------ 서금원2 채용절차(seoGeumWon2_19.html) ---------------------------------------- */
+.tab_menu02_inquire_box.employment{margin: 40px auto;}
+/*------------------ ///서금원2 채용절차(seoGeumWon2_19.html) --------------------------------------- */
+
+}
+
+/********************* max-width:500px*********************/      
+@media all and (max-width:500px) {
+.contents.financial_support03{padding: 60px 0 60px 0;}
+.contents .product_comparison{display: block; width: 100%;}
+.contents .product_comparison .product_box{width:100%; margin-right: 0; margin: 0 auto;}
+.contents .product_comparison .product_box:nth-child(1), .contents .product_comparison .product_box.last{margin-right: 0; margin-left: 0;}
+.contents .product_comparison .product_box:nth-child(2){margin-left: 0; margin: 60px auto;}
+.contents .product_comparison .product_box:nth-child(2) .prd_box{margin-bottom: 30px;}
+
+/* 금융교육 소개financial_support03.html*/
+.education_box .education_item{display: flex; align-items: center; flex-direction: column;}
+.education_box .education_item:nth-child(1), .education_box .education_item:nth-child(3), .education_box .education_item:nth-child(2){width:100%; margin-left: 0; margin-right: 0; margin-bottom: 50px;}
+.education_box .education_item:nth-child(4){margin-bottom: 0; width: 100%;}
+.contents .sub_subject{padding: 12px 0;}
+.center_content .debt_adjustment_system_detail .debt_adj_system_detail_box{height: 250px;}
+.contents.financial_support03 .menu_title.first{margin: 26px auto 40px;}
+.financial_education_list{margin:0 auto 20px;}
+
+/* 맞춤대출서비스financial_support07.html*/
+.several_bank_box>li{width: calc(50% - 5px); margin-right: 5px;}
+.several_bank_box>li:nth-child(2n){margin-right: 0;}
+.several_bank_box>li:nth-child(4n){margin:0 5px 12px 0;}
+.several_bank_box>.third_li{margin:0 5px 12px 0;}
+.financial_support07 .bank_title{font-size: 16px;}
+
+/* 휴면예금 안내financial_support08.html*/
+.procedure_use ul>li:not(.last_li, .third_li){width: calc(50% - 7px); margin-right: 14px;}
+.procedure_use ul>.last_li{margin-right: 0;width: calc(50% - 7px); }
+.procedure_use ul>.third_li{margin-top: 20px;width: calc(50% - 7px);  }
+.procedure_use ul>li:nth-child(2n)::after, .procedure_use ul .last_li::after{display: none;} 
+.procedure_use ul>.third_li::after{display: block;} 
+.procedure_use ul>li:nth-child(2n){margin-right: 0; }
+
+/* .procedure_use ul>li:nth-child(2n)::after{display: none;} */
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_box.bg .tab_menu02_inquire_txt>strong br{display: none;}
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_box.bg .tab_menu02_inquire_txt>span{font-size: 14px;}
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_box.bg .tab_menu02_inquire_txt>span br{display: none;}
+.application_for_payment_information br{display: none;}
+}
+
+
+/********************* max-width:400px*********************/      
+@media all and (max-width:400px) {
+/* 휴면예금 안내financial_support08.html*/
+.procedure_use ul>li:not(.last_li, .third_li){width:100%; margin-right: 0;}
+.procedure_use ul>li::after{top: unset; bottom: -15%; right:unset; left: 50%; transform: translateY(0%) rotate(135deg); width: 7px; height: 7px; border-top: 1px solid #888888; border-right: 1px solid #888888;}
+.procedure_use ul>li:nth-child(2n)::after:not(.last_li){display: block;}
+.procedure_use ul>li:nth-child(1){margin-bottom: 20px;}
+/* .procedure_use ul>li:not(.last_li)::after{display: none;} */
+.procedure_use ul>.third_li{width:100%; margin-right: 0;}
+.procedure_use ul>.last_li{width:100%; margin-right: 0;}
+/* .procedure_use ul>.last_li::after{display: none;} */
+.tab_menu_content .tab_menu03 .inquiry_of_heirs_of_dormant_deposits .donation::before{left: -22px;}
+.tab_menu_content .tab_menu03 .inquiry_of_heirs_of_dormant_deposits .donation::after{right: -11px;}
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_txt::before{left: -30px;}
+.tab_menu_content .tab_menu03 .tab_menu02_inquire_txt::after{right: 10px;}
+
+}

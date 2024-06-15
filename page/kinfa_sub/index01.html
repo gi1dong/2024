@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>서민금융진흥원</title>
+    
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/flower-favicon.png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+    JS
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <style>
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, a{margin: 0; padding: 0;border: 0; box-sizing: border-box; font-family: "Montserrat", "Noto Sans KR", sans-serif; font-weight: 300; vertical-align: baseline; word-break: keep-all;}
+a{text-decoration: none; line-height: 1;font-family: "Montserrat", "Noto Sans KR", sans-serif;font-style: normal; font-weight:400; display: inline-block;}
+a:hover{text-decoration: none;}
+button{outline: none; background: none; box-sizing: border-box;}
+
+body {font-family: "Montserrat", "Noto Sans KR", sans-serif; font-size: 12px;
+  font-weight: 300; line-height: 1.2rem; letter-spacing: -0.5px; width: 100%; min-width: 36rem; overflow-x: hidden; margin: 0 auto;}
+  .content{margin-top: 50px;}
+.swiper-backface-hidden .swiper-slide{width:100vw;}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display: block;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+html{font-size: 10px;}
+blockquote:before, blockquote:after, q:before, q:after {content: "";content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+button{border: none; background: transparent;}
+em{font-style:normal;}
+a{color: #333;} 
+i{display: inline-block;}
+.wrap{ max-width: 780px; width: 100%; text-align: left; margin: 3rem auto 0; overflow: hidden;}
+.main-top{margin-bottom:3rem; display: flex; flex-direction: column; align-items: center;}
+.main-top p{ margin-bottom:1rem; color:#1A2F54;  font-weight:300; }
+.main-top h1{ font-weight:700; font-size:3rem; letter-spacing:-2px; color:#1A2F54;  margin:10px 0 30px 0;}
+.content-title{ text-align: left; font-size:1.8rem; font-weight: 700; margin-bottom:.5rem; color:#1A2F54;  }
+.pagelist{ display: flex; gap:.5rem; align-items: center;flex-wrap: wrap; padding: 3rem 0; }
+.pagelist p{color:#1A2F54;  width: 100%;}
+.logo-wrap{width: 3rem; height: 3rem;}
+.logo-wrap img{display: block; width: 100%;}
+.page-wrap{padding: 2rem; width: 100%; color: #fff; text-align: center; background: #f8f8f8; display: flex; flex-direction: column; justify-content: space-between; align-items: center; row-gap: 0.5rem;}
+.page-wrap p{margin: 5px auto; color: #333; font-size: 22px;}
+.pagelist .slider-for.slider{}
+.pagelist .slider-for.slider>div{padding: 1rem 2rem;}
+
+body{
+  background:#ccc;
+}
+.main {
+  font-family:Arial;
+  width:500px;
+  display:block;
+  margin:0 auto;
+}
+h3 {
+    background: #fff;
+    color: #3498db;
+    font-size: 36px;
+    line-height: 100px;
+    margin: 10px;
+    padding: 2%;
+    position: relative;
+    text-align: center;
+}
+.action{
+  display:block;
+  width:100%;
+  text-align:center;
+}
+.action a {
+  display:inline-block;
+  padding:5px 10px; 
+  background:#f30;
+  color:#fff;
+  text-decoration:none;
+}
+.action a:hover{
+  background:#000;
+}
+
+
+.flow a ,.page-wrap a{text-align: center;color: #fff; display: inline-block;}
+.flow, .slider a{ display: block; padding: 1rem 2rem; background:#1A2F54;  color:#fff; font-size: 1.5rem;}
+.web-wrap{ width: 100%;}
+.web-wrap img{ width: 100%; }
+.m-wrap{ margin:0 auto; max-width: 767px; }
+.m-wrap img{ width: 100%; }
+
+
+
+
+@media (max-width:767px) {
+  .wrap h1{ font-size:3em; }
+  .pagelist{ flex-wrap: wrap; }
+  .pagelist .swiper-slide{ width: 100%;}
+} 
+
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header class="main-top">
+          <p>서민금융진흥원 리뉴얼</p>
+          <h1>상세 페이지</h1>
+          <div class="flow">
+            <a href="./sub/main.html">팀 프로젝트<br/>
+            작업: 적응형 → 반응형 사이트 리뉴얼<br/>
+            기여도:상세 페이지 컨텐츠 영역 퍼블리싱</a>
+          </div>  
+      </header>
+      <div class="contents">
+        <div class="page_box01">
+          <h2 class="content-title" style="margin:2rem 0;">금융지원</h2>
+          <div class="main">
+            <div class="slider slider-for">
+              <div>
+                <h3>
+                  <i class="logo-wrap"><img src="./images/seoGeumWon01.png" alt="서민금융진흥원"/></i>
+                  <p>일반금융상품 통합검색</p>
+                  <a href="./financialSupport/financialSupport02.html"  target="_blank">바로가기</a>
+                </h3>
+              </div>
+              <div>
+                <h3>
+                  <i class="logo-wrap"><img src="./images/seoGeumWon01.png" alt="서민금융진흥원"/></i>
+                  <p>금융교육 소개 01</p>
+                  <a href="./financialSupport/financialSupport03.html"  target="_blank">바로가기</a>
+                </h3>
+            </div>
+              <div>
+                <h3>
+                  <i class="logo-wrap"><img src="./images/seoGeumWon01.png" alt="서민금융진흥원"/></i>
+                  <p>금융교육 소개 02</p>
+                  <a href="./financialSupport/financialSupport03_tab02.html"  target="_blank">바로가기</a>
+              </h3>
+            </div>
+              <div>
+                <h3>
+                  <i class="logo-wrap"><img src="./images/seoGeumWon01.png" alt="서민금융진흥원"/></i>
+                  <p>채무조정제도</p>
+                  <a href="./financialSupport/financialSupport04.html"  target="_blank">바로가기</a>
+              </h3>
+            </div>
+            <div>
+              <h3>
+                <i class="logo-wrap"><img src="./images/seoGeumWon01.png" alt="서민금융진흥원"/></i>
+                <p>분할상환제도</p> 
+                <a href="./financialSupport/financialSupport05.html"  target="_blank">바로가기</a>
+              </h3>
+            </div>
+              <div>
+                <h3>
+                  <i class="logo-wrap"><img src="./images/seoGeumWon01.png" alt="서민금융진흥원"/></i>
+                  <p>분할상환유예제도</p>
+                  <a href="./financialSupport/financialSupport06.html"  target="_blank">바로가기</a>
+                </h3>
+              </div>
+              <div>
+                <h3>
+                  <i class="logo-wrap"><img src="./images/seoGeumWon01.png" alt="서민금융진흥원"/></i>
+                  <p>분할상환유예제도</p>
+                  <a href="./financialSupport/financialSupport06.html"  target="_blank">바로가기</a>
+                </h3>
+              </div>
+              <div>
+                <h3>
+                  <i class="logo-wrap"><img src="./images/seoGeumWon01.png" alt="서민금융진흥원"/></i>
+                  <p>맞춤대출서비스</p>
+                  <a href="./financialSupport/financialSupport07.html"  target="_blank">바로가기</a>
+                </h3>
+              </div>
+
+              <div>
+                <h3>
+                  <i class="logo-wrap"><img src="./images/seoGeumWon01.png" alt="서민금융진흥원"/></i>
+                  <p>분할상환유예제도</p>
+                  <a href="./financialSupport/financialSupport06.html"  target="_blank">바로가기</a>
+                </h3>
+              </div>
+              <div>
+                <h3>
+                  <i class="logo-wrap"><img src="./images/seoGeumWon01.png" alt="서민금융진흥원"/></i>
+                  <p>분할상환유예제도</p>
+                  <a href="./financialSupport/financialSupport06.html"  target="_blank">바로가기</a>
+                </h3>
+              </div>
+            </div>
+            <div class="action">
+              <button type="button">1</button>
+              <button type="button">2</button>
+              <button type="button">3</button>
+              <button type="button">4</button>
+            </div>
+          </div>
+          <div class="pagelist">
+
+              <div class="slider slider-for">
+                <div>
+                  <h3>
+                  <i class="logo-wrap"><img src="./images/seoGeumWon01.png" alt="서민금융진흥원"/></i>
+                  <p>채무조정제도</p>
+                  <a href="./financialSupport/financialSupport04.html"  target="_blank">바로가기</a>
+                  </h3>
+                </div>
+              </div>
+              <div class="slider slider-for">
+                <div>
+                  <h3>
+                  <i class="logo-wrap"><img src="./images/seoGeumWon01.png" alt="서민금융진흥원"/></i>
+                  <p>분할상환제도</p> 
+                  <a href="./financialSupport/financialSupport05.html"  target="_blank">바로가기</a>
+                </h3>
+                </div>
+              </div>
+              <div class="slider slider-for">
+                <div>
+                  <h3>
+                  <i class="logo-wrap"><img src="./images/seoGeumWon01.png" alt="서민금융진흥원"/></i>
+                  <p>분할상환유예제도</p>
+                  <a href="./financialSupport/financialSupport06.html"  target="_blank">바로가기</a>
+                </h3>
+              </div>
+              </div>
+              <div class="slider slider-for">
+                <div>
+                  <h3>
+                  <i class="logo-wrap"><img src="./images/seoGeumWon01.png" alt="서민금융진흥원"/></i>
+                  <p>일반금융상품 통합검색</p>
+                  <a href="./financialSupport/financialSupport02.html"  target="_blank">바로가기</a>
+                </h3>
+              </div>
+              </div>
+              <div class="slider slider-for">
+                <div>
+                  <h3>
+                  <i class="logo-wrap"><img src="./images/seoGeumWon01.png" alt="서민금융진흥원"/></i>
+                  <p>맞춤대출서비스</p>
+                  <a href="./financialSupport/financialSupport07.html"  target="_blank">바로가기</a>
+                </h3>
+              </div>
+              </div>
+              <div class="slider slider-for">
+                <div>
+                  <h3>
+                  <i class="logo-wrap"><img src="./images/seoGeumWon01.png" alt="서민금융진흥원"/></i>
+                  <p>맞춤대출서비스 제휴사 카드</h3>
+                  <a href="./financialSupport/financialSupport07_02.html"  target="_blank">바로가기</a>
+                </h3>
+                </div>
+              </div>
+              <div class="slider slider-for">
+                <div>
+                  <h3>
+                  <i class="logo-wrap"><img src="./images/seoGeumWon01.png" alt="서민금융진흥원"/></i>
+                  <p>맞춤대출서비스 제휴사 카드</h3>
+                  <a href="./financialSupport/financialSupport07_02.html"  target="_blank">바로가기</a>
+                </h3>
+                </div>
+              </div>
+              <div class="slider slider-for">
+                <div>
+                  <h3>
+                  <i class="logo-wrap"><img src="./images/seoGeumWon01.png" alt="서민금융진흥원"/></i>
+                  <p>맞춤대출서비스 제휴사 카드</h3>
+                  <a href="./financialSupport/financialSupport07_02.html"  target="_blank">바로가기</a>
+                </h3>
+                </div>
+              </div>
+              <div class="slider slider-for">
+                <div>
+                  <h3>
+                  <i class="logo-wrap"><img src="./images/seoGeumWon01.png" alt="서민금융진흥원"/></i>
+                  <p>맞춤대출서비스 제휴사 카드</h3>
+                  <a href="./financialSupport/financialSupport07_02.html"  target="_blank">바로가기</a>
+                </h3>
+                </div>
+              </div>
+
+              </div>
+
+        </div> 
+
+      </div>
+    </div>
+    <!-- <div class="wrap">
+      <header class="main-top">
+          <p>서민금융진흥원 리뉴얼</p>
+          <h1>상세 페이지</h1>
+          <div class="flow">
+            <a href="./sub/main.html">팀 프로젝트<br/>
+            작업: 적응형 → 반응형 사이트 리뉴얼<br/>
+            기여도:상세 페이지 컨텐츠 영역 퍼블리싱</a>
+          </div>  
+      </header>
+      <div class="contents">
+    <div class="slider slider-for">
+      <div>
+        <h3>
+          <i class="logo-wrap"><img src="./images/seoGeumWon01.png" alt="서민금융진흥원"/></i>
+          <p>일반금융상품 통합검색</p>
+          <a href="./financialSupport/financialSupport02.html"  target="_blank">바로가기</a>
+        </h3>
+      </div>
+      <div>
+        <h3>
+          <i class="logo-wrap"><img src="./images/seoGeumWon01.png" alt="서민금융진흥원"/></i>
+          <p>금융교육 소개 01</p>
+          <a  href="./financialSupport/financialSupport03.html"  target="_blank">바로가기</a>
+        </h3>
+      </div>
+      <div>
+        <h3>
+
+        </h3>
+      </div>
+      <div>
+        <h3>4</h3>
+      </div>
+      <div>
+        <h3>5</h3>
+      </div>
+    </div>
+    <div class="slider slider-nav">
+      <div>
+        <h3>1</h3>
+      </div>
+      <div>
+        <h3>2</h3>
+      </div>
+      <div>
+        <h3>3</h3>
+      </div>
+      <div>
+        <h3>4</h3>
+      </div>
+      <div>
+        <h3>5</h3>
+      </div>
+    </div>
+  </div>
+</div> -->
+<script>
+
+// $('.slider-for').slick({
+//   slidesToShow: 1,
+//   slidesToScroll: 1,
+//   arrows: false,
+//   fade: true,
+//   asNavFor: '.slider-nav'
+// });
+// $('.slider-nav').slick({
+//   slidesToShow: 3,
+//   slidesToScroll: 1,
+//   asNavFor: '.slider-for',
+//   dots: true,
+//   centerMode: true,
+//   focusOnSelect: true
+// });
+		
+$('.slider-for').slick({
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   fade: true
+ });
+ 
+ $('.action button').click(function() {
+   var slideNo = $(this).index();
+   $('.slider-for').slick('slickGoTo', slideNo);
+ });
+</script>
+
+  </body>
+</html>

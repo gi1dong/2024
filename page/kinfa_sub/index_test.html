@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <dl class="accodian">
+    <dt class="menu-item"><span></span>이게 뭔가요?</dt>
+    <dd>나도 몰라...</dd>
+    <dt><span></span>질문입니다...</dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum maiores.</dd>
+    <dt><span></span>이게 뭔가요?</dt>
+    <dd>나도 몰라...</dd>
+    <dt><span></span>질문입니다...</dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum maiores.</dd>
+  </dl>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+dt, dd {
+  padding: 10px;
+}
+
+dt {
+  background-color: #cfc;
+  margin-bottom: 5px;
+}
+
+dt span {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: black;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.menu-item.on span {
+  background-color: red;
+}
+
+dd {
+  background-color: tan;
+  margin-bottom: 5px;
+  display: none;
+}
+  </style>
+  <script>
+
+    // 메뉴
+    var acodian = {
+  click: function(target) {
+    var $target = $(target);
+    $target.on('click', function() {
+
+      if ($(this).hasClass('on')) {
+        slideUp($target);
+      } else {
+        slideUp($target);
+        $(this).addClass('on').next().slideDown();
+      }
+
+      function slideUp($target) {
+        $target.removeClass('on').next().slideUp();
+      }
+
+    });
+  }
+};
+acodian.click('.accodian > dt');
+  </script>
+
+</body>
+</html>

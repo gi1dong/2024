@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <link href="../assets/css/modules/bootstrap.css" type="text/css" rel="stylesheet">
+  <link href="../assets/css/reset.css" type="text/css" rel="stylesheet"><!-- reset style -->
+  <link href="../assets/css/style.css" type="text/css" rel="stylesheet"><!-- common style -->
+  <title>프로필 -나의 정보 보기</title>
+</head>
+<body>
+  <div class="container mypage">
+    <div class="mypage-top">
+      <div class="info-wrap">
+        <figure>
+          <img src="../assets/images/img_profile_round.png" alt="프로필이미지" />
+        </figure>
+        <div class="mypage-info">
+          <dl class="info-cont first">
+            <dt class="name">제니딸기05</dt>
+            <dd class="email">dio@sinsabridge.com</dd>
+          </dl>
+          <dl class="info-cont">
+            <dt>메세지이용권</dt>
+            <dd>남은 기간 <b>5일</b>
+              <button class="back-icon">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </dd>
+          </dl>
+          <dl class="info-cont">
+            <dt>프리미엄매칭</dt>
+            <dd>소개팅 <b>1회</b> / 리필 <b>2회</b>
+              <button class="back-icon">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <div class="btn-wrap">
+        <button type="button" class="btn btn-border-pink">사용내역</button>
+        <button type="button" class="btn btn-pink">결제</button>
+      </div>
+    </div>
+    <div class="contents">
+      <form action="" method="post">
+        <dl class="cont-box">
+          <dt>지인관리</dt>
+          <dd>
+            <button type="button">지인 초대
+              <div class="back-icon">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </div>
+            </button>
+            <button type="button">지인 차단
+              <div class="back-icon">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </div>
+            </button>
+          </dd>
+        </dl>
+        <dl class="cont-box">
+          <dt>공지사항</dt>
+          <dd>
+            <button type="button">공지사항
+              <div class="back-icon">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </div>
+            </button>
+          </dd>
+        </dl>
+        <dl class="cont-box">
+          <dt>설정</dt>
+          <dd>
+            <button type="button">프로필 등록/수정
+              <div class="back-icon">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </div>
+            </button>
+            <button type="button">비밀번호 변경
+              <div class="back-icon">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </div>
+            </button>
+            <button type="button">알림설정
+              <div class="back-icon">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </div>
+            </button>
+            <button type="button">공지사항
+              <div class="back-icon">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </div>
+            </button>
+            <button type="button">고객센터
+              <div class="back-icon">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </div>
+            </button>
+            <button class="button log-out modal-btn" type="button">로그아웃
+              <div class="back-icon">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </div>
+            </button>
+            <button type="button">탈퇴
+              <div class="back-icon">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </div>
+            </button>
+          </dd>
+        </dl>
+      </form>
+    </div>
+    <nav>
+      <div class="nav">
+        <a class="nav-menu icon_member" href="javascript:;">회원</a>
+        <a class="nav-menu icon_letter" href="javascript:;">쪽지</a>
+        <a class="nav-menu icon_board" href="javascript:;">이용게시판</a>
+        <a class="nav-menu icon_premium" href="javascript:;">프리미엄</a>
+        <a class="nav-menu icon_mypage on" href="javascript:;">프로필</a>
+      </div>
+    </nav>
+    <div class="modal-wrap log-out" style="display:none;">
+      <div class="modal-box" id="modal">
+        <div class="modal-con ">
+          <div class="modal-txt">
+            <div class="modal-txt">
+              <p>닉네임 - <span>김준서</span> 클럽 <br> 이메일 <span>ujuffo@naver.com</span></p>
+              <b>프리미엄회원을 신청하시겠습니까?</b>
+            </div>
+          </div>
+        </div>
+        <div class="btns d-flex">
+          <button type="button" id="modal-cancel" class="btn col-6 gray-color cancel-btn">닫기</button>
+          <a href="javascript:void(0)" id="modal-submit" class="btn col-6 pink-color">로그아웃</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<script>
+  const modalPopOpen = () => {
+    const modalBtnEl = document.getElementsByClassName("modal-btn");
+    const modalBoxEl = document.getElementsByClassName("modal-wrap")[0];
+    for (let el of modalBtnEl) {
+      el.addEventListener("click", function (e) {
+        const target = e.target;
+        modalBoxEl.style.display = "block";
+      })
+    }
+  }
+  const modalBtnHandler = () => {
+    const modalCancelBtnEl = document.getElementById("modal-cancel");
+    const modalSubmitBtnEl = document.getElementById("modal-submit");
+    const modalBoxEl = document.getElementsByClassName("modal-wrap")[0];
+    modalCancelBtnEl.addEventListener("click", function () {
+      modalBoxEl.style.display = "none";
+    })
+    modalSubmitBtnEl.addEventListener("click", function () {
+      modalBoxEl.style.display = "none";
+    })
+  }
+  const modalDataHandler = () => {
+    /* ajax 호출 코드 */
+    if (data) {
+      const modalData = ``
+    }
+  }
+  const init = () => {
+    modalBtnHandler();
+    modalPopOpen();
+  }
+  window.addEventListener("load", init);
+
+$('.nav>a').click(function(){
+ if($(this).hasClass("on")){
+  $(this).addClass("on");
+ }else{
+  $('.nav>a').removeClass("on");
+  $(this).addClass("on");
+ }
+});
+
+</script>

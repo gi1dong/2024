@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>꽃중년 | 회원가입</title>
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <link href="../assets/css/modules/bootstrap.css" type="text/css" rel="stylesheet">
+  <link href="../assets/css/reset.css" type="text/css" rel="stylesheet">
+  <link href="../assets/css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+  <div class="container ">
+    <header>
+      <div class="header">
+        <a href="javascript:void(0)" class="back-icon">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <div class="now-menu-tit">프로필등록</div>
+        <a href="javascript:void(0)" class="skip-icon">건너뛰기</a>
+      </div>
+    </header>
+    <main>
+      <div class="contents">
+        <form action="/member/addInformation" method="post">
+          <dl class="input-box">
+            <dt class="input-tit">
+              <label for="memberPrupose">만남목적</label>
+            </dt>
+            <dd class="input-con">
+              <div class="input-select modal-btn" data-name="">
+                선택
+                <a href="javascript:void(0)" class="back-icon">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+              </div>
+              <input type="hidden" id="memberPrupose" name="memberPrupose">
+            </dd>
+          </dl>
+          <dl class="input-box">
+            <dt class="input-tit">
+              <label for="memberHobby">취미</label>
+            </dt>
+            <dd class="input-con">
+              <div class="input-select modal-btn" data-name="">
+                선택
+                <a href="javascript:void(0)" class="back-icon">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+              </div>
+              <input type="hidden" id="memberHobby" name="memberHobby">
+            </dd>
+          </dl>
+          <dl class="input-box">
+            <dt class="input-tit">
+              <label for="memberMarrige">결혼여부</label>
+            </dt>
+            <dd class="input-con">
+              <div class="input-select modal-btn" data-name="">
+                선택
+                <a href="javascript:void(0)" class="back-icon">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+              </div>
+              <input type="hidden" id="memberMarrige" name="memberMarrige">
+            </dd>
+          </dl>
+          <dl class="input-box">
+            <dt class="input-tit">
+              <label for="memberCar">차량</label>
+            </dt>
+            <dd class="input-con">
+              <div class="input-select modal-btn" data-name="">
+                선택
+                <a href="javascript:void(0)" class="back-icon">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+              </div>
+                <input type="hidden" id="memberCar" name="memberCar">
+            </dd>
+          </dl>
+          <dl class="input-box">
+            <dt class="input-tit">
+              <label for="memberJob">직업</label>
+            </dt>
+            <dd class="input-con">
+              <div class="input-select modal-btn" data-name="">
+                선택
+                <a href="javascript:void(0)" class="back-icon">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+              </div>
+              <input type="hidden" id="memberJob" name="memberJob">
+            </dd>
+          </dl>
+          <dl class="input-box">
+            <dt class="input-tit">
+              <label for="memberEducation">학력</label>
+            </dt>
+            <dd class="input-con">
+              <div class="input-select modal-btn" data-name="">
+                선택
+                <a href="javascript:void(0)" class="back-icon">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+              </div>
+                <input type="hidden" id="memberEducation" name="memberEducation">
+            </dd>
+          </dl>
+          <dl class="input-box">
+            <dt class="input-tit">
+              <label for="memberSalary">연봉</label>
+              <span class="checkbox-icon">
+                <input type="checkbox" class="none" id="check-hide01">
+                <label for="check-hide01">
+                  <span class="icon"></span>
+                </label>
+                <label for="check-hide01">비공개</label>
+              </span>
+            </dt>
+            <dd class="input-con">
+              <div class="input-select modal-btn" data-name="">
+                선택
+                <a href="javascript:void(0)" class="back-icon">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+              </div>
+              <input type="hidden" id="memberSalary" name="memberSalary">
+            </dd>
+          </dl>
+          <dl class="input-box">
+            <dt class="input-tit">
+                <label for="memberAssets">자산</label>
+                <span class="checkbox-icon">
+                  <input type="checkbox" class="none" id="check-hide02">
+                  <label for="check-hide02">
+                    <span class="icon"></span>
+                  </label>
+                  <label for="check-hide02">비공개</label>
+                </span>
+            </dt>
+            <dd class="input-con">
+              <div class="input-select modal-btn" data-name="">
+                선택
+                <a href="javascript:void(0)" class="back-icon">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+              </div>
+                <input type="hidden" id="memberAssets" name="memberAssets">
+            </dd>
+          </dl>
+          <dl class="input-box">
+            <dt class="input-tit">
+              <label for="memberDoseAlcohol">음주</label>
+            </dt>
+            <dd class="input-con">
+              <div class="input-select modal-btn" data-name="">
+                선택
+                <a href="javascript:void(0)" class="back-icon">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+              </div>
+              <input type="hidden" id="memberDoseAlcohol" name="memberDoseAlcohol">
+            </dd>
+          </dl>
+          <dl class="input-box">
+            <dt class="input-tit">
+              <label for="memberDoseCigarette">흡연</label>
+            </dt>
+            <dd class="input-con">
+              <div class="input-select modal-btn" data-name="">
+                선택
+                <a href="javascript:void(0)" class="back-icon">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+              </div>
+              <input type="hidden" id="memberDoseCigarette" name="memberDoseCigarette">
+            </dd>
+          </dl>
+          <dl class="input-box">
+            <dt class="input-tit">
+              <label for="memberHeight">키</label>
+            </dt>
+            <dd class="input-con">
+              <div class="input-select modal-btn" data-name="">
+                선택
+                <a href="javascript:void(0)" class="back-icon">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+              </div>
+              <input type="hidden" id="memberHeight" name="memberHeight">
+            </dd>
+          </dl>
+          <dl class="input-box">
+            <dt class="input-tit">
+              <label for="memberWeight">몸무게</label>
+            </dt>
+            <dd class="input-con">
+              <div class="input-select modal-btn" data-name="">
+                선택
+                <a href="javascript:void(0)" class="back-icon">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+              </div>
+              <input type="hidden" id="memberWeight" name="memberWeight">
+            </dd>
+          </dl>
+          <dl class="input-box">
+            <dt class="input-tit">
+              <label for="memberWeight">몸무게</label>
+            </dt>
+            <dd class="input-con">
+              <div class="input-select modal-btn" data-name="">
+                선택
+                <a href="javascript:void(0)" class="back-icon">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+              </div>
+              <input type="hidden" id="memberWeight" name="memberWeight">
+            </dd>
+          </dl>
+          <dl class="input-box">
+            <dt class="input-tit">
+              <label for="memberWeight">몸무게</label>
+            </dt>
+            <dd class="input-con">
+              <div class="input-select modal-btn" data-name="">
+                선택
+                <a href="javascript:void(0)" class="back-icon">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+              </div>
+              <input type="hidden" id="memberWeight" name="memberWeight">
+            </dd>
+          </dl>
+        </form>
+        <div class="btn-wrap one-btn non-color-btn">
+          <button type="button" id="" class="submit-btn">프로필 등록 완료</button>
+        </div>
+      </div>
+    </main>
+    <div class="modal-wrap" style="display: none;">
+      <div class="modal-box" id="modal">
+          <div class="modal-tit">만남목적</div>
+          <div class="modal-con">
+              <ul>
+                  <li>테스트1</li>
+                  <li class="active">테스트2</li>
+                  <li>테스트3</li>
+                  <li>테스트3</li>
+                  <li>테스트3</li>
+                  <li>테스트3</li>
+                  <li>테스트3</li>
+              </ul>
+          </div>
+          <div class="btn-wrap two-btn">
+            <button type="button" id="modal-cancel" class="cancel-btn">취소</button>
+            <button type="button" id="modal-submit" class="submit-btn">확인</button>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+<script>
+    const modalPopOpen = () => {
+        const modalBtnEl = document.getElementsByClassName("modal-btn");
+        const modalBoxEl = document.getElementsByClassName("modal-wrap")[0];
+        for(let el of modalBtnEl){
+            el.addEventListener("click", function(e){
+                const target = e.target;
+                modalBoxEl.style.display="block";
+            })
+        }
+    }
+    const modalBtnHandler = () => {
+        const modalCancelBtnEl = document.getElementById("modal-cancel");
+        const modalSubmitBtnEl = document.getElementById("modal-submit");
+        const modalBoxEl = document.getElementsByClassName("modal-wrap")[0];
+        modalCancelBtnEl.addEventListener("click", function(){
+            modalBoxEl.style.display="none";
+        })
+        modalSubmitBtnEl.addEventListener("click", function(){
+            modalBoxEl.style.display="none";
+        })
+    }
+    const modalDataHandler = ()=> {
+
+        /* ajax 호출 코드 */
+
+
+        if( data ){
+            const modalData =`
+            
+            `
+        }
+
+
+    }
+    const init = ()=>{
+        modalBtnHandler();
+        modalPopOpen();
+    }
+    window.addEventListener("load", init);
+</script>

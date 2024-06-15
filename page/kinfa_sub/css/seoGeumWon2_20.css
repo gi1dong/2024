@@ -1,0 +1,66 @@
+/* 채용공고 seoGeumWon2_20.html*/
+.recruitment_process, .recruitment_process_table{width: 100%; display: block; margin: 80px auto 0;}
+.recruitment_process_table .table_header_wrap, .recruitment_process_table .table_header_wrap .table_header_tr, .recruitment_process_table .table_header_wrap .table_header_tr .table_header_th{display: block; width: 100%; }
+.recruitment_process_table .table_header_wrap .table_header_tr .table_header_th .table_item_wrap{width: 100%; margin: 0 auto; background: #F8F8F8; border-top:3px solid var(--point1); border-bottom:1px solid var(--chr12); display: block; overflow: hidden;}
+.recruitment_process_table .table_header_wrap .table_header_tr .table_header_th .table_item_wrap .responsive_wrap{width: 60%; float: left; display: flex; justify-content: space-between; align-items: center;}
+.recruitment_process_table .table_header_wrap .table_header_tr .table_header_th .table_item_wrap .responsive_wrap .number{width: 10%; line-height: 50px; height: 50px; border-right: 1px solid var(--chr12);}
+.recruitment_process_table .table_header_wrap .table_header_tr .table_header_th .table_item_wrap .responsive_wrap .title{width: 90%; line-height: 50px; height: 50px; border-right: 1px solid var(--chr12);}
+.recruitment_process_table .table_header_wrap .table_header_tr .table_header_th .table_item_wrap .responsive_right{width: 40%; float: right; display: flex; justify-content: space-between; align-items: center;}
+.recruitment_process_table .table_header_wrap .table_header_tr .table_header_th .table_item_wrap .responsive_right>div{width: 33.33333333333333%; line-height: 50px; height: 50px; text-align: center; border-right: 1px solid var(--chr12);}
+.recruitment_process_table .table_header_wrap .table_header_tr .table_header_th .table_item_wrap .responsive_right>.views{border-right: none;}
+.recruitment_process_table .table_body, .recruitment_process_table .table_body .table_body_tr, .recruitment_process_table .table_body .table_body_tr .table_body_td{display: block; margin: 0 auto; width: 100%;}
+.recruitment_process_table .table_body .table_body_tr .table_body_td .table_item_wrap{width: 100%; margin: 0 auto; border-bottom:1px solid var(--chr12);  overflow: hidden; display: block;}
+.recruitment_process_table .table_body .table_body_tr .table_body_td .table_item_wrap .responsive_wrap{width: 60%; float: left; display: flex; justify-content: space-between; align-items: center; flex-direction: row; line-height: 50px; height: 50px;}
+.recruitment_process_table .table_body .table_body_tr .table_body_td .table_item_wrap .responsive_right{width: 40%; float: right; display: flex; justify-content: space-between; align-items: center;}
+.recruitment_process_table .table_body .table_body_tr .table_body_td .table_item_wrap .responsive_right>div{width: 33.33333333333333%; line-height: 50px; height: 50px; text-align: center; border-right: 1px solid var(--chr12);}
+.recruitment_process_table .table_body .table_body_tr .table_body_td .table_item_wrap .responsive_wrap .number{width: 10%; line-height: 50px; height: 50px; border-right: 1px solid var(--chr12); text-align: center;}
+.recruitment_process_table .table_body .table_body_tr .table_body_td .table_item_wrap .responsive_wrap .title{width: 90%; line-height: 50px; height: 50px; border-right: 1px solid var(--chr12); padding-left: 10px;}
+.recruitment_process_table .table_body .table_body_tr .table_body_td .table_item_wrap .responsive_right>.views{border-right: none;}
+
+/*채용공고 내 검색 영역 버튼 */
+.recruitment_process .search_btn{background: var(--point3); color: #fff; text-align: center; font-size: 16px; line-height: 50px; height: 50px; display: flex;}
+.recruitment_process .search_box{width:100%; background: var(--chr10); border-radius: 12px; padding: 30px 10px;}
+.recruitment_process .search_box form{display: block; width: 100%;}
+.recruitment_process .search_box form fieldset{display: flex; justify-content: space-between; margin: 0 auto; flex-wrap: wrap; line-height: 50px; height: 50px; width: 100%; }
+.recruitment_process .search_box form fieldset select{width:calc(20% - 3px); flex: 1; outline: none;  border:1px solid #CFCFCF; cursor: pointer; color: #898989; font-size: 16px; text-align: left; margin-right: 6px; border-radius: 4px;}
+.recruitment_process .search_box form fieldset select option{outline: none; color: #898989; font-size: 16px; text-align: left; line-height: 1.5625;}
+.recruitment_process .search_box form input{width:calc(80% - 3px); outline: none; border:1px solid #CFCFCF;  cursor: pointer; flex: 5; border-radius: 4px;  color: #898989; font-size: 16px;}
+.recruitment_process .search_btn{ text-align: center; }
+.recruitment_process .btn.max_width235{margin: 24px auto 0;}
+
+/* seoGeumWon2_20.html 글쓰기 버튼 관련 css */
+.recruitment_process .right_writer_btn{float: right; max-width: 110px; width: 100%; text-align: center; height: 50px; line-height: 50px; color: #fff;  background: var(--point3); font-size: 18px; border-radius: 12px; margin: 24px auto 0;}
+/* seoGeumWon2_20.html  페이지네이션 관련 css */
+.recruitment_process .paginate{margin: 80px auto 0; width: 100%; display: block;}
+.recruitment_process .paginate>ol{margin: 80px auto 0; width: 100%; display: flex; justify-content: center; align-items: center; text-align: center;}
+.recruitment_process .paginate>ol li {width: 25px; margin-right: 20px;}
+.recruitment_process .paginate>ol li:last-child { margin-right: 0;}
+.recruitment_process .paginate>ol li a{ display: block; width: 25px; font-size: 15px; color: #333; line-height: 1.6;}
+
+/********************* max-width:767px******************************************/      
+@media all and (max-width:767px) {
+.recruitment_process .search_btn{ line-height:30px; height: 30px;}
+/* seoGeumWon2_20.html 채용공고  - 채용공고 내 검색 영역 */
+.recruitment_process .search_box form fieldset{display: block;  line-height:unset; height:unset; }
+.recruitment_process .search_box form fieldset select, .recruitment_process .search_box form fieldset input{width: 94%; display: block; margin: 0 auto 30px; line-height: 40px; height: 40px;}
+.recruitment_process .btn.max_width235{margin: 0 auto;}
+.recruitment_process_table .table_header_wrap .table_header_tr{display: none;}
+.recruitment_process_table .table_body .table_body_tr .table_body_td .table_body_item_wrap .responsive_wrap .table_body_item.number, .recruitment_process_table .table_body .table_body_tr .table_body_td .table_body_item_wrap .responsive_wrap .table_body_item.title{border-left: none;}
+.recruitment_process_table .table_body .table_body_tr .table_body_td .table_item_wrap .responsive_wrap{flex-wrap: wrap; float: unset; width: 100%;}
+.recruitment_process_table .table_body .table_body_tr .table_body_td .table_item_wrap .responsive_right{display: block; width: 100%; text-align: left;}
+
+/*seoGeumWon2_20.html 채용공고 작성일자 */
+.recruitment_process_table .table_body .table_body_tr .table_body_td .table_item_wrap .responsive_right{ justify-content: flex-end;}
+/*seoGeumWon2_20.html  table border 삭제 */
+.recruitment_process_table .table_body .table_body_tr .table_body_td .table_item_wrap .responsive_wrap .number, .recruitment_process_table .table_body .table_body_tr .table_body_td .table_item_wrap .responsive_wrap .title, .recruitment_process_table .table_body .table_body_tr .table_body_td .table_item_wrap .responsive_right>div{border-right: none;}
+.recruitment_process_table .table_body .table_body_tr .table_body_td .table_item_wrap .responsive_wrap .title, .recruitment_process_table .table_body .table_body_tr .table_body_td .table_item_wrap .responsive_right{flex-wrap: wrap;}
+
+/*seoGeumWon2_20.html  채용공고 내 table header 삭제 및 tobody border 추가*/
+.recruitment_process_table .table_body .table_body_tr .table_body_td .table_item_wrap .responsive_right .file, .recruitment_process_table .table_body .table_body_tr .table_body_td .table_item_wrap .responsive_right>.views{display: none;}
+.recruitment_process_table .table_body{border-top: 3px solid var(--point1);}
+
+/*seoGeumWon2_20.html 글쓰기 버튼 관련 css */
+.recruitment_process .right_writer_btn{ height: 40px; line-height: 40px; font-size: 16px; margin: 24px auto 0; float: unset; max-width: 100%; width:100%; text-align: center; display: block;}
+
+
+}

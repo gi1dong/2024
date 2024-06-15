@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="211" viewBox="0 0 220 211">
+  <g id="그룹_18728" data-name="그룹 18728" transform="translate(-310 -158)">
+    <g id="사각형_5114" data-name="사각형 5114" transform="translate(310 158)" fill="#f8f8f8" stroke="#cfcfcf" stroke-width="1">
+      <rect width="220" height="211" rx="12" stroke="none"/>
+      <rect x="0.5" y="0.5" width="219" height="210" rx="11.5" fill="none"/>
+    </g>
+    <path id="다각형_19" data-name="다각형 19" d="M10,0,20,20H0Z" transform="translate(381 258) rotate(180)" fill="#aaa"/>
+    <g id="그룹_18726" data-name="그룹 18726" transform="translate(191 -49)">
+      <rect id="사각형_5113" data-name="사각형 5113" width="68" height="26" rx="8" transform="translate(146 273)" fill="#aaa"/>
+      <text id="일반회원" transform="translate(180 291)" fill="#fff" font-size="12" font-family="NotoSansCJKkr-DemiLight, Noto Sans CJK KR DemiLight" font-weight="300" letter-spacing="-0.03em"><tspan x="-21.54" y="0">일반회원</tspan></text>
+    </g>
+    <text id="_20_" data-name="20%" transform="translate(371 276)" fill="#333" font-size="18" font-family="NotoSansCJKkr-Bold, Noto Sans CJK KR" font-weight="700" letter-spacing="-0.03em"><tspan x="-18.729" y="0">20%</tspan></text>
+    <path id="다각형_18" data-name="다각형 18" d="M10,0,20,20H0Z" transform="translate(462 312) rotate(180)" fill="#8048c1"/>
+    <text id="_68_" data-name="68%" transform="translate(452 339)" fill="#333" font-size="28" font-family="NotoSansCJKkr-Bold, Noto Sans CJK KR" font-weight="700" letter-spacing="-0.03em"><tspan x="-29.134" y="0">68%</tspan></text>
+    <text id="매칭확률증가" transform="translate(420 207)" fill="#333" font-size="28" font-family="NotoSansCJKkr-Bold, Noto Sans CJK KR" font-weight="700" letter-spacing="-0.03em"><tspan x="-75.18" y="0">매칭확률증가</tspan></text>
+    <g id="그룹_18725" data-name="그룹 18725" transform="translate(272 6)">
+      <rect id="사각형_5113-2" data-name="사각형 5113" width="82" height="32" rx="8" transform="translate(139 268)" fill="#8048c1"/>
+      <text id="추천회원" transform="translate(180 291)" fill="#fff" font-size="16" font-family="NotoSansCJKkr-DemiLight, Noto Sans CJK KR DemiLight" font-weight="300" letter-spacing="-0.03em"><tspan x="-28.72" y="0">추천회원</tspan></text>
+    </g>
+  </g>
+</svg>

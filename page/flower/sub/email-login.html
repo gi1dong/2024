@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+  />
+  <title>이메일 로그인</title>
+<script src="../assets/js/jquery-3.6.0.min.js"></script>
+<link href="../assets/css/modules/bootstrap.css" type="text/css" rel="stylesheet">
+<link href="../assets/css/reset.css" type="text/css" rel="stylesheet">
+<link href="../assets/css/style.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+    <header>
+       <div class="header">
+        <a href="javascript:void(0)" class="back-icon">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <div class="now-menu-tit">이메일 로그인</div>
+      </div>
+    </header>
+    <main>
+      <div class="contents email-login found-info">
+        <div class="cont-top ">
+          <form action="">
+            <dl class="input-box">
+              <dt class="input-tit">
+                <label for="">이메일</label>
+              </dt>
+              <dd class="input-con">
+                <span class="email-local">
+                  <input class="input-select" type="text" placeholder="이메일">
+                </span>
+                <span class="email-separator">@</span>
+                <span class="email-domain">
+                  <select class="input-select" name="emailDomain" id="emailDomain" onchange="emailSelectHandler();">
+                    <option value="naver.com">naver.com</option>
+                    <option value="gmail.com">gmail.com</option>
+                    <option value="daum.net">daum.net</option>
+                    <option value="hanmail.net">hanmail.net</option>
+                    <option value="nate.com">nate.com</option>
+                    <option value="DirectInput">직접입력</option>
+                  </select>
+                </span>
+              </dd>
+            </dl>
+            <dl class="input-box">
+              <dt class="input-tit"><label for="pwd">비밀번호</label></dt>
+              <dd class="input-con"><input class="input-select" type="password" name="" id="pwd" placeholder="비밀번호를 입력하세요.">
+              </dd>
+            </dl>
+          </form>
+          <div class="btn-wrap">
+            <button type="button" class="btn btn-block btn-normal btn-gray" >로그인</button>
+          </div>
+        </div>
+        <div class="content-wrap">
+          <div class="cont-middle ">
+            <p class="subheading">간편 회원가입</p>
+            <a class="link-icon e-mail" href="javascript:;"><img src="../assets/images/icon_message.png" alt="이메일" class="link-icon-img"/>이메일로 시작하기</a>
+            <a class="link-icon naver" href="javascript:;"><img src="../assets/images/icon_naver.png" alt="네이버" class="link-icon-img"/>네이버로 시작하기</a>
+            <a class="link-icon kakao" href="javascript:;"><img src="../assets/images/icon_kakao.png" alt="카카오톡" class="link-icon-img"/> 카카오로 시작하기</a>
+          </div>
+          <ul class="bottom-menu">
+            <li><a href="javascript:;">아이디 찾기</a></li>
+            <li><a href="javascript:;">비밀번호 찾기</a></li>
+            <li><a href="javascript:;">로그인</a></li>
+            <li><a href="javascript:;">고객센터</a></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

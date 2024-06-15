@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>꽃중년 | 비밀번호 찾기</title>
+<link href="../assets/css/modules/bootstrap.css" type="text/css" rel="stylesheet">
+<link href="../assets/css/reset.css" type="text/css" rel="stylesheet">
+<link href="../assets/css/style.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container found-info pwd">
+    <header>
+      <div class="header">
+        <a href="javascript:void(0)" class="back-icon">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+        <div class="now-menu-tit">비밀번호 찾기</div>
+      </div>
+    </header>
+    <main>
+      <div class="contents all-height-info">
+        <form action="">
+        <dl class="input-box">
+            <dt class="input-tit">
+              <label for="">이메일</label>
+            </dt>
+            <dd class="input-con">
+            <span class="email-local">
+                <input class="input-select" type="text" placeholder="이메일">
+            </span>
+            <span class="email-separator">@</span>
+            <span class="email-domain">
+                <select class="input-select" name="emailDomain" id="emailDomain" onchange="emailSelectHandler();">
+                <option value="naver.com">naver.com</option>
+                <option value="gmail.com">gmail.com</option>
+                <option value="daum.net">daum.net</option>
+                <option value="hanmail.net">hanmail.net</option>
+                <option value="nate.com">nate.com</option>
+                <option value="DirectInput">직접입력</option>
+                </select>
+            </span>
+            </dd>
+        </dl>
+        </form> 
+        <dl class="input-box">
+            <dt class="input-tit">
+              <label for="pwd">휴대폰번호</label>
+            </dt>
+            <dd class="input-con"> 
+                <span class="phone-company">
+                    <select class="input-select" name="" id="">
+                      <option value="">통신사</option>
+                    </select>
+                </span>
+                <span class="phone-number">
+                  <input class="input-select" type="number" name="" id="pwd" placeholder="010-0000-0000"></span>
+            </dd>
+        </dl>
+        <button id="cerp-call-btn" class="btn btn-border-pink btn-block btn-normal" data-use="true">인증번호 전송</button>
+        <div class="background-gray mt16" id="cerp-number-box" style="display:none">
+          <dl class="input-box">
+              <dt class="input-tit">
+                <label for="pwd">인증번호</label>
+              </dt>
+              <dd class="input-con">
+                  <span class="cerp-number">
+                      <input class="input-style bg-transparent" type="number" name="" id="pwd" placeholder="인증코드 6자리 입력">
+                      <span class="cerp-timer">0:00</span>
+                  </span>
+                  <span class="cerp-btn"><button class="btn btn-block btn-pink">확인</button></span>
+              </dd>
+          </dl>
+          <div class="re-cerp-wrap">
+              <button type="button" class="re-cerp pink-color">인증번호 재전송</button>
+          </div>
+        </div>
+      </div>
+      <div class="btn-wrap non-modal-btn one-btn">
+        <button type="button" >다음</button>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
+<script>
+    /** 인증번호 전송 버튼 클릭 이벤트 **/
+    const cerpCallEventHandler = ()=> {
+        const callBtnEl = document.getElementById("cerp-call-btn");
+        const cerpInputBoxEl = document.getElementById("cerp-number-box");
+
+        callBtnEl.addEventListener("click", function(e){
+            const target = e.target;
+
+            /* 중복 방지 호출 여부 체크 */
+            if(target.getAttribute("data-use") == "true" ){
+                aJaxCerp();
+
+                cerpInputBoxEl.style.display="block";
+                cerpInputBoxEl.style.marginLeft ="-2rem";
+                cerpInputBoxEl.style.padding="0 2rem;";
+                cerpInputBoxEl.style.width="100% + 4rem";
+                delete target.dataset.use;
+
+                cerpTimer();
+            }
+        })
+    }
+
+    /** 인증번호 재전송 버튼 이벤트 **/
+    const reCerpMessageHandler = () => {
+        const reCerpBtnEl = document.getElementsByClassName("re-cerp")[0];
+        reCerpBtnEl.addEventListener("click", function(){
+            cerpTimer();
+        })
+    }
+
+    /** 타이머 함수 **/
+    const cerpTimer = () => {
+        let time = 10;
+        let min, sec;
+        const timeBoxEl = document.getElementsByClassName("cerp-timer")[0];
+        const reCerpBtnEl = document.getElementsByClassName("re-cerp")[0];
+
+        const timeHandle = setInterval(function() {
+            min = parseInt(time/60);
+            sec= time%60;
+
+            if( sec < 10 ){
+                sec = "0" + sec;
+            }
+
+            let renderTime = min + ":" + sec; 
+
+            timeBoxEl.innerHTML = renderTime;
+            time--;
+
+            if( time < 0 ){
+                clearInterval(timeHandle);
+            }
+
+            /* 재전송 클릭 시 타이머 초기화 */
+            reCerpBtnEl.addEventListener("click", function(){
+                clearInterval(timeHandle); 
+            })
+
+        }, 1000);
+    }
+
+    /** 인증번호 전송 api 함수 **/
+    const aJaxCerp = () => {
+
+    }
+
+    const init = ()=>{
+        cerpCallEventHandler();
+        reCerpMessageHandler();
+    }
+
+    window.addEventListener("load", init);
+</script>

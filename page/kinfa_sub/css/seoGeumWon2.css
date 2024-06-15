@@ -1,0 +1,262 @@
+@charset "utf-8";
+/*common color */
+:root {
+  --chr1:#333;
+  --chr2:#fff;
+  --chr3:#503B26;
+  --chr4:#888888;
+  --chr6:#898989;
+  --chr7:#AAAAAA;
+  --chr8:#F8F8F8;
+  --chr9:#CFCFCF;
+  --chr10:#F5F5F5;
+  --chr11:#606060;
+  --chr12:#D5D5d5;
+  --point1:#3351A7;
+  --point2:#5990D9;
+  --point3:#595ED9;
+  --point4:#DEF6FF;
+  }
+
+/*
+[아래 html 문서의 CSS 소스 존재합니다.]
+*서금원2 
+윤리헌장 seoGeumWon2_01
+임직원  실천강령 seoGeumWon2_02  
+임직원 행동강령 seoGeumWon2_03
+임직원 행동강령 주요내용 seoGeumWon2_04
+클린신고센터 seoGeumWon2_05 
+개인정보수집 및 이용 동의서 seoGeumWon2_06 
+서금원 2 모달창  
+윤리경영 추진체계 
+*/
+
+/* 서금원2- 윤리헌장 seoGeumWon2_01  */
+.seoGeumWon2_01 .certification_wrap{width: 100%; margin:0 auto; background: var(--chr10); padding: 40px 0;}
+.seoGeumWon2_01 .certification_wrap .certification_box{width: calc(100% - 30px); margin:0 auto; display: flex; justify-content: center; align-items: center; background: #fff; border-radius: 12px; flex-direction: column; padding: 40px;}
+.seoGeumWon2_01 .certification_wrap .certification_box h3{font-size: 20px; text-align: center; font-weight: 600;line-height: 1.45; margin: 20px auto;}
+.seoGeumWon2_01 .certification_wrap .certification_box .sub_txt{font-size: 16px; text-align:center; font-weight: 300; line-height: 1.5;}
+.seoGeumWon2_01 .certification_wrap .certification_box ul{margin: 30px auto 6px;}
+.seoGeumWon2_01 .certification_wrap .certification_box ul li{width: 100%;text-align: center;}
+.seoGeumWon2_01 .certification_wrap .certification_box ul li em{display: block; font-weight: 600; color: var(--point1); margin: 16px auto 6px;}
+.seoGeumWon2_01 .circle_box{margin:38px auto 50px; display: block; width: 100%;}
+.seoGeumWon2_01 .circle_box .circle{display: block; width: 5px; height: 5px; border-radius: 100%; background: var(--chr11); margin: 20px auto;}
+
+/* 서금원2- 임직원  실천강령 seoGeumWon2_02  */
+.contents .subheading_txt{margin: 0 auto 28px;}
+.seoGeumWon2_02 .ethical_management_box{width: 100%; border-top: 1px solid #333; border-bottom: 1px solid #333;}
+.seoGeumWon_item{width: 100%; border-top: 1px solid #D5D5D5; position: relative;}
+.seoGeumWon_item:not(.seoGeumWon_item:first-child){width: 100%; border-top: 1px solid #D5D5D5 ;}
+.seoGeumWon_item .seoGeumWon_btn{display: flex; justify-content: left; width: 100%; padding: 30px 10px;position: relative; margin: 0 auto; line-height: 1.45; color:#333333;}
+.seoGeumWon_item .seoGeumWon_btn .chapter_arrow{ display: block; width: 8px; height: 12px; position: absolute; right: 40px; top: 50%; transform: translateY(-50%); background: url(../images/arrow_under.png) no-repeat 360px / contain; background-position: center;}
+.seoGeumWon_item .subMenu{display: block; overflow:hidden; height: 0; }
+.seoGeumWon_item .subMenu ul{width: 100%; display: block; padding: 30px; color: #333333;  background:#F5F5F5; font-size: 15px; text-align: left; line-height: 1.533333333333333;}
+.seoGeumWon_item .subMenu ul li{padding: 10px 5px;}
+.seoGeumWon_item.on .seoGeumWon_btn.on{font-weight: 700;}
+ .seoGeumWon_item.on .subMenu{height: 100%; overflow: visible; background:#F5F5F5;}
+
+
+.seoGeumWon2_02 .ethical_management_box .seoGeumWon_item .seoGeumWon_btn .num{ font-size: 20px; font-weight: 500;line-height: 1.45; display: block; max-width: 110px; width: 100%; text-align: center;}
+.seoGeumWon2_02 .ethical_management_box .seoGeumWon_item .seoGeumWon_btn .chapter_txt{font-size: 20px; text-align: left; font-weight: 300;}
+
+/* 서금원2- 임직원 행동강령 seoGeumWon2_03  */
+.seoGeumWon2_01 .center_content_fifth .contact_us>li{ position: relative;}
+.seoGeumWon2_01 .center_content_fifth .contact_us>li a{ width: calc(100% - 30px); position: unset; bottom: unset;}
+
+/* 서금원2- 클린신고센터 seoGeumWon2_05 */
+.seoGeumWon2_05 .service_box{display: flex; width: 100%; justify-content: space-between; margin: 0 auto; flex-direction: row; flex-wrap: wrap;}
+.seoGeumWon2_05 .service_box .service_itm {width: calc(50% - 6px); border-radius :12px; height: 220px; border-right: 1px solid #CFCFCF; border-bottom: 1px solid #CFCFCF;border-left: 1px solid #CFCFCF; display: block;  margin-bottom: 20px;}
+.service_box .service_itm .sub_subject{background: var(--point1); color: #fff; border-radius: none; }
+.service_box .service_itm .sub_cta{ display: block; width: calc(100% - 24px); padding: 24px 0 0 0; font-size: 16px; text-align: left; line-height: 1.875; margin: 0 auto;}
+.subheading_txt{font-size: 20px; font-weight: 600; display: block; width: 100%; text-align: left; margin: 40px auto 20px;}
+.precautions_box{background: var(--chr10); border-radius: 12px; padding: 30px; box-sizing: border-box; font-size: 15px; line-height: 1.533333333333333;}
+.warning_txt{color: #CF003F; font-weight: 500;}
+.seoGeumWon2_05 .btn_wrap{display: flex; justify-content: center;}
+.seoGeumWon2_05 .btn_wrap a{max-width: 234px; flex: 1; width: 100%; color: #fff; background: var(--point3); text-align: center; font-size: 18px; display: inline-block; border-radius: 12px; padding: 10px 0; margin-top:20px;}
+.seoGeumWon2_05 .btn_wrap a:nth-child(1){ margin-right: 20px; }
+.btn_wrap{display: flex; justify-content: center;}
+.btn_wrap a{max-width: 234px; flex: 1; width: 100%; color: #fff; background: var(--point3); text-align: center; font-size: 18px; display: inline-block; border-radius: 12px; padding: 10px 0; margin-top:20px;}
+.btn_wrap a:nth-child(1){ margin-right: 20px; }
+
+/* 모달창 seoGeumWon2_8.html */
+.dimed{z-index: 2; position: fixed; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100%; background: rgba(0,0,0, 46%);}
+.modal_window{position: absolute; z-index: 3; top: 50%; left: 50%; transform: translate(-50%,-50%); max-width: 655px; width: 100%; border-radius: 12px; height: 510px; background: #fff;}
+.modal_window .modal_bottom{padding: 30px;}
+.modal_window .modal_title{padding: 30px; border-radius: 12px 12px 0 0;}
+.modal_window input{border: 1px solid #CFCFCF; width: 100%; height:35px; line-height: 35px;}
+.modal_window .search_box_name{font-size:16px; display: block; text-align: left; margin-bottom: 10px;}
+.modal_window .description_txt{font-size: 14px; display: block; line-height: 1.785714285714286;margin: 2px auto 12px; text-align: left; width: 100%;}
+.modal_btn_wrap{display: flex; margin: 0 auto; justify-content: space-between; width: 100%; }
+.modal_btn_wrap .modal_btn{width: 50%;}
+.modal_btn_wrap .modal_btn:nth-child(1){position: relative;}
+.modal_btn_wrap .modal_btn:nth-child(1)::after{position: absolute; content: ""; display: block; width:1px; height: 46px; background:#898989; right: 0; top: 50%; transform: translateY(-50%);}
+
+/* 개인정보수집 및 이용 동의서 seoGeumWon2_06  */
+.seoGeumWon2_06 .privacy{}
+.seoGeumWon2_06 .privacy_wrap{width: 100%;}
+.seoGeumWon2_06 .privacy_wrap form{width: 100%; display: block;}
+.seoGeumWon2_06 .privacy_wrap.second{margin-top: 80px;} 
+.seoGeumWon2_06 .privacy_wrap h2{font-size: 20px; display: block; width: 100%; text-align: left; font-weight: 600; margin-bottom: 12px;}
+.seoGeumWon2_06 .privacy_wrap .privacy_box{padding: 30px; border-radius: 12px; border:1px solid #CFCFCF;  background: var(--chr10); }
+.seoGeumWon2_06 .privacy_wrap .privacy_box .privacy_box_txt{display: block; font-size: 14px; text-align: left; color:#898989; line-height: 1.857142857142857;
+overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 7; -webkit-box-orient: vertical;}
+.seoGeumWon2_06 .container{width: 100%; padding-right: 0; padding-left: 0; margin-right: 0;}
+.seoGeumWon2_06 .form-group{display: block; margin: 5px auto;}
+.seoGeumWon2_06 .form-group input{outline: none; width: calc(100% - 4rem);}
+.seoGeumWon2_06 .form-group label{width: 100%;margin: 0 auto 4px;}
+/* .seoGeumWon2_06 .form-group.privacy .form-control{height: 210px;} */
+.seoGeumWon2_06 label{display: flex; justify-content: flex-start; width: 100%; align-items: center; gap: 0.5rem; margin: 5px auto;}
+.seoGeumWon2_06 .agree_txt{margin-left: 12px;}
+.seoGeumWon2_06 .btn{margin: 0;}
+.seoGeumWon2_06 .input-group{display: flex; flex-wrap: nowrap; width: 100%; align-items: center; justify-content: center;}
+.glyphicon{display: block; height: 38px;}
+.input-group{height: 30px; line-height: 30px;}
+.seoGeumWon2_06 .btn.btn-default{height: 38px; line-height: 38px; border-radius: 0;}
+.seoGeumWon2_06 .glyphicon{height: 38px;}
+
+/* 
+윤리경영 추진체계 
+tab menu 탭메뉴 3개 중 1번째 seoGeumWon2_07 /  seoGeumWon2_16.html 
+tab menu 탭메뉴 3개 중 2번째 윤리경영 추진체계 -연도별 추진실적 seoGeumWon1_02/ seoGeumWon2_10.html
+tab menu 탭메뉴 3개 중 3번째 주요활동 =>서금원 1-2번째 페이지 연혁과 디자인 동일 seoGeumWon1_02.html
+*/
+.seoGeumWon2_07 .bubble_wrap{width: 100%; display: flex; justify-content: space-between; align-items: center; margin: 13px auto 60px;}
+.seoGeumWon2_07 .bubble_wrap .speech_bubble{width: calc(50% - 6px); text-align: center; position: relative; z-index: 1;  display: flex; align-items: center; flex-direction: column; justify-content: space-between; }
+.seoGeumWon2_07 .bubble_wrap .speech_bubble .txt_wrap{position: absolute; top:40%; left: 50%; transform: translate(-50%,-50%); z-index: 3; width: 100%; display:block;}
+.seoGeumWon2_07 .bubble_wrap .speecha_bubble p{font-size: 16px; font-weight: 600; line-height: 1.4375;margin: 20px auto 12px; color: #333;}
+.seoGeumWon2_07 .txt_wrap span{font-size: 15px; font-weight: 300; line-height: 1.4375; margin: 0 auto 30px; display: block; color: #333; width: 100%;}
+.seoGeumWon2_07 .bubble_wrap .speech_bubble .bg{ width: 100%; }
+.seoGeumWon2_07 .bubble_wrap .speech_bubble .bg img{display: block; width: 100%;}
+.seoGeumWon2_07 .seoGeumWon2_07_txt{margin: 80px auto; width: 100%; display: block;}
+.seoGeumWon2_07 .seoGeumWon2_07_txt h3{font-size: 20px; font-weight: 600;text-align: left; margin: 0 auto 4px; width: 100%; display: block;}
+.seoGeumWon2_07 .seoGeumWon2_07_txt p{font-size: 15px; font-weight: 300;text-align: left; line-height: 1.533333333333333;}
+.seoGeumWon2_07 .area_main_txt{width: 100%; display: block; text-align: left; font-size: 20px; font-weight: 600; margin: 0 auto 8px;}
+.seoGeumWon2_07 .preview_wrap{padding: 30px; border-radius: 12px; background: var(--point1); color: #fff; text-align: center; }
+.seoGeumWon2_07 .roadmap_wrap{display: flex; width: 100%; margin: 0 auto 80px; justify-content: space-between; flex-direction: row;}
+.seoGeumWon2_07 .roadmap_wrap .roadmap_box{background: var(--point4); border-radius: 12px; width: calc(33.3% - 12px); padding: 30px; text-align: left; }
+.seoGeumWon2_07 .preview_wrap .preview_txt{font-size: 16px; font-weight: 600; margin: 0 auto 18px;display: block; width: 100%; }
+.seoGeumWon2_07 .preview_wrap .preview_sub_txt{display:block; font-size: 15px; font-weight: 300; line-height: 1.533333333333333;}
+.seoGeumWon2_07 .roadmap_wrap .roadmap_box .sub_subject.notBg{text-align: left; font-size: 18px; }
+.seoGeumWon2_07 .roadmap_wrap .roadmap_box .year_txt{font-size: 16px; color: #333; position: relative; padding-bottom: 20px; display: block;} 
+.seoGeumWon2_07 .roadmap_wrap .roadmap_box .year_txt::after{ content: ""; display: block; position: absolute; width: 240px; height: 1px; background: #D5D5D5; bottom: 0; left: 0;}
+.seoGeumWon2_07 .roadmap_wrap .roadmap_box .box_bottom .sub_cta{text-align: left; width: 100%; padding: 0; font-weight: 500; color: var(--point1); font-size: 16px; margin: 20px 0 0 0; display: block;}
+.seoGeumWon2_07 .roadmap_detailed_txt{color:#333; font-size: 16px;display: block; width: 100%;line-height: 1.8125;} 
+.seoGeumWon2_07 .roadmap_detailed_txt.first{margin-bottom: 20px; }
+.seoGeumWon2_07 .sub_title_group{margin: 0 auto 8px; display: block; width: 100%; font-weight: 500;}
+.seoGeumWon2_07 .group_wrap{display: flex; justify-content: space-between; width: 100%; margin: 0 auto; align-items: center;}
+.seoGeumWon2_07 .group_wrap .group_box{width: calc(25% - 21px);}
+.seoGeumWon2_07 .group_wrap .group_box .group_title{padding: 15px; text-align: center; font-size: 18px; font-weight: 500; color: #fff; background: var(--point1); width: 100%; border-radius: 12px 12px 0 0; display: block;}
+.seoGeumWon2_07 .bubble_wrap .speech_bubble p{font-weight: 600;margin: 0 auto 18px;}
+.seoGeumWon2_07 .group_wrap .group_box p{width: 100%; text-align: left; font-size: 16px;line-height: 1.875; padding: 20px 12px 0 12px; border-left:1px solid #CFCFCF; border-right:1px solid #CFCFCF; border-bottom:1px solid #CFCFCF; border-radius: 0 0 12px 12px; height: 122px;}
+.seoGeumWon2_07 .area_main_txt{margin: 80px auto 8px; width: 100%;}
+.seoGeumWon2_07 .evaluation_wrap{display: flex; width: 100%; margin: 0 auto; justify-content: space-between;}
+.seoGeumWon2_07 .evaluation_wrap .evaluation_box{width: calc(25% - 21px); padding: 30px 0; border-radius: 12px; background: #F8F8F8; border: 1px solid #CFCFCF; text-align: center;}
+
+/*seoGeumWon2_08 윤리경영 추진체계 - tab 3번째  주요 활동 / seoGeumWon2_17.html / seoGeumWon2_08 */
+.badge_icon{width: 67px; height: 87px;display: block;}
+.seoGeumWon2_08 .activity_wrap{margin:0 auto; display:flex; justify-content: space-between; width: 100%;}
+.seoGeumWon2_08 .activity_wrap .active_box{width: calc(33.3% - 12px); margin: 0 auto; border-radius: 12px; background: var(--point4); padding: 30px 0; text-align: center; position: relative;}
+.seoGeumWon2_08 .activity_wrap .active_box .competition_name{text-align: center; font-size: 17px; font-weight: 500; line-height: 1.470588235294118; margin: 0 auto 8px;}
+.seoGeumWon2_08 .activity_wrap .active_box .year{font-size: 15px; text-align: center; font-weight: 300;display: block; }
+.seoGeumWon2_08 .activity_wrap .active_box .badge_icon{ position: absolute; bottom: -47px; right: 0; width: 60px; height: 86px; }
+.seoGeumWon2_08 .activity_wrap .active_box .badge_icon img{display: block; width: 100%; height: 100%;}
+
+/*seoGeumWon2_09 인재상 seoGeumWon2_18.html */
+.seoGeumWon2_09{}
+.seoGeumWon2_09 .pc_img{position: relative; display: block; width: 100%;}
+.seoGeumWon2_09 .pc_img img{display: block; width: 100%;}
+.seoGeumWon2_09 figure::after{content: ""; display: block; position: absolute;bottom: 0; left: 0;width: 100%; height: 3px;  background: var(--point1);}
+.seoGeumWon2_09 .talent_wrap{margin: 40px auto 0; width: 100%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;}
+.seoGeumWon2_09 .talent_wrap .talent_box{width: calc(50% - 18px); border-radius: 12px; padding: 30px 5px; border: 1px solid #CFCFCF; height: 215px; display: flex; align-items: center; flex-direction: column; justify-content: center;}
+.seoGeumWon2_09 .talent_wrap .talent_box:nth-child(1),.seoGeumWon2_09 .talent_wrap .talent_box:nth-child(2){margin: 0 auto 55px; color: #333;}
+.seoGeumWon2_09 .talent_wrap .talent_box:nth-child(1){margin-right: 9px;}
+.seoGeumWon2_09 .talent_wrap .talent_box:nth-child(2){margin-left: 9px;}
+.seoGeumWon2_09 .talent_wrap .talent_box .summary{font-size: 15px; display: block; width: 100%; text-align: left;color: #898989; margin: 0 auto 5px;}
+.seoGeumWon2_09 .talent_wrap .talent_box .talent_main_title{font-size: 20px; font-weight: 600; color: #333; margin: 0 auto 12px; width: 100%;}
+.seoGeumWon2_09 .talent_wrap .talent_box .talent_sub_title{display:block; width: 100%; font-size: 16px; font-weight: 300; color: #333; line-height: 1.5625;}
+.seoGeumWon2_09 .mo_img{display: none; position: relative;}
+.seoGeumWon2_21 .gender_equality_box{padding: 30px 0 20px 20px; width: 100%; border-radius: 12px; background: var(--chr10);}
+.seoGeumWon2_21 .gender_equality_box .gender_equality_title_txt{font-size: 16px; font-weight: 500; line-height:2.25;}
+.seoGeumWon2_21 .gender_equality_box .gender_equality_sub_txt{font-size: 15px; line-height: 1.733333333333333; display: block;width: 100%;}
+.seoGeumWon2_21 .subheading_sub_txt{margin: 0 auto 12px; text-align: left; width: 100%;}
+.seoGeumWon2_21 .subheading_sub_txt.second{margin: 30px auto 12px; width: 100%; letter-spacing: -0.05rem;}
+.seoGeumWon2_21 .subheading_txt{margin: 0 auto 0;}
+
+/* seoGeumWon2_21.html양성평등 임원 목표제 */
+.seoGeumWon2_21 .gender_equality_box{padding: 10px;}
+
+/********************* max-width:860px*********************/      
+@media all and (max-width:860px) {
+  /* 윤리경영 추진체계 seoGeumWon2_16.html */
+  .contents.seoGeumWon2_07{width: calc(100% - 30px); margin: 0 auto;}
+  .contents.seoGeumWon2_07 .bubble_wrap{margin: 0 auto 0;}
+  .seoGeumWon2_07 .bubble_wrap .speech_bubble .txt_wrap{top:30%;}
+  .seoGeumWon2_07 .preview_wrap{margin: 0 auto;}
+  .seoGeumWon2_07 .roadmap_wrap .roadmap_box{width:100%;}
+  .seoGeumWon2_07 .roadmap_wrap .roadmap_box .year_txt::after{width: 100%; bottom: 6px;}
+  .seoGeumWon2_07 .sub_title_group{text-align: center; flex-wrap: wrap;}
+  .seoGeumWon2_07 .group_wrap{flex-wrap: wrap;}
+  .seoGeumWon2_07 .group_wrap .group_box, .seoGeumWon2_07 .evaluation_wrap .evaluation_box{width: calc(50% - 9px); margin-bottom: 20px; display: block;}
+  .seoGeumWon2_07 .evaluation_wrap{flex-wrap: wrap;}
+  .seoGeumWon2_07 .evaluation_wrap .evaluation_box:nth-child(3), .seoGeumWon2_07 .evaluation_wrap .evaluation_box:last-child{margin-bottom: 0;}
+  .seoGeumWon2_07 .bubble_wrap .speech_bubble p{margin: 10px auto;}
+  .seoGeumWon2_07 .bubble_wrap .speech_bubble .txt_wrap span{margin: 0 auto 0;}
+  .seoGeumWon2_07 .bub.seoGeumWon2_06 .form-groupble_wrap,.seoGeumWon2_07 .roadmap_wrap {flex-wrap: wrap; flex-direction: column;}
+  .seoGeumWon2_07 .roadmap_wrap .roadmap_box{margin: 0 auto 20px; text-align: center;}
+  .seoGeumWon2_07 .seoGeumWon2_07_txt h3, .seoGeumWon2_07 .roadmap_wrap .roadmap_box .box_bottom .sub_cta, .seoGeumWon2_07 .roadmap_wrap .roadmap_box .sub_subject.notBg{width: 100%; text-align: center;}
+  .seoGeumWon2_07 .bubble_wrap{margin: 0; justify-content: space-between; align-items: center; flex-direction: row;}
+  .seoGeumWon2_07 .bubble_wrap .speech_bubble{width: calc(50% - 9px); }
+  .seoGeumWon2_07 .seoGeumWon2_07_txt, .seoGeumWon2_07 .seoGeumWon2_07_txt p,.seoGeumWon2_07 .area_main_txt{text-align:center;}
+}
+
+/********************* max-width:767px*********************/      
+@media all and (max-width:767px) {
+  /* 서금원2 인권 경영헌장 */
+  .seoGeumWon2_01 .certification_wrap{padding: 10px 0;}
+  .seoGeumWon2_01 .certification_wrap .certification_box{padding: 20px 10px;}
+  .seoGeumWon2_01 .certification_wrap .certification_box h3{margin: 10px auto; font-size: 18px; line-height: 1.2;}
+  .seoGeumWon2_02 .ethical_management_box .seoGeumWon_item .seoGeumWon_btn{width: 100%;}
+  /* 서금원2- 윤리경영 실천 강령 seoGeumWon2_02 */
+  .seoGeumWon2_02 .ethical_management_box .seoGeumWon_item .seoGeumWon_btn{padding: 10px 5px;}
+  /* 서금원2- 임직원 행동강령 seoGeumWon2_03  */
+  .seoGeumWon2_01 .debt_adjustment_system_site_btn{width:calc(100%  - 30px);}
+  /* 서금원2- 클린신고센터 seoGeumWon2_05 */
+  .seoGeumWon2_05 .service_box .service_itm{height: unset; padding-bottom: 20px;}
+  .seoGeumWon2_02 .ethical_management_box .seoGeumWon_item .seoGeumWon_btn .num, .seoGeumWon2_02 .ethical_management_box .seoGeumWon_item .seoGeumWon_btn .chapter_txt{font-size: 15px;}
+  .seoGeumWon2_02 .ethical_management_box .seoGeumWon_item .subMenu ul{font-size: 13px;}
+  .seoGeumWon2_06 .privacy_wrap.second{margin-top: 40px;}
+  /* 개인정보수집 및 이용 동의서 seoGeumWon2_06  */
+  .seoGeumWon2_06 .input-group{flex-wrap: wrap;}
+  /* 윤리경영 추진체계 tab menu 탭메뉴 3개 중 1번째 seoGeumWon2_07 / seoGeumWon2_07.html*/
+  .seoGeumWon2_07 .bubble_wrap .speech_bubble{width:100%; }
+  .seoGeumWon2_07 .group_wrap .group_box, .seoGeumWon2_07 .evaluation_wrap .evaluation_box{width: 100%;}
+  .seoGeumWon2_07 .evaluation_wrap .evaluation_box:nth-child(3), .seoGeumWon2_07 .evaluation_wrap .evaluation_box:last-child{margin-bottom: 20px;}
+  /*윤리경영 추진체계 seoGeumWon2_08  - tab 3번째  주요 활동 / seoGeumWon2_17.html / seoGeumWon2_08 */
+  .seoGeumWon2_08 .activity_wrap{flex-wrap: wrap;}
+  .seoGeumWon2_08 .activity_wrap .active_box{width: calc(50% - 9px);}
+  .seoGeumWon2_08 .activity_wrap .active_box:last-child{margin:60px 0  0 0;}
+  /*인재상 seoGeumWon2_09  seoGeumWon2_18.html */
+  .seoGeumWon2_09 .talent_wrap .talent_box{width: 100%; padding: 20px 5px; height: unset;}
+  .seoGeumWon2_09 .talent_wrap .talent_box:nth-child(1){margin-right: 0;}
+  .seoGeumWon2_09 .talent_wrap .talent_box:nth-child(2){margin-left: 0;}
+  .seoGeumWon2_09 .talent_wrap .talent_box:nth-child(1), .seoGeumWon2_09 .talent_wrap .talent_box:nth-child(2){margin: 0 auto 20px;}
+  .seoGeumWon2_09 .talent_wrap .talent_box:nth-child(3){margin-bottom: 20px;}
+  .seoGeumWon2_09 .mo_img{display: block;}
+  .seoGeumWon2_09 .mo_img img{display: block; width: 100%; height: 100%;}
+  .seoGeumWon2_09 .pc_img{display: none;}
+
+}
+
+/********************* max-width:500px*********************/      
+@media all and (max-width:500px) {
+/* 서금원2- 클린신고센터 seoGeumWon2_05 */
+.seoGeumWon2_05 .service_box .service_itm{width: 100%;}
+
+/*윤리경영 추진체계 - tab 3번째  주요 활동 seoGeumWon2_08 seoGeumWon2_17.html */
+.seoGeumWon2_08 .activity_wrap .active_box{width:100%;margin: 0 auto 50px;}
+.seoGeumWon2_08 .activity_wrap .active_box:last-child{margin:0 auto 0;}
+
+/*seoGeumWon2_09 인재상 seoGeumWon2_18.html */
+.seoGeumWon2_09 .talent_wrap .talent_box .talent_main_title{font-size: 16px;}
+
+}

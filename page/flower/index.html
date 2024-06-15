@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>꽃중년 application </title>
+    
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/flower-favicon.png">
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px; flex-wrap: wrap;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, a{margin: 0; padding: 0;border: 0; box-sizing: border-box; font-family: "Montserrat", "Noto Sans KR", sans-serif; font-weight: 300; vertical-align: baseline; word-break: keep-all;}
+a{text-decoration: none; line-height: 1;font-family: "Montserrat", "Noto Sans KR", sans-serif;font-style: normal; font-weight:400; display: inline-block;}
+a:hover{text-decoration: none;}
+button{outline: none; background: none; box-sizing: border-box;}
+
+body {font-family: "Montserrat", "Noto Sans KR", sans-serif; font-size: 12px;
+  font-weight: 300; line-height: 1.2rem; letter-spacing: -0.5px; width: 100%; min-width: 36rem; overflow-x: hidden; margin: 0 auto;}
+  .content{margin-top: 50px;}
+.swiper-backface-hidden .swiper-slide{width:100vw;}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display: block;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+html{font-size: 10px;}
+blockquote:before, blockquote:after, q:before, q:after {content: "";content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+button{border: none; background: transparent;}
+em{font-style:normal;}
+
+.wrap{ max-width: 780px; width: 100%; text-align: left; margin: 3rem auto 0;}
+.main-top{margin-bottom:3rem; display: flex; flex-direction: column; align-items: center;}
+.main-top p{ margin-bottom:1rem; color:#DE51A3; font-weight:300; }
+.main-top h1{ font-weight:700; font-size:3rem; letter-spacing:-2px; color:#DE51A3; margin:10px 0 30px 0;}
+.content-title{ text-align: left; font-size:1.8rem; font-weight: 700; margin-bottom:.5rem; color:#DE51A3; }
+.pagelist{ display: flex; gap:.5rem; align-items: center;flex-wrap: wrap; padding: 3rem 0;}
+.pagelist .mySwiper{padding-bottom: 5rem;}
+.pagelist .swiper-wrpper {margin: 2rem 0;}
+.pagelist .swiper-slide{height: 100%; }
+.pagelist .swiper-slide>div{padding: 1rem 2rem; height: 30vh; display: flex; align-items: center; flex-wrap: wrap; justify-content: center;}
+.pagelist .swiper-slide p{color:#DE51A3; width: 100%;}
+
+.flow a, .swiper-slide a{ display: block; padding: 1rem 2rem; background:#DE51A3; color:#fff; font-size: 1.5rem;}
+.web-wrap{ width: 100%; }
+.web-wrap img{ width: 100%; }
+.m-wrap{ margin:0 auto; max-width: 767px; }
+.m-wrap img{ width: 100%; }
+.pagelist .swiper-slide p{margin: 1rem 0; font-size: 1.5rem; line-height: 1.8rem;}
+.pagelist .swiper-pagination{bottom: 0; }
+.pagelist .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{background: #DE51A3; }
+
+.page_box04 {position: relative;}
+.page_box04 .pagelist{width: calc(100% - 4rem); margin: 0 auto;}
+.page_box04 .pagelist .mySwiper{width: calc(100% - 8rem); margin: 0 auto; position: relative; }
+.page_box04 .pagelist .mySwiper .swiper-button-next,.page_box04 .pagelist .mySwiper .swiper-button-prev{position: relative; display:block; }
+.page_box04 .swiper-button-next{ left: unset;}
+.page_box04 .swiper-button-prev{ right: unset;}
+.page_box04 .swiper-button-next::after{font-size: 0; content: "";display: block; position: absolute; right: 20px; top: 50%;  width: 10px;  height: 10px;border-top: 1px solid #DE51A3; border-right: 1px solid #DE51A3; transform:  translateY(-50%) rotate(45deg);}
+ .page_box04 .swiper-button-prev::after{font-size: 0; content: "";display: block; position: absolute; left: 20px; top: 50%; right: unset; width: 10px; height: 10px;border-top: 1px solid #DE51A3; border-right: 1px solid #DE51A3; transform:  translateY(-50%) rotate(215deg);}
+ .page_box04 .swiper-horizontal>.swiper-pagination-progressbar, .page_box04 .swiper-pagination-progressbar.swiper-pagination-horizontal,  .page_box04 .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,  .page_box04 .swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{ top: unset; bottom: 10%; width: calc(100% - 8rem); left: 50%; transform: translateX(-50%);}
+ .page_box04 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{background: #DE51A3;}
+
+@media (max-width:767px) {
+  .wrap h1{ font-size:3em; }
+  .pagelist{ flex-wrap: wrap; }
+  .pagelist .swiper-slide{ width: 100%;}
+
+
+} 
+
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header class="main-top">
+          <p>꽃중년 앱</p>
+          <h1>화면 리스트</h1>
+          <div class="flow"><a href="./sub/main.html">main 바로가기</a></div>  
+      </header>
+      <div class="contents">
+        <div class="page_box01">
+          <h2 class="content-title" style="margin:2rem 0;">회원가입, 마이페이지</h2>
+          <div class="pagelist">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div>
+                    <p>마이 페이지</p>
+                    <a href="./sub/myPage.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>프로필 등록<br/>정보입력</p>
+                    <a href="./sub/addInfomation.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>프로필 등록<br/>프로필 사진 추가</p>
+                    <a href="./sub/addPicture.html"  target="_blank">바로가기</a></a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>회원 자동 탈퇴</p>
+                    <a href="./sub/automatic-membership-withdrawal.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>지인 차단추가하기</p>
+                    <a href="./sub/black-list.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                  <p>차단된 지인 목록</p>
+                  <a href="./sub/board_tab_menu04.html"  target="_blank">바로가기</a>
+                </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>회원 프로필 목록</p>
+                    <a href="./sub/board_tab_menu03.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>회원 프로필 목록</p>
+                    <p>[리뷰]</p>
+                    <a href="./sub/board_tab_menu04.html"  target="_blank">바로가기</a> 
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>비밀번호 변경</p>
+                    <a href="./sub/change-password.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+          </div>
+          </div>
+        </div>
+        <div class="page_box02">
+          <h2 class="content-title" style="margin:2rem 0;"> 모달창, 프리미엄</h2>
+          <div class="pagelist">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div>
+                    <p>긴급공지 모달창</p>
+                    <a href="./sub/emergency-not.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>메시지 모달창</p>
+                    <a href="./sub/message-modal01.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>메시지 모달창</p>
+                    <a href="./sub/message-modal01.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>신청 프리미엄</p>
+                    <a href="./sub/premium-apply.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>받은 프리미엄</p>
+                    <a href="./sub/premium-receive.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+          </div>
+          </div>
+        </div>
+        <div class="page_box03">
+          <h2 class="content-title" style="margin:2rem 0;"> 간편회원가입</h2>
+          <div class="pagelist">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div>
+                    <p>간편회원가입</p>
+                    <a href="./sub/simple-membership-registration.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>이메일로그인</p>
+                    <a href="./sub/email-login.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>아이디 찾기</p>
+                    <a href="./sub/find-id.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>아이디 찾기2</p>
+                    <a href="./sub/find-id02.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>비밀번호 찾기</p>
+                    <a href="./sub/find-pwd.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>비밀번호 찾기2</p>
+                    <a href="./sub/find-pwd02.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+        <div class="page_box04">
+          <h2 class="content-title" style="margin:2rem 0;">이용</h2>
+          <div class="pagelist">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div>
+                    <p>알림설정</p>
+                    <a href="./sub/notification-settings.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>지인 초대</p>
+                    <a href="./sub/invitation.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>리뷰 게시판 목록</p>
+                    <a href="./sub/review-list-board.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>공지사항 게시판 목록	</p>
+                    <a href="./sub/notice-list-board.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>사용내역 조회	</p>
+                    <a href="./sub/usage-history.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>결제 -남자버전</p>
+                    <a href="./sub/payment-tabmenu-men.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div>
+                    <p>결제 -여자버전</p>
+                    <a href="./sub/payment-tabmenu-men.html"  target="_blank">바로가기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var wrap01 = new Swiper(".page_box01 .mySwiper", {
+        slidesPerView: 1,
+        breakpoints: {
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1300: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
+          
+        freeMode: true,
+        pagination: {
+          el: ".page_box01 .swiper-pagination",
+          clickable: true,
+        },
+      });
+      var wrap02 = new Swiper(".page_box02 .mySwiper", {
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        slidesPerView: 1,
+        spaceBetween: 30,
+        breakpoints: {
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1300: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
+          
+        loop: true,
+        pagination: {
+          el: ".page_box02 .swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".page_box02 .swiper-button-next",
+          prevEl: ".page_box02 .swiper-button-prev",
+        },
+      });
+      var wrap03 = new Swiper(".page_box03 .mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        slidesPerView: 1,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".page_box03 .swiper-pagination",
+        },
+      });
+
+      var wrap04 = new Swiper(".page_box04 .mySwiper", {
+        effect: "flip",
+        slidesPerView: 1,
+
+        grabCursor: true,
+        pagination: {
+          el: ".page_box04 .swiper-pagination",
+          type: "progressbar",
+        },
+        navigation: {
+          nextEl: ".page_box04 .swiper-button-next",
+          prevEl: ".page_box04 .swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

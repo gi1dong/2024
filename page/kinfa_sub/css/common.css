@@ -1,0 +1,343 @@
+@charset "utf-8";
+
+/*common color */
+@charset "utf-8";
+/*------------------------ common css 속성 시작 : 해당 css는 각 페이지 공통 적용된 css입니다. ----------------------*/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, a{margin: 0; padding: 0;border: 0; box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif;  font-weight: 300; vertical-align: baseline; word-break: keep-all;}
+a{text-decoration: none; line-height: 1; font-family: 'Noto Sans KR', sans-serif;font-style: normal; font-weight:300; display: inline-block; color: #333333; text-decoration: none;}
+a:hover{text-decoration: none; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display: block;}
+body {line-height: 1;  font-family: 'Noto Sans KR', sans-serif;  font-style: normal; font-weight:300; -webkit-user-select:none; -moz-user-select:none;-ms-user-select:none; user-select:none;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+button{border: none; background: transparent; display: block;outline: none; background: none; box-sizing: border-box;}
+em{font-style:normal;}
+html{font-size: 10px;}
+i{display: inline-block;}
+a:hover{color: none!important;}
+@font-face {
+  font-weight: 300;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-style: normal;
+  src: local("NotoSansKR-Light.otf"), url("../fonts/NotoSansKR-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-style: normal;
+  src: local("NotoSansKR-Regular.otf"), url("../fonts/NotoSansKR-Regular.otf") format("opentype");
+
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-style: normal;
+  src: local("NotoSansKR-Medium.otf"), url("../fonts/NotoSansKR-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-style: normal;
+  src: local("NotoSansKR-Bold.otf"), url("../fonts/NotoSansKR-Bold.otf") format("opentype");
+} 
+
+/*common color */
+:root {
+  --chr1:#333;
+  --chr2:#fff;
+  --chr3:#503B26;
+  --chr4:#888888;
+  --chr6:#898989;
+  --chr7:#AAAAAA;
+  --chr8:#F8F8F8;
+  --chr9:#CFCFCF;
+  --chr10:#F5F5F5;
+  --chr11:#606060;
+  --chr12:#D5D5d5;
+  --kinfa-blue:#3351A7;
+  --point2:#5990D9;
+  --point3:#595ED9;
+  --point4:#DEF6FF;
+  }
+
+/*컨텐츠 공통 CSS */
+/* container 부트 스트랩 */
+.container{max-width: 100%; overflow-x: hidden;}
+/* ---부트 스트랩 */
+.contents{padding: 80px 0 140px 0; margin: 0 auto; font-family: 'Noto Sans KR', sans-serif; font-weight: 300; width: 100%; max-width:900px; display: block; overflow: hidden;}
+.contents a{display: inline-block; font-size: 13px; font-family: 'Noto Sans KR', sans-serif; font-weight:300;}
+.contents .contents_top{width: 100%; margin-bottom: 3rem;}
+.contents .contents_title{text-align: left; font-weight: 600; font-size: 30px; color:#333333;display: block; margin: 0 auto 40px; text-align: left; width: 100%;}
+.contents .path{ margin: 16px auto 40px; display:flex; width: 100%;  justify-content: end; flex-direction: column;}
+.contents .path .path_top{display: flex; justify-content: right;}
+.contents .path .path_top .path_icon{display: block; width: 20px; height: 20px; }
+.contents .path .path_top .path_icon.first{margin-right: 12px; background: url(../images/path_icon01.png) no-repeat 360px/contain; background-position: center; background-position: center; }
+.contents .path .path_top .path_icon.second{ background: url(../images/path_icon02.png) no-repeat 360px/contain; background-position: center;}
+.contents .path .path_bottom{display: flex; flex-direction: row;-webkit-flex-direction:row; justify-content:right; align-items: center;}
+.contents .path .path_bottom li{position: relative; margin-right: 10px;}
+.contents .path .path_bottom li:last-child{margin-right: 0;}
+.contents .path .path_bottom li a{display: block; font-size: 13px;font-family: 'Noto Sans KR', sans-serif; font-weight:300;}
+.contents .path .path_bottom li a .arrow_img:not(.arrow_img.first){display: block; background: url(../images/arrow.png) no-repeat 360px/contain; width: 7px; height: 14px; background-position: right;}
+.contents .path .path_bottom li a .arrow_img.first{display: none; background: url(../images/arrow.png) no-repeat 360px/contain; width: 7px;height: 14px; background-position: right;}
+.contents .path .path_bottom .last_list a{margin-right: 0;} 
+.contents .path .path_bottom .home{display: none; background: url(../images/home.png) no-repeat 360px/contain; background-position: center; width: 16px; height: 16px;}
+.contents .btn{ display: flex; display: -ms-flexbox; border: none; background: var(--point3); font-size: 18px; color: #fff; padding: 12px 53px; box-sizing: border-box; border-radius: 12px; margin: 80px auto 0; text-align: center;}
+.contents .btn.max_width235{max-width: 235px; width: 100%; line-height: 50px; height: 50px; padding: 0; display: flex; text-align: center; align-items: center; justify-content: center;}
+.btn.bus_stop{padding: 12px 5px; margin: 0; display:inline-block; text-align: left; line-height: 1; letter-spacing: -.07rem;}
+.contents .go_to_site{display: inline-block; text-decoration: underline; color:#888888;}
+.contents .copy{color: #3351A7; display: block; font-size: 15px; font-weight: 500; line-height: 1.733333333333333;}
+.contents .color{display: inline-block; color: #3351A7; font-size: 16px; font-weight: 500;}
+.postscript{text-align: center; color:#333333;font-size: 16px; font-weight: 300; line-height: 1.5; display: block;}
+
+/* tab menu */
+.tab{width: 100%; display: flex; display: -ms-flexbox;  -webkit-justify-content: flex-start; margin: 0 auto; flex-wrap: nowrap;}
+.tab li{ font-size: 16px; text-align: center; outline: none;  line-height: 1.5; padding: 16px 0; font-family: 'Noto Sans KR', sans-serif; color: #3333; border:1px solid #CFCFCF; font-weight: 300; cursor: pointer; width: 33.3%;}
+.tab li .menu{display: block; width: 100%; font-weight: 300; font-size: 16px; text-align: center; color: #333; outline: none;}
+.tab li.selected .menu{display: block; width: 100%; color: #fff;border-color:#3351A7;background:#3351A7;}
+.tab .menu:nth-child(2):not(.tab.half .menu){border-left: none; border-right: none; width: 33.333333333333333333333333333333%;}
+.tab.half li.selected, .tab.half li{width: 50%;}
+.selected{background:#3351A7; color: #fff; display: block; outline: none; border-color:#3351A7;}
+.tab_menu_content>div[id^="cont0"]{display: none;}
+.tab_menu_content>div[id^="cont0"].on{display: block;}
+
+/* tab menu 바로 아래 텍스트  */
+.contents .subheading_txt.margin_top{margin-top: 36px; width: 100%; text-align: left;}
+
+/* txt color common class */
+.blind{display: none;}
+.color_txt{ color: #3351A7; text-align: center; font-weight: 500;margin: 0 auto 12px; display: block;}
+.contents .bold{font-weight: 600; display: inline-block;}
+.contents .number, .contents .light_color, .contents .path a,.contents .after2003{display:inline-block; color: #898989; font-size: 16px; line-height: 1.5625;} 
+.light_color.block{display: block;}
+.contents .block{display: block; font-weight: 300;}
+.point3{color: var(--point3); display: inline-block; text-decoration: underline;}
+
+/* path 아래 타이틀 텍스트 common class */
+.contents_title_inner{margin: 30px auto 80px; display: block; text-align: left;}
+.contents .subheading_txt{font-size: 20px; line-height: 1.8; font-weight: 600; margin: 0 auto 12px; }
+.contents .subheading_sub_txt{display: block; width: 100%; font-size: 16px;line-height: 1.5625; 
+font-weight: 300;  letter-spacing: -0.03rem;}
+.center_content{width: 100%; margin:0 auto;}
+
+/* 레이아웃 디자인 내 텍스트*/
+.sub_subject{text-align: center; padding: 12px 0; display: block; width: 100%; box-sizing: border-box; color:#fff; background:#333333;border-radius: 12px 12px 0 0; width: 100%; margin: 0 auto; }
+.sub_subject.right{padding: 12px 0; box-sizing: border-box;}
+.sub_subject.notBg{ color:#333333; background: transparent;}
+.sub_subject.notBg.textLeft{text-align: left;}
+
+/* 검색창  */
+input, input:-ms-input-placholder, input::-webkit-input-placholder, input::-moz-input-placholder{border: 0; outline: none; max-width: 600px; height: 35px; line-height: 35px; color: #888888;}
+
+.drop-down.pc{display: block;}
+.drop-down.mo{display: none;}
+
+.mt-6{ margin-top:5rem; }
+.mt-7{ margin-top:7rem; }
+.col-2-5 {
+  position: relative;
+  width: 100%;
+  padding-right: 5px;
+  padding-left: 5px;
+  
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content-box{width: calc(100% - 2rem); margin: 0 auto;}
+@media (max-width:767px) {
+  .m-gap{
+    gap:2rem;
+  }
+}
+/* content */
+.contents{padding: 80px 0 140px 0; margin: 0 auto;
+    font-family: 'S-CoreDream-3Light'; font-weight: 350; width: 100%; max-width:900px; display: block; overflow: hidden;}
+.content-head .title{
+  font-size:2rem;
+  font-weight: 700;
+}
+.content-head .use{
+  margin-bottom:1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap:.5rem;
+}
+.content-head .use li span{
+  display: block;
+  width:15px;
+  height:15px;
+  background-size:contain;
+}
+.content-head .use li:nth-child(1) span{
+  background: url(/images/path_icon01.png) no-repeat;
+  background-size: contain;
+}
+.content-head .use li:nth-child(2) span{
+  background: url(/images/path_icon02.png) no-repeat;
+  background-size: contain;
+}
+.content-head .path{
+  display:flex;
+  justify-content: flex-end;
+  gap:1rem;
+}
+.content-head .path li{
+  position: relative;
+}
+.content-head .path li::after{
+  content: "";
+  position: absolute;
+  right:-1rem;
+  top:50%;
+  transform: translateY(-40%);
+  display: block;
+  border-bottom: .3rem solid transparent;
+  border-top: .3rem solid transparent;
+  border-left: .3rem solid #AAAAAA;
+  border-right: .3rem solid transparent;
+}
+.content-head .path li:last-child::after{display: none;}
+.content-head .path li a{color:#AAAAAA;}
+.content .content-box .box-title{font-size:1.250em ;font-weight: 600;}
+.content .content-box .box-sub-paragraph-title{font-size:0.938em; font-weight: 300; line-height: 1.533333333333333;}
+.content .content-box .box-title + .box-text{margin-top:1rem;}
+.content .content-box .box-text + .box-text{margin-top:.5rem;}
+.content .content-box .box-sub-title{
+  color:#3351A7;
+  font-weight:700;
+}
+
+/****** tab ******/
+/* .tab{
+  display: flex;
+  flex-wrap: wrap;
+}
+.tab .tab-box{
+  padding-top:1.5rem;
+  padding-bottom:1.5rem;
+  border:1px solid #E5E5E8;
+  text-align:center;
+}
+.tab .tab-box.active{
+  background-color: #3351A7;
+  color:#fff;
+}
+.tab .tab-box + .tab-box{
+  margin-left:-1px;
+}
+
+/* tab 박스 4개 */
+/* .tab-4 .tab-box{
+  
+  width:25%;
+} */
+/* .tab-2 .tab-box{
+  width:50%;
+} */ 
+
+/* box */
+.kinfa-blue-box{
+  overflow:hidden;
+  border: 1px solid #3351A7;
+  border-radius: 1rem;
+  background: #3351A7;
+  color:#fff;
+}
+
+.border-gray-box{
+  overflow:hidden;
+  border:1px solid #E5E5E8;
+  border-radius: 1rem;
+}
+
+.min-blue-box{
+  overflow:hidden;
+  border:1px solid var(--point4);
+  border-radius: 1rem;
+  background: var(--point4);
+}
+.min-blue-box .blue-title{
+  padding: 1rem;
+  font-size: 1rem;
+  color:#3351A7;
+}
+.min-blue-box .blue-title + .blue-text{padding:.5rem;}
+
+.line-black-box .title{ 
+  padding:1rem;
+  font-size:1rem;
+  background: #333;
+  color: #fff;
+}
+
+.line-black-box .text{
+  padding:1.5rem;
+  min-height: 7rem;
+}
+
+/** button **/
+.btn-wrap{
+  margin:1rem 0;
+}
+.btn-kinfa-blue{
+  border:1px solid #3351A7;
+  border-radius: .5rem;
+  color:#fff;
+  background: #3351A7;
+}
+.left-area-bottom-txt-wrap{margin: 25px auto 0;}
+.left-area-bottom-txt-wrap .sign{display: block; text-align: left; color: #3351A7; font-weight: 700; font-size: 20px; line-height: 1; letter-spacing: -0.2rem;}
+.img-wrap img{display: block; width: 100%; height: 100%;}
+
+/*********************(max-width:850px *********************/   
+@media all and (max-width:850px) {   
+/* 맞춤대출 서비스 financial_support07.html*/
+/*휴먼 예금 찾아줌 financialSupport08.html */
+.financial_support07,.financial_support08 {width: calc(100% - 30px); margin: 0 auto; padding: 60px 0 120px 0; display: flex; flex-direction: column; justify-content: space-between;}
+}  
+
+/*********************(max-width:767px *********************/    
+@media all and (max-width:767px) {
+.contents:not(.contents.financial_support07, .contents.financial_support08){padding: 60px 0 120px 0; box-sizing: border-box; width: calc(100% - 30px);margin: 0 auto;}
+.contents .contents_title{font-size: 25px;}
+.contents .path{padding-bottom: 5px; border-bottom: 1px solid #AAAAAA; text-align: center; }
+.contents .path .path_top{display: none;}
+.contents .path .path_bottom{width: 70%; display:flex; justify-content: space-between; margin-top: 10px;}
+.contents .path .path_bottom li{margin-right: 0; text-align: center;}
+.contents .path .path_bottom>li>a, .contents .path .path_bottom .last_list a{display: block; width: 100%; padding-right: 0;}
+.contents .path .path_bottom li:nth-child(1)>a{padding-left: 20px;}
+.contents .path .path_bottom .last_list a{padding-right: 20px;}
+.contents .path .path_bottom li a .arrow_img.first{display: block;}
+.contents .path .path_bottom .home{display: block;}
+.contents .btn{font-size: 15px; }
+.contents .btn.max_width235{line-height: 40px; height: 40px;}
+.contents .number, .contents .light_color,.contents .path a, .contents .after2003{font-size: 14px;} 
+.contents .subheading_txt.margin_top{text-align: center;}
+
+.drop-down.pc{display: none;}
+.drop-down.mo{display: block;}
+}
+
+/********************* max-width:500px*********************/      
+@media all and (max-width:500px) {
+.contents .path .path_bottom{width: 100%;}
+.contents .path .path_bottom li a .arrow_img:not(.home), .contents .path .path_bottom li a .arrow_img:not(.arrow_img.first){width: 5px;}
+.contents .path .path_bottom li:nth-child(1)>a{padding-left: 0;}
+.contents .path .path_bottom .last_list a{padding-right: 0;}
+.contents .contents_title{font-size: 16px; margin-bottom: 10px;}
+
+}
+
+/*------------------------ common css 속성 끝 : 해당 css는 각 페이지 공통 적용된 css입니다.----------------------*/
