@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <link href="../assets/css/modules/bootstrap.css" type="text/css" rel="stylesheet">
+  <link href="../assets/css/reset.css" type="text/css" rel="stylesheet"><!-- reset style -->
+  <link href="../assets/css/style.css" type="text/css" rel="stylesheet"><!-- common style -->
+  <title>알림설정</title>
+</head>
+<body>
+  <div class="container setting">
+    <header>
+       <div class="header">
+          <a href="javascript:void(0)" class="back-icon">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <div class="now-menu-tit">알림설정</div>
+      </div>
+    </header>
+    <main>
+      <div class="contents ">
+        <div class="toggle-box">
+          전체알림
+          <input type="checkbox" id="chk1">
+          <label for="chk1"><span>선택</span></label>
+        </div>
+        <div class="distance"></div>
+        <div class="toggle-box">
+          메세지 알림
+          <input type="checkbox" id="chk2">
+          <label for="chk2"><span>선택</span></label>
+        </div>
+        <div class="toggle-box">
+          호감 알림
+          <input type="checkbox" id="chk3">
+          <label for="chk3"><span>선택</span></label>
+        </div>
+        <div class="toggle-box">
+          프리미엄매칭 알림
+          <input type="checkbox" id="chk4">
+          <label for="chk4"><span>선택</span></label>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <nav>
+        <nav class="nav fiexd">
+          <a class="nav-menu icon_member" href="javascript:;">회원</a>
+          <a class="nav-menu icon_letter" href="javascript:;">쪽지</a>
+          <a class="nav-menu icon_board" href="javascript:;">이용게시판</a>
+          <a class="nav-menu icon_premium" href="javascript:;">프리미엄</a>
+          <a class="nav-menu icon_mypage on" href="javascript:;">프로필</a>
+        </nav>
+      </nav>
+    </footer>
+  </div>  
+</body>
+</html>
+<script>
+  $(function(){
+    $('.nav>a').click(function(){
+      if($(this).hasClass("on")){
+        $(this).addClass("on");
+      }else{
+      $('.nav>a').removeClass("on");
+      $(this).addClass("on");
+      }
+    });
+  });
+</script>

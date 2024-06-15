@@ -1,0 +1,453 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>웹퍼블리셔 포트폴리오 김보미</title>
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" > -->
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="js/jquery.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script> -->
+	<!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+	<script src="js/custom.js"></script>
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="./img/fabicon.ico"> -->
+  
+  <script type="text/javascript">
+
+    // <![CDATA[
+    var colour="#ff8e99";
+    var sparkles=20;
+    var lower_sparkles=1;
+    
+    /****************************
+    *  Tinkerbell Magic Sparkle *
+    *(c)2005-13 mf2fm web-design*
+    *  http://www.mf2fm.com/rv  *
+    * DON'T EDIT BELOW THIS BOX *
+    ****************************/
+    var x=ox=400;
+    var y=oy=300;
+    var swide=800;
+    var shigh=600;
+    var sleft=sdown=0;
+    var tiny=new Array();
+    var star=new Array();
+    var starv=new Array();
+    var starx=new Array();
+    var stary=new Array();
+    var tinyx=new Array();
+    var tinyy=new Array();
+    var tinyv=new Array();
+    
+    window.onload=function() { if (document.getElementById) {
+      var i, rats, rlef, rdow;
+      for (var i=0; i<sparkles; i++) {
+        var rats=createDiv(3, 3);
+        rats.style.visibility="hidden";
+        rats.style.zIndex="999";
+        document.body.appendChild(tiny[i]=rats);
+        starv[i]=0;
+        tinyv[i]=0;
+        var rats=createDiv(5, 5);
+        rats.style.backgroundColor="transparent";
+        rats.style.visibility="hidden";
+        rats.style.zIndex="999";
+        var rlef=createDiv(1, 5);
+        var rdow=createDiv(5, 1);
+        rats.appendChild(rlef);
+        rats.appendChild(rdow);
+        rlef.style.top="2px";
+        rlef.style.left="0px";
+        rdow.style.top="0px";
+        rdow.style.left="2px";
+        document.body.appendChild(star[i]=rats);
+      }
+      set_width();
+      sparkle();
+    }}
+    
+    function sparkle() {
+      var c;
+      if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+        ox=x;
+        oy=y;
+        for (c=0; c<sparkles; c++) if (!starv[c]) {
+          star[c].style.left=(starx[c]=x)+"px";
+          star[c].style.top=(stary[c]=y+1)+"px";
+          star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+          star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newColour():colour;
+          star[c].style.visibility="visible";
+          starv[c]=50;
+          break;
+        }
+      }
+      for (c=0; c<sparkles; c++) {
+        if (starv[c]) update_star(c);
+        if (tinyv[c]) update_tiny(c);
+      }
+      setTimeout("sparkle()", 40);
+    }
+    
+    function update_star(i) {
+      if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+      if (starv[i]) {
+        stary[i]+=1+Math.random()*3;
+        starx[i]+=(i%5-2)/5;
+        if (stary[i]<shigh+sdown) {
+          star[i].style.top=stary[i]+"px";
+          star[i].style.left=starx[i]+"px";
+        }
+        else {
+          star[i].style.visibility="hidden";
+          starv[i]=0;
+          return;
+        }
+      }
+      else {
+        tinyv[i]=50;
+        tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+        tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+        tiny[i].style.width="2px";
+        tiny[i].style.height="2px";
+        tiny[i].style.backgroundColor=star[i].childNodes[0].style.backgroundColor;
+        star[i].style.visibility="hidden";
+        tiny[i].style.visibility="visible"
+      }
+    }
+    
+    function update_tiny(i) {
+      if (--tinyv[i]==25) {
+        tiny[i].style.width="1px";
+        tiny[i].style.height="1px";
+      }
+      if (tinyv[i]) {
+        tinyy[i]+=1+Math.random()*3;
+        tinyx[i]+=(i%5-2)/5;
+        if (tinyy[i]<shigh+sdown) {
+          tiny[i].style.top=tinyy[i]+"px";
+          tiny[i].style.left=tinyx[i]+"px";
+        }
+        else {
+          tiny[i].style.visibility="hidden";
+          tinyv[i]=0;
+          return;
+        }
+      }
+      else tiny[i].style.visibility="hidden";
+    }
+    
+    document.onmousemove=mouse;
+    function mouse(e) {
+      if (e) {
+        y=e.pageY;
+        x=e.pageX;
+      }
+      else {
+        set_scroll();
+        y=event.y+sdown;
+        x=event.x+sleft;
+      }
+    }
+    
+    window.onscroll=set_scroll;
+    function set_scroll() {
+      if (typeof(self.pageYOffset)=='number') {
+        sdown=self.pageYOffset;
+        sleft=self.pageXOffset;
+      }
+      else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+        sdown=document.body.scrollTop;
+        sleft=document.body.scrollLeft;
+      }
+      else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+        sleft=document.documentElement.scrollLeft;
+        sdown=document.documentElement.scrollTop;
+      }
+      else {
+        sdown=0;
+        sleft=0;
+      }
+    }
+    
+    window.onresize=set_width;
+    function set_width() {
+      var sw_min=999999;
+      var sh_min=999999;
+      if (document.documentElement && document.documentElement.clientWidth) {
+        if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+        if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+      }
+      if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+        if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+        if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+      }
+      if (document.body.clientWidth) {
+        if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+        if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+      }
+      if (sw_min==999999 || sh_min==999999) {
+        sw_min=800;
+        sh_min=600;
+      }
+      swide=sw_min;
+      shigh=sh_min;
+    }
+    
+    function createDiv(height, width) {
+      var div=document.createElement("div");
+      div.style.position="absolute";
+      div.style.height=height+"px";
+      div.style.width=width+"px";
+      div.style.overflow="hidden";
+      return (div);
+    }
+    
+    function newColour() {
+      var c=new Array();
+      c[0]=255;
+      c[1]=Math.floor(Math.random()*256);
+      c[2]=Math.floor(Math.random()*(256-c[1]/2));
+      c.sort(function(){return (0.5 - Math.random());});
+      return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
+    }
+    // ]]>
+  </script> 
+</head>
+<body>
+  <style>
+    /*부드러운 스크롤 이동 
+    html { scroll-behavior: smooth;}
+    */
+    body{ margin:0; padding:0;}
+    header{ position:absolute; width:100%; height:100px; border-bottom:1px solid #000; display:flex; justify-content: center; align-items: center; float:left;}
+    section{ width:100%; height:100vh; display:flex; justify-content: center; align-items: center; float:left;}
+    footer{ width:100%; height:300px; border-top:1px solid #000;  display:flex; justify-content: center; align-items: center; float:left;}
+     
+    section:nth-child(odd){ background-color:#f1f1f1;}
+     
+    .main1{ display:inline-block; height:1400px;}
+     
+    .main4{ display:inline-block; height:100vh;}
+    .main4 h2{ width:100%;}
+    #main4_sub{ width:100%; overflow:hidden; display:inline-block;}
+     
+    #main4_sub[data-box='0'] .main4-box{ margin-left:0;}
+    #main4_sub[data-box='1'] .main4-box{ margin-left:-600px;}
+    #main4_sub[data-box='2'] .main4-box{ margin-left:-1200px;}
+    #main4_sub[data-box='3'] .main4-box{ margin-left:-1800px;}
+    #main4_sub[data-box='4'] .main4-box{ margin-left:-2400px;}
+    
+    #main4_sub[data-box='5'] .main4-box{ margin-left:-3000px;}
+    #main4_sub[data-box='6'] .main4-box{ margin-left:-3600px;}
+    #main4_sub[data-box='7'] .main4-box{ margin-left:-4200px;}
+    #main4_sub[data-box='8'] .main4-box{ margin-left:-4800px;}
+    #main4_sub[data-box='9'] .main4-box{ margin-left:-5400px;}
+    #main4_sub[data-box='10'] .main4-box{ margin-left:-6000px;}
+     
+    .main4-box{ display:flex; width:4200px; transition-duration:0.3s;}
+    .main4-box > div{ width:600px; display:flex; justify-content: center; align-items: center; height:600px; }
+    .main4-box > div:nth-child(odd){ background-color:#fff1f1;}
+    .main4-box > div:nth-child(even){ background-color:#f1fff1;}
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>
+    // 스크롤 중복입력 방지용 flag
+    var scrollworker = false;
+    // 스크롤 구간 배열
+    var scrollTops = [];
+    // 기본 이동시간 0.8초
+    var basicinterval = 800;
+    // 페이지 로드 후 동작
+    $(function(){
+        // scrollTops 구간목록을 배열로 구성 
+        $("section").each(function(index, element) {
+            if($(this).offset().top!=undefined){
+                scrollTops.push($(this).offset().top)
+            }
+        });
+        // scrollTops 내임차순 정렬
+        scrollTops.sort(function(a, b)  {  return a - b;});
+        // 마지막 scrollTops 을 넘겨줄 위치를 구하기 위해
+        scrollTops.push(scrollTops[scrollTops.length -1] + window.outerHeight);
+        // header, section, footer 에서 마우스 휠을 넣었을 경우
+        $("header, section, footer").on("mousewheel", function (e) {
+            // 기존 이벤트 취소
+            e.preventDefault();
+            // 중복 입력 방지
+            if(scrollworker==false){
+                // 중복 입력 방지 on
+                scrollworker = true;
+                // 동작하고 있는 엘리먼트
+                const elm = $(this);
+                // 휠이벤트가 undefined 가 아니라면
+                if(event.wheelDelta!=undefined){
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                         delta = event.wheelDelta / 120;
+                         if (window.opera) delta = -delta;
+                    } 
+                    else if (event.detail)
+                         delta = -event.detail / 3;
+                     
+                    // 지금의 스크롤탑 위치
+                    const nst = $(window).scrollTop();
+                    // 어디로 움직일 것인가
+                    var moveTop;
+
+                    // if($(elm).hasClass("main1")){ // main1 스크롤 이동 패스
+                    //     // 연속 입력위해 scrollworker 지정
+                    //     scrollworker = false;
+                    //     if(delta < 0){ // 아래로
+                    //         moveTop = "+=50";
+                    //     }else if(delta>0){ // 휠위로
+                    //         moveTop = "-=50";
+                    //     }
+                    //     // main1에선 기본 스크롤
+                    //     $("html,body").stop().animate({
+                    //         scrollTop: moveTop + 'px'
+                    //         }, {
+                    //         duration: 5,easing: "swing", complete: function () {
+                    //             scrollworker = false;
+                    //         }
+                    //     });
+                    //     return;   }
+     
+                    if($(elm).hasClass("main4")){ // main4 일 경우 조건 수행후 이어 동작시키기
+                        // 조건을 수행시키기 위해 boxno 을 지정
+                        var boxno = Number($("#main4_sub").attr("data-box")); 
+                        // 조건을 만족하는지에 대한 상태 flag
+                        var movestat = false;
+                        if(delta < 0){ // 아래로
+                            boxno++;
+                            // 조건값이 main4-box 의 수를 넘어가게 되면
+                            if(boxno > $(".main4-box").length + 9 ){
+                                boxno--;
+                                // 지금의 scrollTop 위치보다큰 값중 첫번째 값 추출
+                                moveTop = scrollTops.filter(x=> x > nst)[0];
+                                // 값이 없으면 마지막값으로 지정
+                                if(moveTop == undefined) moveTop = scrollTops[scrollTops.length-1];
+                                // 조건상태 만족처리
+                                movestat = true;
+                            }
+                        }else if(delta>0){ // 휠위로
+                            boxno--;
+                            // 조건값이 최소라면
+                            if(boxno < 0){
+                                // 지금의 scrollTop 위치보다 작은 값 추출
+                                var nstminArr = scrollTops.filter(x => x < nst);
+                                // 역순정렬
+                                nstminArr.sort(function(a, b)  {  return b - a;});
+                                // 역순정렬한 첫번째값 추출
+                                moveTop = nstminArr[0];
+                                // 첫번째값이 undefined 면 움직일 위치 0으로 지정
+                                if(moveTop == undefined) moveTop = 0;
+                                movestat = true;
+                            }
+                        }
+                        // 변경된 조건으로 스타일 적용
+                        $("#main4_sub").attr("data-box",boxno);
+                         
+                        // 조건에 따라 scrollTop을 지정하기 위해 변수지정
+                        var intervals = basicinterval;
+                        // 조건에 만족하지 않으면 움직임이 없도록 고정시킴
+                        if(!movestat) { intervals=0; moveTop=$(".main4").offset().top;}
+                        // scrollTop 이동
+                        $("html,body").stop().animate({
+                            scrollTop: moveTop + 'px'
+                            }, {
+                            duration: intervals,easing: "swing", complete: function () {
+                                scrollworker = false;
+                            }
+                        });
+                    }else{ // 그외일경우 일반적 진행
+                        if(delta < 0){ // 아래로
+                            // 지금의 scrollTop 위치보다큰 값중 첫번째 값 추출
+                            moveTop = scrollTops.filter(x=> x > nst)[0];
+                            // 값이 없으면 마지막값으로 지정
+                            if(moveTop == undefined) moveTop = scrollTops[scrollTops.length-1];
+                        }else if(delta>0){ // 휠위로
+                            // 지금의 scrollTop 위치보다 작은 값 추출
+                            var nstminArr = scrollTops.filter(x => x < nst);
+                            // 역순정렬
+                            nstminArr.sort(function(a, b)  {  return b - a;});
+                            // 역순정렬한 첫번째값 추출
+                            moveTop = nstminArr[0];
+                            // 첫번째값이 undefined 면 움직일 위치 0으로 지정
+                            if(moveTop == undefined) moveTop = 0;
+                        }
+                        // scrollTop 이동
+                        $("html,body").stop().animate({
+                            scrollTop: moveTop + 'px'
+                            }, {
+                            duration: basicinterval,easing: "swing", complete: function () {
+                                scrollworker = false;
+                            }
+                        });
+                    }
+                }
+            }
+        });
+    });
+    $(window).resize(function(){ 
+        scrollTops = [];
+        $("section").each(function(index, element) {
+            if($(this).offset().top!=undefined){
+                scrollTops.push($(this).offset().top)
+            }
+        });
+        scrollTops.sort(function(a, b)  {  return a - b;});
+        scrollTops.push(scrollTops[scrollTops.length -1] + window.outerHeight);
+    });
+    </script>
+     
+    </head>
+    <body>
+    <header>
+    </header>
+    <section class="main0">
+        <h2>Main 0</h2>
+    </section>
+    <section class="main1">
+        <h2>Main 1</h2>
+    </section>
+    <section class="main2">
+        <h2>Main 2</h2>
+    </section>
+    <section class="main3">
+        <h2>Main 3</h2>
+    </section>
+    <section class="main4">
+        <div>
+            <h2>Main 4</h2>
+            <div id="main4_sub" data-box="0">
+                <div class="main4-box">
+                    <div class="main4-box-1">4-1</div>
+                    <div class="main4-box-2">4-2</div>
+                    <div class="main4-box-3">4-3</div>
+                    <div class="main4-box-4">4-4</div>
+                    <div class="main4-box-5">4-5</div>
+                    <div class="main4-box-6">4-6</div>
+                    <div class="main4-box-7">4-7</div>
+                    <div class="main4-box-8">4-8</div>
+                    <div class="main4-box-9">4-9</div>
+                    <div class="main4-box-10">4-10</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

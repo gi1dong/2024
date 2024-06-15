@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <link href="../assets/css/reset.css" type="text/css" rel="stylesheet">
+  <link href="../assets/css/style.css" type="text/css" rel="stylesheet">
+  
+  <title>지인 차단 추가하기</title>
+</head>
+<body>
+  <div class="container black-list">
+    <header>
+      <div class="header">
+        <a href="javascript:void(0)" class="back-icon">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <div class="now-menu-tit">지인 차단 추가하기</div>
+        <a href="javascript:void(0)" class="more-icon">
+          <img src="../assets/images/icon_more.png" alt="더보기"/>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="contents">
+        <div class="payment-box">
+          <p class="payment-title">엄마</p>
+          <div class="payment-date-box">
+            <span class="payment-date">010-1234-1234</span>
+            <span class="amount">
+              <input type='checkbox' id="a1" name='blockPerson' value=''
+              onclick='getCheckedCnt()'/> 
+              <label for="a1"></label>
+            </span>
+          </div>
+        </div>
+        <div class="payment-box">
+          <p class="payment-title">아빠</p>
+          <div class="payment-date-box">
+            <span class="payment-date">010–1234-1234</span>
+            <span class="amount">
+              <input type='checkbox' id="a2" name='blockPerson' value=''
+              onclick='getCheckedCnt()'/>
+              <label for="a2"></label>
+            </span>
+          </div>
+        </div>
+        <div class="payment-box">
+          <p class="payment-title">김준서</p>
+          <div class="payment-date-box">
+            <span class="payment-date">010–1234-1234</span>
+            <span class="amount">
+              <input type='checkbox' id="a3" name='blockPerson' value=''
+              onclick='getCheckedCnt()'/>
+              <label for="a3"></label>
+            </span>
+          </div>
+        </div>
+        <div class="payment-box">
+          <p class="payment-title">홍길동</p>
+          <div class="payment-date-box">
+            <span class="payment-date">010–1234-1234</span>
+            <span class="amount">
+              <input type='checkbox' id="a4" name='blockPerson'value=''
+              onclick='getCheckedCnt()'/>
+              <label for="a4"></label>
+            </span>
+          </div>
+        </div>
+        <div class="payment-box">
+          <p class="payment-title">김아무개</p>
+          <div class="payment-date-box">
+            <span class="payment-date">010–1234-1234</span>
+            <span class="amount">
+              <input type='checkbox' id="a5" name='blockPerson'value=''
+              onclick='getCheckedCnt()'/>
+               <label for="a5"></label>
+              </span>
+          </div>
+        </div>
+        <div class="payment-box on">
+          <p class="payment-title">김보미</p>
+          <div class="payment-date-box">
+            <span class="payment-date">010–1234-1234</span>
+            <span class="amount">
+              <input type='checkbox' id="a6" name='blockPerson'value=''
+              onclick='getCheckedCnt()'/> 
+              <label for="a6"></label>
+            </span>
+          </div>
+        </div>
+        <div class="payment-box on">
+          <p class="payment-title">김나리</p>
+          <div class="payment-date-box">
+            <span class="payment-date">010–1234-1234</span>
+            <span class="amount">
+              <input type='checkbox' id="a7" name='blockPerson' value=''
+              onclick='getCheckedCnt()'/> 
+              <label for="a7"></label>
+            </span>
+          </div>
+        </div>
+        <div class="payment-box">
+          <p class="payment-title">박경식</p>
+          <div class="payment-date-box">
+            <span class="payment-date">010–1234-1234</span>
+            <span class="amount">
+              <input type='checkbox' id="a8" name='blockPerson' value=''
+              onclick='getCheckedCnt()'/> 
+              <label for="a8"></label>
+            </span>
+          </div>
+        </div>
+        <div class="payment-box">
+          <p class="payment-title">서경석</p>
+          <div class="payment-date-box">
+            <span class="payment-date">010–1234-1234</span>
+            <span class="amount">
+              <input type='checkbox' id="a9" name='blockPerson' value=''
+              onclick='getCheckedCnt()'/> 
+              <label for="a9"></label>
+            </span>
+          </div>
+        </div>
+        <div class="payment-box">
+          <p class="payment-title">이초희</p>
+          <div class="payment-date-box">
+            <span class="payment-date">010–1234-1234</span>
+            <span class="amount">
+              <input type='checkbox' id="a10" name='blockPerson' value=''
+              onclick='getCheckedCnt()'/>
+               <label for="a10"></label>
+              </span>
+          </div>
+        </div>
+        <div class="payment-box">
+          <p class="payment-title">이황</p>
+          <div class="payment-date-box">
+            <span class="payment-date">010–1234-1234</span>
+            <span class="amount">
+              <input type='checkbox' id="a11" name='blockPerson' value=''
+              onclick='getCheckedCnt()'/> 
+              <label for="a11"></label>
+            </span>
+          </div>
+        </div>
+        <div class="payment-box">
+          <p class="payment-title">설민석</p>
+          <div class="payment-date-box">
+            <span class="payment-date">010–1234-1234</span>
+            <span class="amount">
+              <input type='checkbox' id="a12" name='blockPerson' value=''
+              onclick='getCheckedCnt()'/> 
+              <label for="a12"></label>
+            </span>
+          </div>
+        </div>
+        <div class="payment-box">
+          <p class="payment-title">연정훈</p>
+          <div class="payment-date-box">
+            <span class="payment-date">010–1234-1234</span>
+            <span class="amount">
+              <input type='checkbox' id="a13" name='blockPerson' value=''
+              onclick='getCheckedCnt()'/> 
+              <label for="a13"></label>
+            </span>
+          </div>
+        </div>
+        <div class="payment-box">
+          <p class="payment-title">한가인</p>
+          <div class="payment-date-box">
+            <span class="payment-date">010–1234-1234</span>
+            <span class="amount">
+              <input type='checkbox'id="a14" name='blockPerson' value=''
+              onclick='getCheckedCnt()'/> 
+              <label for="a14"></label>
+            </span>
+          </div>
+        </div>     
+        <div class="payment-box">
+          <p class="payment-title">이재연</p>
+          <div class="payment-date-box">
+            <span class="payment-date">010–1234-1234</span>
+            <span class="amount">
+              <input type='checkbox' id="a15" name='blockPerson' value=''
+              onclick='getCheckedCnt()'/>
+              <label for="a15"></label>
+            </span>
+          </div>
+        </div>
+        <div class="payment-box">
+          <p class="payment-title">서장훈</p>
+          <div class="payment-date-box">
+            <span class="payment-date">010–1234-1234</span>
+            <span class="amount">
+              <input type='checkbox' id="a16" name='blockPerson' value=''
+              onclick='getCheckedCnt()'/>
+               <label for="a16"></label>
+              </span>
+          </div>
+        </div>
+      </div>
+      <div class="btn-wrap">
+        <button type="button" class="btn btn-block btn-normal btn-pink">
+          <div id='personNum' class="person-num">
+          </div>명 지인차단</button>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
+<script>
+  function getCheckedCnt()  {
+    const query = 'input[name="blockPerson"]:checked';
+    // const queryBtn = document.getElementsByClassName("payment-box").addClass("select");
+    const selectedElements = document.querySelectorAll(query);
+    const selectedElementsCnt = selectedElements.length;
+    document.getElementById('personNum').innerText
+      = selectedElementsCnt;
+    }
+
+// $(function(){
+//   $(".payment-box").click("select");
+//   var check = $(this).children(input[name="blockPerson"]);
+// if($(this).hasClass("select")){
+//   check.is( ':checked' );}
+// });
+
+//   $( document ).ready( function() {
+//     $( '#a' ).on( 'change', function() {
+//       if ( $( '#a' ).is( ':checked' ) ) {
+//       } else {
+//         $( '#b' ).text( '' );
+//       }
+//     } );
+//   } );
+
+// });
+</script>

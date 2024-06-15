@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./test_css/layout03.css">
+  <link rel="stylesheet" href="./css/main.css">
+
+  <!--script -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> 
+
+  <!--//script -->
+  <title>Store</title>
+</head>
+<body>
+  <style>
+    .store-wrap.sub {background: #1d1d1d;padding: 6rem 0; margin: 0 auto 0;}
+    .store-wrap.sub .store-img{display: block;}
+    .store-wrap.sub .prd-tit{color: #fff;}
+    .store-wrap.sub .prd-tit::before{display: none;}
+    .map{margin: 6rem 0;}
+
+    iframe{height: 100vh;}
+    .store-txt{color: #fff; text-align: right; margin: 6rem auto 0;     font-size: 2rem; line-height: 1.5;}
+  </style>
+
+  <!-- store -->
+  <section class="store-wrap sub">
+    <div class="inner">
+      <div class="prd-txt">
+        <h2 class="prd-tit">플래그십 스토어 성수</h2>
+      </div>
+    </div>
+    <div class="store-img">
+      <div class="inner">
+        <div id="tab-1" class="tab-content current">
+          <div class="">
+              <!-- Swiper -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a class="store-link" href="javascript:;" >
+                    <img src="./img/seongsu01.jpg" alt=""/>
+                  </a>
+                </div>
+              <div class="swiper-slide">
+                  <a class="store-link" href="javascript:;">
+                    <img src="./img/seongsu02.jpg" alt=""/>
+                  </a>
+              </div>
+              <div class="swiper-slide">
+                  <a class="store-link" href="javascript:;">
+                    <img src="./img/pc_seongsu_03.jpg" alt=""/>
+                  </a>
+              </div>
+              <div class="swiper-slide">
+                  <a class="store-link" href="javascript:;">
+                    <img src="./img/pc_seongsu_4.jpg" alt=""/>
+                  </a>  
+              </div>
+              <div class="swiper-slide">
+                  <a class="store-link" href="javascript:;">
+                    <img src="./img/pc_seongsu_5.jpg" alt=""/>
+                  </a>
+              </div>
+              <div class="swiper-slide">
+                  <a class="store-link" href="javascript:;">
+                    <img src="./img/pc_seongsu_6.jpg" alt=""/>
+                  </a>
+              </div>
+              <div class="swiper-slide">
+                  <a class="store-link" href="javascript:;">
+                    <img src="./img/pc_seongsu_7.jpg" alt=""/>
+                  </a>
+              </div>
+              </div>
+              <div class="swiper-scrollbar"></div>
+            </div>
+          </div>
+          <div class="store-txt">
+            <p>서울 강남구 압구정로46길 50</p>
+            <a href="tel:827041282124">+82 70 4128 2124</a>
+            <p>월-일 11:00am - 9:00pm</p>
+          </div>
+        </div>
+      </div>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.479420245516!2d127.05260439999999!3d37.5437671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca490cc5188af%3A0x18dd0af0962d6656!2z7ISc7Jq47Yq567OE7IucIOyEseuPmeq1rCDsl7DrrLTsnqU16ri4IDg!5e0!3m2!1sko!2skr!4v1718234841305!5m2!1sko!2skr" width="100%" height="100vh" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+  </section>
+  <script>
+      var storeSwiper = new Swiper(".store-img .mySwiper", {
+    scrollbar: {
+      el: ".store-img .swiper-scrollbar",
+      hide: true,
+    },
+  });
+
+  </script>
+</body>
+</html>

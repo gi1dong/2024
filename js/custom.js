@@ -32,6 +32,7 @@ $(function(){
   // $(this).removeClass("active")
   // $(".sub_menu").removeClass("on")
   //   });
+
 // 메인 swiper
   var swiper = new Swiper(".main_area>.swiper-container", {
   direction: "vertical",
@@ -50,39 +51,8 @@ $(function(){
     },
   });
 
-  // $(".gnb ul li").click(function(){
-  // swiper.slideTo($(this).index());
-  //   $(".menu_bg").animate({"left":"-100%"},500);
-  // $(".menu_btn").removeClass("open");
-  // });
-
-  // $(".gnb>ul>li>a").click(function(){
-  //   // swiper.slideTo($(this).index());
-  //   const showSubmenu =$(this).parent().find("ul").outerHeight();
-  //   if($(this).hasClass("on"))
-  //   { 
-  //     $(this).removeClass("on");
-  //     $(this).parent().find("div").stop().animate({ height: "0" });
-  //   }else{
-  //     $(".sub_menu").stop().animate({ height:"0"});
-  //   $(this).addClass("on");
-  //   $(this).parent().find("div").stop().animate({ height : showSubmenu });
-  //   }
-  //   });
   
 TweenMax.staggerFromTo(".txt02 i", 1, {opacity:0, y:-10},{opacity:1,y:0}, 0.9);
-  
-  // slidesPerView: "auto",
-  // spaceBetween: 30,
-  // freeMode: true,
-  // mousewheel: {
-  //   invert: false,
-  // },
-  // autoplay: {
-  //   speed: 1000,
-  //   delay:2500,
-  //   disableOnInteraction: false,
-  // },
 
   // 메뉴
 $(".aside nav .nav_inner>li>a").click(function () {
@@ -133,8 +103,6 @@ $(".aside nav .nav_inner>li>a").click(function () {
     },
   });
 
-  
-  
 //   $('#loading').hide();
 //   $(".sub_menu li>a").click(function(){
 //     setTimeout(function(){
@@ -144,22 +112,22 @@ $(".aside nav .nav_inner>li>a").click(function () {
 //   return true;
 // });
 
-});
+
 
   
-// var swiperOptions = {
-//   loop: true,
-//   autoplay: {
-//   delay: 1,
-//   speed: 1000,
-//   disableOnInteraction: false},
-//   slidesPerView: "auto",
-//   speed: 15000,
-//   grabCursor: true,
-//     spaceBetween: 30,
-//   mousewheelControl: true,
-//   keyboardControl: true,
-// };
+var swiperOptions = {
+  loop: true,
+  autoplay: {
+  delay: 1,
+  speed: 1000,
+  disableOnInteraction: false},
+  slidesPerView: "auto",
+  speed: 15000,
+  grabCursor: true,
+    spaceBetween: 30,
+  mousewheelControl: true,
+  keyboardControl: true,
+};
 
 // var project = new Swiper(".swiper-slide.section03 .main_intro_wrap .swiper-container.cafe24 ", swiperOptions);
 
@@ -237,3 +205,15 @@ $(".aside nav .nav_inner>li>a").click(function () {
 //   stagger: 0.08,
 //   morphSVG: (i) => original[i]
 // });
+
+let section11 = new Swiper(".section11 .mySwiper.swiper", {
+  slidesPerView: "auto",
+  loop:true,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false
+  },
+  speed: 5000,
+});
+
+});
