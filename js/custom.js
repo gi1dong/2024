@@ -34,8 +34,11 @@ $(function(){
   //   });
 
 // 메인 swiper
-  var swiper = new Swiper(".main_area>.swiper-container", {
+  var mainSWiper = new Swiper(".main_area .swiper-container", {
   direction: "vertical",
+  mousewheel: {
+    invert: false,
+  },
   speed: 800,
   loop: true,
   pagination: {
@@ -43,15 +46,12 @@ $(function(){
     type: "fraction",
     },
     navigation: {
-    nextEl: ".main_area>.next_btn",
-    prevEl: ".main_area>.prev_btn",
+    nextEl: ".main_area .next_btn",
+    prevEl: ".main_area .prev_btn",
     },
-    mousewheel: {
-      invert: false,
-    },
+
   });
 
-  
 TweenMax.staggerFromTo(".txt02 i", 1, {opacity:0, y:-10},{opacity:1,y:0}, 0.9);
 
   // 메뉴
@@ -103,6 +103,18 @@ $(".aside nav .nav_inner>li>a").click(function () {
     },
   });
 
+  let section11 = new Swiper(".explain_img .mySwiper.swiper", {
+    slidesPerView: "auto",
+    loop:true,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false
+    },
+    spaceBetween: 0,
+    speed: 5000,
+  });
+  
+
 //   $('#loading').hide();
 //   $(".sub_menu li>a").click(function(){
 //     setTimeout(function(){
@@ -115,19 +127,19 @@ $(".aside nav .nav_inner>li>a").click(function () {
 
 
   
-var swiperOptions = {
-  loop: true,
-  autoplay: {
-  delay: 1,
-  speed: 1000,
-  disableOnInteraction: false},
-  slidesPerView: "auto",
-  speed: 15000,
-  grabCursor: true,
-    spaceBetween: 30,
-  mousewheelControl: true,
-  keyboardControl: true,
-};
+// var swiperOptions = {
+//   loop: true,
+//   autoplay: {
+//   delay: 1,
+//   speed: 1000,
+//   disableOnInteraction: false},
+//   slidesPerView: "auto",
+//   speed: 15000,
+//   grabCursor: true,
+//     spaceBetween: 30,
+//   mousewheelControl: true,
+//   keyboardControl: true,
+// };
 
 // var project = new Swiper(".swiper-slide.section03 .main_intro_wrap .swiper-container.cafe24 ", swiperOptions);
 
@@ -206,14 +218,5 @@ var swiperOptions = {
 //   morphSVG: (i) => original[i]
 // });
 
-let section11 = new Swiper(".section11 .mySwiper.swiper", {
-  slidesPerView: "auto",
-  loop:true,
-  autoplay: {
-    delay: 0,
-    disableOnInteraction: false
-  },
-  speed: 5000,
-});
 
 });
