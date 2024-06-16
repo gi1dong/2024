@@ -31,64 +31,6 @@ src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;5
 @font-face { font-family: "Josefin Sans", sans-serif; font-style: normal; font-weight: 500; src: url('../font/JosefinSans-Medium.ttf') format('woff2'), url('../font/JosefinSans-Medium.ttf') format('truetype');}
 @font-face { font-family: "Josefin Sans", sans-serif; font-style: normal; font-weight: 300; src: url('../font/JosefinSans-Regular.ttf') format('woff2'), url('../font/JosefinSans-Regular.ttf') format('truetype');}
 
-/* header*/
-/* .header h1 {
-  position: fixed; top: 40px;
-  left: 50px;
-  z-index: 2;
-  color: #fff;
-  font-size: 16px; font-weight: 600; }
-  .header h1 a {color: #fff;}
-  .menu_btn {position: fixed; top: 40px; right: 50px; z-index: 2; cursor: pointer; }
-  .menu_btn span { background: #fff; display: block; width: 40px; height: 3px; margin: 5px 0;}
-  .menu_btn span:nth-child(2) { width: 20px; float: right; -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; position: relative; }
-  .menu_btn span:nth-child(2):after { content: "MENU"; display: block; position: absolute; bottom: -10px; right: 0; color: #fff; opacity: 0; -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
-  .menu_btn:hover span { width: 40px;}
-  .menu_btn:hover span:nth-child(2):after { opacity: 1; bottom: -20px;}
-  .menu_btn.open span:first-child { display: block;
-  position: absolute; height: 3px;
-  width: 100%;
-  background: #fff; opacity: 1;
-  transform: rotate(135deg); top: 20px;
-  left: 0;
-  z-index: 2;
-  -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; -ms-transition: all .3s ease-in-out; transition: all .3s ease-in-out; }
-  .menu_btn.open span:last-child { display: block;
-  position: absolute; height: 3px;
-  width: 100%;
-  background: #fff; opacity: 1;
-  transform: rotate(-135deg); top: 20px;
-  left: 0px;
-  z-index: 2;
-  -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; -ms-transition: all .3s ease-in-out; transition: all .3s ease-in-out; }
-  .menu_btn.open span:last-child:after { opacity: 0;
-  }
-  .menu_btn.open {z-index: 3;
-  width: 50px;
-  height: 50px;
-  left: 50%;
-  margin-left: -25px; transition: .25s ease-in-out; }
-  .menu_bg {
-  position: fixed; width: 100%;
-  height: 100%;
-  left: -100%;
-  top: 0;
-  background: rgba(0, 0, 0, 0.9); z-index: 2;}
-  .menu_bg_inner { width: 100%; height: 100%; position: relative;}
-  .menu_bg .gnb {position: absolute; text-align: center; top: 50%; width: 100%; left: 50%; display: block; transform: translate(-50%,-50%); margin-top: -38px; }
-  /* .menu_bg .gnb ul { overflow: hidden; } */
-  /* .menu_bg .gnb li {padding-right: 40px; margin: 20px 0;}
-  .menu_bg .gnb li:last-child { padding-right: 0; }
-  .menu_bg .gnb li a { font-size: 30px; color: #fff;display: block; letter-spacing: normal; display:inline-block;}
-  .menu_bg .gnb .no_active a {color: #808488;}
-  .menu_bg .gnb .active a {color: #fff;}
-  .menu_bg .gnb .no_active .sub_menu {overflow: hidden; opacity: 0; visibility: hidden; height: 0; transition: all .3s; }
-  .menu_bg .gnb .no_active .sub_menu a{ font-size: 15px; text-align: center; display: block;}
-  .menu_bg .gnb .active .sub_menu.on {display: block; opacity: 1; visibility: visible;  overflow: visible; height: 100%;} */ 
-  
- /* #loading {width: 100vw; height: 100vh; top: 0;left: 0; right: 0; bottom: 0; position: fixed; display: block; opacity: 0.8; background: rgba(0, 0, 0, 0.7); z-index: 999999; text-align: center;}
- #loading::after{content: "LODING..."; position: absolute; z-index: 99999; font-size: 7rem; color: #fff; width: 100vw; height: 100vh; top: 50%; left: 50%; transform: translate(-50%,-50%); display: block; font-weight: 300;} */
-
 /* header */
 .header{right: 0; opacity: 1; visibility: visible;}
 .header.open{display: block; opacity: 0; visibility: hidden; right: -100%; top: 0; position: fixed; width: 100%; height: 100%; transition: all .3s;}
@@ -403,8 +345,6 @@ transform: rotate(0deg) }
 @media screen and (max-width: 1024px) {
   header{width: 100%;}
   header .header{width: calc(100% - 40px); margin: 0 auto; display: flex;}
-  /* header .header h1{left: 100px;} */
-  /* header .header .menu_btn{right: 100px;} */
   main>.swiper-container{width: 100%;}
 }
 
@@ -413,7 +353,7 @@ transform: rotate(0deg) }
   .aside{max-width: unset;}
   .aside nav .nav_inner>li>a{font-size: 24px;}
   .aside nav .nav_inner>li .sub_menu ul li>a{font-size: 16px;}
-  /* .main_area{overflow: visible;} */
+
   .main_area .main_intro .txt02 strong{font-size: 30px;}
-  .main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro{}
+
 }
