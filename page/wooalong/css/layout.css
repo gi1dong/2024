@@ -316,14 +316,14 @@ footer {
 footer .footer {
   color: #000;
   width: 100%;
-  background-color: #000;
+  background-color: #1D1D1D;
   text-align: center;
 }
 
 footer .footer .ft_info {
   max-width: 1200px;
   width: 90%;
-  background-color: #000;
+  background-color: #1D1D1D;
   font-size: 41px;
   padding: 7% 0;
   display: inline-block;

@@ -28,6 +28,8 @@ main .main_top .main_vis {
   right: 20%;
 }
 
+video::-webkit-media-controls-fullscreen-button {display: none !important;}
+
 /*배경효과 가상요소*/
 /*
 main .main_top .main_vis:after {

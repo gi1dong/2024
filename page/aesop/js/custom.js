@@ -78,12 +78,12 @@ $(function () {
   });
   
 
-  $(".gnb> .gnb_btn").click(function () {
+  $(".gnb_btn").click(function () {
     $("#aside").stop().animate({ left: "0" }, 300);
     $(".dimmed_bg").addClass("on");
   });
 
-  $(".closebtn").click(function () {
+  $(".close_btn").click(function () {
     $("#container").removeClass("on");
     $("#aside").stop().animate({ left: "-100%" }, 300);
     $(".dimmed_bg").removeClass("on");

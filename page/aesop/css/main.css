@@ -1,32 +1,13 @@
-#container{width: 100%; background-color: #fffef2;}
-
-.area_title{font-size: 25px;font-weight: 500; margin: 5px auto; display: block; text-align: center; line-height: 30px;    font-family: 'Poppins', sans-serif;}
+#container{width: 100%; background: #fffef2;}
+.area_title{font-size: 25px;font-weight: 500; margin: 5px auto; display: block; text-align: center; line-height: 30px;  font-family: 'Poppins', sans-serif;}
 .area_title.a {text-align: left;}
-
-.prd_name{  font-size: 14px;display: block;  color: #252525;
-  line-height:1.2;font-weight: bold;}
-
-  .main_btn{color: #fff; background-color: #252525; 
-    font-size: 15px; padding: 10px 25px; display: inline-block;}
-
-.main_btn.a{ position: absolute; left: 50%;  color: #fff; background-color: #252525; bottom:50px; transform: translateX(-50%); }
+.prd_name{ font-size: 14px;display: block;  color: #252525;line-height:1.2;font-weight: bold;}
+.main_btn{color: #fff; background: #252525;  font-size: 15px; padding: 10px 25px; display: inline-block; cursor: pointer;}
+.main_btn.a{ position: absolute; left: 50%; color: #fff; background: #252525; bottom:50px; transform: translateX(-50%); cursor: pointer;}
     
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.swiper {width: 100%;height: 100%;}
+.swiper-slide {text-align: center; font-size: 18px;}
+.swiper-slide img { display: block;width: 100%;height: 100%;object-fit: cover;}
 
 .main_vis .swiper-slide>img{height: 100%;}
 .main_vis .swiper-slide .slide_txt{
@@ -130,7 +111,7 @@
   height: 3px;
   color: #252525;
   width: 100%;
-  background-color: #dfe9e8;
+  background: #dfe9e8;
 }
 
 .main_vis .swiper-pagination-progressbar.swiper-pagination-horizontal {
@@ -139,14 +120,12 @@
 }
 
 .main_vis .mySwiper .swiper-initialized .swiper-horizontal .swiper-pointer-events {
-  background-color: #252525;
+  background: #252525;
 }
 
 .swiper-pagination-horizontal {}
-
-
 .main_vis .mySwiper .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  background-color: #252525;
+  background: #252525;
   transform: translate3d(0px, 0px, 0px) scaleX(0.8) scaleY(1);
   transition-duration: 100ms;
   position: absolute;
@@ -171,7 +150,7 @@
 }
 
 .main_slide {
-  background-color: #dec9b4;
+  background: #dec9b4;
   width: 100%;
   z-index: 1;
   padding: 5% 0;
@@ -196,7 +175,7 @@
 /* ALL PRODUCT area 시작 */
 .all_prod_wrap {
   width: 100%;
-  background-color: #f9f9ef;
+  background: #f9f9ef;
   padding: 40px 10px 0;
   z-index: 1;
   position: relative;
@@ -212,7 +191,7 @@
 
 .all_prod_wrap .all_prod .area_title{
   color: #252525;text-align: center;
-  background-color: #f9f9ef;
+  background: #f9f9ef;
 }
 .all_prod_wrap .prd_wrap{ 
   display: flex;
@@ -233,12 +212,11 @@
   height: 165px;
 }
 
-
 .all_prod_wrap .allprd .fa-shopping-bag {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  background-color: #f9f9ef;
+  background: #f9f9ef;
   color: #252525;
 }
 
@@ -257,12 +235,12 @@
 
 .all_prod_wrap .allprd .color_wrap .color {
   width: 10px; height: 10px;
-  background-color: #000;
+  background: #000;
   display: inline-block;
 }
 
 .all_prod_wrap .allprd .color_wrap .color1 {
-  width: 10px; height: 10px;background-color: #ccc;
+  width: 10px; height: 10px;background: #ccc;
   display: inline-block;
 }
 
@@ -285,7 +263,7 @@
 
 /* <!-- ALL PRODUCT area 끝 --> */
 .more {
-  background-color: #f9f9ef;
+  background: #f9f9ef;
   display: inline-block;
   color: #252525;
   text-align: center;
@@ -349,44 +327,31 @@
 .video_txt {
   width: 100%;
   color: #252525;
-  background-color: #f9f9ef;
+  background: #f9f9ef;
   position: relative;
   z-index: 1;
   height: 100%;
 }
 
 video{width: 100%;height: 100%;}
-
-.video_txt>ul {
-  width: 100%;
-  overflow: hidden; text-align: center;
-  border-bottom: 1px solid #252525;
-}
-
-.video_txt>ul>li {display: block; height: 50px; line-height: 50px;
-  float: left;  color: #252525;  font-size: 15px; width: 50%;}
-
-
-
-.video_txt>ul>li.in{
-  color: #f9f9ef; 
-  background-color: #252525;
-}
+.video_txt>ul { width: 100%;overflow: hidden; text-align: center; border-bottom: 1px solid #252525;}
+.video_txt>ul>li {display: block; height: 50px; line-height: 50px;float: left;  color: #252525;  font-size: 15px; width: 50%;}
+.video_txt>ul>li.in{ color: #f9f9ef;  cursor: pointer;background: #252525;}
 
 .vid {
   width: 100%;
-  background-color: #f9f9ef;
+  background: #f9f9ef;
   display: block;height: 100%;
 }
 
-.vid #vid01 {  background-color: #f9f9ef;
+.vid #vid01 {  background: #f9f9ef;
   width: 100%;display: block;
 }
 
 .vid #vid01 .vid01_wrap {
   width: 100%;display: block;
   height: 100%; padding: 0 2%;
-  text-align: center;  background-color: #f9f9ef;}
+  text-align: center;  background: #f9f9ef;}
 
 .vid #vid01 .vid01_wrap .area_title{
   margin: 3% auto;    
@@ -400,7 +365,7 @@ video{width: 100%;height: 100%;}
   line-height: 1.5;
 }
 
-.vid #vid02 { background-color: #f9f9ef;
+.vid #vid02 { background: #f9f9ef;
   width: 100%;display: block;
   margin: 0% auto;
   font-size: 15px;
@@ -441,12 +406,8 @@ video{width: 100%;height: 100%;}
 left: 50%; transform: translateX(-50%);
   position: relative;z-index: 99;
  }
- .vid .swiper-pagination .swiper-pagination-current{
-   font-size: 22px;
- }
+ .vid .swiper-pagination .swiper-pagination-current{font-size: 22px;}
 .vid #vid02 .swiper-wrapper{display: flex; height: unset; }
-
-
 .swiper-pagination-bullet {
   text-align: center;  width: 100%;
   margin: 5% auto 0;
@@ -465,27 +426,20 @@ color:#252525;
   left: 50%;bottom: 0;  display: block;
   transform: translateX(-50%);
   position: relative;z-index: 9;
-  background-color: transparent;
+  background: transparent;
 }
 .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
-  width: 100%; position: relative; 
-  bottom:unset;height: 30px;background-color:unset;
-}
+width: 100%; position: relative; bottom:unset;height: 30px;background:unset;}
 
 .vid .swiper-horizontal { margin: 2% auto;  width: 100%; display: inline-block;}
-
- .vid .swiper-pagination-bullet{width: 10%; background-color: unset;}
-
+ .vid .swiper-pagination-bullet{width: 10%; background: unset;}
 .vid #vid02 .vid02_img .swiper .swiper-wrapper .swiper-slide>p {
   font-size: 15px; margin-bottom: 5%;padding-top: 10px;}
 
-.vid>div {
-  width: 100%;height: 0;
-  display: none;overflow: hidden;
-}
+.vid>div {width: 100%;height: 0; display: none;overflow: hidden;}
 
 .vid>div.in {
-  width: 100%;background-color: #f9f9ef;
+  width: 100%;background: #f9f9ef;
 height: 100%;
   display: inline-block;
   z-index: 1;
@@ -505,7 +459,7 @@ height: 100%;
 .re_prd_area {
   width: 100%;
   margin: 0 auto;padding-top: 5%;
-  background-color: #F4EDDC;
+  background: #F4EDDC;
   text-align: center;
   z-index: 1;
   color: #252525;
@@ -633,7 +587,7 @@ height: 100%;
   width: 10%;
   height: 10px;
   margin: 10px auto;
-  background-color: #ccc;
+  background: #ccc;
 }
 
 .review_prd .swiper-pagination-bullet-active {
@@ -644,7 +598,7 @@ height: 100%;
   float: right;
   width: 90%;
   line-height: 20px;
-  background-color: #fff;
+  background: #fff;
   font-size: 11px;
 }
 
@@ -679,23 +633,11 @@ height: 100%;
   display: inline-block;
 }
 
-.review_prd .review_box .prd_left .left_bottom .bottom_right2 {
-  font-size: 10px;
-  padding-right: 4px;
-}
+.review_prd .review_box .prd_left .left_bottom .bottom_right2 {font-size: 10px;padding-right: 4px;}
 
 /* 리뷰 상품 1개 끝 */
-
-
-.review_prd .mySwiper .swiper-slide:nth-child(2) {
-  padding-top: 7%;
-}
-
-.review_prd .mySwiper .swiper-slide:nth-child(3) {
-  padding-top: 2%;
-}
-
-
+.review_prd .mySwiper .swiper-slide:nth-child(2) {padding-top: 7%;}
+.review_prd .mySwiper .swiper-slide:nth-child(3) {padding-top: 2%;}
 .review_prd .pagination {
   color: #252525;
   bottom: 0;
@@ -713,7 +655,7 @@ height: 100%;
 .review_prd .swiper-pagination .swiper-pagination-bullets .swiper-pagination-horizontal {
   position: absolute;
   width: 100%;
-  background-color: #F0E7D6;
+  background: #F0E7D6;
 }
 
 /* 브랜드 스토리 */
@@ -737,7 +679,5 @@ height: 100%;
 }
 
 .swiper-pagination-bullet{margin: 0 5%; width: 100%;display: block; position: absolute; bottom:0; left: 50%;}
-
-.brand_txt #brand_tit .main_btn {  color: #fff;margin-top: 11%;
-  background-color: #252525;  text-align: left;}
+.brand_txt #brand_tit .main_btn { color: #fff;margin-top: 11%; cursor: pointer; background: #252525;  text-align: left; cursor: pointer;}
 

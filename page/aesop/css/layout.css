@@ -96,7 +96,7 @@ header .nav{
 }
 
 header .nav .gnb_btn {
-  top: 50%;
+  top: 50%; cursor: pointer;
   transform: translateY(-50%);
   width: 20px;
   position: absolute;
@@ -171,7 +171,7 @@ header .nav .right_gnb>i:last-child {
   padding: 10px;
 }
 
-#aside .menu .closebtn>.fa-solid.fa-x {
+#aside .menu .close_btn>.fa-solid.fa-x {
   font-size: 23px;
   right: 5%;
   position: absolute;

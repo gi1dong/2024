@@ -39,7 +39,6 @@ video::-webkit-media-controls-play-button ,
 /* 괄호에 display: none !important; 를 추가하면된다.
  예 ) 전체화면 전환 버튼을 숨긴다. 
  다만 더블클릭으로 전체화면이 되는 기능등은 그대로고 단지 버튼만 없앤다. */
-
 video::-webkit-media-controls-fullscreen-button {display: none !important;}
 
 /* 영역별 txt */
@@ -70,7 +69,6 @@ video::-webkit-media-controls-fullscreen-button {display: none !important;}
 .prd-info .infor-inner{max-width: 1280px; margin: 0 auto; width: 100%; padding: 0 0 5rem 0; display: flex; justify-content: space-between; align-items: flex-start;}
 .prd-info .infor-inner::after{display: block; content: ''; clear: both;}
 .prd-info .prd-tit::before{position: absolute; top: -4rem; left: -2rem; content: "";  display: inline-block;  width: 5rem; height: 6rem; background: url(../img/obj_pc.png)no-repeat center center/cover; z-index: -1;}
-
 .prd-info .prd-txt { float: left; max-width: 26%; text-align: left; margin: 6rem auto 0;     padding-left: 3rem; }
 .prd-tit-subtxt {color: #1d1d1d;font-size: 24px;line-height: 36px; text-transform: lowercase;}
 .prd-img { float: right; width: 74%; margin: 0 auto; padding-left:5rem; box-sizing: border-box; }
@@ -85,7 +83,6 @@ video::-webkit-media-controls-fullscreen-button {display: none !important;}
 .prd-img .prd1 .img.d{background: url(../img/best04.png)no-repeat center center/cover;}
 .prd-img .prd1 .img.e{background: url(../img/best05.png)no-repeat center center/cover;}
 .prd-img .prd1 .img.f{background: url(../img/best06.png)no-repeat center center/cover;}
-
 .prd-img .prd1 .hover-after {position: absolute; z-index: 3; left: 0; top: 0; width: 100%; height: 100%; background: rgba(52, 52, 52, 0.9); transition: opacity 0.6s ease; opacity: 0; }
 .prd-img .prd1:hover .hover-after {opacity: 1; }
 .prd-img .prd1 .hover-after em{display: block; color: #fff; font-size: 18px;  line-height: 2;   font-weight: 800;  padding: 50rem 3rem;}
@@ -174,17 +171,22 @@ iframe{height: 100%; width: 100%; display: block;}
 /* store contents */
 .store-wrap{padding: 6rem 0; margin: 6rem auto 0;}
 .store-wrap .prd-tit{margin: 0 auto 2rem;}
-.tab-menu{display: flex; justify-content: flex-start; align-items: center;   width: calc(100% - 3rem);  margin: 0 auto;}
+.deskTop .tab-menu, .mobile .tab-menu{display: flex; justify-content: flex-start; align-items: center;   width: calc(100% - 3rem);  margin: 0 auto;}
+.mobile{display: none;}
+
 .tab-menu li:nth-child(1){padding:0 2rem 0 0;}
 .tab-menu li a{display: block;}
 
 .store-wrap ul.tab-menu li{border-radius: 50px; padding: 1rem 2rem; margin-right: 3rem; font-size: 20px; text-align: center; background: #ededed; color: #1d1d1d;}
-.store-wrap ul.tab-menu li:last-child{margin-right: 0;}
+.mobile .store-wrap ul.tab-menu li{margin-right: 0;}
+
+.deskTop .store-wrap ul.tab-menu li:last-child{margin-right: 0;}
 .store-wrap ul.tab-menu li.current{background: #1d1d1d; color: #fff;}
 .store-wrap .store-link{display: block;}
 .store-wrap .store-link img{display: block; width: 100%; height: 100%;}
 
 .tab-content{display: none;  padding: 15px;}
+.tab-content>div{max-width: 1280px; width: 100%; margin: 0 auto;}
 .tab-content.current{ display: inherit; }
 .store-img{margin: 3rem auto 6rem; width: 100%; background:#1d1d1d;}
 .store-img .swiper-scrollbar-drag{background: #fff;}
@@ -268,7 +270,6 @@ svg text:nth-child(12) {
 .contact-us-wrap{width: 100%; margin: 0 auto; display: flex; align-items: center;}
 .contact-us-wrap .cs-area{display:block; width: 33%; }
 .board{width: 50%; font-weight: 700; color: #fff; font-size: 20px;}
-
 .right .txt{width: calc(100% - 3rem); margin: 0 auto;}
 
 .contact-us-wrap .cs-area:nth-child(3) .board-inner .board{padding: 35px 0;}
@@ -326,6 +327,7 @@ color: #767676;}
 @media screen and (max-width: 1300px) {
 .store-wrap .inner{width: calc(100% - 6rem); margin: 0 auto;}
 /* .pop-up-store .farm-txt.clear{width: calc(100% - 6rem);} */
+
 }
 
 @media screen and (max-width: 1280px) {
@@ -334,6 +336,9 @@ color: #767676;}
   .prd-tit-subtxt{margin:0 auto 0;}
   .farming-wrap .faming-imgbg .farm-main{ margin: 0 auto 10rem;}
 
+  .deskTop .tab-menu{display: none;}
+  .mobile {display: block;}
+  .mobile .tab-menu{display: grid; gap: 1rem; flex-wrap: wrap; justify-content: unset; margin: 0 auto; }
   .prd-img .prd1{padding-left: 0;}
   .contact-us-wrap.pc{margin: 0 auto 3rem;}
   .contact-us .contact.inner{width: calc(100% - 6rem); display: block; margin:  0 auto 3rem; padding: 0 0 3rem 0;}
@@ -385,7 +390,7 @@ color: #767676;}
   .call-numb, 
   .qanda-txt{font-size: 20px; margin-top: 0;font-weight: 400;}
   .call-numb::before{width: 30px;height: 30px;}
- .noti-txt>p {font-size: 20px; line-height: 25px;}
+  .noti-txt>p {font-size: 20px; line-height: 25px;}
   .new-prd{width: 100%;}
   .new-prd.inner {position: relative; height: 460px;}
   .new-prd.inner .swiper{height: 460px;}
@@ -461,7 +466,6 @@ color: #767676;}
   .new-launch-prd .inner{flex-direction: column-reverse; }
   .new-launch-prd .mySwiper.prd-slide{height: 50vh; }
   .new-launch-prd .mySwiper.prd-slideimg{width: 100%; height: 100%; display: block;}
-
   .new-launch-prd .prd-txt{float: unset;text-align: center; width: unset;}
   .new-launch-prd .prd-txt{margin: 6rem auto 6rem;}
 
@@ -470,12 +474,12 @@ color: #767676;}
   .right .shortcuts{bottom: 2rem; width: 100%; height: 45px;}
   .right br{display: none;}
 
-  .tab-menu{display: grid; gap: 1rem; flex-wrap: wrap; justify-content: unset; margin: 0 auto; }
   .store-wrap ul.tab-menu li{margin-right: 0;  border-radius: 5px;}
-.store-img{display: none;}
+  .store-img{display: none;}
+  .store-wrap.sub .store-wrap .inner{width: 100%;}
+  .store-wrap.sub .store-txt{margin: 1rem auto 0;}
+  .store-wrap.sub .tab-content{padding: 0;}
 
-.store-wrap.sub .store-wrap .inner{width: 100%;}
-.store-wrap.sub .tab-content{padding: 0;}
 }
 
 @media screen and (max-width: 780px) {

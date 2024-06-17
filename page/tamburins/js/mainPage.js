@@ -47,17 +47,6 @@ $(function(){
     //     progressContent.textContent = `${Math.ceil(time / 1000)}s`;
     //   }   $('#header').css({background: '#fff', color:'#333', border:'#333'});
     // }
-    });
-
-    // store location tab
-    $('ul.tab-menu li').click(function(){
-      var tab_id = $(this).attr('data-tab');
-
-      $('ul.tab-menu li').removeClass('current');
-      $('.tab-content').removeClass('current');
-
-      $(this).addClass('current');
-      $("#"+tab_id).addClass('current');
     })
 
     }  
@@ -362,6 +351,17 @@ $(window).scroll(function(){
     }
     }
   };
+
+  // store location tab
+  $('ul.tab-menu li').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('ul.tab-menu li').removeClass('current');
+    $('.tab-content').removeClass('current');
+
+    $(this).addClass('current');
+    $("#"+tab_id).addClass('current');
+  })
 
   $("#go-bottom span").click(function(){
     $('html, body').scrollTop( $(document).height() );
