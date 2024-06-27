@@ -238,12 +238,12 @@ transform: rotate(0deg) }
 
 .main_area .section03 .main_intro_wrap .mySwiper.cafe24 .swiper-wrapper .swiper-slide .information .cafe24_button span{background:#fff; color:#2d2d2d; display: inline-block; text-align: center; font-size: 12px; letter-spacing: 0.5px; font-weight: 400; max-width: 150px; padding:10px; box-sizing: border-box; width: 100%; font-family: "Montserrat"; margin: 0 auto; border-color: transparent;}
 .main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .one{ background: url(../img/cafe24_img01.png) no-repeat 100% center/cover;}
-.main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .two{ background: url(../img/cafe24_img02.png) no-repeat 100% center/cover;}
+.main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .two{ background: url(../img/lelabo.jpg) no-repeat 100% center/cover;}
 .main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .three{ background: url(../img/cafe24_img03.png) no-repeat 100% center/cover;}
 .main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .four{background: url(../img/cafe24_img04.png) no-repeat 100% center/cover;}
 .main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .five{background: url(../img/cafe24_img05.png) no-repeat 100% center/cover;}
-.main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .six{  background: url(../img/cafe24_img06.png) no-repeat 100% center/cover;}
-.main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .seven{background: url(../img/cafe24_img07.png) no-repeat 100% center/cover;}
+/* .main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .six{  background: url(../img/cafe24_img06.png) no-repeat 100% center/cover;} */
+/* .main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .seven{background: url(../img/cafe24_img07.png) no-repeat 100% center/cover;} */
 .main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .eight{background: url(../img/cafe24_img08.png) no-repeat 100% center/cover;}
 .main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .nine{background: url(../img/cafe24_img09.png) no-repeat 100% center/cover;}
 .main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .ten{background: url(../img/keds_bg.jpg) no-repeat 100% center/cover;}
@@ -283,7 +283,7 @@ transform: rotate(0deg) }
 .main_area .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .main_intro .date{ transform: translate3d(10px, 10px, 10px); }
 .main_area .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .main_intro .btn_wrap { transform: translate3d(10px, 10px, 10px); }
 .main_area .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .bg_opac {opacity: 1;}
-.main_area .swiper-container .swiper-wrapper .swiper-slide-active .main_intro strong  {letter-spacing: 1rem; font-family: "Josefin Sans", sans-serif; font-size: 60px; display: block; line-height: 1.4;}
+.main_area .swiper-container .swiper-wrapper .swiper-slide-active .main_intro strong  {letter-spacing: -0.2rem; font-family: "Josefin Sans", sans-serif; font-size: 60px; display: block; line-height: 1.4;}
 .page_control {position: fixed; bottom: 30px; right: 30px; z-index: 9;}
 .page_control span {color: #fff; outline: none; cursor: pointer; display: inline-block; vertical-align: middle;}
 .page_control i {display: inline-block; width: 80px; height: 1px; background: #fff; vertical-align: middle; margin-left: 40px; }
