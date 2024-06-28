@@ -28,26 +28,19 @@
     body {position: fixed; font-family: "Montserrat", "Noto Sans KR", sans-serif; font-size: 12px; line-height: 1.2; letter-spacing: -0.5px; width: 100%; overflow-x: hidden; margin: 0 auto; background: #000; min-width: 440px;}
     body section {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); height: 883px; overflow: hidden;}
 .fila_screen {max-width: 390px; 
-width: 100%; display: block; position: absolute; top: 75px; left: 22px; border-radius: 0 0 30px 30px; height:calc(100% - 7rem); z-index: 9999;}
-
+width: 100%; display: block; position: absolute; top: 75px; left: 22px; border-radius: 0 0 30px 30px; height:calc(100% - 6rem); z-index: 90;}
 body section .phone_bg{position: relative; overflow: hidden;}
-
-.mo_screen_btn{position:absolute; bottom: 20px;
-  left: 50%; transform: translatex(-50%); max-width: 200px;
-  font-size: 16px; text-align: center; display: inline-block;  border-radius: 20px;  background-color:  rgba(255,255,255,.85);box-shadow: inset 0px 0px 5px white; padding: 10px 20px;}
+.mo_screen_btn{position:absolute; z-index: 91; bottom: 50px; left: 50%; transform: translatex(-50%); max-width: 200px; z-index: 99; font-size: 16px; text-align: center; display: inline-block;  border-radius: 20px;  background-color:  rgba(255,255,255,.85); box-shadow: inset 0px 0px 5px white; padding: 10px 20px;}
 
 @media screen and (max-width: 767px){
 .mo_screen_btn{font-size: 16px; }
-section{width: calc(100% - 4rem); margin:0 auto;}
 }
-
   </style>
   <section>
+    <a class="mo_screen_btn" href="../aesop/index.html">사이트 보러가기</a>
     <img class="phone_bg" src="./img/iphone12.png" alt="모바일화면"/>
     <iframe class="fila_screen" src="../aesop/index.html" width="800" height="500" frameborder="0"></iframe>
   </section>
-  
-  <a class="mo_screen_btn" href="../aesop/index.html">사이트 보러가기</a>
 </body>
 </html>
 <!-- <script>

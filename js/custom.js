@@ -1,17 +1,18 @@
 $(function(){
 
   $(".menu_btn").click(function(){
-    if ($(".menu_btn").hasClass("open")) {
+    if ($(".menu_btn").hasClass("open") && $(".aside").hasClass("open")) {
       $(this).removeClass("open");
       $(".aside").removeClass("open");
+      $(".nav_inner>li>a").removeClass("selected");
+      $(".nav_inner>li>a").parent().find("div").stop().animate({ height: "0" });
+      $(".nav_inner>li>a .arrow::after").css({transform:"rotate(135deg)"})
       $(".logo").removeClass("open");
-      // $(".aside nav .nav_inner>li").removeClass("selected");
-        $(".dimed").stop().animate({right: "-100%" }, 300);
+      $(".dimed").stop().animate({right: "-100%" }, 300);
     } else {
       $(this).addClass("open");
       $(".aside").addClass("open");
       $(".logo").addClass("open");
-      // $(".aside nav .nav_inner>li").addClass("selected");
       $(".dimed").stop().animate({ right: "0" }, 300);
     }
   // if($(this).hasClass("open")){
@@ -113,7 +114,7 @@ $(".aside nav .nav_inner>li>a").click(function () {
     spaceBetween: 0,
     speed: 5000,
   });
-  
+
 
 //   $('#loading').hide();
 //   $(".sub_menu li>a").click(function(){

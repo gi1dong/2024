@@ -158,12 +158,12 @@ a {
 
 img {
 	vertical-align: top;
-	width: unset;
+	width: 100%;
 }
 
 button{border: none; background: transparent;}
 body{position: fixed; width: 100vw; height: 100vh; background: #000;}
-body section {position: absolute; max-width: 400px; width: 100%; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+body section { overflow:hidden ;  position: absolute; max-width: 400px; width: 100%; top: 50%; left: 50%; transform: translate(-50%,-50%); }
 
 body section .fila_screen {
     width: 390px;
@@ -172,8 +172,9 @@ body section .fila_screen {
     top: 75px;
     left: 22px;
     border-radius: 0 0 30px 30px;
-    height:84vh;
+    height:90%;
     z-index: 9999;
+    overflow: hidden;
 }
   </style>
 
