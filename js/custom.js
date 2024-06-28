@@ -119,6 +119,7 @@ $(".aside nav .nav_inner>li>a").click(function () {
   $(".flower_middle").click(function(){
     if ($(".aside").hasClass("open")) {
       $(".aside").removeClass("open");
+      $(".menu_btn").removeClass("open");
       $(".nav_inner>li>a").removeClass("selected");
       $(".nav_inner>li>a").parent().find("div").stop().animate({ height: "0" });
       $(".nav_inner>li>a .arrow::after").css({transform:"rotate(135deg)"})
