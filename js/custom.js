@@ -121,7 +121,7 @@ $(".aside nav .nav_inner>li>a").click(function () {
       $(".menu_btn").removeClass("open");
       $(".menu_btn span:first-child ").css({transform:"rotate(-135deg)"},{background:"#fff"})
       $(".menu_btn span:last-child ").css({transform:"rotate(135deg)"},{background:"#fff"})
-      $(".menu_btn span:last-child ").css({opacity:"1"})
+      $(".menu_btn span:last-child:after ").css({opacity:"1"})
       $(".nav_inner>li>a").removeClass("selected");
       $(".nav_inner>li>a").parent().find("div").stop().animate({ height: "0" });
       $(".nav_inner>li>a .arrow::after").css({transform:"rotate(135deg)"})
