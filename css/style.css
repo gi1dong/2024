@@ -11,7 +11,7 @@ table {border-collapse: collapse; border-spacing: 0; }
 html, body {position: relative; width: 100%; height: 100vh; overflow-x: hidden;}
 body {font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12px; font-weight: 300; line-height: 1.2rem; letter-spacing: -0.5px; width: 100%; min-width: 36rem; overflow-x: hidden; margin: 0 auto;}
 .swiper-backface-hidden .swiper-slide{width:100vw;}
-
+button{background: none; padding: 0; margin: 0; border: none; outline: none;}
 /* 말줄임 */
 .ellipsis{display:inline-block;overflow:hidden;max-width:100%;text-overflow:ellipsis;word-break:keep-all;word-wrap:break-word;white-space:nowrap;vertical-align:middle;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto}
 .line_cut2,.line_cut3{display:-webkit-box;overflow:hidden;text-overflow:ellipsis;-webkit-box-orient:vertical;word-wrap:break-word;-webkit-line-clamp:2}
@@ -60,8 +60,10 @@ a:active,a:hover,a:focus{text-decoration:none}
 .aside nav .nav_inner li:last-child{padding: 0;}
 .aside nav .nav_inner>li>a { display: block; width: 100%; display: flex; justify-content: space-between; padding: 10px 0;  font-size: 30px; color: #000; font-weight: 500; text-align: left; position: relative; overflow: hidden;}
 .aside nav .nav_inner>li .sub_menu{ width: 100%; height: 0;  overflow: hidden;}
+
 .aside nav .nav_inner>li .sub_menu ul li>a{ display:inline-block; font-size: 18px; line-height: 1.6rem; font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;  font-weight: 300; }
-.aside nav .nav_inner>li a.selected .arrow::after {transform: rotate(315deg);}
+.aside nav .nav_inner>li a.selected .arrow::after{transform: rotate(315deg);}
+
 .aside::-webkit-scrollbar { width: 5px; } 
 .aside::-webkit-scrollbar-thumb { background-color: #333; border-radius: 10px; } 
 .aside::-webkit-scrollbar-track { background-color:  rgba(255,255,255,.85); border-radius: 10px; box-shadow: inset 0px 0px 5px white; }

@@ -115,7 +115,18 @@ $(".aside nav .nav_inner>li>a").click(function () {
     speed: 5000,
   });
 
-
+// aside menu 꽃중년
+  $(".flower_middle").click(function(){
+    if ($(".aside").hasClass("open")) {
+      $(".aside").removeClass("open");
+      $(".nav_inner>li>a").removeClass("selected");
+      $(".nav_inner>li>a").parent().find("div").stop().animate({ height: "0" });
+      $(".nav_inner>li>a .arrow::after").css({transform:"rotate(135deg)"})
+      $(".logo").removeClass("open");
+      $(".dimed").stop().animate({right: "-100%" }, 300);
+    } else {}
+  });
+});
 //   $('#loading').hide();
 //   $(".sub_menu li>a").click(function(){
 //     setTimeout(function(){
@@ -220,4 +231,3 @@ $(".aside nav .nav_inner>li>a").click(function () {
 // });
 
 
-});
