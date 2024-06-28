@@ -1,5 +1,7 @@
 @charset "utf-8";
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } /* HTML5 display-role reset for older browsers */ article,aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } /* HTML5 display-role reset for older browsers */ article,aside, details, 
+text{}
+figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 ol, ul {list-style: none; }
 a {text-decoration: none; color: #333;}
 i {font-style: normal; }
@@ -7,7 +9,7 @@ blockquote, q {quotes: none;}
 blockquote:before, blockquote:after, q:before, q:after {content: ""; content: none;}
 table {border-collapse: collapse; border-spacing: 0; }
 html, body {position: relative; width: 100%; height: 100vh; overflow-x: hidden;}
-body {font-family: "Montserrat", "Noto Sans KR", "Josefin Sans", sans-serif;  font-size: 12px; font-weight: 300; line-height: 1.2rem; letter-spacing: -0.5px; width: 100%; min-width: 36rem; overflow-x: hidden; margin: 0 auto;}
+body {font-family: "Noto Sans KR", "Josefin Sans",'Apple SD Gothic Neo',Sans-serif;   font-size: 12px; font-weight: 300; line-height: 1.2rem; letter-spacing: -0.5px; width: 100%; min-width: 36rem; overflow-x: hidden; margin: 0 auto;}
 .swiper-backface-hidden .swiper-slide{width:100vw;}
 /* 말줄임 */
 .ellipsis{display:inline-block;overflow:hidden;max-width:100%;text-overflow:ellipsis;word-break:keep-all;word-wrap:break-word;white-space:nowrap;vertical-align:middle;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto}
@@ -24,12 +26,13 @@ a:active,a:hover,a:focus{text-decoration:none}
 #u_skip a:hover,#u_skip a:focus,#u_skip a:active{z-index:1000;width:100%;height:auto;padding:10px 0;color:#fff}
 
 /* font */
-@font-face {font-family: 'Noto Sans KR', sans-serif; font-weight: 400; font-style: normal; src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"); unicode-range: U+AC00-D7A3;}
-@font-face { font-family: "Montserrat"; font-weight: 300; font-style: normal;
-src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap"); unicode-range: U+26,U+0061-007A,U+0041-005A;}
-@font-face{font-family: "Josefin Sans", sans-serif;  font-style: bold; font-weight: 700; src: url('../font/JosefinSans-Bold.ttf') format('woff2'), url('../font/JosefinSans-Bold.ttf')format('truetype');}
-@font-face { font-family: "Josefin Sans", sans-serif; font-style: normal; font-weight: 500; src: url('../font/JosefinSans-Medium.ttf') format('woff2'), url('../font/JosefinSans-Medium.ttf') format('truetype');}
-@font-face { font-family: "Josefin Sans", sans-serif; font-style: normal; font-weight: 300; src: url('../font/JosefinSans-Regular.ttf') format('woff2'), url('../font/JosefinSans-Regular.ttf') format('truetype');}
+@font-face {font-family: 'Noto Sans KR','Apple SD Gothic Neo',Sans-serif; ; font-weight: 400; font-style: normal; src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"); unicode-range: U+AC00-D7A3, U+0030-0039;}
+
+@font-face{font-family: "Josefin Sans",'Apple SD Gothic Neo',Sans-serif; ;  font-style: bold; font-weight: 700; src: url('../font/JosefinSans-Bold.ttf') format('woff2'), url('../font/JosefinSans-Bold.ttf')format('truetype');unicode-range: U+26,U+0061-007A,U+0041-005A;}
+@font-face { font-family: "Josefin Sans",'Apple SD Gothic Neo',Sans-serif; ; font-style: normal; font-weight: 500; src: url('../font/JosefinSans-Medium.ttf') format('woff2'), url('../font/JosefinSans-Medium.ttf') format('truetype');unicode-range: U+26,U+0061-007A,U+0041-005A;}
+@font-face { font-family: "Josefin Sans",'Apple SD Gothic Neo',Sans-serif; ; font-style: normal; font-weight: 400; src: url('../font/JosefinSans-Regular.ttf') format('woff2'), url('../font/JosefinSans-Regular.ttf') format('truetype');unicode-range: U+26,U+0061-007A,U+0041-005A;}
+
+@font-face { font-family: "Josefin Sans",'Apple SD Gothic Neo',Sans-serif;  font-style: normal; font-weight: 300; src: url('../font/JosefinSans-Regular.ttf') format('woff2'), url('../font/JosefinSans-Thin.ttf') format('truetype');unicode-range: U+26,U+0061-007A,U+0041-005A;}
 
 /* header */
 .header{right: 0; opacity: 1; visibility: visible;}
@@ -47,7 +50,7 @@ src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;5
 .menu_btn.open span:first-child { display: block; position: absolute; height: 2px; width: 100%; background: #000; opacity: 1; transform: rotate(135deg); top: 20px; left: 0; z-index: 2; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; -ms-transition: all .3s ease-in-out; transition: all .3s ease-in-out;}
 .menu_btn.open span:last-child { display: block; position: absolute; height: 2px; width: 100%; background: #000; opacity: 1; transform: rotate(-135deg); top: 20px; left: 0; z-index: 2; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; -ms-transition: all .3s ease-in-out; transition: all .3s ease-in-out; }
 .menu_btn.open span:last-child:after { opacity: 0;}
-.aside{position: absolute; width: 100%; max-width: 360px; right: -100%; top: 0;  background: rgba(255,255,255,.85);  z-index: 3; transition: all .6s; font-family: "Montserrat"; font-weight: 400;-webkit-font-smoothing: antialiased; padding:100px 0 0 0; margin: 0 auto; -moz-osx-font-smoothing: grayscale; visibility: hidden;  height: 100vh;  overflow: hidden;}
+.aside{position: absolute; width: 100%; max-width: 360px; right: -100%; top: 0;  background: rgba(255,255,255,.85);  z-index: 3; transition: all .6s; font-weight: 400;-webkit-font-smoothing: antialiased; padding:100px 0 0 0; margin: 0 auto; -moz-osx-font-smoothing: grayscale; visibility: hidden;  height: 100vh;  overflow: hidden;}
 .aside.open{right: 0; visibility: visible; overflow: visible;overflow-y: scroll;}
 .aside nav{position: relative;}
 .aside nav .nav_inner {margin: 0 auto; width:100%; position: absolute; left: 20px; top:0; z-index: 3;}
@@ -55,16 +58,14 @@ src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;5
 .aside nav .nav_inner li:last-child{padding: 0;}
 .aside nav .nav_inner>li>a { display: block; width: 100%; display: flex; justify-content: space-between; padding: 10px 0;  font-size: 30px; color: #000; font-weight: 500; text-align: left; position: relative; overflow: hidden;}
 .aside nav .nav_inner>li .sub_menu{ width: 100%; height: 0;  overflow: hidden;}
-.aside nav .nav_inner>li .sub_menu ul li>a{ display:inline-block; font-size: 18px; line-height: 1.6rem; font-family:"Montserrat", sans-serif; font-weight: 300; }
+.aside nav .nav_inner>li .sub_menu ul li>a{ display:inline-block; font-size: 18px; line-height: 1.6rem; font-family:'Noto Sans KR','Apple SD Gothic Neo',Sans-serif; font-weight: 300; }
 .aside nav .nav_inner>li a.selected .arrow::after {transform: rotate(315deg);}
 .aside::-webkit-scrollbar { width: 5px; } 
 .aside::-webkit-scrollbar-thumb { background-color: #333; border-radius: 10px; } 
 .aside::-webkit-scrollbar-track { background-color:  rgba(255,255,255,.85); border-radius: 10px; box-shadow: inset 0px 0px 5px white; }
 
 .arrow{position: relative;}
-.arrow::after { content: "";display: block; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); width: 10px; 
-height: 10px;border-top: 1px solid #000; border-right: 1px solid #000;
-transform: rotate(135deg);}
+.arrow::after { content: "";display: block; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); width: 10px; height: 10px;border-top: 1px solid #000; border-right: 1px solid #000;transform: rotate(135deg);}
 .dimed{position: fixed; width: 100%; height: 100%;  top: 0; right: -100%; background: rgba(0, 0, 0, 0.7); z-index: 2;}
 
 /* MAIN */
@@ -236,7 +237,7 @@ transform: rotate(0deg) }
   -moz-osx-font-smoothing: grayscale;
 }
 
-.main_area .section03 .main_intro_wrap .mySwiper.cafe24 .swiper-wrapper .swiper-slide .information .cafe24_button span{background:#fff; color:#2d2d2d; display: inline-block; text-align: center; font-size: 12px; letter-spacing: 0.5px; font-weight: 400; max-width: 150px; padding:10px; box-sizing: border-box; width: 100%; font-family: "Montserrat"; margin: 0 auto; border-color: transparent;}
+.main_area .section03 .main_intro_wrap .mySwiper.cafe24 .swiper-wrapper .swiper-slide .information .cafe24_button span{background:#fff; color:#2d2d2d; display: inline-block; text-align: center; font-size: 12px; letter-spacing: 0.5px; font-weight: 400; max-width: 150px; padding:10px; box-sizing: border-box; width: 100%; font-family:'Noto Sans KR','Apple SD Gothic Neo',Sans-serif; margin: 0 auto; border-color: transparent;}
 .main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .one{ background: url(../img/cafe24_img01.png) no-repeat 100% center/cover;}
 .main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .two{ background: url(../img/lelabo.jpg) no-repeat 100% center/cover;}
 .main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .three{ background: url(../img/cafe24_img03.png) no-repeat 100% center/cover;}
@@ -283,7 +284,7 @@ transform: rotate(0deg) }
 .main_area .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .main_intro .date{ transform: translate3d(10px, 10px, 10px); }
 .main_area .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .main_intro .btn_wrap { transform: translate3d(10px, 10px, 10px); }
 .main_area .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .bg_opac {opacity: 1;}
-.main_area .swiper-container .swiper-wrapper .swiper-slide-active .main_intro strong  {letter-spacing: -0.2rem; font-family: "Josefin Sans", sans-serif; font-size: 60px; display: block; line-height: 1.4;}
+.main_area .swiper-container .swiper-wrapper .swiper-slide-active .main_intro strong  {letter-spacing: -0.2rem; font-family: "Josefin Sans",'Apple SD Gothic Neo',Sans-serif; font-size: 60px; display: block; line-height: 1.4;}
 .page_control {position: fixed; bottom: 30px; right: 30px; z-index: 9;}
 .page_control span {color: #fff; outline: none; cursor: pointer; display: inline-block; vertical-align: middle;}
 .page_control i {display: inline-block; width: 80px; height: 1px; background: #fff; vertical-align: middle; margin-left: 40px; }
