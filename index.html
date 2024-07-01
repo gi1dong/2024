@@ -16,13 +16,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 	<script src="./js/custom.js"></script>
   <script type="text/javascript">
-
     // <![CDATA[
     var colour="#ff8e99";
     var sparkles=20;
     var lower_sparkles=1;
-    
-    
     /****************************
     *  Tinkerbell Magic Sparkle *
     *(c)2005-13 mf2fm web-design*
@@ -42,7 +39,6 @@
     var tinyx=new Array();
     var tinyy=new Array();
     var tinyv=new Array();
-    
     window.onload=function() { if (document.getElementById) {
       var i, rats, rlef, rdow;
       for (var i=0; i<sparkles; i++) {
@@ -69,7 +65,6 @@
       set_width();
       sparkle();
     }}
-    
     function sparkle() {
       var c;
       if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
@@ -152,7 +147,6 @@
         x=event.x+sleft;
       }
     }
-    
     window.onscroll=set_scroll;
     function set_scroll() {
       if (typeof(self.pageYOffset)=='number') {
@@ -172,7 +166,6 @@
         sleft=0;
       }
     }
-    
     window.onresize=set_width;
     function set_width() {
       var sw_min=999999;
@@ -196,7 +189,6 @@
       swide=sw_min;
       shigh=sh_min;
     }
-    
     function createDiv(height, width) {
       var div=document.createElement("div");
       div.style.position="absolute";
@@ -205,7 +197,6 @@
       div.style.overflow="hidden";
       return (div);
     }
-    
     function newColour() {
       var c=new Array();
       c[0]=255;
@@ -214,7 +205,6 @@
       c.sort(function(){return (0.5 - Math.random());});
       return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
     }
-  
     // ]]>
   </script> 
 </head>
@@ -289,7 +279,7 @@
                   <a href="./page/tamburins/main.html"  target="_blank">Tamburins</a>
                 </li>
                 <li>
-                  <a href="./page/gentleMonster/index.html" target="_blank">gentleMonster</a>
+                  <a href="./page/gentleMonster/index.html" target="_blank">GentleMonster</a>
                 </li>
                 <li>
                   <a href="https://bombombom111.cafe24.com/index.html" target="_blank">LE LABO</a>
@@ -484,7 +474,12 @@
             </div>
           </div>
           <div class="swiper-slide section04">
-            <div class="bg"></div>
+            <div class="bg">
+              <video width="100%" height="100%" class="" loop="1" disablekb="1" playsinline="" muted="1" autohide="1"  autoplay="1" >
+              <source
+                src="./img/aesop.mp4"  type="video/mp4">
+            </video>
+            </div>
             <div class="bg_opac"></div>
             <div class="main_intro">
               <span class="txt01">Mobile사이트 리뉴얼</span>
@@ -1055,7 +1050,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide section09">
+          <!-- <div class="swiper-slide section09">
             <div class="bg"></div>
             <div class="bg_opac"></div>
             <div class="main_intro">
@@ -1063,12 +1058,12 @@
               <div class="txt02"><strong>LE LABO</strong></div>
               <p class="txt03">개인 프로젝트<br/>제작기간 : 반응형작업진행중 <br>기획, 디자인 :기존 사이트 동일 <br> 퍼블리싱 100%</p>
               <div class="btn_wrap">
-                <a href="https://bombombom111.cafe24.com/index.html/index.html" class="btn01 last btn_base btn_ef01" target="_blank">
-                  <span style="background: #59595959; color: #fff;">사이트 바로가기(진행중)</span>
+                <a href="https://bombombom111.cafe24.com/index.html" class="btn01 last btn_base btn_ef01" target="_blank">
+                  <span style="background: #59595959; color: #fff;">사이트 바로가기</span>
                 </a>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="swiper-slide section10">
             <div class="bg"></div>
             <div class="bg_opac"></div>

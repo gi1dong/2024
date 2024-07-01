@@ -75,7 +75,7 @@ $(".aside nav .nav_inner>li>a").click(function () {
     slidesPerView: "auto",
     centeredSlides: true,
     autoplay: {
-      delay: 3500,
+      delay: 2500,
       disableOnInteraction: false,
     },
     navigation: {
@@ -115,6 +115,17 @@ $(".aside nav .nav_inner>li>a").click(function () {
     speed: 5000,
   });
 
+  // aseop
+  $(function(){
+    $(window).scroll(function(){
+    const videoTop = $('.section04').offset().top;
+    const video = $("video");
+    if( $(document).scrollTop() > videoTop ){
+    video.get(0).play();
+    }
+    });
+  });
+
 // aside menu 꽃중년
   $(".flower_middle").click(function(){
       $(".aside").removeClass("open");
@@ -135,9 +146,6 @@ $(".aside nav .nav_inner>li>a").click(function () {
 //   return true;
 // });
 
-
-
-  
 // var swiperOptions = {
 //   loop: true,
 //   autoplay: {
@@ -153,15 +161,11 @@ $(".aside nav .nav_inner>li>a").click(function () {
 // };
 
 // var project = new Swiper(".swiper-slide.section03 .main_intro_wrap .swiper-container.cafe24 ", swiperOptions);
-
- 
 // function Loading() {
 //   var maskHeight = $(document).height();
 //   var maskWidth  = window.document.body.clientWidth;
-   
 //   var mask       = "<div id='mask' style='position:absolute; z-index:9000; background-color:#000000; display:none; left:0; top:0;'></div>";
 //   var loadingImg ='';
-   
 //   loadingImg +=" <div id='loadingImg'>";
 //   loadingImg +=" <img src='${pageContext.request.contextPath}/img/Spinner2.gif' style='position:absolute; z-index:9500; text-align:center; display:block; margin-top:300px; margin-left:750px;'/>";
 //   loadingImg += "</div>";  
