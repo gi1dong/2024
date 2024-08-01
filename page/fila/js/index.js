@@ -1,5 +1,5 @@
-$(function () {
-var main_vis = new Swiper(".main_vis .mySwiper", {
+(function () {
+const main_vis = new Swiper(".main_vis .mySwiper", {
  speed:800,
 effect:"fade",
   autoplay: {
@@ -16,7 +16,6 @@ effect:"fade",
     clickable: true,
   },
 });
-
 $(".swiper-control").click(function () {
   if ($(this).hasClass("hi")) {
     $(this).removeClass("hi");
@@ -28,9 +27,8 @@ $(".swiper-control").click(function () {
     return false;
   }
 });
-
 /* 인기상품 영역*/
-var product = new Swiper(".product .mySwiper", {
+const product = new Swiper(".product .mySwiper", {
 autoplay: {
 delay: 2600,
 disableOnInteraction: true,
@@ -45,27 +43,22 @@ disableOnInteraction: true,
     el: ".product .swiper-pagination.show",
   },
 });
-
 $(".main_vis .swiper-control").click(function () {
 return false;
 });
-
 /*스와이퍼 슬라이드 재생 멈춤 기능*/
 $(".product .stop").click(function () {
 product.autoplay.stop();
 return false;
 });
-
 $(".product .play").click(function () {
 product.autoplay.start();
 return false;
 });
-
 $(".menu_3").click(function () {
   $(this).addClass("on");
 });
-
-var ft_info = new Swiper(".ft_info .mySwiper", {
+const ft_info = new Swiper(".ft_info .mySwiper", {
   loop: false,
   slidesPerView: "1",
   spaceBetween: 6,
@@ -74,9 +67,8 @@ var ft_info = new Swiper(".ft_info .mySwiper", {
     disableOnInteraction: false,
   },
 });
-
 // tab메뉴 남성 속옷 카테고리
-var categoryMen = new Swiper(".category_tab .mySwiper.men", {
+const categoryMen = new Swiper(".category_tab .mySwiper.men", {
   pagination: {
     el: ".category_tab .swiper-pagination",
     clickable: true,
@@ -86,7 +78,7 @@ var categoryMen = new Swiper(".category_tab .mySwiper.men", {
   },
 });
 // tab메뉴 여성 속옷 카테고리,아동 속옷 카테고리
-var categoryWomen = new Swiper(".category_tab .mySwiper.women", {
+const categoryWomen = new Swiper(".category_tab .mySwiper.women", {
   pagination: {
     el: ".category_tab .swiper-pagination",
     clickable: true,
@@ -95,8 +87,6 @@ var categoryWomen = new Swiper(".category_tab .mySwiper.women", {
     },
   },
 });
-
-
 /*tab menu area*/
 $(".tab> ul> li").click(function () {
   idx = $(this).index() + 1;
@@ -106,8 +96,7 @@ $(".tab> ul> li").click(function () {
   $(".tab> ul> li").removeClass("on");
   $(this).addClass("on");
 });
-
-var awards_tab = new Swiper(".awards_tab .mySwiper", {
+const awards_tab = new Swiper(".awards_tab .mySwiper", {
   slidesPerView: 2.3,
       spaceBetween: 30,
       pagination: {
@@ -115,8 +104,7 @@ var awards_tab = new Swiper(".awards_tab .mySwiper", {
         el: ".awards_tab .swiper-pagination",
       },
   
-    });
-
+});
 $("#menu_btn").click(function () {
   if ($("#menu_btn").hasClass("on")) {
     $(this).removeClass("on");
@@ -128,23 +116,19 @@ $("#menu_btn").click(function () {
     $("#right_menu").stop().animate({ right: 0 }, 300);
   }
 });
-
 $(".close_btn").click(function () {
   $(".dimmed_bg").removeClass("on");
   $("#container").removeClass("close");
   $("#right_menu").stop().animate({right: "-100%"}, 400 );
   $("#menu_btn").removeClass("on");
 });
-
 /*우측 하단*/
 $(".top_btn").click(function () {
   $("html,body").stop().animate({ scrollTop: 0 }, 500);
 });
-
 /*우측 아코디언 메뉴*/
 $(".list_items .ctg_name").click(function(){
-  var ctgHeught = $(this).parent().find("ul").outerHeight();
-
+  const ctgHeught = $(this).parent().find("ul").outerHeight();
   if ($(this).hasClass("opentab")){
     $(this).removeClass("opentab");
     $(this).parent().find("div").stop().animate({ height: "0" });}
@@ -154,10 +138,8 @@ $(".list_items .ctg_name").click(function(){
       $(this).parent().find("div").stop().animate({ height : ctgHeught });
     }
 });
-
 $(".bd_item .item_tit").click(function () {
-  var ft_menu = $(this).parent().find("ul").outerHeight();
-
+  const ft_menu = $(this).parent().find("ul").outerHeight();
   if ($(this).hasClass("color")) {
     $(this).removeClass("color");
     $(this).parent().find("div").stop().animate({ height: "0" });
@@ -166,7 +148,6 @@ $(".bd_item .item_tit").click(function () {
     $(this).parent().find("div").stop().animate({ height: ft_menu });
   }
 });
-
 $(".header .hd_icon .fa-search").click(function () {
   if ($(".sr_inner").hasClass("inn")) {
     $(".sr_inner").removeClass("inn");
@@ -176,7 +157,6 @@ $(".header .hd_icon .fa-search").click(function () {
     document.getElementById("#container").style.display = "block";
   }
 });
-
 $(window).scroll(function () {
   scrTop = $(window).scrollTop();
   contentAreaTop = $(".content").offset().top;
@@ -186,30 +166,25 @@ $(window).scroll(function () {
     $(".top_btn").removeClass("om");
   }
 });
-
 /*about fila*/
 $(".awards_tab .swiper .swiper-slide").click(function(){
-  var awd_idx = $(this).index() + 1;
+  const awd_idx = $(this).index() + 1;
   console.log(awd_idx);
   $("div[class^=txt0]").removeClass("on");
   $(".txt0" + awd_idx).addClass("on"); 
 });
-
-var controller = new ScrollMagic.Controller({
+const controller = new ScrollMagic.Controller({
   globalSceneOptions: {
     triggerHook: "onLeave",
     duration: "200%"
   }
 });
-
-var event_txt = TweenMax.to(".events .space_tit", 0.3, {y: "0%"});
-var scene01 = new ScrollMagic.Scene({ 
+const event_txt = TweenMax.to(".events .space_tit", 0.3, {y: "0%"});
+const scene01 = new ScrollMagic.Scene({ 
   triggerElement: ".events",
   offset:-600,
   })
   .setTween(event_txt)
   .addTo(controller)
-
-
-});
+}());
 
