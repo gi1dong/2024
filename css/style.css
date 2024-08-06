@@ -12,10 +12,11 @@ html, body {position: relative; width: 100%; height: 100vh; overflow-x: hidden;}
 body {font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12px; font-weight: 300; line-height: 1.2rem; letter-spacing: -0.5px; width: 100%; min-width: 36rem; overflow-x: hidden; margin: 0 auto;}
 .swiper-backface-hidden .swiper-slide, .swiper-slide{width:100vw; height: 100vh; overflow: hidden;}
 button{background: none; padding: 0; margin: 0; border: none; outline: none;}
+
 /* 말줄임 */
 .ellipsis{display:inline-block;overflow:hidden;max-width:100%;text-overflow:ellipsis;word-break:keep-all;word-wrap:break-word;white-space:nowrap;vertical-align:middle;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto}
-.line_cut2,.line_cut3{display:-webkit-box;overflow:hidden;text-overflow:ellipsis;-webkit-box-orient:vertical;word-wrap:break-word;-webkit-line-clamp:2}
-.line_cut3{-webkit-line-clamp:3}
+.line_cut2,.line_cut3{display:-webkit-box;overflow:hidden;text-overflow:ellipsis;-webkit-box-orient:vertical;word-wrap:break-word;-webkit-line-clamp:2;line-clamp:2;}
+.line_cut3{-webkit-line-clamp:3; line-clamp:3; }
 
 /* link */
 a:link,a:visited{color:#333; text-decoration:none}
@@ -60,10 +61,8 @@ a:active,a:hover,a:focus{text-decoration:none}
 .aside nav .nav_inner li:last-child{padding: 0;}
 .aside nav .nav_inner>li>a { display: block; width: 100%; display: flex; justify-content: space-between; padding: 10px 0;  font-size: 30px; color: #000; font-weight: 500; text-align: left; position: relative; overflow: hidden;}
 .aside nav .nav_inner>li .sub_menu{ width: 100%; height: 0;  overflow: hidden;}
-
 .aside nav .nav_inner>li .sub_menu ul li>a{ display:inline-block; font-size: 18px; line-height: 1.6rem; font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;  font-weight: 300; }
 .aside nav .nav_inner>li a.selected .arrow::after{transform: rotate(315deg);}
-
 .aside::-webkit-scrollbar { width: 5px; } 
 .aside::-webkit-scrollbar-thumb { background-color: #333; border-radius: 10px; } 
 .aside::-webkit-scrollbar-track { background-color:  rgba(255,255,255,.85); border-radius: 10px; box-shadow: inset 0px 0px 5px white; }
@@ -71,31 +70,29 @@ a:active,a:hover,a:focus{text-decoration:none}
 .arrow::after { content: "";display: block; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); width: 10px; height: 10px;border-top: 1px solid #000; border-right: 1px solid #000;transform: rotate(135deg);}
 .dimed{position: fixed; width: 100%; height: 100%;  top: 0; right: -100%; background: rgba(0, 0, 0, 0.7); z-index: 2;}
 
-/* MAIN */
-/* .main_area {width: 100%; height: 100vh; overflow: hidden;} */
-
 /**swiper_reset**/ 
 .main_area .swiper-pagination.swiper-pagination-fraction.swiper-pagination-vertical,
 .main_area>.swiper-horizontal>.swiper-pagination-bullets, .main_area>.swiper-pagination-bullets.swiper-pagination-horizontal, .main_area>.swiper-pagination-custom, .main_area>.swiper-pagination-fraction, .main_area .swiper-pagination-current, .main_area .swiper-pagination-total, .main_area .page_control{color: #fff;}
 .main_area>.swiper-container{ width: 100vw; height: 100vh; position: fixed; /* top:50%; transform: translateY(-50%); left: 0; */ z-index: 1; }
 .main_area>.swiper-container>.swiper-wrapper{ height: 100%; width: 100%; box-sizing: border-box;}
-
 .main_area>.swiper-container>.swiper-wrapper>.swiper-slide,
 .main_area>.swiper-container>.swiper-wrapper>.swiper-slide-active{z-index: 1;  position: relative; font-size: 18px; color:#fff; background: #000;/* Center slide text vertically */ display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-box-pack: center;overflow: hidden; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; width: 100%; height: 100%; overflow: hidden;}
 .main_area .swiper-slide .bg {-webkit-transform: scale(1.1) rotate(1deg); -moz-transform: scale(1.1) rotate(2deg); -ms-transform: scale(1.1) rotate(2deg); -o-transform: scale(1.1) rotate(2deg); transform: scale(1.1) rotate(2deg); -webkit-transition: all 1ms ease 1ms; -moz-transition: all 1s ease 0.1s; -o-transition: all 1ms ease 1ms; -ms-transition: all 1ms ease 1ms; transition: all 1ms ease 1ms; opacity: 1; background-position: center; background-size: cover; position: absolute; top: 0;left: 0; width: 100%; height: 100%; overflow: hidden;}
 
 /**active_eff*/
 .main_area .swiper-slide.swiper-slide-active .bg { -webkit-transform: scale(1) rotate(0deg); -moz-transform: scale(1) rotate(0deg); -ms-transform: scale(1) rotate(0deg); -o-transform: scale(1) rotate(0deg); transform: scale(1) rotate(0deg); opacity: 1;}
+
 /**cafe24**/
 .main_area .section03 .bg { background-color:#000;}
 
 /**btn_eff_*/
-.main_area .btn01 {display: inline-block; margin-top: 20px; min-width: 175px; padding: 19px 0; position: relative; font-size: 12px; font-weight: 700; line-height: 1; text-align: center; border: 2px solid transparent; border-radius: 5px; background: transparent; -webkit-transition: color 300ms, background 300ms, border 300ms; transition: color 300ms, background 300ms, border 300ms; }
+.main_area .btn01 {display: inline-block; margin-top: 20px; min-width: 175px; padding: 19px 0; position: relative; font-size: 12px; font-weight: 700; line-height: 1; text-align: center; border: 2px solid transparent; border-radius: 5px; background: transparent; -webkit-transition: color 300ms, background-color 300ms, border 300ms; transition: color 300ms, background-color 300ms, border 300ms; }
 .main_area .btn01.last{background: #595959; color: #fff;}
 .main_area .btn01 span {position: relative; letter-spacing: 0.5px; font-size: 14px; font-weight:400; }
+.txt02{margin: 0 auto;}
 
 /* border style */ 
-.main_area .btn01 {flex-shrink: 0; text-decoration: none; background: #fff; border-radius: 40px; color: #000; display: inline-block; padding: 0 30px; height: 51px; line-height: 49px; font-weight: 600; letter-spacing: -.036em; font-size: inherit; transition: .3s background ,.3s color, .3s border, .3s opacity; -webkit-animation: move 2.5s infinite; animation: move 2.5s infinite; }
+.main_area .btn01 {flex-shrink: 0; text-decoration: none; background: #fff; border-radius: 40px; color: #000; display: inline-block; padding: 0 30px; height: 51px; line-height: 49px; font-weight: 600; letter-spacing: -.036em; font-size: inherit; transition: .3s background-color ,.3s color, .3s border, .3s opacity; -webkit-animation: move 2.5s infinite; animation: move 2.5s infinite; }
 @keyframes move {
   0% {
 transform: rotate(0deg) }
@@ -127,12 +124,10 @@ transform: rotate(0deg) }
 }
 .main_area .btn01:hover {font-weight:700; color: #000;}
 
-/* 영역별 배경 */
+/* Area bg */
 .main_area .section02 .bg { background:url(../img/wooalong_l.png) no-repeat 0 0 / cover;}
 
 /**cafe24**/
-/* .main_area .section03{position: relative; width: 100%; height: 100vh;}  */
-
 .main_area .section03 .main_intro_wrap{width: 100%; top: 50%; transform: translateY(-50%); justify-content: center; flex-direction: column; align-items: center; display: flex; margin: 0 auto; position: absolute; left: 0;  height:100%;}
 .main_area .section03 .main_intro_wrap .txt01{ display: block; color: #fff; width: 100%; margin: 0 auto 60px; text-align: center; font-size: 18px; }
 .cafe24_responsive_box{overflow: hidden; width: 100%; position: relative;}
@@ -146,8 +141,7 @@ transform: rotate(0deg) }
 .main_area .section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .information .cafe24_button {margin: 0 auto;}
 .cafe24_button a{display:inline-block; color: #fff; position: relative; margin: 0 auto 20px; padding: 0 0 10px 0;}
 .cafe24_button a span{ margin: 3rem auto 0;  pointer-events: all; display: block; font-size: .688em;  line-height: .909em; }
-/* .cafe24_button a::after{content: '';  display: inline-block;  position: absolute; left: 0; bottom: 0; height: 1px; width: 100%; -webkit-transition: bottom .5s; transition: bottom .5s; background: #fff;} */
-.txt02{margin: 0 auto;}
+
 .bg-1 {
   background: #ECEFF1;
   color: #1d1d1d;
@@ -189,18 +183,9 @@ transform: rotate(0deg) }
   transition-timing-function: cubic-bezier(0.1, 1, 0.1, 1);
 }
 .button--tamaya.button--inverted::before,
-.button--tamaya.button--inverted::after {
-  background:#ECEFF1;
-  color: #fff;
-}
-.button--tamaya::before {
-  top: 0;
-  padding-top: 1em;
-}
-.button--tamaya::after {
-  bottom: 0;
-  line-height: 0;
-}
+.button--tamaya.button--inverted::after {background:#ECEFF1; color: #fff;}
+.button--tamaya::before {top: 0; padding-top: 1em;}
+.button--tamaya::after {bottom: 0; line-height: 0;}
 .button--tamaya > span {
   display: block; color: #fff;
   -webkit-transform: scale3d(0.2, 0.2, 1);
@@ -236,14 +221,11 @@ transform: rotate(0deg) }
 .main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .three{ background: url(../img/cafe24_img03.png) no-repeat 100% center/cover;}
 .main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .four{background: url(../img/cafe24_img04.png) no-repeat 100% center/cover;}
 .main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .five{background: url(../img/cafe24_img05.png) no-repeat 100% center/cover;}
-/* .main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .six{  background: url(../img/cafe24_img06.png) no-repeat 100% center/cover;} */
-/* .main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .seven{background: url(../img/cafe24_img07.png) no-repeat 100% center/cover;} */
 .main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .eight{background: url(../img/cafe24_img08.png) no-repeat 100% center/cover;}
 .main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .nine{background: url(../img/cafe24_img09.png) no-repeat 100% center/cover;}
 .main_area .swiper-slide.section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .ten{background: url(../img/keds_bg.jpg) no-repeat 100% center/cover;}
 .swiper-pagination-bullet, .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{display: inline-block;}
 .swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets{bottom: 0; top: unset;}
-/* .main_area .section04 .bg { background:url(../img/aesop_bg.jpg) no-repeat 100% center/cover; } */
 .main_area .section05 .bg { background:url(../img/t2.jpg) no-repeat 100% center/cover;}
 .main_area .section06 .bg { background:url(../img/fila_bg.jpg) no-repeat 0 0 / cover; background-position: center;}
 .main_area .section07 .bg {background:url(../img/mainArea4.jpg) no-repeat 100% center/cover;}
@@ -254,13 +236,13 @@ transform: rotate(0deg) }
 .main_area .swiper-container .swiper-wrapper .swiper-slide.main_intro .txt01 { font-size: 18px; display: block; transform: translate3d(-2 9px, 10px, 10px); -webkit-transition: all 0.4s ease-in-out 0.1s; -moz-transition: all 0.4s ease-in-out 0.1s; -o-transition: all 0.4s ease-in-out 0.1s; -ms-transition: all 0.4s ease-in-out 0.1s; transition: all 0.4s ease-in-out 0.1s;}
 .main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro .txt01 span {font-weight: 700; transform: translate3d(-29px, 32px, 10px); display:inline-block;}
 .main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro .txt02 strong{font-size: 50px; display: block; line-height: 1.6; font-weight: 700; padding: 30px 0; -webkit-transition: all 2s ease-in-out .5s; -moz-transition: all 2s ease-in-out .5s; -o-transition: all 2s ease-in-out .5s; -ms-transition: all 2s ease-in-out .5s; transition: all 2s ease-in-out .5s;}
-.main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro .date { font-size: 18px;line-height: 1.7;color: #fff;font-weight: 300; padding-bottom: 20px;transform: translate3d(-29px, 32px, 10px); -webkit-transition: all 1s ease-in-out 0.1s;-moz-transition: all 1s ease-in-out 0.5s; -o-transition: all 1s ease-in-out 0.5s; -ms-transition: all 1s ease-in-out 0.5s;transition: all 1s ease-in-out 0.5s;;}
+.main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro .date { font-size: 18px;line-height: 1.7;color: #fff;font-weight: 300; padding-bottom: 20px;transform: translate3d(-29px, 32px, 10px); -webkit-transition: all 1s ease-in-out 0.1s;-moz-transition: all 1s ease-in-out 0.5s; -o-transition: all 1s ease-in-out 0.5s; -ms-transition: all 1s ease-in-out 0.5s;transition: all 1s ease-in-out 0.5s;}
+
 /* btn */
 .main_area .btn_wrap {transform: translate3d(-29px, 32px, 10px); -webkit-transition: all 1.2s ease-in-out 0.4s; -moz-transition: all 1.2s ease-in-out 0.4s; -o-transition: all 1.2s ease-in-out 0.4s; -ms-transition: all 1.2s ease-in-out 0.4s; transition: all 1.2s ease-in-out 0.4s;}
 .main_area .swiper-slide .bg_opac {position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0; background: radial-gradient(circle at top left, rgba(0, 0, 0, 0) 17%, rgba(0, 0, 0, 0.9) 100%); -webkit-transition: all 2s ease 0.1s; -moz-transition: all 2s ease 0.1s; -o-transition: all 2s ease 0.1s; -ms-transition: all 2s ease 0.1s; transition: all 2s ease 0.1s; }
 .main_area .prev_btn {position: fixed; letter-spacing: 1px;}
 .main_area .prev_btn:before { content: ""; display: block; width: 0; height: 1px; position: absolute; bottom: -5px; left: 0; background: #fff; -webkit-transition: all .5s ease 0.1s; -moz-transition: all .5s ease 0.1s; -o-transition: all .5s ease 0.1s; -ms-transition: all .5s ease 0.1s; transition: all .5s ease 0.1s; }
-
 .main_area .next_btn {position: relative; letter-spacing: 1px; }
 .main_area .next_btn:before { content: ""; display: block; width: 0; height: 1px; position: absolute; bottom: -5px; right: 0; background: #fff; -webkit-transition: all .5s ease 0.1s; -moz-transition: all .5s ease 0.1s; -o-transition: all .5s ease 0.1s; -ms-transition: all .5s ease 0.1s; transition: all .5s ease 0.1s; }
 
@@ -280,7 +262,7 @@ transform: rotate(0deg) }
 
 /* 꽃중년 */
 .section11{position: relative; width: 100%; height: 100%;}
-.section11 .bg{position:absolute; top: 0; left: 0;  /* background: url(../img/flower_bg.jpg)no-repeat left center/cover;  */width: 100%; height: 100vh;}
+.section11 .bg{position:absolute; top: 0; left: 0;  width: 100%; height: 100vh;}
 .main_area .swiper-container .swiper-wrapper.flower .swiper-slide.prototype_device{background: transparent;}
 .main_area .swiper-container .swiper-wrapper .swiper-slide.section11 .center{display: flex; justify-content: space-between; align-items: center; width: 100%; margin: 0 auto;}
 .explain_txt{ display: block; width:40%; float: left; padding: 10px 20px;}
@@ -306,9 +288,9 @@ transform: rotate(0deg) }
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;}
-
   .flower-box { width: 100%;}
   img.flower { width: 100%; will-change: transform; transform-origin: center bottom; /*  // rotate 기준을 bottom 으로 */}
+
 /* // css ver */
 .flower-css {animation: swaying-flower 3s infinite ease-in-out;}
 @keyframes swaying-flower {
@@ -316,34 +298,30 @@ transform: rotate(0deg) }
   50% {transform: rotate(10deg);}
   100% {transform: rotate(-10deg);}
 }
-
 .line_hei{line-height: 2;}
-
 @media (hover: hover) {
   .main_area .prev_btn:hover:before, .main_area .next_btn:hover:before{ width: 100%;}
-.main_area .prev_btn:hover:before, .main_area .next_btn:hover:before{ width: 100%;}
-a:hover{text-decoration:none}
-#u_skip a:hover{z-index:1000;width:100%;height:auto;padding:10px 0;color:#fff}
-.menu_btn:hover span { width: 40px;}
-.menu_btn:hover span:nth-child(2):after { opacity: 1; bottom: -20px;}
-.main_area .section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide:hover .information{opacity: 1; visibility: visible;}
-.main_area .section11 .swiper-wrapper.flower>.swiper-slide:hover .information{opacity: 1; visibility: visible;}
-.button--tamaya:hover::before {
+  .main_area .prev_btn:hover:before, .main_area .next_btn:hover:before{ width: 100%;}
+  a:hover{text-decoration:none}
+  #u_skip a:hover{z-index:1000;width:100%;height:auto;padding:10px 0;color:#fff}
+  .menu_btn:hover span { width: 40px;}
+  .menu_btn:hover span:nth-child(2):after { opacity: 1; bottom: -20px;}
+  .main_area .section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide:hover .information{opacity: 1; visibility: visible;}
+  .main_area .section11 .swiper-wrapper.flower>.swiper-slide:hover .information{opacity: 1; visibility: visible;}
+  .button--tamaya:hover::before {
   -webkit-transform: translate3d(0, -100%, 0);
   transform: translate3d(0, -100%, 0);
-}
-.button--tamaya:hover::after {
+  }
+  .button--tamaya:hover::after {
   -webkit-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
-}
-.button--tamaya:hover > span {
+  }
+  .button--tamaya:hover > span {
   opacity: 1;
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
+  }
 }
-
-}
-
 @media screen and (max-width: 1024px) {
   header{width: 100%;}
   header .header{position: fixed; z-index: 11; top: 0; left: 0; width: calc(100% - 40px); margin: 0 auto; display: flex;}
@@ -361,14 +339,10 @@ a:hover{text-decoration:none}
   /* hover  */
   .main_area .section11 .swiper-wrapper.flower>.swiper-slide .information,
   .main_area .section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .information{opacity: 1; visibility: visible;}
-  
 }
-
 @media screen and (max-width: 767px){
   /* aside */
   .aside nav .nav_inner>li>a{font-size: 18px;}
   .aside nav .nav_inner>li .sub_menu ul li>a{font-size: 16px;}
   .main_area .main_intro .txt02 strong{font-size: 30px;}
-
-
 }

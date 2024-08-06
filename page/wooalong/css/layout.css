@@ -340,7 +340,6 @@ footer .footer .ft_info .ft_info_3 {
   justify-content: space-between;
 }
 
-
 footer .footer .ft_info .ft_info_1>li,
 footer .footer .ft_info .ft_info_2>li,
 footer .footer .ft_info .ft_info_3>li {
@@ -386,3 +385,4 @@ footer .footer .ft_bottom .ft_date {
   font: 15px;
   text-align: left;
 }
+
