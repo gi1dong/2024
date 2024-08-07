@@ -1,5 +1,5 @@
 $(function () {
-  var main_vis = new Swiper(".main_vis .mySwiper", {
+  const main_vis = new Swiper(".main_vis .mySwiper", {
     pagination: {
       el: ".main_vis .swiper-pagination",
       type: "progressbar",
@@ -15,8 +15,7 @@ $(function () {
       loop: true,
     },
   });
-
-  var main_slide = new Swiper(".main_slide .mySwiper", {
+  const main_slide = new Swiper(".main_slide .mySwiper", {
     slidesPerView: 2,
     spaceBetween: 10,
     pagination: {
@@ -43,8 +42,7 @@ $(function () {
       },
     },
   });
-
-  var re_prd_area = new Swiper(".re_prd_area .mySwiper", {
+  const re_prd_area = new Swiper(".re_prd_area .mySwiper", {
     slidesPerView: 2.5,
     spaceBetween: 10,
     centeredSlides: true,
@@ -59,7 +57,6 @@ $(function () {
       loop: true,
     },
   });
-
   $(window).scroll(function () {
     curr = $(window).scrollTop();
     off_top = $(".video_txt").offset().top;
@@ -76,29 +73,23 @@ $(function () {
       });
     }
   });
-  
-
   $(".gnb_btn").click(function () {
     $("#aside").stop().animate({ left: "0" }, 300);
     $(".dimmed_bg").addClass("on");
   });
-
   $(".close_btn").click(function () {
     $("#container").removeClass("on");
     $("#aside").stop().animate({ left: "-100%" }, 300);
     $(".dimmed_bg").removeClass("on");
   });
-
   $(".video_txt>ul>li").click(function () {
-    var idx = $(this).index() + 1;
+    const idx = $(this).index() + 1;
       $(".video_txt>ul>li").removeClass("in");
       $(this).addClass("in");
       $(".vid>div").removeClass("in");
       $("#vid0" + idx).addClass("in");
-    
   });
-
-  var review_prd = new Swiper(".review_prd .mySwiper", {
+  const review_prd = new Swiper(".review_prd .mySwiper", {
     slidesPerView: 2,
     spaceBetween: 20,
     loop:true,
@@ -112,10 +103,8 @@ $(function () {
       el: ".swiper-pagination",
     },
   });
-
   $(".bi_li>.li_list").click(function () {
-    var sub_b = $(this).parent().find("ul").outerHeight();
-
+    const sub_b = $(this).parent().find("ul").outerHeight();
     if ($(this).hasClass("op")) {
       $(this).removeClass("op");
       $(this).parent().find("div").stop().animate({ height: "0" });
@@ -124,28 +113,22 @@ $(function () {
       $(this).parent().find("div").stop().animate({ height: sub_b });
     }
   });
-
   var vid = new Swiper(".vid .mySwiper", {
     pagination: {
       el: ".vid .swiper-pagination",
       type: "fraction",
     },
   });
-
   $(".ctg_li .category").click(function () {
     var sub_h = $(this).parent().find("ul").outerHeight(); 
-
     if ($(this).hasClass("on")) {
-      
       $(this).removeClass("on");
       $(this).parent().find("div").stop().animate({ height: "0" });
     } else {
-      
       $(this).addClass("on");
       $(this).parent().find("div").stop().animate({ height: sub_h });
     }
   });
-
   var main_area = new Swiper(".main_area .mySwiper", {
     direction: "vertical",
     autoplay: {
@@ -158,16 +141,12 @@ $(function () {
       clickable: true,
     },
   });
-
   $(".bi_li .bi_a").click(function () {
     var bi_h = $(this).parent().find("ul").outerHeight();
-
     if ($(this).hasClass("op")) {
-
       $(this).removeClass("op");
       $(this).parent().find("div").stop().animate({ height: "0" });
     } else {
-  
       $(this).addClass("op");
       $(this).parent().find("div").stop().animate({ height: bi_h });
     }

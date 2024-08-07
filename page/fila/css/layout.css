@@ -15,6 +15,26 @@
   unicode-range:"U+0041-005A","U+0061-007A";
 }
 
+  /* 전체화면 버튼 */
+  video{width: 100%;}
+  video::-webkit-media-controls-fullscreen-button {	display: none !important;}
+  /* 일시정지, 재생 버튼 */
+  video::-webkit-media-controls-play-button {	display: none !important;}
+  /* 재생 슬라이드..? */
+  video::-webkit-media-controls-timeline {	display: none !important;}
+  /* 현재 진행 시간 */
+  video::-webkit-media-controls-current-time-display{	display: none !important;}
+  /* 전체 시간 */
+  video::-webkit-media-controls-time-remaining-display {	display: none !important;}
+  /* 음소거 버튼 */
+  video::-webkit-media-controls-mute-button {	display: none !important;}
+  /* 볼륨 조절 슬라이드 */
+  video::-webkit-media-controls-volume-slider {	display: none !important;}
+  /* 괄호에 display: none !important; 를 추가하면된다.
+  예 ) 전체화면 전환 버튼을 숨긴다. 
+  다만 더블클릭으로 전체화면이 되는 기능등은 그대로고 단지 버튼만 없앤다. */
+  video::-webkit-media-controls-fullscreen-button {display: none !important;}
+
 .dimmed_bg {
   position: fixed;
   top: 0;
@@ -33,17 +53,15 @@
   opacity: 1; visibility: visible;
 }
 
-#container .close {
-  opacity: 0;
-}
+#container .close { opacity: 0;}
 
-body { overflow-x: hidden;
+body { overflow-x: hidden; box-sizing: border-box;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 300;
   line-height: 1.32;
   background-repeat: no-repeat;
   width: 100%;
-  background-color: #f5f5f5;
+  background: #f5f5f5;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -79,7 +97,7 @@ header .header {
   font-size: 10px;
   overflow: hidden;
   width: 100%;
-  z-index: 999;
+  z-index: 99;
 }
 
 header .header .hd_logo {
@@ -123,7 +141,7 @@ header .header .hd_logo a img {width: 100%;  display: block;height: 100%;}
 
 .sr_inner.inn {
   display: block;
-  background-color: #0b203f;
+  background: #0b203f;
   position: fixed;
   opacity: 1;
   width: 100%;
@@ -161,13 +179,13 @@ legend {
 .sr_inner .hot_key {
   position: absolute;
   width: 100%;
-  z-index: 90;
+  z-index: 80;
   height: 18%;
   transform: translateY(-50%);
   margin: 2%;
   top: 45%;
   color: #fff;
-  background-color: cadetblue;
+  background: cadetblue;
 }
 
 .sr_inner .hot_key>strong {
@@ -207,14 +225,14 @@ legend {
 .fld {
   width: 100%;
   height: 20%;
-  background-color: cadetblue;
+  background: cadetblue;
   position: fixed;
   z-index: 9;
 }
 
 .fld .fa-search {
   font-size: 15px;
-  background-color: #fff;
+  background: #fff;
 }
 
 .fld label {
@@ -266,7 +284,7 @@ header .header .hd_icon #menu_btn .btn_span {
   width: 100%;
   margin-bottom: 5px;
   height: 2px;
-  background-color: #fff;
+  background: #fff;
 }
 header .header .hd_icon #menu_btn .btn_span:nth-child(2){height: 2px;}
 header .header .hd_icon #menu_btn .btn_span:last-child {
@@ -277,7 +295,7 @@ header .header .hd_icon #menu_btn .btn_span:last-child {
 #right_menu {
   font-family: "Noto Sans KR", sans-serif;
   position: fixed;
-  background-color: #f5f5f5;
+  background: #f5f5f5;
   width: 80%;
   height: 100vh;
   z-index: 99999; right: -100%;
@@ -300,21 +318,16 @@ header .header .hd_icon #menu_btn .btn_span:last-child {
 
 #right_menu .close_btn>span:nth-child(1) {transform: translateY(15px) rotate(-45deg);}
 #right_menu .close_btn>span:last-child { margin-bottom: 0;transform: translateY(9px) rotate(45deg);}
-
 #right_menu .info { color: #ddd; position: relative; font-size: 14px;display: block; line-height: 40px;width: calc(100% - 40px); margin: 150px auto 50px;
 }
 
-#right_menu .info::after {
-  display: block; position: absolute;
-  border-bottom: 1px solid #000; bottom: 0; left: 0;
-  content: "";
-  width: 100%;
-}
+#right_menu .info::after {display: block; position: absolute;border-bottom: 1px solid #000; bottom: 0; left: 0;
+ content: ""; width: 100%;}
 
 #right_menu .btn_box {
   display: inline-block;
   width: 100%;
-  background-color: #f5f5f5;
+  background: #f5f5f5;
   color: #000;
   font-size: 18px;
   overflow: hidden;
@@ -333,7 +346,7 @@ header .header .hd_icon #menu_btn .btn_span:last-child {
 }
 
 #right_menu .btn_box>p:hover {
-  background-color: #000;
+  background: #000;
   color: #fff;
   transition: all .6s;
 }
@@ -348,7 +361,7 @@ header .header .hd_icon #menu_btn .btn_span:last-child {
 
 #right_menu .btn_box_txt>span {
   display: inline-block;
-  background-color: #000;
+  background: #000;
   color: #fff;
   font-size: 11px;
   margin: 4% 0;
@@ -361,12 +374,12 @@ header .header .hd_icon #menu_btn .btn_span:last-child {
 #right_menu .menu_inner_wrap .main_menu_list .list_items .ctg_name {position: relative; display: block; width: 100%; line-height: 30px; font-size: 15px;}
 #right_menu .menu_inner_wrap .main_menu_list .list_items .ctg_name.opentab{width:100%;}
 #right_menu .menu_inner_wrap .main_menu_list .list_items .ctg_name::before { content: ""; position: absolute;  display: block; position: absolute; right: 0; height: 2px; width: 20px;}
-#right_menu .menu_inner_wrap .main_menu_list .list_items .ctg_name::after {  content: ""; position: absolute; right: 0px; color: #ddd; bottom: 40%; height: 7px; width: 7px; transform: rotate(45deg) scale(0.8); 
+#right_menu .menu_inner_wrap .main_menu_list .list_items .ctg_name::after {content: ""; position: absolute; right: 0px; color: #ddd; bottom: 40%; height: 7px; width: 7px; transform: rotate(45deg) scale(0.8); 
   border-style: solid; border-image: initial; border-width: 2px 2px 0px 0px;}
 /* 서브메뉴 div */
 #right_menu .menu_inner_wrap .main_menu_list .list_items .sub_menu {height: 0; width: 100%; overflow: hidden;}
 /* 서브메뉴 ul */
-#right_menu .menu_inner_wrap .main_menu_list .list_items .sub_menu .menu_list_wrap {color: #0b203f; padding: 0 10px; background-color: #f5f5f5; width: 100%; display: block; text-align: left;  font-size: 14px;}
+#right_menu .menu_inner_wrap .main_menu_list .list_items .sub_menu .menu_list_wrap {color: #0b203f; padding: 0 10px; background: #f5f5f5; width: 100%; display: block; text-align: left;  font-size: 14px;}
 
 
 #right_menu .guide {
@@ -388,7 +401,7 @@ header .header .hd_icon #menu_btn .btn_span:last-child {
 }
 
 #right_menu .guide .guide_btn {
-  background-color: #000;
+  background: #000;
   color: #fff;
   font-size: 18px;
   text-align: center;
@@ -545,7 +558,7 @@ footer .footer .ft_bottom .ft_bt_1 .ft_bt_1_inner .ft_bt_1_wrap .ft_bt_list .ft_
 
 footer .footer .ft_bottom .ft_bt_icon {
   text-align: center; position: relative;
-  background-color: #000;
+  background: #000;
   padding: 5% 0;
   width: 100%;
   display: block;
@@ -589,7 +602,7 @@ footer .footer .ft_menu .ft_menu_inner .menu_wrap .menu_list .bd_item .item_tit.
 footer .footer .ft_menu .ft_menu_inner .menu_wrap .menu_list .bd_item .sub_bd {
   color: #000;
   overflow: hidden;
-  background-color: #f5f5f5;
+  background: #f5f5f5;
   font-size: 18px;
   height: 0;
   width: 100%; box-sizing: border-box;
@@ -604,7 +617,7 @@ footer .footer .ft_menu .ft_menu_inner .menu_wrap .menu_list .bd_item .sub_bd .s
 }
 
 footer .footer .ft_menu .ft_menu_inner .menu_wrap .menu_list .bd_item .item_tit .sub_bd .sub_bd_list {
-  background-color: #f5f5f5;
+  background: #f5f5f5;
   padding: 10px; width: 100%;
   height: 100%;
   color: #000; 
@@ -699,7 +712,7 @@ body .top_btn {width: 30px;
   transition: all .5s; display: block;
 }
 
-body .top_btn i {transform: rotate(180deg); display: inline-block;   line-height: 30px;}
+body .top_btn i { display: inline-block;   line-height: 30px;}
 body .top_btn.om {transform: rotate(180deg);}
 
 

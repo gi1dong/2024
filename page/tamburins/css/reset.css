@@ -21,9 +21,8 @@ input.hide-clear[type="search"]::-webkit-search-cancel-button,
 input.hide-clear[type="search"]::-webkit-search-results-button,
 input.hide-clear[type="search"]::-webkit-search-results-decoration {display: none; }
 button{ border: none; background: none; cursor: pointer;  -webkit-appearance: none;appearance: none;
-  padding:unset;  color:#fff; font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;}
+  padding:unset;  color:unset;font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;}
 input{border: none;}
-button{color:unset;}
 .inner{position: relative; max-width: 1280px; width: 100%; margin: 0 auto;}
 .clear{display: block; content: ''; clear: both;}
 .en{  font-family: "DM Serif Display", serif;}

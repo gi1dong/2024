@@ -31,7 +31,6 @@ $(function(){
     nextEl: ".main_area .next_btn",
     prevEl: ".main_area .prev_btn",
     },
-
   });
 TweenMax.staggerFromTo(".txt02 i", 1, {opacity:0, y:-10},{opacity:1,y:0}, 0.9);
   // 메뉴
