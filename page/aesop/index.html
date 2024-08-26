@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  <system.webServer>
+    <staticContent>
+        <remove fileExtension=".eot" />
+        <mimeMap fileExtension=".eot" mimeType="application/vnd.ms-fontobject" />
+        <remove fileExtension=".ttf" />
+        <mimeMap fileExtension=".ttf" mimeType="application/octet-stream" />
+        <remove fileExtension=".svg" />
+        <mimeMap fileExtension=".svg" mimeType="image/svg+xml" />
+        <remove fileExtension=".woff" />
+        <mimeMap fileExtension=".woff" mimeType="application/font-woff" />
+      </staticContent>
+  </system.webServer>
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">

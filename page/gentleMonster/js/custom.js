@@ -1,4 +1,5 @@
 $(function(){
+  gsap.registerPlugin(ScrollTrigger);
   $("nav").mouseenter(function(){
     $(".menu1>ul>li").addClass("active");
     $("header").addClass("active");
@@ -13,8 +14,7 @@ $(function(){
     $(".logoImg").removeClass("active");
     $(".dimmedBg").removeClass("active");
   });
-
-  var contSection02 = new Swiper(".section01 .swiper-container", {
+  const contSection02 = new Swiper(".section01 .swiper-container", {
     spaceBetween:0,
     autoplay: {
       delay: 5500,
@@ -35,15 +35,13 @@ $(function(){
       }
     }
   });
-
 // 스크롤 내리면 헤더 사라짐
   $(window).scroll(function () {
-    var headerNone = $(window).scrollTop();
-    var mainStart = $(".section02").offset().top;
+    const headerNone = $(window).scrollTop();
+    const mainStart = $(".section02").offset().top;
     if (headerNone >= mainStart) {$("header").hide();} 
     else {$("header").show();}
   });
-
   // menuBtn을 클릭시 우측에서부터 바디 전체 넓이 차지하는 메뉴가 열려라
   $(".hamBurgerBtn").click(function (){
     if ($(".fullMenu").hasClass("open"))
@@ -61,7 +59,6 @@ $(function(){
 
     }
   });
-
 // 좌측에서부터 나오는 메뉴 닫기 버튼 클릭시 open 클래스 사라지며, 바디 영역 내 y축 스크롤이 생겨라
   $(".fullMenu .close").click(function(){
     if ($(".fullMenu").hasClass("open"))
@@ -77,7 +74,6 @@ $(function(){
       $("body, html").css("overflow-y", "scroll");
     }
   });
-
 // 탭메뉴
   $(".click>ul>li").click(function(){
     var indexNumber = $(this).index()+1;
@@ -87,7 +83,6 @@ $(function(){
     $(this).addClass("on");
     // console.log(indexNumber)
   });
-
 // 제품찾기 누르면 위에서 아래로 메뉴가 내려와라
   $(".productSearch").click(function(){
     if($(".productSearchArea").hasClass("on"))
@@ -101,9 +96,8 @@ $(function(){
       $("body .dimmedBg").addClass("active");
     }
   });
-
   $(".subMenuList.plus").click(function(){
-    var plusMenu= $(this).parent().find("ul").outerHeight();
+    const plusMenu= $(this).parent().find("ul").outerHeight();
     if($(this).hasClass("open"))
     {
       $(this).removeClass("open");
@@ -119,7 +113,6 @@ $(function(){
       $(this).parent().find("div").stop().animate({ height: plusMenu });
     }
   });
-
 // 탭메뉴 내 엑스 버튼 클릭시 탭메뉴 사라져라
   $("header .productSearchArea .close span").click(function(){
     if($(".productSearchArea").hasClass("on")){
@@ -130,9 +123,8 @@ $(function(){
       $(".productSearchArea").addClass("on");
     }
   });
-
 // news area
-  var newsSlide = new Swiper(".section04 .swiper-container", {
+  const newsSlide = new Swiper(".section04 .swiper-container", {
     slidesPerView: 3,
     spaceBetween: 10,
     pagination: {
@@ -151,7 +143,6 @@ $(function(){
       }
   }
   });
-
 // 하츠 제품 바로 알기 호버시 넓이 변화
   $(".leftLayout").mouseenter(function() {
     $(this).stop().animate({width: "55%"});
@@ -170,20 +161,17 @@ $(function(){
     $(this).stop().animate({width: "50%"});
     $(this).siblings(".leftLayout").stop().animate({width: "50%"});
   });
-
-// 패밀리 사이트
-$("footer .ftFamily .siteButton").click(function(){
-  if($("footer .ftFamily .familyListWrap").hasClass("open"))
-  {
-    $("footer .ftFamily .familyListWrap").removeClass("open")
-  }
-  else
-  {
-    $("footer .ftFamily .familyListWrap").addClass("open");
-  }
-});
-
-  gsap.registerPlugin(ScrollTrigger);
+  // 패밀리 사이트
+  $("footer .ftFamily .siteButton").click(function(){
+    if($("footer .ftFamily .familyListWrap").hasClass("open"))
+    {
+      $("footer .ftFamily .familyListWrap").removeClass("open")
+    }
+    else
+    {
+      $("footer .ftFamily .familyListWrap").addClass("open");
+    }
+  });
   // support 영역 박스 3개
   gsap.to(".section03 .boxWrap", {
     scrollTrigger: {
@@ -193,9 +181,8 @@ $("footer .ftFamily .siteButton").click(function(){
     },
     stagger: .3, opacity: 1, y: 0, duration: .5,
   });
-
   // .not(".twoItemsChild", ".secMenuWrap").not(".twoItemsInner", ".secMenuWrapHeight")
-  var section06 = new Swiper(".section06.inner .swiper-container", {
+  const section06 = new Swiper(".section06.inner .swiper-container", {
     slidesPerView: 3,
     spaceBetween: 20,
     autoplay: {
@@ -219,12 +206,10 @@ $("footer .ftFamily .siteButton").click(function(){
       prevEl: ".section06.inner .swiper-button-prev",
     },
   });
-
   // gsap 사용해서 타이틀 텍스트에 효과
   let phrases = ["Best Collaboration"]
   let demo = document.querySelector(".collaborationTxtArea")
   let animation = gsap.timeline({repeat: Infinity})
-
   function createLayers(){
   phrases.forEach(value => {
     let layer = document.createElement("div")
@@ -232,7 +217,6 @@ $("footer .ftFamily .siteButton").click(function(){
     demo.appendChild(layer)
   })
   }
-
   function animateText() {
   let layers = document.querySelectorAll(".collaborationTxtArea div")
     layers.forEach(function(element, index){
@@ -240,9 +224,8 @@ $("footer .ftFamily .siteButton").click(function(){
   })
     gsap.set(".collaborationTxtArea", {visibility:"visible",color:"gray"}) 
   }
-
-  createLayers()
-  animateText()
+  createLayers();
+  animateText();
 
 // 모바일 메뉴
 /* three depth menu */
@@ -294,5 +277,4 @@ $("footer .ftFamily .siteButton").click(function(){
     menuWrap.click('.threeDepthMenu li', 300)
   });    
 }(jQuery));
-
-});
+}());

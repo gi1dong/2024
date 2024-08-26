@@ -143,3 +143,39 @@ img {
 	width: unset;
 }
 
+@font-face {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+	unicode-range:U+0020-007E;
+  }
+  
+  @font-face {
+	font-family: "Montserrat";
+	font-weight: 400;
+	font-style: normal;
+	src: url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+	unicode-range:U+0061-007A, U+0041-005A;
+  }
+  
+  /* 전체화면 버튼 */
+  /* video{width: 100%;} */
+  video::-webkit-media-controls-fullscreen-button {	display: none !important;}
+  /* 일시정지, 재생 버튼 */
+  video::-webkit-media-controls-play-button {	display: none !important;}
+  /* 재생 슬라이드..? */
+  video::-webkit-media-controls-timeline {	display: none !important;}
+  /* 현재 진행 시간 */
+  video::-webkit-media-controls-current-time-display{	display: none !important;}
+  /* 전체 시간 */
+  video::-webkit-media-controls-time-remaining-display {	display: none !important;}
+  /* 음소거 버튼 */
+  video::-webkit-media-controls-mute-button {	display: none !important;}
+  /* 볼륨 조절 슬라이드 */
+  video::-webkit-media-controls-volume-slider {	display: none !important;}
+  /* 괄호에 display: none !important; 를 추가하면된다.
+  예 ) 전체화면 전환 버튼을 숨긴다. 
+  다만 더블클릭으로 전체화면이 되는 기능등은 그대로고 단지 버튼만 없앤다. */
+  video::-webkit-media-controls-fullscreen-button {display: none !important;}
+  

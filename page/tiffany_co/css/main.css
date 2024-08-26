@@ -6,6 +6,8 @@ main {
 
 main .container_wrap {
   width: 100%;
+  height: 100vh;
+  margin: 0 auto 100px;
 }
 
 main .container_wrap #container1 {
@@ -22,10 +24,8 @@ main .container_wrap #container1 {
 main .container_wrap #container1 .main_vis {
   display: block;
   position: relative;
-  margin: 0% auto;
+  margin: 90px auto 90px;
   overflow: hidden;
-  margin: 0 10%;
-  height: 100%;
 }
 
 main .container_wrap #container1 .main_vis .main_l {
@@ -39,20 +39,18 @@ main .container_wrap #container1 .main_vis .main_l .main_txt {
   display: inline-block;
   position: absolute;
   top: 0;
-  left: 0%;
+  left: 0;
   padding: 0 1%;
 }
 
 main .container_wrap #container1 .main_vis .main_l .main_txt .mt_p {
-  margin-bottom: 70px;
-  padding: 5%;
-  font-size: 24px;
+  margin-bottom: 30px;
+  font-size: 18px;
   color: #fff;
-  line-height: 30px;
   display: inline-block;
   position: relative;
-  padding: 1%;
-  background-color: #81d8d0;
+  padding: 10px 20px;
+  background: #81d8d0;
 }
 
 main .container_wrap #container1 .main_vis .main_l .main_txt .mt_em {
@@ -89,19 +87,19 @@ main .container_wrap #container1 .main_vis .main_r {
 .main_vis .main_r .main_img>img {
   width: 100%;
   height: 100%;
-  display: block;
+  display: block; image-rendering: pixelated;
 }
 
 .main_vis .main_btn {
   position: absolute;
-  background-color: #000;
+  background: #000;
   color: #fff;
   text-align: center;
   font-size: 14px;
   display: inline-block;
   min-width: 200px;
   padding: 20px 0;
-  bottom: 2%;
+  bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
   font-weight: 700;
@@ -595,11 +593,6 @@ main .container_wrap .main_icon .mv_number {
     li
     ne-height: 1em;
   } */
-@media screen and (max-width:1800px) {
-  .main_vis .main_btn {
-    bottom: 10%;
-  }
-}
 
 @media screen and (max-width:1700px) {}
 
@@ -649,19 +642,12 @@ main .container_wrap .main_icon .mv_number {
   #container2 .content .con1_txt>p {
     font-size: 50px;
   }
-
 }
 
 @media screen and (max-width: 1200px) {
-  .main_vis .main_btn {
-    bottom: 20%;
-  }
-
   #container2 .content .con1_r .con1_txt {
     padding: 0% 0 0% 5%;
   }
-
-  #container2 .content .con1_txt .con1_txt_p1 {}
 }
 
 @media screen and (max-width: 1190px) {
@@ -721,14 +707,6 @@ main .container_wrap .main_icon .mv_number {
 }
 
 @media screen and (max-width: 1100px) {
-  .main_vis .main_btn {
-    bottom: 30%;
-  }
-
-  main .container_wrap #container1 .main_vis .main_l .main_txt .mt_p_1 {
-    width: 64%;
-  }
-
   .bk_tit_1>p {
     font-size: 50px;
     line-height: 65px;
@@ -739,7 +717,7 @@ main .container_wrap .main_icon .mv_number {
 @media screen and (max-width:1023px) {
   main #container1 .main_vis .main_l {
     width: 30%;
-    top: 0;
+    top: 10%;
   }
 
   main .container_wrap #container1 .main_vis .main_l .main_txt {
@@ -766,7 +744,6 @@ main .container_wrap .main_icon .mv_number {
   }
 
   main .container_wrap #container1 .main_vis .main_l .main_txt .mt_p {
-    width: 100%;
     font-size: 18px;
     text-align: center;
     letter-spacing: 0.055em;
@@ -785,18 +762,20 @@ main .container_wrap .main_icon .mv_number {
     max-width: unset;
   }
 
-  .bk_tit_1>p {
-    font-size: 42px;
-    margin-top: 5%;
-    line-height: 40px;
-  }
-
   .main_vis .main_r .main_img>img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
   }
+
+
+  .bk_tit_1>p {
+    font-size: 42px;
+    margin-top: 5%;
+    line-height: 40px;
+  }
+
 
   .prd_wrap .prd {
     float: unset;
@@ -817,8 +796,6 @@ main .container_wrap .main_icon .mv_number {
   }
 }
 
-@media screen and (max-width: 945px) {}
-
 @media screen and (max-width: 900px) {
   main .container_wrap #container1 .main_vis .main_l {
     position: unset;
@@ -835,11 +812,6 @@ main .container_wrap .main_icon .mv_number {
   main .container_wrap #container1 .main_vis .main_l .main_txt .mt_em {
     text-align: center;
     font-size: 60px;
-  }
-
-  main .container_wrap #container1 .main_vis .main_l .main_txt .mt_p {
-    margin-bottom: 10px;
-    font-size: 17px;
   }
 
   main .container_wrap #container1 .main_vis .main_l .main_txt .mt_p:after {
@@ -870,10 +842,7 @@ main .container_wrap .main_icon .mv_number {
     position: absolute;
     min-width: 160px;
     right: 1%;
-    bottom: unset;
-    top: 35%;
   }
-
 
   .main_r .vertical_txt {
     top: unset;
@@ -899,10 +868,7 @@ main .container_wrap .main_icon .mv_number {
   .main_vis .main_btn {
     min-width: 100px;
     font-size: 10px;
-    bottom: unset;
-    padding: 3% 0;
-    top: 34%;
-    position: absolute;
+    bottom: 30%;
   }
 
   .prd_tit {
@@ -946,7 +912,6 @@ main .container_wrap .main_icon .mv_number {
     display: block;
   }
 
-  #container2 .content .con1_l {}
 
   #container2 .content .con1_txt>p {
     font-size: 25px;
@@ -1033,10 +998,6 @@ main .container_wrap .main_icon .mv_number {
     right: -35px;
   }
 
-  .main_vis .main_btn {
-    top: 30%;
-  }
-
   main .container_wrap #container1 .main_vis .main_r {
     width: 100%;
   }
@@ -1071,13 +1032,5 @@ main .container_wrap .main_icon .mv_number {
 
   #container2 .content .con1_txt>p {
     font-size: 18px;
-  }
-}
-
-
-
-@media screen and (max-width: 500px) {
-  .main_vis .main_btn {
-    top: 30%;
   }
 }

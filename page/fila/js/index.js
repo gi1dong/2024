@@ -1,6 +1,6 @@
-$(function () {
+(function() {
   var main_vis = new Swiper(".main_vis .mySwiper", {
-  speed:800,
+    speed:800,
     effect:"fade",
     autoplay: {
     delay: 2500,
@@ -13,7 +13,7 @@ $(function () {
     pagination: {
       el: ".main_vis .swiper-pagination",
       clickable: true,
-    },
+    }
   });
   $(".swiper-control").click(function () {
     if ($(this).hasClass("hi")) {
@@ -40,7 +40,7 @@ $(function () {
     },
     pagination: {
       el: ".product .swiper-pagination.show",
-    },
+    }
   });
   $(".main_vis .swiper-control").click(function () {
   return false;
@@ -64,7 +64,7 @@ $(function () {
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
-    },
+    }
   });
   // tab menu men
   var categoryMen = new Swiper(".category_tab .mySwiper.men", {
@@ -74,7 +74,7 @@ $(function () {
       renderBullet: function (index, className) {
         return '<span class="' + className + '">' + (index + 1) + "</span>";
       },
-    },
+    }
   });
   // tab menu women
   var categoryWomen = new Swiper(".category_tab .mySwiper.women", {
@@ -84,7 +84,7 @@ $(function () {
       renderBullet: function (index, className) {
         return '<span class="' + className + '">' + (index + 1) + "</span>";
       },
-    },
+    }
   });
   /*tab menu area*/
   $(".tab> ul> li").click(function () {
@@ -171,18 +171,27 @@ $(function () {
     $("div[class^=txt0]").removeClass("on");
     $(".txt0" + awd_idx).addClass("on"); 
   });
-  var controller = new ScrollMagic.Controller({
-    globalSceneOptions: {
-      triggerHook: "onLeave",
-      duration: "200%"
-    }
-  });
-  var event_txt = TweenMax.to(".events .space_tit", 0.3, {y: "0%"});
-  var scene01 = new ScrollMagic.Scene({ 
-    triggerElement: ".events",
-    offset:-600,
-    })
-  .setTween(event_txt)
-  .addTo(controller)
-});
+
+  const controller = new ScrollMagic.Controller();
+	const scene1 = new ScrollMagic.Scene({
+		triggerElement : '#trigger1',
+    offset: 600,
+		triggerHook : .8	//'onEnter' = 1, 'onCenter' = 0.5, 'onLeave' = 0
+	})
+	.setClassToggle('#animate3', 'visible')
+	.addTo(controller)
+	.addIndicators();
+
+	const staggerElement = $('.animation2');
+	for(var i=0; i<staggerElement.length; i++){
+		var scene2 = new ScrollMagic.Scene({
+			triggerElement : staggerElement[i],
+		offset: 150,
+			triggerHook : .9
+		})	
+		.setClassToggle(staggerElement[i], 'visible')
+		.addTo(controller)
+		.addIndicators();
+	}
+}());
 

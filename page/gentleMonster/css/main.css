@@ -387,14 +387,14 @@ main .arrow .arrowWrap::after {content: ""; position:absolute; z-index: 3; displ
 .section04 .swiper-slide.articles .articleWrap .articleimg img {display: block; width: 310px; height: 220px;}
 .section04 .swiper-slide.articles .articleWrap .articleimg {display: block; width: 310px; height: 220px;}
 
-.section04 .articleTxt {overflow: hidden; word-break: break-all; -webkit-box-orient: vertical; -webkit-line-clamp: 2; padding: 20px 30px; width: 310px; height: 250px; border: 1px solid #dbdbdb; background: #fff;}
+.section04 .articleTxt {overflow: hidden; word-break: break-all; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; padding: 20px 30px; width: 310px; height: 250px; border: 1px solid #dbdbdb; background: #fff;}
 /* hover */
 .section04 .swiper-slide.articles .articleTxt:hover {background: #f1f1f1;}
 /*메인 영역 : .section04 뉴스 영역 */
 .section04 .articleTxt .preFace .preFaceInner::before {content: ""; position: absolute; left: -31px; display: block; padding-left: 26px; border-left: 5px solid #a6a9aa; height: 30px; line-height: 30px;}
 .section04 .articleTxt .preFace .preFaceInner {position: relative; display: inline-block; font-size: 15px; color:#a6a9aa;}
 .section04 .articleTxt .articleTitle {padding: 20px 0 25px 0; font-size: 18px; line-height: 26px; font-weight: 700; color: #000;}
-.section04 .articleTxt .articleTxtCont {display: -webkit-box; overflow: hidden; word-break: break-all; -webkit-box-orient: vertical; -webkit-line-clamp: 2; color:#555;}
+.section04 .articleTxt .articleTxtCont {display: -webkit-box; overflow: hidden; word-break: break-all; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; color:#555;}
 .section04 .articleTxt .date {overflow: hidden; padding-top: 40px; width: 100%;}
 .section04 .articleTxt .date .day {float: left; font-size: 15px; color: #777;}
 .section04 .articleTxt .date .views {float: right; font-size: 15px; color: #777;}
