@@ -105,7 +105,7 @@ section {
 
 body,
 html {
-	font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+	font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
 	line-height: 1;
 }
 
@@ -118,7 +118,8 @@ blockquote,
 q {
 	quotes: none;
 }
-
+button{ border: none; background: none; cursor: pointer;  -webkit-appearance: none;appearance: none;padding:unset;  color:unset;}
+  input{border: none;}
 blockquote:before,
 blockquote:after,
 q:before,
@@ -141,3 +142,4 @@ img {
 	vertical-align: top;
 	width: unset;
 }
+
