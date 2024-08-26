@@ -14,62 +14,6 @@ $(function(){
     $(".dimmedBg").removeClass("active");
   });
 
-//헤더 메뉴 내 하위 메뉴 나와라
-  // $(".subMenuList.plus").click(function(){
-  //   var openSecondMenu = $(this).parent().find("ul").outerHeight();
-  //   if ($(this).hasClass("on")) 
-  //   {
-  //     $(this).removeClass("on");
-  //     $(this).parent().find("div").stop().animate({ height: "0" });
-  //     $(this).find(".icon.plus").removeClass("on");
-  //     $(this).find(".icon.minus").removeClass("on");
-  //   } 
-  //   else 
-  //   {
-  //     $(this).addClass("on");
-  //     $(this).parent().find("div").stop().animate({ height: openSecondMenu });
-  //     $(this).find(".icon.plus").addClass("on");
-  //     $(this).find(".icon.minus").addClass("on");
-  //   }
-  // });
-
-// 메뉴
-// $('.first-menu>ul>li>a').on('click', function() {
-//   function slideDown(target) {
-//     slideUp();
-//     $(target).addClass('on').next().slideDown();
-//   }
-
-//   function slideUp() {
-//     $('.first-menu>ul>li>a').removeClass('on').next().slideUp();
-//   }
-
-//   $(this).hasClass('on') ? slideUp() : slideDown(this);
-
-// });
-
-// var acodian = {
-//   click: function(target) {
-//     var $target = $(target);
-//     $target.on('click', function() {
-
-//       if ($(this).hasClass('on')) {
-//         slideUp($target);
-//       } else {
-//         slideUp($target);
-//         $(this).addClass('on').next().slideDown();
-//       }
-
-//       function slideUp($target) {
-//         $target.removeClass('on').next().slideUp();
-//       }
-
-//     });
-//   }
-// };
-// acodian.click('.first-menu .menu-item02');
-
-
   var contSection02 = new Swiper(".section01 .swiper-container", {
     spaceBetween:0,
     autoplay: {
