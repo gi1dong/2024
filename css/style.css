@@ -16,7 +16,7 @@ button{background: none; padding: 0; margin: 0; border: none; outline: none;}
 /* 말줄임 */
 .ellipsis{display:inline-block;overflow:hidden;max-width:100%;text-overflow:ellipsis;word-break:keep-all;word-wrap:break-word;white-space:nowrap;vertical-align:middle;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto}
 .line_cut2,.line_cut3{display:-webkit-box;overflow:hidden;text-overflow:ellipsis;-webkit-box-orient:vertical;word-wrap:break-word;-webkit-line-clamp:2}
-.line_cut3{-webkit-line-clamp:3;line-clamp:3;}
+.line_cut3{-webkit-line-clamp:3}
 
 /* link */
 a:link,a:visited{color:#333; text-decoration:none}
@@ -54,21 +54,26 @@ a:active,a:hover,a:focus{text-decoration:none}
 .menu_btn.open span:last-child { display: block; position: absolute; height: 2px; width: 100%; background: #000; opacity: 1; transform: rotate(-135deg); top: 20px; left: 0; z-index: 2; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; -ms-transition: all .3s ease-in-out; transition: all .3s ease-in-out; }
 .menu_btn.open span:last-child:after { opacity: 0;}
 .aside{position: fixed; width: 100%; min-width: 360px; right: -100%; top: 0;  background: rgba(255,255,255,.85);  z-index: 3; transition: all .6s; font-weight: 400;-webkit-font-smoothing: antialiased; padding:100px 0 0 0; margin: 0 auto; -moz-osx-font-smoothing: grayscale; visibility: hidden;  height: 100vh;  overflow: hidden;}
-.aside.open{right: 0; visibility: visible; overflow-x: hidden; overflow-y: scroll;}
+.aside.open{right: 0; visibility: visible; overflow: visible;overflow-y: scroll;}
 .aside nav{position: relative;}
 .aside nav .nav_inner {margin: 0 auto; width:100%; position: absolute; left: 20px; top:0; z-index: 3;}
 .aside nav .nav_inner li{padding: 7.5px 0; width: calc(100% - 4rem);  margin: 0 auto;}
 .aside nav .nav_inner li:last-child{padding: 0;}
 .aside nav .nav_inner>li>a { display: block; width: 100%; display: flex; justify-content: space-between; padding: 10px 0;  font-size: 30px; color: #000; font-weight: 500; text-align: left; position: relative; overflow: hidden;}
 .aside nav .nav_inner>li .sub_menu{ width: 100%; height: 0;  overflow: hidden;}
+
 .aside nav .nav_inner>li .sub_menu ul li>a{ display:inline-block; font-size: 18px; line-height: 1.6rem; font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;  font-weight: 300; }
 .aside nav .nav_inner>li a.selected .arrow::after{transform: rotate(315deg);}
+
 .aside::-webkit-scrollbar { width: 5px; } 
 .aside::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; } 
 .aside::-webkit-scrollbar-track { background:  rgba(255,255,255,.85); border-radius: 10px; box-shadow: inset 0px 0px 5px white; }
 .arrow{position: relative;}
 .arrow::after { content: "";display: block; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); width: 10px; height: 10px;border-top: 1px solid #000; border-right: 1px solid #000;transform: rotate(135deg);}
 .dimed{position: fixed; width: 100%; height: 100%;  top: 0; right: -100%; background: rgba(0, 0, 0, 0.7); z-index: 2;}
+
+/* MAIN */
+/* .main_area {width: 100%; height: 100vh; overflow: hidden;} */
 
 /**swiper_reset**/ 
 .main_area .swiper-pagination.swiper-pagination-fraction.swiper-pagination-vertical,
@@ -121,9 +126,13 @@ transform: rotate(-2deg) }
 transform: rotate(0deg) }
 }
 .main_area .btn01:hover {font-weight:700; color: hsl(0, 0%, 0%);}
-/* section bg */
+
+/* 영역별 배경 */
 .main_area .section02 .bg { background:url(../img/wooalong_l.png) no-repeat 0 0 / cover;}
+
 /**cafe24**/
+/* .main_area .section03{position: relative; width: 100%; height: 100vh;}  */
+
 .main_area .section03 .main_intro_wrap{width: 100%; top: 50%; transform: translateY(-50%); justify-content: center; flex-direction: column; align-items: center; display: flex; margin: 0 auto; position: absolute; left: 0;  height:100%;}
 .main_area .section03 .main_intro_wrap .txt01{ display: block; color: #fff; width: 100%; margin: 0 auto 60px; text-align: center; font-size: 18px; }
 .cafe24_responsive_box{overflow: hidden; width: 100%; position: relative;}
@@ -137,6 +146,7 @@ transform: rotate(0deg) }
 .main_area .section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .information .cafe24_button {margin: 0 auto;}
 .cafe24_button a{display:inline-block; color: #fff; position: relative; margin: 0 auto 20px; padding: 0 0 10px 0;}
 .cafe24_button a span{ margin: 3rem auto 0;  pointer-events: all; display: block; font-size: .688em;  line-height: .909em; }
+/* .cafe24_button a::after{content: '';  display: inline-block;  position: absolute; left: 0; bottom: 0; height: 1px; width: 100%; -webkit-transition: bottom .5s; transition: bottom .5s; background: #fff;} */
 .txt02{margin: 0 auto;}
 .bg-1 {
   background: #ECEFF1;
@@ -201,7 +211,10 @@ transform: rotate(0deg) }
   -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
-.button--antiman.button--border-thick::before {border-width: 1px;}
+.button--antiman.button--border-thick::before {
+  border-width: 1px;
+}
+
 .button {
   float: left;
   display: block;
@@ -376,6 +389,8 @@ padding: 1.5em;}
   .main_area .section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .information{opacity: 1; visibility: visible;}
   .react img{margin: 0 auto 10px;}
   .react h2{font-size: 30px;}
+
+
 }
 
 @media screen and (max-width: 767px){
@@ -383,6 +398,6 @@ padding: 1.5em;}
   .aside nav .nav_inner>li>a{font-size: 18px;}
   .aside nav .nav_inner>li .sub_menu ul li>a{font-size: 16px;}
   .main_area .main_intro .txt02 strong{font-size: 30px;}
-  .react a{width: 50%;}
+
 
 }
