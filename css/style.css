@@ -73,10 +73,10 @@ a:active,a:hover,a:focus{text-decoration:none}
 /**swiper_reset**/ 
 .main_area .swiper-pagination.swiper-pagination-fraction.swiper-pagination-vertical,
 .main_area>.swiper-horizontal>.swiper-pagination-bullets, .main_area>.swiper-pagination-bullets.swiper-pagination-horizontal, .main_area>.swiper-pagination-custom, .main_area>.swiper-pagination-fraction, .main_area .swiper-pagination-current, .main_area .swiper-pagination-total, .main_area .page_control{color: #fff;}
-.main_area>.swiper-container{ width: 100%; height: 100vh; position: fixed; top:0; right: 0; bottom: 0; left: 0;  z-index: 1;overflow-x: hidden; }
+.main_area>.swiper-container{ width: 100%; height: 100vh; position: fixed; top:0; right: 0; bottom: 0; left: 0;  z-index: 99; overflow-x: hidden; }
 .main_area>.swiper-container>.swiper-wrapper{ height: 100vh; width: 100%;}
 .main_area>.swiper-container>.swiper-wrapper>.swiper-slide,
-.main_area>.swiper-container>.swiper-wrapper>.swiper-slide-active{z-index: 1;  position: relative; font-size: 18px; color:#fff; background: #000;/* Center slide text vertically */ display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-box-pack: center;overflow: hidden; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; width: 100%; height: 100vh; overflow: hidden;}
+.main_area>.swiper-container>.swiper-wrapper>.swiper-slide-active{z-index: 99;  position: relative; font-size: 18px; color:#fff; background: #000;/* Center slide text vertically */ display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; width: 100%; height: 100vh; overflow-x: hidden;}
 .main_area .swiper-slide .bg {-webkit-transform: scale(1.1) rotate(1deg); -moz-transform: scale(1.1) rotate(2deg); -ms-transform: scale(1.1) rotate(2deg); -o-transform: scale(1.1) rotate(2deg); transform: scale(1.1) rotate(2deg); -webkit-transition: all 1ms ease 1ms; -moz-transition: all 1s ease 0.1s; -o-transition: all 1ms ease 1ms; -ms-transition: all 1ms ease 1ms; transition: all 1ms ease 1ms; opacity: 1; background-position: center; background-size: cover; position: absolute; top: 0;left: 0; width: 100%; height: 100vh;}
 
 /**active_eff*/
