@@ -93,7 +93,7 @@ a:active,a:hover,a:focus{text-decoration:none}
 /**btn_eff_*/
 .main_area .btn01 {display: inline-block; margin-top: 20px; min-width: 175px; padding: 19px 0; position: relative; font-size: 12px; font-weight: 700; line-height: 1; text-align: center; border: 2px solid transparent; border-radius: 5px; background: transparent; -webkit-transition: color 300ms,background 300ms, border 300ms; transition: color 300ms,background 300ms, border 300ms; }
 .main_area .btn01.last{background: #595959; color: #fff;}
-.main_area .btn01 span {position: relative; letter-spacing: 0.5px; font-size: 14px; font-weight:400; }
+.main_area .btn01 span {position: relative; letter-spacing: 0.5px; font-size: 14px; font-weight:400; display: block; }
 
 /* border style */ 
 .main_area .btn01 {flex-shrink: 0; text-decoration: none; background: #fff; border-radius: 40px; color: #000; display: inline-block; padding: 0 30px; height: 51px; line-height: 49px; font-weight: 600; letter-spacing: -.036em; font-size: inherit; transition: .3s background ,.3s color, .3s border, .3s opacity; -webkit-animation: move 2.5s infinite; animation: move 2.5s infinite; }

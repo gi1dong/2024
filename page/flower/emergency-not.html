@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./assets/js/jquery-3.6.0.min.js"></script>
+  <link href="./assets/css/modules/bootstrap.css" type="text/css" rel="stylesheet">
+  <link href="./assets/css/reset.css" type="text/css" rel="stylesheet"><!-- reset style -->
+  <link href="./assets/css/style.css" type="text/css" rel="stylesheet"><!-- common style -->
+  <title>긴급공지 모달</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header borderBot">
+      <div class="header-wrap d-flex align-items-end justify-content-between">
+        <ul class="header-list d-flex">
+          <li class="header-item on">
+            <a href="javascript:void(0)">회원추천</a>
+          </li>
+          <li class="header-item">
+            <a href="javascript:void(0)">프리미엄등록</a>
+            <!-- 토스트팝업 부트스트랩 기본값 -->
+            <div class="toast" style="display: block; opacity:1">
+              <div class="toast-body">
+                프리미엄 등록 무료
+              </div>
+            </div>
+          </li>
+        </ul>
+        <button class="header-saerch modal-btn">검색</button>
+      </div>
+    </header>
+    <main>
+      <div class="contents emergency">
+        <div class="cont-wrap">
+          <div class="accordion">
+            <div class="accordion-item membership">
+              <div class="accordion-header membership-header">
+                <div class="membership-button accordion-button">
+                  <figure>
+                    <img src="./assets/images/img_profile.png" alt="프로필이미지">
+                  </figure>
+                  <div class="membership-con">
+                    <div class="membership-title d-flex">
+                      <h3>제니딸기05</h3>
+                      <p> 여성, 56세, 돌싱</p>
+                    </div>
+                    <ul class="membership-info d-flex">
+                      <li class="membership-info-item d-flex">
+                        <p>목적</p>
+                        <p>이성친구</p>
+                      </li>
+                      <li class="membership-info-item d-flex">
+                        <p>거주</p>
+                        <p>서울</p>
+                      </li>
+                      <li class="membership-info-item d-flex">
+                        <p>직업</p>
+                        <p>전문직</p>
+                      </li>
+                      <li class="membership-info-item d-flex">
+                        <p>결혼</p>
+                        <p>미혼</p>
+                      </li>
+                    </ul>
+                    <div class="membership-premium">프리미엄</div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-collapse">
+                <!-- 정보가 들어가면 .txt추가 되면 show -->
+                <div class="accordion-body membership-body txt">
+                  <p>
+                    서로 모르고 살아온 날보다 앞으로 살아갈 날이 훨씬 많다는 사실 만으로도 마음이 벅찹니다. 결혼준비는 끝났는데 함께할 배우자가 없네요. 만낫너 대화하며 알아갔으면 좋겠어요.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item membership">
+              <div class="accordion-header membership-header">
+                <div class="membership-button accordion-button">
+                  <figure>
+                    <img src="./assets/images/img_profile.png" alt="프로필이미지">
+                  </figure>
+                  <div class="membership-con">
+                    <div class="membership-title d-flex">
+                      <h3>제니딸기05</h3>
+                      <p> 여성, 56세, 돌싱</p>
+                    </div>
+                    <ul class="membership-info d-flex">
+                      <li class="membership-info-item d-flex">
+                        <p>목적</p>
+                        <p>이성친구</p>
+                      </li>
+                      <li class="membership-info-item d-flex">
+                        <p>거주</p>
+                        <p>서울</p>
+                      </li>
+                      <li class="membership-info-item d-flex">
+                        <p>직업</p>
+                        <p>전문직</p>
+                      </li>
+                      <li class="membership-info-item d-flex">
+                        <p>결혼</p>
+                        <p>미혼</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-collapse">
+                <div class="accordion-body membership-body ">
+                  <p>
+                    <!-- 정보값 넣기 -->
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item membership">
+              <div class="accordion-header membership-header">
+                <div class="membership-button accordion-button">
+                  <figure>
+                    <img src="./assets/images/img_profile.png" alt="프로필이미지">
+                  </figure>
+                  <div class="membership-con">
+                    <div class="membership-title d-flex">
+                      <h3>제니딸기05</h3>
+                      <p>여성, 56세, 돌싱</p>
+                    </div>
+                    <ul class="membership-info d-flex">
+                      <li class="membership-info-item d-flex">
+                        <p>목적</p>
+                        <p>이성친구</p>
+                      </li>
+                      <li class="membership-info-item d-flex">
+                        <p>거주</p>
+                        <p>서울</p>
+                      </li>
+                      <li class="membership-info-item d-flex">
+                        <p>직업</p>
+                        <p>전문직</p>
+                      </li>
+                      <li class="membership-info-item d-flex">
+                        <p>결혼</p>
+                        <p>미혼</p>
+                      </li>
+                    </ul>
+                    <div class="membership-premium">프리미엄</div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-collapse">
+                <div class="accordion-body membership-body txt">
+                  <p>
+                    서로 모르고 살아온 날보다 앞으로 살아갈 날이 훨씬 많다는 사실 만으로도 마음이 벅찹니다. 결혼준비는 끝났는데 함께할 배우자가 없네요. 만낫너 대화하며 알아갔으면 좋겠어요.서로 모르고
+                    살아온 날보다 앞으로 살아갈 날이 훨씬 많다는 사실 만으로도 마음이 벅찹니다. 결혼준비는 끝났는데 함께할 배우자가 없네요. 만낫너 대화하며 알아갔으면 좋겠어요.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- 광고부분 -->
+            <div class="advertisement">
+              <a href="javascript:(0)" class="advertisement-link">
+                <figure>
+                  <img src="./assets/images/img_advertise.png" alt="이미지">
+                </figure>
+              </a>
+            </div>
+            <div class="accordion-item membership">
+              <div class="accordion-header membership-header">
+                <div class="membership-button accordion-button">
+                  <figure>
+                    <img src="./assets/images/img_profile.png" alt="프로필이미지">
+                  </figure>
+                  <div class="membership-con">
+                    <div class="membership-title d-flex">
+                      <h3>제니딸기05</h3>
+                      <p> 여성, 56세, 돌싱</p>
+                    </div>
+                    <ul class="membership-info d-flex">
+                      <li class="membership-info-item d-flex">
+                        <p>목적</p>
+                        <p>이성친구</p>
+                      </li>
+                      <li class="membership-info-item d-flex">
+                        <p>거주</p>
+                        <p>서울</p>
+                      </li>
+                      <li class="membership-info-item d-flex">
+                        <p>직업</p>
+                        <p>전문직</p>
+                      </li>
+                      <li class="membership-info-item d-flex">
+                        <p>결혼</p>
+                        <p>미혼</p>
+                      </li>
+                    </ul>
+                    <div class="membership-premium">프리미엄</div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-collapse">
+                <div class="accordion-body membership-body txt">
+                  <p>
+                    서로 모르고 살아온 날보다 앞으로 살아갈 날이 훨씬 많다는 사실 만으로도 마음이 벅찹니다. 결혼준비는 끝났는데 함께할 배우자가 없네요. 만낫너 대화하며 알아갔으면 좋겠어요.서로 모르고
+                    살아온 날보다 앞으로 살아갈 날이 훨씬 많다는 사실 만으로도 마음이 벅찹니다. 결혼준비는 끝났는데 함께할 배우자가 없네요. 만낫너 대화하며 알아갔으면 좋겠어요.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item membership">
+              <div class="accordion-header membership-header">
+                <div class="membership-button accordion-button">
+                  <figure>
+                    <img src="./assets/images/img_profile.png" alt="프로필이미지">
+                  </figure>
+                  <div class="membership-con">
+                    <div class="membership-title d-flex">
+                      <h3>제니딸기05</h3>
+                      <p> 여성, 56세, 돌싱</p>
+                    </div>
+                    <ul class="membership-info d-flex">
+                      <li class="membership-info-item d-flex">
+                        <p>목적</p>
+                        <p>이성친구</p>
+                      </li>
+                      <li class="membership-info-item d-flex">
+                        <p>거주</p>
+                        <p>서울</p>
+                      </li>
+                      <li class="membership-info-item d-flex">
+                        <p>직업</p>
+                        <p>전문직</p>
+                      </li>
+                      <li class="membership-info-item d-flex">
+                        <p>결혼</p>
+                        <p>미혼</p>
+                      </li>
+                    </ul>
+                    <div class="membership-premium">프리미엄</div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-collapse">
+                <div class="accordion-body membership-body txt">
+                  <p>
+                    서로 모르고 살아온 날보다 앞으로 살아갈 날이 훨씬 많다는 사실 만으로도 마음이 벅찹니다. 결혼준비는 끝났는데 함께할 배우자가 없네요. 만낫너 대화하며 알아갔으면 좋겠어요.서로 모르고
+                    살아온 날보다 앞으로 살아갈 날이 훨씬 많다는 사실 만으로도 마음이 벅찹니다. 결혼준비는 끝났는데 함께할 배우자가 없네요. 만낫너 대화하며 알아갔으면 좋겠어요.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn-wrap more">
+            <button type="button" class="btn btn-block btn-normal btn-border-pink">더보기</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <nav>
+        <div class="nav fiexd">
+          <a class="nav-menu on icon_member" href="javascript:;">회원</a>
+          <a class="nav-menu icon_letter" href="javascript:;">쪽지</a>
+          <a class="nav-menu icon_board" href="javascript:;">이용게시판</a>
+          <a class="nav-menu icon_premium" href="javascript:;">프리미엄</a>
+          <a class="nav-menu icon_mypage" href="javascript:;">프로필</a>
+        </div>
+      </nav>
+    </footer>
+    <div class="modal-wrap emergency" style="">
+      <div class="modal-box" id="modal">
+        <div class="modal-con ">
+          <div class="modal-txt">
+            <b>긴급공지가 들어갑니다.<br/>두줄까지 들어갑니다.</b>
+            <figure><img src="./assets/images/icon_emergency.png" alt="긴급"/></figure>
+          </div>
+          <div class="modal-txt-box">
+            긴급팝업 내용이 들어갑니다.긴급팝업 내용이 들어갑니다.긴급팝업 내용이 들어갑니다.긴급팝업 내용이 들어갑니다.긴급팝업 내용이 들어갑니다.긴급팝업 내용이 들어갑니다.긴급팝업 내용이 들어갑니다.긴급팝업 내용이 들어갑니다.긴급팝업 내용이 들어갑니다.긴급팝업 내용이 들어갑니다.긴급팝업 내용이 들어갑니다.
+          </div>
+        </div>
+        <div class="emergency-btn">
+          <button type="button" id="modal-cancel" class="btn cancel-btn">오늘 하루 보지 않기</button>
+          <button  type="button" href="javascript:void(0)" id="modal-submit" class="btn col-6">닫기</button>
+        </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
+<script>
+  const modalPopOpen = () => {
+    const modalBtnEl = document.getElementsByClassName("modal-btn");
+    const modalBoxEl = document.getElementsByClassName("modal-wrap")[0];
+    for (let el of modalBtnEl) {
+      el.addEventListener("click", function (e) {
+        const target = e.target;
+        modalBoxEl.style.display = "block";
+      })
+    }
+  }
+
+  const modalBtnHandler = () => {
+    const modalCancelBtnEl = document.getElementById("modal-cancel");
+    const modalSubmitBtnEl = document.getElementById("modal-submit");
+
+    const modalBoxEl = document.getElementsByClassName("modal-wrap")[0];
+
+    modalCancelBtnEl.addEventListener("click", function () {
+      modalBoxEl.style.display = "none";
+    })
+
+    modalSubmitBtnEl.addEventListener("click", function () {
+      modalBoxEl.style.display = "none";
+    })
+  }
+
+  const modalDataHandler = () => {
+
+    /* ajax 호출 코드 */
+    if (data) {
+      const modalData = ``
+    }
+  }
+
+  const init = () => {
+    modalBtnHandler();
+    modalPopOpen();
+  }
+
+  window.addEventListener("load", init);
+  
+  $('.nav>a').click(function(){
+   if($(this).hasClass("on")){
+    $(this).addClass("on");
+   }else{
+    $('.nav>a').removeClass("on");
+    $(this).addClass("on");
+   }
+  });
+</script>
