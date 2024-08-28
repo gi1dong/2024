@@ -171,7 +171,6 @@
                 masonryContainerStyle.getPropertyValue("grid-auto-rows")
             );
             document.querySelectorAll(".pseudo-img").forEach((e) => {
-      
                 let a = Math.round(e.offsetHeight / 10) * 10
                 e.style.height = a + 'px'
             })
@@ -211,7 +210,6 @@
             modalPopOpen();
             masonryLayout()
         }
-      
         window.addEventListener('load', init)
         window.addEventListener("resize", masonryLayout);
       

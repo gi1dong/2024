@@ -1,45 +1,33 @@
-/* 메인 css */
-main {
-  width: 100%;
-  display: block;
-}
+main{padding: 120px 0 0 0; margin: 0 auto;}
 
 main .container_wrap {
   width: 100%;
-  height: 100vh;
   margin: 0 auto 100px;
 }
 
 main .container_wrap #container1 {
   display: block;
   width: 100%;
-  height: 87vh;
-  background-color: fmain#fff;
+  background: #fff;
   color: #000;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  margin: 100px auto 0;
 }
 
 main .container_wrap #container1 .main_vis {
   display: block;
-  position: relative;
-  margin: 90px auto 90px;
-  overflow: hidden;
+ margin: 0 auto;
+ padding: 120px 0;
 }
 
 main .container_wrap #container1 .main_vis .main_l {
-  width: 70%;
+  width: 50%;
   display: block;
   float: left;
 }
 
 main .container_wrap #container1 .main_vis .main_l .main_txt {
-  width: 63%;
+  width: 100%;
   display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
   padding: 0 1%;
 }
 
@@ -72,11 +60,9 @@ main .container_wrap #container1 .main_vis .main_l .main_txt .mt_p_1 {
 }
 
 main .container_wrap #container1 .main_vis .main_r {
-  width: 44%;
+  width: 50%;
   display: block;
-  min-width: 548px;
   float: right;
-  z-index: 999;
 }
 
 .main_vis .main_r .main_img {
@@ -90,23 +76,20 @@ main .container_wrap #container1 .main_vis .main_r {
   display: block; image-rendering: pixelated;
 }
 
-.main_vis .main_btn {
-  position: absolute;
+ .main_btn {
   background: #000;
   color: #fff;
   text-align: center;
   font-size: 14px;
   display: inline-block;
   min-width: 200px;
+  margin: 30px auto 0;
   padding: 20px 0;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
   font-weight: 700;
 }
 
-.main_vis .main_btn:hover {
-  background-color: #81d8d0;
+ .main_btn:hover {
+  background: #81d8d0;
   transition: all .6s;
   color: #000;
 }
@@ -151,17 +134,19 @@ main .container_wrap .main_icon .mv_number {
 
 #container2 {
   display: block;
-  margin: 0% auto 5%;
-  width: 95%;
-  padding: 3%;
+  margin: 0 auto 0;
+  width: 100%;
+  padding: 120px 0;
+  /* position: relative; */
 }
-
+.ani_wrap01{width: 100%; margin: 120px auto 0;}
 .ani_wrap01 [class^=ani] {
   font-size: 9.8vw;
   line-height: 1.2;
   font-weight: 500;
   text-transform: capitalize;
   margin: 20px auto;
+  width: 100%;
 }
 
 .ani_wrap01 .ani_txt01 {
@@ -173,7 +158,7 @@ main .container_wrap .main_icon .mv_number {
 }
 
 .ani_wrap01 .ani_txt02 span {
-  color: #87cbca;
+  color: #81d8d0;
   font-weight: bold;
 }
 
@@ -187,6 +172,7 @@ main .container_wrap .main_icon .mv_number {
 #container2 .content:nth-child(2) .con1_r {
   float: left;
   width: 50%;
+  padding: 0 30px;
   height: 100%;
 }
 
@@ -272,27 +258,22 @@ main .container_wrap .main_icon .mv_number {
   line-height: 20px;
   padding: 2.5% 5%;
   letter-spacing: 0.07em;
-  font-weight: 700;
+  font-weight: 300;
 }
 #container2 .content .con1_txt .con1_btn>a{display: block;}
-
-#container3 {
+main #container3 {
   display: block;
-  background-color: #000;
+  background: #000;
+  box-sizing: border-box;
   width: 100%;
-  padding: 2% 0;
-  margin: 4% auto;
-  position: relative;
+  text-align: center;
 }
 
 #container3 .bk_bg {
-  background-color: #000;
-  text-align: center;
   color: #fff;
-  margin: 2% auto;
   display: block;
-  padding: 2% 0;
   width: 100%;
+ padding: 120px 0;
 }
 
 #container3 .bk_bg .bk_tit {
@@ -300,17 +281,16 @@ main .container_wrap .main_icon .mv_number {
   font-size: 24px;
   color: #fff;
   width: 100%;
-  position: absolute;
-  background-color: #000;
 }
-
+.bk_bg .bk_tit em{display: inline-block;}
 .bk_bg .bk_tit .bk_em {
-  margin: 0% auto;
+  margin: 0 auto 30px;
   font-style: italic;
 }
 
 .bk_bg .bk_tit .bk_em1 {
-  margin: 0% auto;
+  margin: 0 auto 30px;
+  padding: 0 30px;
   font-weight: bold;
 }
 
@@ -329,7 +309,7 @@ main .container_wrap .main_icon .mv_number {
 }
 
 .bk_bg .bk_tit_1 .color_6666ff {
-  color: #87cbca;
+  color: #81d8d0;
 }
 
 .bk_bg .bk_img {
@@ -351,7 +331,7 @@ main .container_wrap .main_icon .mv_number {
   color: #fff;
   border: 1px solid #fff;
   font-size: 15px;
-  background-color: #000;
+  background: #000;
   padding: 20px 60px;
   margin: 0 auto;
 }
@@ -368,10 +348,10 @@ main .container_wrap .main_icon .mv_number {
 /* @media screen and (max-width: 620px){ #container3{}}*/
 #conatainer4 {
   width: 100%;
-  padding: 0 3% 15%;
+  padding: 120px 30px;
   display: block;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   background: #Fff;
 }
 
@@ -389,7 +369,7 @@ main .container_wrap .main_icon .mv_number {
   width: 100%;
   display: block;
   overflow: hidden;
-  margin: 5% auto 10%;
+  margin: 120px auto 120px;
   background: #fff;
 
 }
@@ -427,7 +407,7 @@ main .container_wrap .main_icon .mv_number {
 
 .prd_wrap .prd .prd_txt>p {
   font-size: 35px;
-  font-weight: bolder;
+  font-weight: 800;
   line-height: 43px;
 }
 
@@ -457,14 +437,12 @@ main .container_wrap .main_icon .mv_number {
 .web_award .award_l {
   width: calc(50% - 20px); margin-right: 20px;
   float: left; margin: 20px auto;
-  display: block;
+  display: block; cursor: pointer;
 }
 .web_award .award_l>img{display: block; width: 100%; object-fit: contain;}
-
 .web_award .award_r {
   width: 50%;
   float: right;
-  padding: 0 2%;
 }
 
 .web_award .award_r .award_r1,
@@ -485,15 +463,17 @@ main .container_wrap .main_icon .mv_number {
 .web_award .award_r .award_r3>.award_r_txt>p {
   font-size: 27px;
   text-align: left;
-  font-weight: bolder;
+  font-weight: 800;
   color: #000;
 }
 
 .web_award .award_r .award_r1 .award_r_txt>span,
-.web_award .award_r .award_r3>.award_r_txt>span {
+.web_award .award_r .award_r3>.award_r_txt>span,
+.web_award .award_r .award_r2>.award_r_txt>span  {
   font-size: 16px;
   display: block;
   margin-top: 20px;
+  font-family: 'MapoFlowerIsland';
 }
 
 .web_award .award_r .award_r1>.award_r_img,
@@ -501,26 +481,6 @@ main .container_wrap .main_icon .mv_number {
   float: right;
   width: 50%;
   display: block;
-}
-
-.web_award .award_r1 .award_r_img>img,
-.web_award .award_r .award_r3>.award_r_img>img {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.web_award .award_r .award_r3>.award_r_txt>.award_btn,
-.web_award .award_r .award_r1 .award_r_txt>.award_btn {
-  font-weight: bolder;
-  display: inline-block;
-  color: #fff;
-  padding: 3%;
-  background-color: #000;
-  font-size: 13px;
-  text-align: center;
-  min-width: 40%;
-  margin-top: 9%;
 }
 
 /* 우측 2번째 줄  */
@@ -550,21 +510,19 @@ main .container_wrap .main_icon .mv_number {
 
 .web_award .award_r .award_r2>.award_r_txt>p {
   font-size: 30px;
-  font-weight: bolder;
+  font-weight: 800;
   margin-bottom: 20px;
 }
 
-.web_award .award_r .award_r2>.award_r_txt>span {
-  font-size: 16px;
-  display: block;
-}
-
+footer .award_btn,
+.web_award .award_r .award_r3>.award_r_txt>.award_btn,
+.web_award .award_r .award_r1 .award_r_txt>.award_btn,
 .web_award .award_r .award_r3>.award_r_txt>.award_btn,
 .web_award .award_r .award_r2>.award_r_txt>.award_btn {
-  font-weight: bold;
+  font-weight: 800;
   display: inline-block;
   color: #fff;
-  background-color: #000;
+  background: #000;
   font-size: 13px;
   text-align: center;
   padding: 3%;
@@ -580,37 +538,13 @@ main .container_wrap .main_icon .mv_number {
 .web_award .award_r .award_r3 {
   width: 100%;
 }
-
 .web_award .award_r .award_r3 .award_r_txt {
-  width: 50%;
-  float: left;
+  width: 50%; float: left;
 }
-
-/* 미디어쿼리 */
-/* @media screen and (max-width:1920px) {
-  main .container_wrap #container1 .main_vis .main_l .main_txt .mt_em {
-    font-size: 95px;
-    li
-    ne-height: 1em;
-  } */
-
-@media screen and (max-width:1700px) {}
-
-@media screen and (max-width:1600px) {}
-
-@media screen and (max-width:1500px) {}
-
-@media screen and (max-width:1400px) {
-  .main_vis .main_btn {
-    left: 50%;
-  }
+@media (hover: hover)  { 
+#container2 .content .con1_txt .con1_btn:hover{transition: all .5s; font-weight: 800;}
 }
-
 @media screen and (max-width:1360px) {
-  .main_vis .main_btn {
-    bottom: 10%;
-  }
-
   main .container_wrap #container1 .main_vis .main_l .main_txt .mt_em {
     font-size: 70px;
   }
@@ -626,14 +560,12 @@ main .container_wrap .main_icon .mv_number {
   #container2 .content .con1_txt>h1::after {
     left: 0;
   }
-
   .prd_wrap .prd {
     float: unset;
     width: 70%;
     margin: 2% auto;
   }
 }
-
 @media screen and (max-width: 1220px) {
   #container2 .content .con1_txt .con1_txt_p1 {
     margin: 20px 0 10px;
@@ -643,13 +575,11 @@ main .container_wrap .main_icon .mv_number {
     font-size: 50px;
   }
 }
-
 @media screen and (max-width: 1200px) {
   #container2 .content .con1_r .con1_txt {
     padding: 0% 0 0% 5%;
   }
 }
-
 @media screen and (max-width: 1190px) {
   .bk_tit_1>p {
     font-size: 90px;
@@ -669,73 +599,48 @@ main .container_wrap .main_icon .mv_number {
     width: 100%;
     margin: 1% auto;
   }
-
-  #conatainer4 {
-    padding: 0 3% 0%;
-  }
 }
-
-
 @media screen and (max-width: 1139px) {
   #container2 .content .con1_txt .con1_txt_p1 {
     margin: 20px 0 10px;
   }
-
   #container2 .content .con1_txt>p {
     font-size: 45px;
   }
+}
+@media screen and (max-width:1137px) {
+  #container2 .content .con1_txt .con1_txt_p1 {
+    margin: 20px 0 15px;
+  }
 
-  @media screen and (max-width:1137px) {
-    #container2 .content .con1_txt .con1_txt_p1 {
-      margin: 20px 0 15px;
-    }
+  #container2 .content .con1_txt>p {
+    font-size: 40px;
+  }
 
-    #container2 .content .con1_txt>p {
-      font-size: 40px;
-    }
-
-    .bk_tit_1>p {
-      font-size: 80px;
-    }
+  .bk_tit_1>p {
+    font-size: 80px;
   }
 }
-
 @media screen and (max-width: 1120px) {
   .bk_tit_1>p {
     font-size: 60px;
   }
 }
-
 @media screen and (max-width: 1100px) {
   .bk_tit_1>p {
     font-size: 50px;
     line-height: 65px;
   }
 }
-
-
 @media screen and (max-width:1023px) {
   main #container1 .main_vis .main_l {
     width: 30%;
     top: 10%;
   }
-
-  main .container_wrap #container1 .main_vis .main_l .main_txt {
-    position: absolute;
-    top: 0;
-    left: 3%;
-  }
-
   main .container_wrap #container1 .main_vis .main_l .main_txt .mt_em {
     font-size: 60px;
     display: block;
     line-height: 0.9;
-  }
-
-  .main_vis .main_btn {
-    position: absolute;
-    width: 20%;
-    right: 1%;
   }
 
   #container2 .content .con1_txt>p {
@@ -762,14 +667,6 @@ main .container_wrap .main_icon .mv_number {
     max-width: unset;
   }
 
-  .main_vis .main_r .main_img>img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-
   .bk_tit_1>p {
     font-size: 42px;
     margin-top: 5%;
@@ -788,14 +685,8 @@ main .container_wrap .main_icon .mv_number {
     margin-top: 10px;
     line-height: 60px;
   }
+  footer .award_btn{  background: #81d8d0; color: #000;}
 }
-
-@media screen and (max-width: 1000px) {
-  main .container_wrap #container1 .main_vis .main_l .main_txt {
-    left: 10%;
-  }
-}
-
 @media screen and (max-width: 900px) {
   main .container_wrap #container1 .main_vis .main_l {
     position: unset;
@@ -805,7 +696,6 @@ main .container_wrap .main_icon .mv_number {
   }
 
   main .container_wrap #container1 .main_vis .main_l .main_txt {
-    position: unset;
     width: 100%;
   }
 
@@ -838,12 +728,6 @@ main .container_wrap .main_icon .mv_number {
     width: 70%;
   }
 
-  .main_vis .main_btn {
-    position: absolute;
-    min-width: 160px;
-    right: 1%;
-  }
-
   .main_r .vertical_txt {
     top: unset;
     right: unset;
@@ -852,66 +736,46 @@ main .container_wrap .main_icon .mv_number {
     right: 0;
   }
 }
-
 @media screen and (max-width: 780px) {
+  main{padding: 60px 0 0 0; margin: 0 auto;}
+  main .container_wrap #container1 .main_vis .main_r {
+    width: 100%;
+  }
   .main_vis .main_r .main_img {
     padding-right: 30%;
   }
-
-
   main .container_wrap #container1 .main_vis .main_l .main_txt .mt_p_1 {
     font-size: 15px;
     width: 100%;
     line-height: unset;
   }
-
-  .main_vis .main_btn {
-    min-width: 100px;
-    font-size: 10px;
-    bottom: 30%;
-  }
-
   .prd_tit {
-    font-size: 60px;
+    font-size: 40px;
   }
 
-  #container2 .content .con1_txt .con1_btn {
-    font-size: 10px;
+  footer .award_btn,
+  #container2 .content .con1_txt .con1_btn,
+  .web_award .award_r .award_r3>.award_r_txt>.award_btn, 
+  .web_award .award_r .award_r1 .award_r_txt>.award_btn,
+  .web_award .award_r .award_r2>.award_r_txt>span,
+  .web_award .award_r .award_r1>.award_r_txt>span,
+  .web_award .award_r .award_r3>.award_r_txt>span {
+    font-size: 14px;
   }
 
   .web_award .award_r .award_r1>.award_r_txt>p,
   .web_award .award_r .award_r2>.award_r_txt>p,
   .web_award .award_r .award_r3>.award_r_txt>p {
-    font-size: 14px;
+    font-size: 14px; text-align: center;
   }
 
-  .web_award .award_r .award_r2>.award_r_txt>span,
-  .web_award .award_r .award_r1>.award_r_txt>span,
-  .web_award .award_r .award_r3>.award_r_txt>span {
-    font-size: 12px;
-  }
-
-
-
-  #conatainer4 {
+  #conatainer4,
+  .web_award  {
     padding: unset;
   }
-
-  .web_award {
-    padding: unset;
-  }
-
   #container2 {
     width: 100%;
-    padding: 0 2%;
   }
-
-  #container2 .content>img {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-
 
   #container2 .content .con1_txt>p {
     font-size: 25px;
@@ -925,32 +789,39 @@ main .container_wrap .main_icon .mv_number {
     position: relative;
   }
 
+  #container3{padding: 60px 0;}
+
   #container3 .bk_btn {
+    margin-top: 60px;
     font-size: 12px;
     padding: 13px 38px;
     width: unset;
   }
 
-}
+  .web_award .award_r .award_r1, 
+  .web_award .award_r .award_r2,
+  .web_award .award_r .award_r3{margin: 0 auto;}
 
-@media screen and (max-width: 700px) {
-  main .container_wrap #container1 .main_vis .main_r {
-    width: 30%;
-  }
-
+  .web_award .award_r .award_r1,
+  .web_award .award_r .award_r3{display: flex; flex-direction: column-reverse;}
   #container2 .content .con1_l,
-  #container2 .content .con1_r {
-    float: unset;
-    display: block;
-    margin: 0 auto;
-    width: unset;
+  .web_award .award_r .award_r3 .award_r_txt,
+  #container2 .content .con1_r,  
+  .web_award .award_r .award_r1>.award_r_txt, 
+  .award_r .award_r3>.award_r_txt,  
+  .web_award .award_r .award_r1>.award_r_img, 
+  .web_award .award_r .award_r3>.award_r_img,
+  .web_award .award_r .award_r2 .award_r_img,
+  .award_r .award_r2>.award_r_txt {
+    float: unset; display: block;
+    margin: 0 auto; width: 100%; padding:30px; text-align: center;
   }
 
   #container2 .content:nth-child(2) .con1_r,
   #container2 .content:nth-child(2) .con1_l {
     float: unset;
     margin: 0 auto;
-    width: unset;
+    width:  100%;
   }
 
   #container2 .content:nth-child(2) {
@@ -971,13 +842,10 @@ main .container_wrap .main_icon .mv_number {
   .bk_tit_1 {
     margin-top: 40px;
   }
-
   .bk_tit_1>p {
     font-size: 30px;
   }
-
 }
-
 @media screen and (max-width: 620px) {
   main .container_wrap #container1 .main_vis .main_l .main_txt {
     width: 100%;
@@ -1007,7 +875,6 @@ main .container_wrap .main_icon .mv_number {
     line-height: 1px;
   }
 }
-
 @media screen and (max-width: 560px) {
   .main_r .vertical_txt {
     right: 0;
@@ -1023,13 +890,10 @@ main .container_wrap .main_icon .mv_number {
   }
 
 }
-
-
 @media screen and (max-width: 530px) {
   #container2 .content .con1_txt .con1_txt_p1 {
     font-size: 11px;
   }
-
   #container2 .content .con1_txt>p {
     font-size: 18px;
   }

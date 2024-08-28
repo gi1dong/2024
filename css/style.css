@@ -349,7 +349,10 @@ a:hover{text-decoration:none}
 }
 
 /* React */
-.main_area>.swiper-container>.swiper-wrapper>.react.swiper-slide-active{background:  rgba(0, 0, 0, 0.7);}
+.main_area>.swiper-container .swiper-wrapper .swiper-slide.react.swiper-slide-active{background:  rgba(0, 0, 0, 0.1);}
+
+.main_area .swiper-slide.react.swiper-slide-active .bg_opac{    background: rgba(0, 0, 0, 0.1);}
+
 .react img{display: flex;
   margin: 0 auto 30px;
   justify-content: center;
