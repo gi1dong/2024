@@ -9,7 +9,7 @@ i {font-style: normal; }
 blockquote, q {quotes: none;}
 blockquote:before, blockquote:after, q:before, q:after {content: ""; content: none;}
 table {border-collapse: collapse; border-spacing: 0; }
-html, body {position: relative; width: 100%; height: 100vh; overflow-x: hidden;}
+html, body {position: relative; width: 100%; height: 100vh; overflow-x: hidden; min-width:576px; max-width: 1280px;}
 body {font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12px; font-weight: 300; line-height: 1.2rem; letter-spacing: -0.5px; width: 100%; min-width: 36rem; overflow-x: hidden; margin: 0 auto;}
 .swiper-backface-hidden .swiper-slide, .swiper-slide{width:100vw; height: 100vh; overflow: hidden;}
 button{background: none; padding: 0; margin: 0; border: none; outline: none;}
@@ -61,10 +61,8 @@ a:active,a:hover,a:focus{text-decoration:none}
 .aside nav .nav_inner li:last-child{padding: 0;}
 .aside nav .nav_inner>li>a { display: block; width: 100%; display: flex; justify-content: space-between; padding: 10px 0;  font-size: 30px; color: #000; font-weight: 500; text-align: left; position: relative; overflow: hidden;}
 .aside nav .nav_inner>li .sub_menu{ width: 100%; height: 0;  overflow: hidden;}
-
 .aside nav .nav_inner>li .sub_menu ul li>a{ display:inline-block; font-size: 18px; line-height: 1.6rem; font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;  font-weight: 300; }
 .aside nav .nav_inner>li a.selected .arrow::after{transform: rotate(315deg);}
-
 .aside::-webkit-scrollbar { width: 5px; } 
 .aside::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; } 
 .aside::-webkit-scrollbar-track { background:  rgba(255,255,255,.85); border-radius: 10px; box-shadow: inset 0px 0px 5px white; }
@@ -348,7 +346,6 @@ a:hover{text-decoration:none}
 .react img:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-
 }
 
 /* React */
@@ -371,6 +368,14 @@ padding: 1.5em;}
   }
 }
 
+@media (hover: hover) and (screen) and (max-width: 1024px) {
+  /* hover  */
+  .main_area .section11 .swiper-wrapper.flower>.swiper-slide .information,
+  .main_area .section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .information{opacity: 1; visibility: visible;}
+  .react img{margin: 0 auto 10px;}
+  .react h2{font-size: 30px;}
+}
+
 @media screen and (max-width: 1024px) {
   header{width: 100%;}
   header .header{ width: calc(100% - 40px); margin: 0 auto; display: flex;}
@@ -384,14 +389,6 @@ padding: 1.5em;}
   .desktop{display: none;}
   .explain_img{width: 100%; display: block;float: none;}
   .main_area .swiper-container .swiper-wrapper .swiper-slide.section11 .center{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 100%; display: block; text-align: center; margin: 0 auto;}
-
-  /* hover  */
-  .main_area .section11 .swiper-wrapper.flower>.swiper-slide .information,
-  .main_area .section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .information{opacity: 1; visibility: visible;}
-  .react img{margin: 0 auto 10px;}
-  .react h2{font-size: 30px;}
-
-
 }
 
 @media screen and (max-width: 767px){
@@ -400,5 +397,5 @@ padding: 1.5em;}
   .aside nav .nav_inner>li .sub_menu ul li>a{font-size: 16px;}
   .main_area .main_intro .txt02 strong{font-size: 30px;}
 
-
+  .react a{width: calc(100% - 60px);}
 }
