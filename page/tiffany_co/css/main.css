@@ -529,7 +529,7 @@ footer .award_btn,
   min-width: 40%;
   margin-top: 9%;
 }
-
+footer .award_btn{background: #81d8d0;}
 .web_award .award_r .award_r2 .award_r_img {
   float: left;
 }
@@ -685,7 +685,7 @@ footer .award_btn,
     margin-top: 10px;
     line-height: 60px;
   }
-  footer .award_btn{  background: #81d8d0; color: #000;}
+  footer .award_btn{ margin-top: 0; background: #81d8d0; color: #000;}
 }
 @media screen and (max-width: 900px) {
   main .container_wrap #container1 .main_vis .main_l {
