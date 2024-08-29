@@ -180,7 +180,7 @@
 	})
 	.setClassToggle('#animate3', 'visible')
 	.addTo(controller)
-	.addIndicators();
+	// .addIndicators();
 
 	const staggerElement = $('.animation2');
 	for(var i=0; i<staggerElement.length; i++){
@@ -191,7 +191,7 @@
 		})	
 		.setClassToggle(staggerElement[i], 'visible')
 		.addTo(controller)
-		.addIndicators();
+		// .addIndicators();
 	}
 }());
 
