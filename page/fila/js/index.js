@@ -12,9 +12,10 @@
     },
     pagination: {
       el: ".main_vis .swiper-pagination",
-      clickable: true,
+      clickable: false
     }
   });
+
   $(".swiper-control").click(function () {
     if ($(this).hasClass("hi")) {
       $(this).removeClass("hi");
@@ -26,6 +27,11 @@
       return false;
     }
   });
+
+  // $(".main_vis .swiper-control").click(function () {
+  //   return false;
+  //   });
+
   /* 인기상품 영역*/
   var product = new Swiper(".product .mySwiper", {
   autoplay: {
@@ -34,17 +40,11 @@
     loop: true,
     autoHeight: true,
   },
-    navigation: {
-      nextEl: ".product .swiper-button-next",
-      prevEl: ".product .swiper-button-prev",
-    },
     pagination: {
       el: ".product .swiper-pagination.show",
     }
   });
-  $(".main_vis .swiper-control").click(function () {
-  return false;
-  });
+
   /*스와이퍼 슬라이드 재생 멈춤 기능*/
   $(".product .stop").click(function () {
     product.autoplay.stop();
@@ -54,6 +54,7 @@
     product.autoplay.start();
     return false;
   });
+
   $(".menu_3").click(function () {
     $(this).addClass("on");
   });
@@ -83,7 +84,7 @@
       clickable: true,
       renderBullet: function (index, className) {
         return '<span class="' + className + '">' + (index + 1) + "</span>";
-      },
+      }
     }
   });
   /*tab menu area*/
@@ -94,15 +95,19 @@
     $(".tab> ul> li").removeClass("on");
     $(this).addClass("on");
   });
+
 // awards_tab
   var awards_tab = new Swiper(".awards_tab .mySwiper", {
     slidesPerView: 2.3,
     spaceBetween: 30,
+    clickable: true,
     pagination: {
       loop: true,
+      clickable: true,
       el: ".awards_tab .swiper-pagination",
-    },
+    }
   });
+
   $("#menu_btn").click(function (){
     if ($("#menu_btn").hasClass("on")) {
       $(this).removeClass("on");
@@ -155,6 +160,7 @@
       document.getElementById("#container").style.display = "block";
     }
   });
+
   $(window).scroll(function () {
     scrTop = $(window).scrollTop();
     contentAreaTop = $(".content").offset().top;
@@ -164,8 +170,9 @@
       $(".top_btn").removeClass("om");
     }
   });
+  
   /*about fila*/
-  $(".awards_tab .swiper .swiper-slide").click(function(){
+  $(".awards_tab .swiper-slide").click(function(){
     let awd_idx = $(this).index() + 1;
     // console.log(awd_idx);
     $("div[class^=txt0]").removeClass("on");
@@ -180,7 +187,7 @@
 	})
 	.setClassToggle('#animate3', 'visible')
 	.addTo(controller)
-	.addIndicators();
+	// .addIndicators();
 
 	const staggerElement = $('.animation2');
 	for(var i=0; i<staggerElement.length; i++){
@@ -191,7 +198,7 @@
 		})	
 		.setClassToggle(staggerElement[i], 'visible')
 		.addTo(controller)
-		.addIndicators();
+		// .addIndicators();
 	}
 }());
 

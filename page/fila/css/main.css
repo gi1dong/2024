@@ -1,9 +1,8 @@
-img{display: block; width: 100%; height: 100%;}
 .swiper{overflow-x: hidden;}
 .swiper-slide{opacity: 1;}
 
-main{background: #fff;}
-main .main_vis {width: 100vw; display: block; position: relative;margin: 0 auto;}
+main{background: #fff; margin: 0 auto;}
+main .main_vis {width: 100vw; height: 100vh; display: block; position: relative;margin: 0 auto;}
 main .main_vis .mySwiper .swiper-wrapper .swiper-slide{position: relative; width: 100vw; height: 100vh;}
 main .main_vis .mySwiper .swiper-wrapper .swiper-slide::before{content: ""; background: rgb(0 0 0 / 30%); display: block; position: absolute;  width: 100%; height: 100%; }
 main .main_vis .mySwiper .swiper-wrapper .swiper-slide:nth-child(1) {background: url(../images/main_vis.jpg)no-repeat center/cover;}
@@ -19,7 +18,6 @@ main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_txt
 /* main vis txt */
 main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_p_3,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_p_2 ,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_em_2 ,.main_p,
 .main_p_5,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_p_1,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_p_4,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_em_5,.main_p_5,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_p_5 ,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_em_4 ,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_em_6 ,.vis04_txt,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_em_3{ font-size: 25px; font-weight: 700; color: #fff;}
-
 main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_bottom {
   width:100%;  margin: 0 auto;
   text-align: center;
@@ -40,14 +38,14 @@ main .main_vis .swiper-button-next {
   position: absolute;
   bottom: 0%;
   display: block;
-  color: #2d2d2d;
+  color: #fff;
   font-size: 20px;
   right: 5%;
 }
 
 .main_vis .swiper-button-next::after {
   position: absolute;
-  color: #2d2d2d;
+  color: #fff;
   bottom: 0%;
   right: 5%;
   font-size: 20px;
@@ -55,29 +53,30 @@ main .main_vis .swiper-button-next {
 
 .main_vis .swiper-button-prev {
   position: absolute;
-  color: #2d2d2d;
-  bottom: 0%;
+  color: #fff;
+  bottom: 0;
   font-size: 20px;
   left: 5%
 }
 
 .main_vis .swiper-button-prev::after {
   position: absolute;
-  color: #2d2d2d;
+  color: #fff;
   font-size: 20px;
-  bottom: 0%;
+  bottom: 0;
   left: 5%
 }
 
 .main_vis .swiper-pagination {
   position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translatey(-50%);
+  left: 50%;
+  height: 5vh;
+  transform: translateX(-50%);
   bottom: 0;
   color: #fff;
+  display: block;
   text-align: center;
-  z-index: 0;
+  z-index: 9;
 }
 
 .main_vis .swiper-pagination-bullet-active {color: #e1002a;}
@@ -137,7 +136,7 @@ main .main_vis .swiper-pagination-bullets.swiper-pagination-horizontal {top: uns
 
 /* 인기상품 영역 */
 .product {
-  display: block; padding-bottom: 20px;
+  display: block;  
   position: relative;
   margin:0 auto 20%;
 }
@@ -169,8 +168,8 @@ main .main_vis .swiper-pagination-bullets.swiper-pagination-horizontal {top: uns
 }
 
 .product .mySwiper {
-  position: relative;
-  width: 100%;
+  position: relative; padding: 30px 0;
+  width: 100%; box-sizing: border-box;
 }
 
 .product .mySwiper .swiper-initialized .swiper-horizontal {
@@ -181,19 +180,26 @@ main .main_vis .swiper-pagination-bullets.swiper-pagination-horizontal {top: uns
   list-style: none;
 }
 
-.swiper-pagination.show{bottom: -5%; width:100%; display: flex; height: 50px;  z-index: 999; justify-content: center; align-items: center; }
+.product .botton{position: absolute; bottom: -5%; width:100%; display: flex; z-index: 999; justify-content: space-between; align-items: flex-end; flex-direction: row;height: 60px; }
+
 .product .mySwiper .swiper-wrapper .swiper-slide{position: relative;opacity: 1;}
 .product .mySwiper .swiper-wrapper .swiper-slide .prd_i{width: calc(100% - 40px); margin: 0 auto; display: block;}
 .product .mySwiper .swiper-wrapper .swiper-slide .prd_i>img {width: 100%;height: 100%; display: block;}
 .product .mySwiper .swiper-wrapper .swiper-slide .prd_txt {position: absolute; bottom:0; left: 0;width: 100%; background: rgba(255, 255, 255, 0.8);}
-.product .mySwiper .swiper-wrapper .swiper-slide .prd_txt>p {vertical-align: middle;text-align: center;line-height: 2.5;font-size: 20px;}
+.product .mySwiper .swiper-wrapper .swiper-slide .prd_txt_p {vertical-align: middle;text-align: center;line-height: 2.5;font-size: 20px;}
+
+.product .swiper-pagination{width: 100%;  display: flex; position: unset; text-align: right;  justify-content: flex-end; align-items: center; padding:0 20px; margin-bottom: 10px;}
+
 .product .swiper-pagination-bullet {background-clip: padding-box;  background-color: #666;}
-.product .swiper-pagination-bullet-active {background-color: #2d2d2d;}
-.product .autoplay {position: absolute;  width: 20px; height: 20px;bottom: 5px;color: #2d2d2d;cursor: pointer;display: inline-block;bottom:0;}
+.product .swiper-pagination-bullet-active {background: #2d2d2d;}
+
 .product .autoplay>img{display: block; width: 100%; height: 100%;}
-.product .autoplay.stop {right: 50px; z-index: 2;bottom: -2%;}
-.product .autoplay.play {right: 10px; z-index: 2; bottom: -2%; display: block;} 
-.product .autoplay.play>span{  width: 0; height: 0;	border-top: 10px solid transparent; display: block; border-bottom: 10px solid transparent; 	border-left: 10px solid #000;/* 화살표 */}
+.product .swiper_control_btn{  background: #fff; display: flex; justify-content:flex-end; align-items: center; margin-right: 50px;}
+.product .swiper_control_btn a{display: inline-block;}
+.product .swiper_control_btn i{color: #fff; font-size: 18px; line-height:1; text-align: center; display: inline-block;}
+.product .swiper_control_btn .autoplay{width: 30px; height: 30px; background: #666; color: #fff; display: flex; justify-content: center; align-items: center;}
+.product .autoplay.stop{margin-right: 20px; }
+
 
 /* Our Models 영역 */
 .prd_tit {
@@ -218,6 +224,7 @@ main .main_vis .swiper-pagination-bullets.swiper-pagination-horizontal {top: uns
   margin-top: 16px;
   padding: 20px 0;
   text-align: center;
+  font-family: "Noto Sans KR","Montserrat" sans-serif;
 }
 
 .tab {
@@ -227,7 +234,7 @@ main .main_vis .swiper-pagination-bullets.swiper-pagination-horizontal {top: uns
   display: block;
 }
 .tab ul{width: calc(100% - 30px); display: flex; justify-content: space-between; align-items: center; margin: 0 auto;}
-.tab ul li {background: #0b203f;text-align: center; margin-right: 10px;padding: 2%; box-sizing: border-box; width:33.3%;}
+.tab ul li {background: #0b203f;text-align: center; margin-right: 10px;padding: 2%; box-sizing: border-box; width:33.3%; cursor: pointer;}
 .tab ul li:last-child {margin-right: 0; float: right;}
 .tab ul li span { display: inline-block; font-size: 15px;  color: #fff;}
 .tab ul li.on { background: #e1002a;}
@@ -240,7 +247,7 @@ main .main_vis .swiper-pagination-bullets.swiper-pagination-horizontal {top: uns
 }
 
 /* category_tab 영역 */
-.category_tab {width: 100%; margin: 0 auto 0; padding: 5% 0; box-sizing: border-box; display: flex; color: #2d2d2d; overflow: hidden;}
+.category_tab {width: 100%; margin: 0 auto 0; padding: 60px 0; box-sizing: border-box; display: flex; color: #2d2d2d; overflow: hidden;}
 .category_tab .mySwiper {display: flex; width: 100%; position: relative; background: #f5f5f5;}
 .category_tab .mySwiper .swiper-wrapper {width: 100%; background: #f5f5f5;}
 .category_tab .mySwiper .swiper-wrapper .swiper-slide{width: 100%; display: flex; flex-direction:column; }
@@ -283,13 +290,19 @@ main .main_vis .swiper-pagination-bullets.swiper-pagination-horizontal {top: uns
 .awards_tab{margin: 0 auto 20px;}
 .awards_tab .txt0 div {display: none;}
 .awards_tab .txt0 div.on {display: block;}
-.collaboration{padding: 60px 0;}
-.awards_days {color: #0B203F; font-weight: 700; text-align: center; display: block; margin: 5% auto; font-size: 25px; font-family: "Montserrat";}
-.awards_info .sustainability{text-align: center; width:100%; margin: 0 auto; background: rgb(253,230,239);}
-.awards_info .sustainability .txt_wrap{width: calc(100% - 60px); margin: 0 auto; padding: 60px 0;}
 
-.awards_info .sustainability h3{margin:0 auto 30px; font-weight: 600; display: block; font-size: 18px; }
-.awards_info .sustainability p{ font-size: 15px; }
+/* collaboration */
+.collaboration{margin: 60px auto 0;}
+.awards_days {color: #0B203F; font-weight: 700; text-align: center; display: block; margin: 5% auto; font-size: 25px; font-family: "Montserrat";}
+.awards_info .sustainability{width:100%; margin: 0 auto; background: rgb(253,230,239);}
+/* .collaboration .txt_wrap {text-align: center;} */
+.collaboration .txt_wrap p{ font-size: 15px;  line-height: 1.8;}
+.thug{background: #000; color: #ededed; text-align: center;}
+.awards_info .sustainability .txt_wrap{width: calc(100% - 60px); margin: 0 auto; padding: 60px 0;}
+.collaboration .main_txt{margin:0 auto 30px; font-weight: 600; display: block; font-size: 18px; }
+.loop_img{background: #000; display: flex; justify-content: space-between; align-items: center; margin: 0 auto;}
+.img_box{width: calc(100vw - 20vw); height: calc(100vh - 60vh); }
+.img_box.museum{width: 100%;}
 .awards_info .sustainability_box .sustainability_img.fir{background: url(../images/tab_menu02_01.jpg) no-repeat 0/cover; height: 251px; background-position: center; width: 100%; }
 .awards_info .sustainability_box .sustainability_img.second{background: url(../images/tab_menu02_02.jpg) no-repeat 0/cover; 
   height: 251px; background-position: center; width: 100%; }
@@ -298,12 +311,16 @@ main .main_vis .swiper-pagination-bullets.swiper-pagination-horizontal {top: uns
 .awards_tab .swiper {width: 100%; border-top: 2px solid #0B203F;margin: 5% auto 10%;}
 .awards_tab .swiper .swiper-slide::before{content: ""; position: absolute; top: -10%; left: 0;background: #e1002a; width: 2px;height: 12px;  z-index: 2;} 
 .awards_tab .swiper .swiper-slide{width: 100%; display: block; opacity: 1; padding-top:3%; }
+
 .awards_tab .swiper .swiper-slide .aw{font-size: 18px;}
 
 div[class^=txt0] {display: none;}
-div[class^=txt0].on {display: block;}
-.awards_tab div[class^=txt0].on {display: block;height: 300px;}
-div[class^=txt0].on img{height: 100%; image-rendering: crisp-edges; object-fit: cover;}
+div[class^=txt0].on {display: block; padding: 0 0 80px 0;}
+.awards_tab div[class^=txt0].on {display: block; height: 40vh; }
+
+.museum_top .img_wrapp{display: flex; justify-content: space-between; align-items: center; height: 40vh; }
+
+div[class^=txt0].on img{height: 100%; object-fit: cover; image-rendering: pixelated;}
 .awards_tab .history_info{width:100%; margin: 0 auto;}
 .awards_tab .history_info .title_txt{
   font-weight: 400; text-align: center;
@@ -343,6 +360,36 @@ div[class^=txt0].on img{height: 100%; image-rendering: crisp-edges; object-fit: 
   line-height: 40px;font-family: "Montserrat";
   display: inline-block; font-size: 15px;}
   .awards_tab .member_box>h4{font-size: 15px; margin: 10px auto; display: block;line-height: 1.4;}
+
+/*  details*/
+.swiper-container.details {
+  height: calc(100vh - 120px);
+  margin: 60px;
+}
+
+.swiper-container.details .swiper-slide {
+  overflow: hidden;
+}
+
+.swiper-container.details .slide-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-container.details .copy {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  letter-spacing: 0.06em;
+}
 
 /* space 영역 */
 .space {

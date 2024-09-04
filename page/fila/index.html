@@ -4,16 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FILA</title>
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <!-- fontawesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/f8a0a95034.js" crossorigin="anonymous"></script>
   <link rel="icon" type="icon" href="./images/fila-favicon.ico"/>
+  <title>FILA (mobile)</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f8a0a95034.js" ></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!-- css-->
-  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -22,7 +20,7 @@
     <div class="header">
       <h1 class="hd_logo">
         <a href="javascript:void(0);" >        
-          <img src="./images/pc_logo_underwear.png" alt="로고">
+          <img src="./images/pc_logo_underwear.png" alt="Fila"/>
         </a>
       </h1>
       <div class=" hd_icon">
@@ -271,7 +269,6 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
-        <div class="swiper-control"></div>
       </div>
       <!--//main_vis -->
       <div class="video_area">
@@ -337,9 +334,17 @@
             </div>
           </div>
         </div>
-        <div class="swiper-pagination show"></div>
-        <a onclick=mySwiper.autoplay.stop(); class="autoplay stop"><img src="./images/stop_button.png" alt="멈춤버튼"></a>
-        <a onclick=mySwiper.autoplay.start(); class="autoplay play"><span></span></a>
+        <div class="botton">
+          <div class="swiper-pagination show"></div>
+          <div class="swiper_control_btn">
+            <a onclick=mySwiper.autoplay.stop(); class="autoplay stop">
+              <i class="fa-solid fa-stop"></i>
+            </a>
+            <a onclick=mySwiper.autoplay.start(); class="autoplay play">
+              <i class="fa-solid fa-play"></i>
+            </a>
+          </div>
+        </div>
       </div>
       <!-- new product-->
       <div class="our_models">
@@ -447,8 +452,12 @@
           <div class="txt01 on"><img src="./images/collaboration01.png" alt=""></div>
           <div class="txt02"><img src="./images/collaboration02.jpg" alt=""></div>
           <div class="txt03"><img  src="./images/tab_menu03.jpg" alt="" /></div>
-          <div class="txt04"><img src="./images/collaboration04.jpg"/></div>
-          <div class="swiper mySwiper">
+          <div class="txt04 museum_top">
+              <div class="img_wrapp">
+                <img src="images/museum_top01.png" alt=""/>
+              </div>
+          </div>
+          <div class="swiper mySwiper collaboration">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <button class="aw montserrat" type="button">OJOS X FILA </button>
@@ -472,33 +481,57 @@
             <video  controls autoplay muted loop>
               <source type="video/mp4" src="./images/coll01.mp4">
             </video>
+            <div class="txt_wrap">
+              <br/>
+              <h3 class="main_txt">강렬한 색채의 대비 , 스포츠의 역동적인 FilA와 오호스의 협업. </h3>
+              <P>오호스는 빛바랜 것들에서 발견한 영감으로 색다른 현재를 완성합니다. <br/>
+              제품이 아닌 메시지를 드러내고자 하며, 단순한 진열이 아닌 전시를 지향합니다.</p>
+            </div>
           </div>
         </div>
         <div class="txt02">
           <strong class="awards_days">FILA X ARIES</strong>
           <div class="awards_info">
-          <div class="sustainability">
-            <div class="txt_wrap">
-              <h3 class="main_txt">글로벌 스포츠 브랜드 휠라와 럭셔리 스트리트 웨어 브랜드 에리즈(Aries)의 협업 컬렉션 </h3>
-              <p>한 세기가 넘는 아카이브에서 이탈리아 정신이 담긴 특징을 선별해 이를 현시대의 흐름과 조화시킨 컬렉션을 선보입니다. </p>
-              <br/> <br/>
-              <p>브랜드의 근본이 되는 이탈리아 정신을 재발견하는 동시에 기능성 뿐만 아니라 스타일을 중시하는 최근의 흐름을 융합했습니다.
-                </p>
+            <div class="sustainability">
+              <div class="txt_wrap">
+                <h3 class="main_txt">
+                  글로벌 스포츠 브랜드 휠라와 럭셔리 스트리트 웨어 브랜드 에리즈(Aries)의 협업 컬렉션 
+                </h3>
+                <p>한 세기가 넘는 아카이브에서 이탈리아 정신이 담긴 특징을 선별해 이를 현시대의 흐름과 조화시킨 컬렉션을 선보입니다. </p>
+                <p>브랜드의 근본이 되는 이탈리아 정신을 재발견하는 동시에 기능성 뿐만 아니라 스타일을 중시하는 최근의 흐름을 융합했습니다.
+                  </p>
+              </div>
             </div>
           </div>
         </div>
-        </div>
         <div class="txt03">
           <strong class="awards_days">FILA X THUG CLUB</strong>
-          <p>뚜렷한 브랜드 컬러와 독창적인 디자인으로 국내는 물론 해외에서도 큰 인기를 얻고 있는 럭셔리 스트리트 패션 브랜드 떠그클럽과 이탈리안 스포츠 브랜드 휠라의 만남</p>
+          <div class="txt_wrap thug">
+            <div class="loop_img">
+              <div class="img_box">
+                <img src="images/oopy01.webp" alt=""/>
+              </div>
+              <div class="img_box">
+                <img src="images/oopy02.webp" alt=""/>
+              </div>
+            </div>
+            <p >
+              뚜렷한 브랜드 컬러와 독창적인 디자인으로 국내는 물론 해외에서도 큰 인기를 얻고 있는 럭셔리 스트리트 패션 브랜드 떠그클럽과 이탈리안 스포츠 브랜드 휠라의 만남
+            </p>
+          </div>
         </div>
         <div class="txt04">
           <strong class="awards_days montserrat">FILA X THE MUSEUM VISITOR
           </strong>
-          <p>글로벌 스포츠 브랜드 FILA 와 현대미술을 기반한 아트 브랜드 THE MUSEUM VISITOR의 ART&SPORTS 조합 <br/><br/><br/>
-            THE MUSEUM VISITOR에서 추구하는 요소인 사랑을 담아낸 이번 HE(ART) 컬렉션은 HEART를 HE/ART로 재해석했습니다.
-            <br/>
-            </p>
+          <div class="txt_wrap">
+              <div class="img_box museum">
+                <img src="images/museum04.jpg" alt=""/>
+              </div>
+            <p class="center">글로벌 스포츠 브랜드 FILA 와 현대미술을 기반한 아트 브랜드 THE MUSEUM VISITOR의 ART&SPORTS 조합 
+              THE MUSEUM VISITOR에서 추구하는 요소인 사랑을 담아낸 이번 HE(ART) 컬렉션은 HEART를 HE/ART로 재해석했습니다.
+              <br/>
+              </p>
+          </div>
         </div>
       </div>    
       <!-- space-->
@@ -871,7 +904,7 @@
           </div>
         </div>
         <div class="ft_bt_icon">
-          <p>휠라의 소식과 다양한 이벤트를 더욱 빠르게 전달받아보세요.</p>
+          <p>FILA  소식과 다양한 이벤트를 더욱 빠르게 전달받아보세요.</p>
           <ul class="ft_bt_txt">
             <li><i class="fa-brands fa-facebook-square"></i></li>
             <li><i class="fa-brands fa-youtube"></i> </li>
