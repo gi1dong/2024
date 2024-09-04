@@ -187,19 +187,14 @@ main .main_vis .swiper-pagination-bullets.swiper-pagination-horizontal {top: uns
 .product .mySwiper .swiper-wrapper .swiper-slide .prd_i>img {width: 100%;height: 100%; display: block;}
 .product .mySwiper .swiper-wrapper .swiper-slide .prd_txt {position: absolute; bottom:0; left: 0;width: 100%; background: rgba(255, 255, 255, 0.8);}
 .product .mySwiper .swiper-wrapper .swiper-slide .prd_txt_p {vertical-align: middle;text-align: center;line-height: 2.5;font-size: 20px;}
-
 .product .swiper-pagination{width: 100%;  display: flex; position: unset; text-align: right;  justify-content: flex-end; align-items: center; padding:0 20px; margin-bottom: 10px;}
-
-.product .swiper-pagination-bullet {background-clip: padding-box;  background-color: #666;}
-.product .swiper-pagination-bullet-active {background: #2d2d2d;}
-
+.product .swiper-pagination-bullet-active {background-color: #666;}
 .product .autoplay>img{display: block; width: 100%; height: 100%;}
 .product .swiper_control_btn{  background: #fff; display: flex; justify-content:flex-end; align-items: center; margin-right: 50px;}
 .product .swiper_control_btn a{display: inline-block;}
 .product .swiper_control_btn i{color: #fff; font-size: 18px; line-height:1; text-align: center; display: inline-block;}
-.product .swiper_control_btn .autoplay{width: 30px; height: 30px; background: #666; color: #fff; display: flex; justify-content: center; align-items: center;}
+.product .swiper_control_btn .autoplay{ cursor: pointer;  width: 30px; height: 30px; background: #666; color: #fff; display: flex; justify-content: center; align-items: center;}
 .product .autoplay.stop{margin-right: 20px; }
-
 
 /* Our Models 영역 */
 .prd_tit {
@@ -295,7 +290,6 @@ main .main_vis .swiper-pagination-bullets.swiper-pagination-horizontal {top: uns
 .collaboration{margin: 60px auto 0;}
 .awards_days {color: #0B203F; font-weight: 700; text-align: center; display: block; margin: 5% auto; font-size: 25px; font-family: "Montserrat";}
 .awards_info .sustainability{width:100%; margin: 0 auto; background: rgb(253,230,239);}
-/* .collaboration .txt_wrap {text-align: center;} */
 .collaboration .txt_wrap p{ font-size: 15px;  line-height: 1.8;}
 .thug{background: #000; color: #ededed; text-align: center;}
 .awards_info .sustainability .txt_wrap{width: calc(100% - 60px); margin: 0 auto; padding: 60px 0;}
@@ -303,23 +297,19 @@ main .main_vis .swiper-pagination-bullets.swiper-pagination-horizontal {top: uns
 .loop_img{background: #000; display: flex; justify-content: space-between; align-items: center; margin: 0 auto;}
 .img_box{width: calc(100vw - 20vw); height: calc(100vh - 60vh); }
 .img_box.museum{width: 100%;}
-.awards_info .sustainability_box .sustainability_img.fir{background: url(../images/tab_menu02_01.jpg) no-repeat 0/cover; height: 251px; background-position: center; width: 100%; }
+.awards_info .sustainability_box .sustainability_img.fir{background: url(../images/tab_menu02_01.jpg) no-repeat 0/cover; height: 250px; background-position: center; width: 100%; }
 .awards_info .sustainability_box .sustainability_img.second{background: url(../images/tab_menu02_02.jpg) no-repeat 0/cover; 
-  height: 251px; background-position: center; width: 100%; }
-.awards_info .sustainability_box .sustainability_img.third{background: url(../images/tab_menu02_03.jpg) no-repeat 0/cover; 
-  height: 251px; background-position: center; width: 100%; }
+  height: 250px; background-position: center; width: 100%; }
+.awards_info .sustainability_box .sustainability_img.third{background: url(../images/tab_menu02_03.jpg) no-repeat 0/cover;  height: 250px; background-position: center; width: 100%; }
 .awards_tab .swiper {width: 100%; border-top: 2px solid #0B203F;margin: 5% auto 10%;}
 .awards_tab .swiper .swiper-slide::before{content: ""; position: absolute; top: -10%; left: 0;background: #e1002a; width: 2px;height: 12px;  z-index: 2;} 
 .awards_tab .swiper .swiper-slide{width: 100%; display: block; opacity: 1; padding-top:3%; }
-
 .awards_tab .swiper .swiper-slide .aw{font-size: 18px;}
 
 div[class^=txt0] {display: none;}
 div[class^=txt0].on {display: block; padding: 0 0 80px 0;}
 .awards_tab div[class^=txt0].on {display: block; height: 40vh; }
-
 .museum_top .img_wrapp{display: flex; justify-content: space-between; align-items: center; height: 40vh; }
-
 div[class^=txt0].on img{height: 100%; object-fit: cover; image-rendering: pixelated;}
 .awards_tab .history_info{width:100%; margin: 0 auto;}
 .awards_tab .history_info .title_txt{
@@ -355,7 +345,6 @@ div[class^=txt0].on img{height: 100%; object-fit: cover; image-rendering: pixela
 .awards_tab .member_box>h3{font-size: 18px; text-align:center; display: flex;line-height: 40px; justify-content:center; width: 100%;}
 .awards_tab .member_box .icon{ display: inline-block;
   background: url(../images/meb_01.png) no-repeat 0 /contain; background-position: center;  width: 40px; height: 40px;}
-
 .member_box_title_txt{text-align: center; font-weight: 600; margin-left: 20px;
   line-height: 40px;font-family: "Montserrat";
   display: inline-block; font-size: 15px;}
@@ -425,7 +414,7 @@ div[class^=txt0].on img{height: 100%; object-fit: cover; image-rendering: pixela
 }
 
 .space .space_tit .space_sp {
-  text-shadow: 0px 0px 3px rgb(0 0 0 / 10%);
+  text-shadow: 0 0 3px rgb(0 0 0 / 10%);
   line-height: 38px;
   font-size: 30px;
 }
@@ -442,12 +431,12 @@ div[class^=txt0].on img{height: 100%; object-fit: cover; image-rendering: pixela
   height: 1px;
   content: "";
   width: 60px;
-  background-color: #ededed;
+  background: #ededed;
 }
 
 .space .space_tit .space_btn::after {
   position: absolute;
-  left: 17%;
+  left: 10%;
   content: "";
   bottom: 40%;
   margin: auto 0;
@@ -591,7 +580,7 @@ div[class^=txt0].on img{height: 100%; object-fit: cover; image-rendering: pixela
   font-weight: 300;
 }
 
-.events .space_tit .mb_p {line-height: 48px; padding: 5px 10px; background: #fff;text-align: center;font-size: 16px; color: #2d2d2d;}
+.events .space_tit .mb_p {line-height: 48px; padding: 10px 20px; background: #fff;text-align: center;font-size: 16px; color: #2d2d2d;}
 .instagram {background-color: #ffff; width: 100%;color: #2d2d2d; padding: 10% 0;}
 .instagram .inst_tit>h3 {display: block;width: 100%; font-weight: 700;}
 .instagram .inst_tit .inst_main_title {font-size: 20px;text-align: center;line-height: 22px;color: #e1002a;}
