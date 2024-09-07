@@ -1,15 +1,13 @@
 
 
 body {
-  background-color: #fff;
+  background: #fff;
   max-width: 100%;
 }
 
 #container {
   overflow-x: hidden;
 }
-
-
 .vid>iframe {
   position: absolute;
   top: 0;
@@ -42,7 +40,7 @@ header .header {
   width: 100%;
   height: 50px;
   transition: all .2s ease-out;
-  background-color: #252525;
+  background: #252525;
   color: #fffef2;
   animation: toptxtbanner 10s linear infinite;
   text-align: center;
@@ -61,14 +59,14 @@ header .header .toptxtBanner {
 
 header .header .header_txt {
   display: block;
-  padding-top: 5px;
+  padding: 5px 0;
 }
 
 header .header .right_x_btn {
   position: absolute;
   padding: 0 11px;
   top: 0;
-  background-color: #252525;
+  background: #252525;
   right: 2%;
   color: #fff;
 }
@@ -113,9 +111,6 @@ header .nav .logo {
   left: 50%;
 }
 
-header .nav .logo>img {
-  display: block;
-}
 header .nav .right_gnb {
   display: inline-block;
   position: absolute;

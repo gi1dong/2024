@@ -287,16 +287,10 @@ body *{
   font-family: "Noto Sans KR","Montserrat" sans-serif!important;
 }
 
-body { overflow-x: hidden;
-  box-sizing: border-box;
-  font-weight: 300;
-  font-family: "Noto Sans KR","Montserrat" sans-serif!important;
-  line-height: 1.5; min-width: 360px; max-width: 1024px;
-  position: relative; width: 100%; margin: 0; padding: 0;
+body { overflow-x: hidden; height: 100%; font-weight: 300; font-family: "Noto Sans KR","Montserrat" sans-serif!important; line-height: 1.5; min-width: 360px;  position: relative; width: 100%; margin: 0; padding: 0;
 }
 
 .center{text-align: center;}
-
 .blind {
   overflow: hidden;
   position: absolute;

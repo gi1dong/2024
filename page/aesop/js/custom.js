@@ -1,5 +1,5 @@
-(function () {
-  const main_vis = new Swiper(".main_vis .mySwiper", {
+window.onload = function(){
+  var main_vis = new Swiper(".main_vis .mySwiper", {
     pagination: {
       el: ".main_vis .swiper-pagination",
       type: "progressbar",
@@ -12,10 +12,10 @@
     autoplay: {
       delay: 2000,
       disableOnInteraction: false,
-      loop: true,
-    },
+      loop: true
+    }
   });
-  const main_slide = new Swiper(".main_slide .mySwiper", {
+  var main_slide = new Swiper(".main_slide .mySwiper", {
     slidesPerView: 2,
     spaceBetween: 10,
     pagination: {
@@ -42,19 +42,19 @@
       },
     },
   });
-  const re_prd_area = new Swiper(".re_prd_area .mySwiper", {
+  var re_prd_area = new Swiper(".re_prd_area .mySwiper", {
     slidesPerView: 2.5,
     spaceBetween: 10,
     centeredSlides: true,
     pagination: {
-      el: ".re_prd_area .swiper-pagination",
+      el: ".re_prd_area .swiper-pagination"
     },
     speed:800,
     loop:true,
     autoplay: {
       delay: 2000,
       disableOnInteraction: false,
-      loop: true,
+      loop: true
     },
   });
   $(window).scroll(function () {
@@ -83,14 +83,13 @@
     $(".dimmed_bg").removeClass("on");
   });
   $(".video_txt>ul>li").click(function () {
-    const idx = $(this).index() + 1;
+    var idx = $(this).index() + 1;
       $(".video_txt>ul>li").removeClass("in");
       $(this).addClass("in");
       $(".vid>div").removeClass("in");
       $("#vid0" + idx).addClass("in");
-    
   });
-  const review_prd = new Swiper(".review_prd .mySwiper", {
+  var review_prd = new Swiper(".review_prd .mySwiper", {
     slidesPerView: 2,
     spaceBetween: 20,
     loop:true,
@@ -102,11 +101,10 @@
     },
     pagination: {
       el: ".swiper-pagination",
-    },
+    }
   });
   $(".bi_li>.li_list").click(function () {
-    const sub_b = $(this).parent().find("ul").outerHeight();
-
+    var sub_b = $(this).parent().find("ul").outerHeight();
     if ($(this).hasClass("op")) {
       $(this).removeClass("op");
       $(this).parent().find("div").stop().animate({ height: "0" });
@@ -115,14 +113,14 @@
       $(this).parent().find("div").stop().animate({ height: sub_b });
     }
   });
-  const vid = new Swiper(".vid .mySwiper", {
+  var vid = new Swiper(".vid .mySwiper", {
     pagination: {
       el: ".vid .swiper-pagination",
       type: "fraction",
     },
   });
   $(".ctg_li .category").click(function () {
-    const sub_h = $(this).parent().find("ul").outerHeight(); 
+    var sub_h = $(this).parent().find("ul").outerHeight(); 
 
     if ($(this).hasClass("on")) {
       
@@ -134,29 +132,26 @@
       $(this).parent().find("div").stop().animate({ height: sub_h });
     }
   });
-  const main_area = new Swiper(".main_area .mySwiper", {
+  var main_area = new Swiper(".main_area .mySwiper", {
     direction: "vertical",
     autoplay: {
       delay: 1500,
       disableOnInteraction: false,
-      loop: true,
+      loop: true
     },
     pagination: {
       el: ".main_area .swiper-pagination",
-      clickable: true,
+      clickable: true
     },
   });
   $(".bi_li .bi_a").click(function () {
-    const bi_h = $(this).parent().find("ul").outerHeight();
-
+    var bi_h = $(this).parent().find("ul").outerHeight();
     if ($(this).hasClass("op")) {
-
       $(this).removeClass("op");
       $(this).parent().find("div").stop().animate({ height: "0" });
     } else {
-  
       $(this).addClass("op");
       $(this).parent().find("div").stop().animate({ height: bi_h });
     }
   });
-}());
+};

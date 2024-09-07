@@ -399,9 +399,9 @@ div[class^=txt0].on img{height: 100%; object-fit: cover; image-rendering: pixela
   bottom: 0;
   left: 0;
   content: "";
-  background-color: rgba(0, 0, 0, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  width: 100%; z-index: -1;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%; z-index: 0;
 }
 
 .space .img_inner .space_inner {
@@ -412,8 +412,8 @@ div[class^=txt0].on img{height: 100%; object-fit: cover; image-rendering: pixela
 .space .space_tit {
   position: absolute;
   bottom: 10%;
-  left: 5%;
-  color: #fff;
+  left: 5%; cursor: pointer;
+  color: #fff; z-index: 1;
   line-height: 24px;
 }
 
@@ -454,15 +454,15 @@ top:50%; transform: translateY(-50%); right: 0;
 
 /* 로드 트립 */
 .road_trip {
-  width: 100%;
+  width: 100%; height: 80vh;
   position: relative;
 }
 
 .road_trip .img_inner {
-  position: relative;
-  width: 100%;
+  position: absolute; top: 0; left: 0 ; bottom: 0;
+  width: 100%; height: 100%;
 }
-
+.road_trip video{display: block; width: 100%; height: 100%; object-fit: cover;}
 .road_trip .img_inner::after {
   position: absolute;
   top: 0;
@@ -470,8 +470,7 @@ top:50%; transform: translateY(-50%); right: 0;
   bottom: 0;
   left: 0;
   content: "";
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.5);
   width: 100%;
 }
 
@@ -541,7 +540,7 @@ top:50%; transform: translateY(-50%); right: 0;
   position: relative;
   display: block;
   margin: 0 auto;
-  background-image: url(../images/event.png);
+  background-image: url(../images/couple_38.jpg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;

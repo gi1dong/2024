@@ -1,17 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <system.webServer>
-    <staticContent>
-        <remove fileExtension=".eot" />
-        <mimeMap fileExtension=".eot" mimeType="application/vnd.ms-fontobject" />
-        <remove fileExtension=".ttf" />
-        <mimeMap fileExtension=".ttf" mimeType="application/octet-stream" />
-        <remove fileExtension=".svg" />
-        <mimeMap fileExtension=".svg" mimeType="image/svg+xml" />
-        <remove fileExtension=".woff" />
-        <mimeMap fileExtension=".woff" mimeType="application/font-woff" />
-      </staticContent>
-  </system.webServer>
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,11 +16,11 @@
 <!-- 폰트어썸 -->
 <script src="https://kit.fontawesome.com/f8a0a95034.js" crossorigin="anonymous"></script>
 <!-- js -->
-<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-<script src="./js/jquery.lettering-0.6.1.min.js"></script>
-<script src="./js/custom.js"></script>
+<script src="js/jquery.lettering-0.6.1.min.js"></script>
+<script src="js/custom.js"></script>
 </head>
 <body>
 <header>
@@ -61,7 +49,6 @@
   </div>
 </div>
 </header>
-
 <!--Holder 메뉴-->
 <aside id="aside">
   <div class="menu">
@@ -857,5 +844,4 @@
   
 </footer>
 </body>
-
 </html>

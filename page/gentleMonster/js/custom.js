@@ -1,7 +1,7 @@
 window.onload = function(){
   gsap.registerPlugin(ScrollTrigger);
-
   let screenWidth = $(window).width();
+  
   if (screenWidth > 1220) {
     // 화면 크기 1220px 이상일 경우
   $(".centerItemClick").mouseenter(function(){

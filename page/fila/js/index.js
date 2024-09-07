@@ -1,21 +1,20 @@
-(function() {
+window.onload = function(){
   var main_vis = new Swiper(".main_vis .mySwiper", {
     speed:800,
     effect:"fade",
     autoplay: {
     delay: 2500,
-    disableOnInteraction: false,
+    disableOnInteraction: false
     },
     navigation: {
       nextEl: ".main_vis .swiper-button-next",
-      prevEl: ".main_vis .swiper-button-prev",
+      prevEl: ".main_vis .swiper-button-prev"
     },
     pagination: {
       el: ".main_vis .swiper-pagination",
       clickable: false
     }
   });
-
   $(".swiper-control").click(function () {
     if ($(this).hasClass("hi")) {
       $(this).removeClass("hi");
@@ -27,7 +26,6 @@
       return false;
     }
   });
-
   // $(".main_vis .swiper-control").click(function () {
   //   return false;
   //   });
@@ -41,7 +39,7 @@
     autoHeight: true,
   },
     pagination: {
-      el: ".product .swiper-pagination.show",
+      el: ".product .swiper-pagination.show"
     }
   });
 
@@ -54,7 +52,6 @@
     product.autoplay.start();
     return false;
   });
-
   $(".menu_3").click(function () {
     $(this).addClass("on");
   });
@@ -95,7 +92,6 @@
     $(".tab> ul> li").removeClass("on");
     $(this).addClass("on");
   });
-
 // awards_tab
   var awards_tab = new Swiper(".awards_tab .mySwiper", {
     slidesPerView: 2.3,
@@ -104,10 +100,9 @@
     pagination: {
       loop: true,
       clickable: true,
-      el: ".awards_tab .swiper-pagination",
+      el: ".awards_tab .swiper-pagination"
     }
   });
-
   $("#menu_btn").click(function (){
     if ($("#menu_btn").hasClass("on")) {
       $(this).removeClass("on");
@@ -160,17 +155,15 @@
       document.getElementById("#container").style.display = "block";
     }
   });
-
   $(window).scroll(function () {
-    scrTop = $(window).scrollTop();
-    contentAreaTop = $(".content").offset().top;
+    var scrTop = $(window).scrollTop();
+   var contentAreaTop = $(".content").offset().top;
     if (scrTop >= contentAreaTop) {
       $(".top_btn").addClass("om");
     } else {
       $(".top_btn").removeClass("om");
     }
   });
-  
   /*about fila*/
   $(".awards_tab .swiper-slide").click(function(){
     let awd_idx = $(this).index() + 1;
@@ -178,9 +171,8 @@
     $("div[class^=txt0]").removeClass("on");
     $(".txt0" + awd_idx).addClass("on"); 
   });
-
-  const controller = new ScrollMagic.Controller();
-	const scene1 = new ScrollMagic.Scene({
+  var controller = new ScrollMagic.Controller();
+	var scene1 = new ScrollMagic.Scene({
 		triggerElement : '#trigger1',
     offset: 600,
 		triggerHook : .8	//'onEnter' = 1, 'onCenter' = 0.5, 'onLeave' = 0
@@ -188,8 +180,7 @@
 	.setClassToggle('#animate3', 'visible')
 	.addTo(controller)
 	// .addIndicators();
-
-	const staggerElement = $('.animation2');
+	var staggerElement = $('.animation2');
 	for(var i=0; i<staggerElement.length; i++){
 		var scene2 = new ScrollMagic.Scene({
 			triggerElement : staggerElement[i],
@@ -200,5 +191,5 @@
 		.addTo(controller)
 		// .addIndicators();
 	}
-}());
+};
 
