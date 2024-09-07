@@ -1602,13 +1602,11 @@ padding: 120px 0;
   overflow: hidden;
   width: 100%;
 }
-
 .section03 .boxArea {
   margin: 0 auto;
   display: block;
   width: 100%;
 }
-
 .section03 .boxWrap {
   float: left;
   margin-right: 10px;
@@ -1619,34 +1617,28 @@ padding: 120px 0;
   transform: translateY(50%);
   opacity: 0;
 }
-
 .section03 .boxWrap.c {
   margin-right: 0;
 }
-
 .section03 .boardArea>p {
   margin: 20px 0;
   font-size: 20px;
   font-weight: 700;
 }
-
-
-.section03 .boxWrap.a .iconImg {
-  width: 75px;
+.section03 .boxWrap .iconImg{  width: 75px;
   height: 60px;
   display: block;
   margin: 20px auto 0;
+  background-position: center;}
 
-  background-position: center;
-  background: url(../images/support1.png) no-repeat center/cover;
+.section03 .boxWrap.a .iconImg {
+  background: url(../images/support1.png) no-repeat center/contain;
 }
-
 .section03 .boxWrap.b .iconImg {
-  background: url(../images/support2.png) no-repeat center/cover;
+  background: url(../images/support2.png) no-repeat center/contain;
 }
-
 .section03 .boxWrap.c .iconImg {
-  background: url(../images/support3.png) no-repeat center/cover;
+  background: url(../images/support3.png) no-repeat center/contain;
 }
 
 /*메인 영역 : support section05 미디어 쿼리 */
@@ -1705,9 +1697,7 @@ padding: 120px 0;
     font-size: 14px; line-height: 2;
     color: #212121;
   }
-
 }
-
 /* 메인 영역 : .section04  */
 .section04 {
   position: relative;
@@ -1720,22 +1710,18 @@ padding: 120px 0;
 .section04 .swiper-container {
   padding-bottom: 70px;
 }
-
 .section04 .swiper-container .swiper-wrapper .swiper-slide.articles {
   display: inline-block; cursor: pointer;
   width: 310px;
   height: 470px;
   margin-right: 25px;
 }
-
 .section04 .swiper-container .swiper-wrapper .swiper-slide.articles:last-child {
   margin-right: 0;
 }
-
 .section04 .helpTxtWrap.news {
   margin-bottom: 80px;
 }
-
 .section04 .swiper-slide.articles .articleWrap .articleimg img {
   display: block;
   width: 310px;
