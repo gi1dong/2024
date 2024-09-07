@@ -2,9 +2,9 @@
 .swiper-slide{opacity: 1;}
 
 main{background: #fff; margin: 0 auto;}
-main .main_vis {width: 100vw; height: 100vh; display: block; position: relative;margin: 0 auto;}
+main .main_vis {width: 100%; height: 100vh; display: block; position: relative;margin: 0 auto;}
 main .main_vis .mySwiper .swiper-wrapper .swiper-slide{position: relative; width: 100vw; height: 100vh;}
-main .main_vis .mySwiper .swiper-wrapper .swiper-slide::before{content: ""; background: rgb(0 0 0 / 30%); display: block; position: absolute;  width: 100%; height: 100%; }
+main .main_vis .mySwiper .swiper-wrapper .swiper-slide::before{content: ""; background: rgb(0 0 0 / 20%); display: block; position: absolute;  width: 100%; height: 100%;  background-position: center;}
 main .main_vis .mySwiper .swiper-wrapper .swiper-slide:nth-child(1) {background: url(../images/main_vis.jpg)no-repeat center/cover;}
 main .main_vis .mySwiper .swiper-wrapper .swiper-slide:nth-child(2) {
  font-weight: 700; font-size: 25px; background: url(../images/main_vis1.jpg)no-repeat center/cover;}
@@ -12,12 +12,16 @@ main .main_vis .mySwiper .swiper-wrapper .swiper-slide:nth-child(3) { background
 main .main_vis .mySwiper .swiper-wrapper .swiper-slide:nth-child(4) {background: url(../images/main_vis3.jpg)no-repeat center/cover;background-position: center;}
 main .main_vis .mySwiper .swiper-wrapper .swiper-slide:nth-child(5) {background: url(../images/main_vis2.jpg)no-repeat center/cover;background-position: center;}
 main .main_vis .mySwiper .swiper-wrapper .swiper-slide:nth-child(6) {background: url(../images/main_vis7.jpg)no-repeat center/cover;background-position: center;}
-main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner { margin: 0 auto;width: calc(100%  - 60px);height: 100%; position: relative;}
+main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner { margin: 0 auto;width: calc(100%  - 60px);height: 100%; position: relative; cursor: pointer;}
+
 main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_txt{position: absolute; bottom: 200px; left: 0;}
 
 /* main vis txt */
-main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_p_3,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_p_2 ,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_em_2 ,.main_p,
-.main_p_5,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_p_1,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_p_4,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_em_5,.main_p_5,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_p_5 ,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_em_4 ,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_em_6 ,.vis04_txt,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_em_3{ font-size: 25px; font-weight: 700; color: #fff;}
+main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_p_3,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_p_2 ,.main_p,
+.main_p_5,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_p_1,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_p_4, .main_p_5,main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_p_5 ,.vis04_txt{ font-size: 25px; font-weight: 700; color: #fff;}
+
+.main_em_3,.main_em_2,.main_em_4,.main_em_5,.main_em_6 {font-size: 21px; font-weight: 300; display: block; color: #fff;}
+
 main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_bottom {
   width:100%;  margin: 0 auto;
   text-align: center;
@@ -118,32 +122,35 @@ main .main_vis .swiper-button-prev, main .main_vis .swiper-button-next {width: 2
 main .main_vis .swiper-pagination-bullets.swiper-pagination-horizontal {top: unset;bottom: -7%;}
 
 /* 비디오 영역 */
-.video_area { margin: 20% auto 0; position: relative;color: #2d2d2d;width: 100%;}
+.video_area { color: #2d2d2d;width: 100%;  text-align: center;  margin: 60px auto 30px; width: 100%;  padding: 120px 0;}
+
 .video_area .video_txt {
   width: 100%;
-  text-align: center;
-  font-weight: 700;
-  padding: 3% 0px;
+  font-weight: 700; margin: 0 auto 30px;
   font-size: 25px;
+  display: block;
 }
 
-.video_area .video_txt>strong {display: inline-block;color: #2d2d2d;}
-.video_area .video_txt>.vid_txt1 {color: #0b203f;}
-.video_area .video_txt>.vid_txt2 { color: #e1002a;}
-.video_area iframe { width: 100%; height: 50vh;display: block;}
+.video_area .video_txt>strong ,.video_area .video_txt>span{display: inline-block;color: #2d2d2d;}
+
+.video_area .video_txt .vid_txt1 {color: #0b203f;}
+.video_area .video_txt .vid_txt2 { color: #e1002a;}
+
+.video_area video { width: 100%; height: 100%; display: block; object-fit: cover;}
 .vid_btn { width: 100%;display: block;text-align: center;}
 .vid_btn>p { width: calc(100% - 40px);line-height: 56px;font-size: 16px; margin: 10px auto;color: #fff;font-size: 15px;background-color: #e1002a;}
+
 
 /* 인기상품 영역 */
 .product {
   display: block;  
   position: relative;
-  margin:0 auto 20%;
+ margin: 0 auto 120px;
 }
 
 .product .prd_tit {
   text-align: center;
-  padding: 80px 0 20px;
+margin: 0 auto 30px;
   font-size: 25px;
 }
 
@@ -181,7 +188,6 @@ main .main_vis .swiper-pagination-bullets.swiper-pagination-horizontal {top: uns
 }
 
 .product .botton{position: absolute; bottom: -5%; width:100%; display: flex; z-index: 1; justify-content: space-between; align-items: flex-end; flex-direction: row;height: 60px; }
-
 .product .mySwiper .swiper-wrapper .swiper-slide{position: relative;opacity: 1;}
 .product .mySwiper .swiper-wrapper .swiper-slide .prd_i{width: calc(100% - 40px); margin: 0 auto; display: block;}
 .product .mySwiper .swiper-wrapper .swiper-slide .prd_i>img {width: 100%;height: 100%; display: block;}
@@ -189,7 +195,7 @@ main .main_vis .swiper-pagination-bullets.swiper-pagination-horizontal {top: uns
 .product .mySwiper .swiper-wrapper .swiper-slide .prd_txt_p {vertical-align: middle;text-align: center;line-height: 2.5;font-size: 20px;}
 .product .swiper-pagination{width: 100%;  display: flex; position: unset; text-align: right;  justify-content: flex-end; align-items: center; padding:0 20px; margin-bottom: 10px;}
 .product .swiper-pagination-bullet-active {background-color: #666;}
-.product .autoplay>img{display: block; width: 100%; height: 100%;}
+
 .product .swiper_control_btn{  background: #fff; display: flex; justify-content:flex-end; align-items: center; margin-right: 50px;}
 .product .swiper_control_btn a{display: inline-block;}
 .product .swiper_control_btn i{color: #fff; font-size: 18px; line-height:1; text-align: center; display: inline-block;}
@@ -236,7 +242,8 @@ main .main_vis .swiper-pagination-bullets.swiper-pagination-horizontal {top: uns
 .tab ul li.on span { color: #fff;  font-weight: 700;}
 .con>div {width: 100%; display: none;}
 .con>div.on {display: block;}
-@media screen and (max-width: 400px) {
+
+@media screen and (max-width: 1024px) {
   .tab ul {display: block;} 
   .tab ul li {width: 100%; float: none; margin-bottom: 10px;} 
 }
