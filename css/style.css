@@ -4,7 +4,7 @@ text{font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSyst
 figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 ol, ul {list-style: none; }
 *{box-sizing: border-box;}
-a {text-decoration: none; color: #333;}
+a {text-decoration: none; color: #333; border: transparent;}
 i {font-style: normal; }
 blockquote, q {quotes: none;}
 blockquote:before, blockquote:after, q:before, q:after {content: ""; content: none;}
@@ -88,12 +88,15 @@ img{image-rendering: pixelated;}
 .main_area .section03 .bg { background:rgba(0, 0, 0, 0.8);}
 
 /**btn_eff_*/
-.main_area .btn01 {display: inline-block; margin-top: 20px; min-width: 175px; padding: 19px 0; position: relative; font-size: 12px; font-weight: 700; line-height: 1; text-align: center; border: 2px solid transparent; border-radius: 5px; background: transparent; -webkit-transition: color 300ms,background 300ms, border 300ms; transition: color 300ms,background 300ms, border 300ms; }
+.main_area .btn01 { border: transparent; display: inline-block; margin-top: 20px;position: relative; font-size: 12px;  text-align: center; border: 2px solid transparent; border-radius: 5px; background: transparent; -webkit-transition: color 300ms,background 300ms, border 300ms; transition: color 300ms,background 300ms, border 300ms; }
 .main_area .btn01.last{background: #595959; color: #fff;}
-.main_area .btn01 span {position: relative; letter-spacing: 0.5px; font-size: 14px; font-weight:400; display: block; }
+.main_area .btn01 span {position: relative; letter-spacing: 0.5px; font-size: 14px; display: block;  color: #111; height: 100%;}
 
 /* border style */ 
-.main_area .btn01 {flex-shrink: 0; text-decoration: none; background: #fff; border-radius: 40px; color: #000; display: inline-block; padding: 0 30px; height: 51px; line-height: 49px; font-weight: 600; letter-spacing: -.036em; font-size: inherit; transition: .3s background ,.3s color, .3s border, .3s opacity; -webkit-animation: move 2.5s infinite; animation: move 2.5s infinite; }
+.main_area .btn01 {flex-shrink: 0; text-decoration: none; background: #fff; border-radius: 40px; color: #000; display: inline-block;  padding: 10px 20px;  letter-spacing: -.036em; font-size: inherit; transition: 3s background,3s color, 3s border, 3s opacity; -webkit-animation: move 3s infinite; animation: move 3s infinite; }
+
+.section10{}
+.section10 .btn01{}
 @keyframes move {
   0% {
 transform: rotate(0deg) }
@@ -108,7 +111,6 @@ transform: rotate(-2deg) }
 36% {
 transform: rotate(0deg) }
 }
-
 @-webkit-keyframes move {
   0% {
 transform: rotate(0deg) }
@@ -123,7 +125,6 @@ transform: rotate(-2deg) }
 36% {
 transform: rotate(0deg) }
 }
-.main_area .btn01:hover {font-weight:700; color: hsl(0, 0%, 0%);}
 
 /* 영역별 배경 */
 .main_area .section02 .bg { background:url(../img/wooalong_l.png) no-repeat 0 0 / cover;}
