@@ -15,14 +15,12 @@ window.onload=function(){
     $(".close_btn").click(function () {
       $("#left_menu").stop().animate({ left: "-100%" }, 600);
     });
-
     var controller = new ScrollMagic.Controller({
       globalSceneOptions: {
         triggerHook: 'onLeave',
         duration: '100%',
       }
     });
-
     /*움직이는 txt*/
     let txt_ani01 = TweenMax.to(".ani_wrap01 .ani_txt01", 0.5, { x: "-10%" });
     let txt_ani02 = TweenMax.to(".ani_wrap01 .ani_txt02", 0.5, { x: "40%" });

@@ -6,11 +6,10 @@
   unicode-range:U+AC00-D7A3,U+0030-0039,U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
 }
 
-
 @font-face {
   font-family: 'MapoFlowerIsland';
   src: url('font/MapoFlowerIsland.ttf') format('ttf');
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   unicode-range:U+AC00-D7A3,U+0030-0039,U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
 }
@@ -18,7 +17,7 @@
 @font-face {
   font-family: 'MapoFlowerIsland';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
   unicode-range:U+AC00-D7A3,U+0030-0039,U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
 }
@@ -26,13 +25,15 @@
 @font-face {
   font-family: 'MapoFlowerIsland';
   src: url('font/MapoFlowerIsland.otf') format('otf');
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   unicode-range:U+AC00-D7A3,U+0030-0039,U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
 }
 
 @font-face {
   font-family:"Bodoni Moda", serif;
+  font-weight: 300;
+  font-style: normal;
   src: url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
   unicode-range:  U+0061-007A, U+0041-005A;
 }
@@ -50,6 +51,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
+  font-family: 'MapoFlowerIsland',"Bodoni Moda", serif;
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -79,17 +81,15 @@ table {
 	border-spacing: 0;
 }
 a{text-decoration: none;color: inherit; cursor: pointer;}
-button{margin: 0; padding: 0; border: none; outline: none; background: transparent; cursor: pointer;}
+button{margin: 0; padding: 0; border: none; outline: none; background: transparent; cursor: pointer; border-radius: 10px;}
 img{image-rendering: pixelated; display: block; width: 100%; object-fit: cover;}
 .clear{display: block; content: ''; clear: both;}
 .inner{ position: relative; max-width: 1520px;  width: 100%; margin: 0 auto;}
 .none{display: none;}
 body, html{width: 100%; height: 100%; line-height: 1;font-family: 'MapoFlowerIsland',"Bodoni Moda", serif; overflow-x: hidden;
-  display: block;
-  margin: 0 auto;
-  font-size: 14px;}
+  display: block; padding: 0; margin: 0; font-size: 14px;}
   body{overflow-x: hidden; min-width: 360px; width: 100%; } 
-body *{box-sizing: border-box;}
+body *{box-sizing: border-box; font-family: 'MapoFlowerIsland',"Bodoni Moda", serif; }
 
 header .header {
   position: relative;
@@ -102,7 +102,7 @@ header .header {
   height: 90px;
   z-index: 20;
 }
-header .header .inner{height: 100%;}
+header .header .inner{height: 100%; width: calc(100% - 60px); margin: 0 auto;}
 
 /* 좌측 햄버거*/
 .header .hamburger {
@@ -110,7 +110,7 @@ header .header .inner{height: 100%;}
   width: 30px; height: 20px; cursor: pointer;
   top: 50%; 
   transform: translatey(-50%);
-  left: 10%;
+  left: 0;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -158,7 +158,7 @@ display: block;
 
 .header .hd_icon { cursor: pointer;
   position: absolute;
-  right: 10%;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
   width: 28px;
@@ -350,12 +350,13 @@ display: block;
 }
 
 /* footer */
+footer{background: #000;}
 .footer {font-size: 15px;position: relative;   width: 100%;  background: #000;  color: #636363;padding: 20px 20px 40px; overflow: hidden;}
-footer .footer.inner{display: flex; justify-content: center; align-items: center; flex-direction: row;}
-footer .footer.inner>div{ text-align: left; line-height: 1.6; padding: 10px; width: calc(33.3% - 10px);}
-footer .footer .brand_logo { width: 200px;display: block;}
+footer .footer.inner{display: flex; justify-content: space-between; align-items: center; flex-direction: row; padding: 0 30px;}
+footer .footer.inner .logo_wrap,  footer .info_wrap, footer .ft_bt { text-align: left; line-height: 2; padding: 10px; width: calc(33.3% - 10px);}
+footer .footer .brand_logo {display: flex; justify-content: center;}
 footer .footer .ft_menu>ul>li {padding: 1% 2%;}
-footer .footer .ft_r a { padding: 2%; display: inline-block;}
+footer .footer .ft_r a { padding: 1%; display: inline-block;}
 footer .footer .ft_r .ft_r_p {
   display: inline-block;
   color: #fff;
@@ -379,6 +380,23 @@ footer .footer .ft_info>a {
   background: #81d8d0;
 }
 
+.footer svg{ fill: #636363; display: inline-block;}
+
+footer .award_btn,
+.web_award .award_r .award_r3>.award_r_txt>.award_btn,
+.web_award .award_r .award_r1 .award_r_txt>.award_btn,
+.web_award .award_r .award_r3>.award_r_txt>.award_btn,
+.web_award .award_r .award_r2>.award_r_txt>.award_btn {
+  display: inline-block;
+  color: #fff;
+  background: #000;
+  font-size: 13px;
+  text-align: center; line-height: 1.5;
+  padding: 3% 6%; 
+  min-width: 40%; border-radius: 10px;
+  margin-top: 10px;
+}
+footer .award_btn{background: #81d8d0;}
 
 @media (hover: hover)  { 
   #left_menu .menu .menu_li:hover {
@@ -403,17 +421,18 @@ footer .footer .ft_info>a {
     max-width: 100%;
     width: 176px;
 }
-  #left_menu .aside{padding-top: 60px;}
+
   .right_txt .rt_1st_wrap .rt_1st>span,
   .right_txt .rt_1st_wrap .rt_1st>span {display: none;}
 
   #left_menu .aside .menu, 
   .right_txt .rt_1st_wrap .rt_1st.se,
   .right_txt{float: unset; }
-  #left_menu .aside .menu{padding: 60px 0;}
+  #left_menu .aside{padding: 30px 0;}
+  #left_menu .aside .menu{padding: 30px 0 0 0;}
   .menu_date{position: unset; bottom: unset; left: unset;}
   footer .footer{padding: 0;}
-  footer .footer.inner{font-size: 13px; padding:30px; box-sizing: border-box; }
+  footer .footer.inner{font-size: 13px; box-sizing: border-box; }
 
 .brand_logo{width: 50%; margin: 0 auto;}
   footer .footer .ft_menu>ul>li {
@@ -421,13 +440,13 @@ footer .footer .ft_info>a {
     text-align: left;
     padding: 2%;
   }
-  footer .footer.inner>div{width: calc(50% - 30px);}
-  footer .footer .ft_r a{padding: 1%;}
+
+  footer .footer .ft_r a{padding: 0.5%;}
   footer .footer .ft_cs .ft_l,
   footer .footer .ft_cs .ft_r{ width: 100%;}
   footer .footer .ft_cs .ft_r{margin: 30px auto 0;}
 .logo_wrap{display: none;}
-  .info_wrap{display: flex; justify-content: space-between; gap: 20px;}
+  .info_wrap{display: flex; justify-content: space-between; gap: 20px;width: calc(50% - 30px); align-items: center;}
 
    footer .footer .info_wrap,
   .ft_bt{width: calc(50% - 15px); 
@@ -477,7 +496,7 @@ footer .footer .ft_info>a {
   .rt_btn {
     font-size: 14px;
   }
-  footer .footer.inner{flex-direction: column;}
+  footer .footer.inner{flex-direction: column; padding: 60px 30px;}
   footer .footer.inner>div{width: 100%;}
 
   footer .footer .info_wrap, .ft_bt{width: 100%;}
