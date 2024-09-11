@@ -139,7 +139,6 @@ window.onload = function(){
       delay: 2500,
     }
     });
-
     // store location tab
     $('ul.tab-menu li').click(function(){
       var tab_id = $(this).attr('data-tab');
@@ -148,7 +147,6 @@ window.onload = function(){
       $(this).addClass('current');
       $("#"+tab_id).addClass('current');
     });
-
     }  
     else 
     {
