@@ -866,7 +866,7 @@ footer .footer .ft_logo .ft_copyrightstext>p {
   color: #fff;
 }
 
-body .top_btn {width: 30px;
+body .top_btn {width: 30px; cursor: pointer;
   height: 30px; background: #fff;
   border: 1px solid #0b203f;
   text-align: center; border-radius: 50px;
