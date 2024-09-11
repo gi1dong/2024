@@ -140,7 +140,6 @@ $(function () {
 
   /*마우스 효과*/
   var circle = $(".circle");
-
   function moveMove(e) {
     TweenLite.to(circle, 0.3, {
       css: {

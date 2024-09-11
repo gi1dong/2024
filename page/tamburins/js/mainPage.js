@@ -169,7 +169,7 @@ $(function(){
   var storeSwiper = new Swiper(".store-img .mySwiper", {
     scrollbar: {
       el: ".store-img .swiper-scrollbar",
-      hide: true,
+      hide: false,
     },
   });
 
@@ -273,43 +273,43 @@ $(window).scroll(function(){
       },
     });
 
-  var rightSwiper = new Swiper(".right .mySwiper", {
-    loop: true,
-    slidesPerView: 2,
-    autoplay: {
-      delay: 4500,
-    },
-    breakpoints: {
-      1379: {
-        slidesPerView: 4,
-        spaceBetween: 10,
-      },
-      1280: {
-        slidesPerView: 2,
-        spaceBetween: 0,
-      },
-      1024: {
-        slidesPerView: 2,
-      },
-      759: {
-        slidesPerView: 2,
-      },
-    },
-    freeMode: true,
-    watchSlidesProgress: true,
-  });
+  // var rightSwiper = new Swiper(".right .mySwiper", {
+  //   loop: true,
+  //   slidesPerView: 2,
+  //   autoplay: {
+  //     delay: 4500,
+  //   },
+  //   breakpoints: {
+  //     1379: {
+  //       slidesPerView: 4,
+  //       spaceBetween: 10,
+  //     },
+  //     1280: {
+  //       slidesPerView: 2,
+  //       spaceBetween: 0,
+  //     },
+  //     1024: {
+  //       slidesPerView: 2,
+  //     },
+  //     759: {
+  //       slidesPerView: 2,
+  //     },
+  //   },
+  //   freeMode: true,
+  //   watchSlidesProgress: true,
+  // });
   
-  var leftSwiper2 = new Swiper(".left .mySwiper2", {
-    loop: true,
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".left .swiper-button-next",
-      prevEl: ".left .swiper-button-prev",
-    }, 
-  thumbs: {
-      swiper: rightSwiper,
-    },
-  });
+  // var leftSwiper2 = new Swiper(".left .mySwiper2", {
+  //   loop: true,
+  //   spaceBetween: 10,
+  //   navigation: {
+  //     nextEl: ".left .swiper-button-next",
+  //     prevEl: ".left .swiper-button-prev",
+  //   }, 
+  // thumbs: {
+  //     swiper: rightSwiper,
+  //   },
+  // });
   
   // 헤더 내 언어
   $("header .kor").click(function () {
@@ -355,16 +355,12 @@ $(window).scroll(function(){
   // store location tab
   $('ul.tab-menu li').click(function(){
     var tab_id = $(this).attr('data-tab');
-
     $('ul.tab-menu li').removeClass('current');
     $('.tab-content').removeClass('current');
-
     $(this).addClass('current');
     $("#"+tab_id).addClass('current');
   })
-
   $("#go-bottom span").click(function(){
     $('html, body').scrollTop( $(document).height() );
   });
-    
 });

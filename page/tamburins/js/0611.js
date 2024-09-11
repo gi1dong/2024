@@ -1,12 +1,89 @@
+document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger)
+  });
 window.onload = function(){
-    document.addEventListener("DOMContentLoaded", (event) => {
-    gsap.registerPlugin(ScrollTrigger)
-    });
-    $('#video').click(function showcontrol() {
-      if(!this.hasAttribute("controls")) {
-          this.setAttribute("controls", "controls");
+    // page layout 
+    const main = function (){
+      // URL의 앵커를 가져옵니다.
+      var hash = window.location.hash;
+      // 앵커가 존재하는 경우 해당 앵커로 자동으로 이동합니다.
+      if (hash) {
+      var element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' }); // 스크롤 부드럽게 이동
+      }
+      }
+    }
+    main();
+
+    // header kor
+    $("#header .kor").click(function () {
+      var hei = $(this).parent().find("ul").outerHeight(); 
+      if ($("#header .wrap").hasClass("open")) {
+        $(".wrap").removeClass("open");
+        $(".kor").parent().find("div").stop().animate({ height: 0 });
+      } else {
+        $("#header .wrap").addClass("open");
+        $(".kor").parent().find("div").stop().animate({ height: hei });
+      }
+      });
+
+    $("footer .kor").click(function () {
+      var hei2 = $(this).parent().find("ul").outerHeight(); 
+      if ($("footer .wrap").hasClass("open")) {
+        $("footer .wrap").removeClass("open");
+        $("footer .triangle").removeClass("up");
+        $("footer .kor").parent().find("div").stop().animate({ height: "0" });
+        $("footer .triangle").addClass("down");
+      } else {
+        $("footer .wrap").addClass("open");
+        $("footer .triangle").removeClass("down");
+        $("footer .triangle").addClass("up");
+        $("footer .kor").parent().find("div").stop().animate({ height: hei2 });
       }
     });
+  
+// 비디오
+    $('#video').click(function showcontrol() {
+      if(!this.hasAttribute("controls")) {
+        this.setAttribute("controls", "controls");
+      }
+    });
+    
+  // store location tab
+  $('ul.tab-menu li').click(function(){
+    var tab_id = $(this).attr('data-tab');
+    $('ul.tab-menu li').removeClass('current');
+    $('.tab-content').removeClass('current');
+    $(this).addClass('current');
+    $("#"+tab_id).addClass('current');
+  });
+  $("#go-bottom span").click(function(){
+    $('html, body').scrollTop( $(document).height() );
+  });
+  var storeSwiper = new Swiper(".tab_img .mySwiper", {
+    scrollbar: {
+      el: ".tab_img .swiper-scrollbar",
+      hide: false
+    }
+  });
+    // 상품 이미지 카드 영역
+    $(".flip").each(function () {
+      shadowEff = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".farming-wrap",
+            start: "top center",
+          },
+          boxShadow: "5px 5px 15px 5px rgba(0,0,0,0.67)",
+        })
+        .to(this, {
+          boxShadow: "5px 2px 15px 2px rgba(0, 0, 0, 0.3)",
+          delay: $(this).data("d"),
+        })
+        .to(this, {
+          boxShadow: "5px 2px 15px 2px rgba(0, 0, 0, 0)",
+        })
+      });
 
    // screenWidth 따라 차이
   let screenWidth = $(window).width();
@@ -50,7 +127,6 @@ window.onload = function(){
         $(".main_menu_list").removeClass("disabled");
         $(".sub_menu_box").removeClass("active");
     });
-
     var prdImg = new Swiper(".prd-img.mo .mySwiper", {
     spaceBetween: 30,
     effect: "fade",
@@ -71,18 +147,12 @@ window.onload = function(){
       $('.tab-content').removeClass('current');
       $(this).addClass('current');
       $("#"+tab_id).addClass('current');
-    })
-
-    var storeSwiper = new Swiper(".store-img .mySwiper", {
-      scrollbar: {
-        el: ".store-img .swiper-scrollbar",
-        hide: true
-      },
     });
+
     }  
     else 
     {
-    // 1024--------------------------------------------------------------------------------------------------------------------
+    // pc 1024--------------------------------------------------------------------------------------------------------------------
     // 화면 너비가 1024px 이상일 때 실행할 코드
     $(".kor").click(function () {
     var hei = $(this).parent().find("ul").outerHeight(); 
@@ -156,30 +226,83 @@ window.onload = function(){
         $(".ftbtn a::after").show();
       $(".ftmore-pageul").addClass("on");}
     });
+    }
+    // width 따라 다르게 적용 js 끝
 
   // 신상품 
   var experience = new Swiper(".new-launch-prd .mySwiper.prd-slide", {
-    direction: "vertical",
     slidesPerView: 1,
     autoplay: {
-      delay: 5500,
+      loop: true, 
+      effect:'fade',
+      direction: "vertical",
+      delay: 3200,
+      disableOnInteraction: false 
     },
     spaceBetween: 30,
-    mousewheel: true,
+    mousewheel: false,
     pagination: {
       el: ".new-launch-prd .swiper-pagination",
-      clickable: true,
-    },
+      clickable: true
+    }
   });
- }
-  var headHeight = $('#header').offset().top; //헤더를 변수에 넣기
-  var $page = $('.prd-info'); //색상이 변할 부분
-  var $window = $(window);
-  var pageOffsetTop = $page.offset().top;//색상 변할 부분의 top값 구하기, - 문서 끝부터 선택한 요소까지의 거리
-  var scrolled = $window.scrollTop();
-  $window.resize(function(){ //반응형을 대비하여 리사이즈시 top값을 다시 계산
-    pageOffsetTop = $page.offset().top;
-  const element = document.getElementsByClassName('#header');
-  const height = element.offsetHeight;
-});
-};
+  // loop slide 한정 특가 영역
+  function loopSlide()  {
+        $('.loop.swiper').each(function(index) {
+        t = $(this);
+        t.addClass('swiepr-' + index);
+        let swiperLoop = new Swiper( t, {
+        autoplay: {
+        delay: 0, //add
+        disableOnInteraction: false,
+        },
+        speed: 5000,
+        loop: true,
+        loopAdditionalSlides: 1,
+        slidesPerView: 5,
+        breakpoints: {
+          1379: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 30
+          },
+          759: {
+            slidesPerView: 1,
+            spaceBetween: 0
+          }
+        }
+      });
+    })
+  }
+  loopSlide();
+
+  // header color change
+  $(window).scroll(function(){
+    var headWrap = $("#header");
+    var headWrapMo = $(".mo-header");
+    const scrollVal = window.scrollY;
+    //현재 스크롤된값
+    const scrollH =   window.innerHeight;
+    //현재보여지는 viewport 높이
+    const scrollBody =  window.clientHeight;
+    //현재문서의 전체높이
+    // 그럼 현재스크롤바의 퍼센테이지를 구해내는 함수는 다음과같이 정의할수있다 .
+    
+    // function colorChang(){
+    // return ((scrollVal +scrollH) / (scrollBody * 100))
+    // };
+    if(scrollVal>scrollH||scrollVal>scrollBody){
+      headWrap.addClass("down"); 
+      headWrapMo.addClass("down"); 
+
+    }else{
+      headWrapMo.removeClass("down");
+      headWrap.removeClass("down");
+    }
+  });
+}
+
+

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -14,160 +13,81 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,-25" />
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../swiper/swiper.css" />
   <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./test_css/layout03.css">
   <link rel="stylesheet" href="./css/main.css">
   <!--script -->
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> 
+  <script src="../swiper/swiper.js"></script> 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="./js/mainPage.js" type="text/javascript"></script>  
+  <script src="./js/0611.js" type="text/javascript"></script>  
   <!--//script -->
   <title>Tamburins</title>
 </head>
   <body >
-    <style>
-      /* 전체화면 버튼 */
-      video::-webkit-media-controls-fullscreen-button {	display: none !important;}
-      /* 일시정지, 재생 버튼 */
-      video::-webkit-media-controls-play-button {	display: none !important;}
-      /* 재생 슬라이드..? */
-      video::-webkit-media-controls-timeline {	display: none !important;}
-      /* 현재 진행 시간 */
-      video::-webkit-media-controls-current-time-display{	display: none !important;}
-      /* 전체 시간 */
-      video::-webkit-media-controls-time-remaining-display {	display: none !important;}
-      /* 음소거 버튼 */
-      video::-webkit-media-controls-mute-button {	display: none !important;}
-      /* 볼륨 조절 슬라이드 */
-      video::-webkit-media-controls-volume-slider {	display: none !important;}
-      /* 괄호에 display: none !important; 를 추가하면된다.
-      예 ) 전체화면 전환 버튼을 숨긴다. 
-      다만 더블클릭으로 전체화면이 되는 기능등은 그대로고 단지 버튼만 없앤다. */
-      video::-webkit-media-controls-fullscreen-button {display: none !important;}
-    </style>
     <div class="dimmed_bg"></div>
     <div class="contents" >
       <!-- header -->
       <header> 
         <div id="header"  >
-          <h1 class="logo">
-            <a href="javascript:;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="210" height="26" viewBox="0 0 210 26" fill="none"><g clip-path="url(#clip0_5924_5517)"><path d="M23.5946 0.688843H0.958984V6.11548H1.10101C2.99471 4.90233 5.24348 4.11526 7.52775 4.11526H9.77652V19.5401C9.77652 20.6467 9.67 21.7888 9.56348 22.6114C9.27646 23.434 8.66989 24.5406 8.31482 25.1117V25.3247H16.2417V25.1117C15.8837 24.5406 15.2771 23.434 14.9931 22.6114C14.8865 21.7888 14.78 20.6467 14.78 19.5401V4.11526H17.0288C19.3131 4.11526 21.5618 4.89937 23.4555 6.11548H23.5976V0.688843H23.5946Z"></path><path d="M45.6591 23.147C45.1591 22.2179 44.659 21.1112 44.0879 19.7205L36.5191 0.688843H31.699L24.2366 19.7205C23.7366 20.9692 23.201 22.2208 22.701 23.147C22.3785 23.7535 21.9169 24.5406 21.5588 25.1117V25.3247H28.0566V25.0022C27.808 24.5021 27.521 23.7535 27.3435 23.147C27.4145 22.1824 27.737 21.0757 28.2371 19.7205L28.5241 18.9364H38.2352L38.5222 19.7945C38.9868 21.0787 39.3063 22.1853 39.3803 23.1499C39.2738 23.7565 38.9158 24.5436 38.6317 25.1146V25.3277H46.7006V25.1146L45.665 23.1499L45.6591 23.147ZM29.5568 16.1491L30.6634 13.1843L33.4832 6.00896H33.5187L36.3741 13.2938L37.3032 16.1491H29.5538H29.5568Z"></path><path d="M70.4251 0.688843L63.7469 19.0755H63.5694L56.8201 0.688843H48.2866V0.901884C48.6446 1.47295 49.2512 2.57959 49.5353 3.40216C49.6418 4.22474 49.7483 5.36688 49.7483 6.47351V19.543C49.7483 20.6496 49.6418 21.7918 49.5353 22.6144C49.2483 23.4369 48.6417 24.5436 48.2866 25.1146V25.3277H54.7844V25.1146C54.4263 24.5436 53.8198 23.4369 53.5357 22.6144C53.4292 21.7918 53.3227 20.6496 53.3227 19.543V6.00896H53.5357L60.6756 25.3247H65.2116L72.1383 6.222H72.3159V19.5401C72.3159 20.6467 72.2094 21.7888 72.1028 22.6114C71.8158 23.434 71.2093 24.5406 70.8542 25.1117V25.3247H78.7101V25.1117C78.352 24.5406 77.7455 23.434 77.4614 22.6114C77.3549 21.7888 77.2484 20.6467 77.2484 19.5401V6.47351C77.2484 5.36688 77.3549 4.22474 77.4614 3.40216C77.7484 2.57959 78.355 1.47295 78.7101 0.901884V0.688843H70.4251Z"></path><path d="M96.8837 11.4356V11.3646C99.8101 10.1869 101.381 8.54475 101.381 6.11548C101.381 2.72457 98.452 0.937391 92.6703 0.72435C91.7057 0.688843 90.4925 0.688843 89.8504 0.688843H82.4236V0.901884C82.7816 1.47295 83.3882 2.57959 83.6722 3.40216C83.7788 4.22474 83.8853 5.36688 83.8853 6.47351V19.5401C83.8853 20.6467 83.7788 21.7888 83.6722 22.6114C83.3852 23.434 82.7787 24.5406 82.4236 25.1117V25.3247H93.9219C99.313 25.3247 103.062 23.2535 103.062 18.0754C103.062 13.9329 100.526 12.0777 96.8837 11.4356ZM88.8858 3.50868H91.9217C94.7415 3.50868 96.1706 4.40228 96.1706 7.1156C96.1706 8.97083 95.5286 10.329 94.4219 11.2581H88.8888V3.50868H88.8858ZM93.0993 22.4309L88.8858 22.2179V13.9714H93.3478C96.1322 13.9714 97.8099 15.1845 97.8099 18.1139C97.8099 21.3627 95.8097 22.4339 93.0964 22.4339L93.0993 22.4309Z"></path><path d="M111.365 14.9005V6.47351C111.365 5.36688 111.471 4.22474 111.578 3.40216C111.865 2.57959 112.471 1.47295 112.826 0.901884V0.688843H104.899V0.901884C105.257 1.47295 105.864 2.57959 106.148 3.40216C106.255 4.22474 106.361 5.36688 106.361 6.47351V14.794C106.361 21.9693 110.288 25.8632 116.966 25.8632C123.644 25.8632 127.464 21.8273 127.464 14.7585V6.54748C127.464 5.36984 127.571 4.2277 127.677 3.40512C127.964 2.58255 128.571 1.47591 128.926 0.904843V0.691802H122.034V0.904843C122.392 1.47591 122.999 2.58255 123.283 3.40512C123.39 4.2277 123.496 5.36984 123.496 6.54748V14.9034C123.496 19.4395 121.602 22.1528 117.534 22.1528C113.465 22.1528 111.356 19.0814 111.356 14.9034L111.365 14.9005Z"></path><path d="M146.031 13.7554L146.28 13.6489C148.815 12.6132 151.635 10.0775 151.635 6.65105C151.635 3.22463 148.28 0.688843 143.566 0.688843H131.642V0.901884C132 1.47295 132.606 2.57959 132.891 3.40216C132.997 4.22474 133.104 5.36688 133.104 6.47351V19.5401C133.104 20.6467 132.997 21.7888 132.891 22.6114C132.603 23.434 131.997 24.5406 131.642 25.1117V25.3247H139.569V25.1117C139.211 24.5406 138.604 23.434 138.32 22.6114C138.214 21.7888 138.107 20.6467 138.107 19.5401V14.9685H140.249C140.607 14.9685 140.927 14.9685 141.214 14.933L148.105 25.3218H153.748V24.9992L146.037 13.7524L146.031 13.7554ZM144.495 12.1842C144.031 12.2197 143.282 12.2197 142.818 12.2197C142.424 12.2197 140.317 12.1487 138.104 12.0422V3.54419H141.747C144.676 3.54419 146.425 4.5443 146.425 7.72217C146.425 9.79341 145.602 11.1841 144.495 12.1842Z"></path><path d="M161.991 19.5401V6.47351C161.991 5.36688 162.098 4.22474 162.204 3.40216C162.491 2.57959 163.098 1.47295 163.453 0.901884V0.688843H155.526V0.901884C155.884 1.47295 156.491 2.57959 156.775 3.40216C156.881 4.22474 156.988 5.36688 156.988 6.47351V19.543C156.988 20.6496 156.881 21.7918 156.775 22.6144C156.488 23.4369 155.881 24.5436 155.526 25.1146V25.3277H163.453V25.1146C163.095 24.5436 162.488 23.4369 162.204 22.6144C162.098 21.7918 161.991 20.6496 161.991 19.543V19.5401Z"></path><path d="M183.84 0.688843V0.901884C184.198 1.47295 184.805 2.57959 185.089 3.40216C185.195 4.22474 185.302 5.36688 185.302 6.47351V18.8625H185.231L174.593 0.688843H166.595V0.901884C166.953 1.47295 167.56 2.57959 167.844 3.40216C167.951 4.22474 168.057 5.36688 168.057 6.47351V19.543C168.057 20.6496 167.951 21.7918 167.844 22.6144C167.557 23.4369 166.951 24.5436 166.595 25.1146V25.3277H173.164V25.1146C172.806 24.5436 172.2 23.4369 171.916 22.6144C171.809 21.7918 171.703 20.6496 171.703 19.543V5.61543H171.774L183.485 25.3247H188.947V6.47351C188.947 5.36688 189.054 4.22474 189.16 3.40216C189.447 2.57959 190.054 1.47295 190.409 0.901884V0.688843H183.84Z"></path><path d="M201.283 25.8603C207.496 25.8603 209.958 22.1114 209.958 18.2559C209.958 14.0779 207.316 12.0777 203.531 10.8646L202.425 10.5065C200.034 9.72243 197.892 9.00638 197.892 6.68659C197.892 4.36681 200.211 3.3667 202.105 3.3667C204.854 3.3667 207.067 4.65086 208.709 6.61558L208.996 6.50906V2.08253C207.677 1.04691 205.141 0.15332 202.318 0.15332C197.463 0.15332 193.107 2.76012 193.107 7.58018C193.107 10.7225 194.962 13.1873 199.211 14.6845L200.425 15.1136C203.46 16.1847 205.245 16.8623 205.245 19.1495C205.245 21.4368 203.638 22.5759 201.283 22.5759C198.64 22.5759 195.498 21.1468 193.32 18.398L193.033 18.5045V23.3245C194.353 24.6442 197.105 25.8603 201.28 25.8603H201.283Z"></path></g><defs><clipPath id="clip0_5924_5517"><rect width="208.999" height="25.707" transform="translate(0.958984 0.15332)"></rect></clipPath></defs></svg>
-            </a>
-          </h1>
-          <ul id="top" class="clear"><!-- menu -->
-            <li class="category_li">
-              <a class="category_menu" a href="javascript:">PERFUME</a>
-            </li>
-            <li class="category_li">
-              <a class="category_menu" a href="javascript:">HAND&LIP</a>
-            </li>
-            <li class="category_li">
-              <a class="category_menu" a href="javascript:">BODY</a>
-            </li>
-            <li class="category_li">
-              <a class="category_menu" a href="javascript:">HOME FRAGRANCE</a>
-            </li>
-            <li class="category_li">
-              <a class="category_menu" href="javascript:;">STORE</a>
-            </li>
-          </ul>
-          <div class="hd-wrap">
-            <ul class="lang-box">
-              <li class="wrap">
-                <div class="lang">
-                  <a class="kor" href="javascript:"> 
-                    KOR
-                  </a>
-                  <div class="eng">
-                    <ul>
-                      <li>
-                        <a href="javascript:">ENG</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+          <div class="inner">
+            <h1 class="logo">
+              <a href="javascript:;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="210" height="26" viewBox="0 0 210 26" fill="none"><g clip-path="url(#clip0_5924_5517)"><path d="M23.5946 0.688843H0.958984V6.11548H1.10101C2.99471 4.90233 5.24348 4.11526 7.52775 4.11526H9.77652V19.5401C9.77652 20.6467 9.67 21.7888 9.56348 22.6114C9.27646 23.434 8.66989 24.5406 8.31482 25.1117V25.3247H16.2417V25.1117C15.8837 24.5406 15.2771 23.434 14.9931 22.6114C14.8865 21.7888 14.78 20.6467 14.78 19.5401V4.11526H17.0288C19.3131 4.11526 21.5618 4.89937 23.4555 6.11548H23.5976V0.688843H23.5946Z"></path><path d="M45.6591 23.147C45.1591 22.2179 44.659 21.1112 44.0879 19.7205L36.5191 0.688843H31.699L24.2366 19.7205C23.7366 20.9692 23.201 22.2208 22.701 23.147C22.3785 23.7535 21.9169 24.5406 21.5588 25.1117V25.3247H28.0566V25.0022C27.808 24.5021 27.521 23.7535 27.3435 23.147C27.4145 22.1824 27.737 21.0757 28.2371 19.7205L28.5241 18.9364H38.2352L38.5222 19.7945C38.9868 21.0787 39.3063 22.1853 39.3803 23.1499C39.2738 23.7565 38.9158 24.5436 38.6317 25.1146V25.3277H46.7006V25.1146L45.665 23.1499L45.6591 23.147ZM29.5568 16.1491L30.6634 13.1843L33.4832 6.00896H33.5187L36.3741 13.2938L37.3032 16.1491H29.5538H29.5568Z"></path><path d="M70.4251 0.688843L63.7469 19.0755H63.5694L56.8201 0.688843H48.2866V0.901884C48.6446 1.47295 49.2512 2.57959 49.5353 3.40216C49.6418 4.22474 49.7483 5.36688 49.7483 6.47351V19.543C49.7483 20.6496 49.6418 21.7918 49.5353 22.6144C49.2483 23.4369 48.6417 24.5436 48.2866 25.1146V25.3277H54.7844V25.1146C54.4263 24.5436 53.8198 23.4369 53.5357 22.6144C53.4292 21.7918 53.3227 20.6496 53.3227 19.543V6.00896H53.5357L60.6756 25.3247H65.2116L72.1383 6.222H72.3159V19.5401C72.3159 20.6467 72.2094 21.7888 72.1028 22.6114C71.8158 23.434 71.2093 24.5406 70.8542 25.1117V25.3247H78.7101V25.1117C78.352 24.5406 77.7455 23.434 77.4614 22.6114C77.3549 21.7888 77.2484 20.6467 77.2484 19.5401V6.47351C77.2484 5.36688 77.3549 4.22474 77.4614 3.40216C77.7484 2.57959 78.355 1.47295 78.7101 0.901884V0.688843H70.4251Z"></path><path d="M96.8837 11.4356V11.3646C99.8101 10.1869 101.381 8.54475 101.381 6.11548C101.381 2.72457 98.452 0.937391 92.6703 0.72435C91.7057 0.688843 90.4925 0.688843 89.8504 0.688843H82.4236V0.901884C82.7816 1.47295 83.3882 2.57959 83.6722 3.40216C83.7788 4.22474 83.8853 5.36688 83.8853 6.47351V19.5401C83.8853 20.6467 83.7788 21.7888 83.6722 22.6114C83.3852 23.434 82.7787 24.5406 82.4236 25.1117V25.3247H93.9219C99.313 25.3247 103.062 23.2535 103.062 18.0754C103.062 13.9329 100.526 12.0777 96.8837 11.4356ZM88.8858 3.50868H91.9217C94.7415 3.50868 96.1706 4.40228 96.1706 7.1156C96.1706 8.97083 95.5286 10.329 94.4219 11.2581H88.8888V3.50868H88.8858ZM93.0993 22.4309L88.8858 22.2179V13.9714H93.3478C96.1322 13.9714 97.8099 15.1845 97.8099 18.1139C97.8099 21.3627 95.8097 22.4339 93.0964 22.4339L93.0993 22.4309Z"></path><path d="M111.365 14.9005V6.47351C111.365 5.36688 111.471 4.22474 111.578 3.40216C111.865 2.57959 112.471 1.47295 112.826 0.901884V0.688843H104.899V0.901884C105.257 1.47295 105.864 2.57959 106.148 3.40216C106.255 4.22474 106.361 5.36688 106.361 6.47351V14.794C106.361 21.9693 110.288 25.8632 116.966 25.8632C123.644 25.8632 127.464 21.8273 127.464 14.7585V6.54748C127.464 5.36984 127.571 4.2277 127.677 3.40512C127.964 2.58255 128.571 1.47591 128.926 0.904843V0.691802H122.034V0.904843C122.392 1.47591 122.999 2.58255 123.283 3.40512C123.39 4.2277 123.496 5.36984 123.496 6.54748V14.9034C123.496 19.4395 121.602 22.1528 117.534 22.1528C113.465 22.1528 111.356 19.0814 111.356 14.9034L111.365 14.9005Z"></path><path d="M146.031 13.7554L146.28 13.6489C148.815 12.6132 151.635 10.0775 151.635 6.65105C151.635 3.22463 148.28 0.688843 143.566 0.688843H131.642V0.901884C132 1.47295 132.606 2.57959 132.891 3.40216C132.997 4.22474 133.104 5.36688 133.104 6.47351V19.5401C133.104 20.6467 132.997 21.7888 132.891 22.6114C132.603 23.434 131.997 24.5406 131.642 25.1117V25.3247H139.569V25.1117C139.211 24.5406 138.604 23.434 138.32 22.6114C138.214 21.7888 138.107 20.6467 138.107 19.5401V14.9685H140.249C140.607 14.9685 140.927 14.9685 141.214 14.933L148.105 25.3218H153.748V24.9992L146.037 13.7524L146.031 13.7554ZM144.495 12.1842C144.031 12.2197 143.282 12.2197 142.818 12.2197C142.424 12.2197 140.317 12.1487 138.104 12.0422V3.54419H141.747C144.676 3.54419 146.425 4.5443 146.425 7.72217C146.425 9.79341 145.602 11.1841 144.495 12.1842Z"></path><path d="M161.991 19.5401V6.47351C161.991 5.36688 162.098 4.22474 162.204 3.40216C162.491 2.57959 163.098 1.47295 163.453 0.901884V0.688843H155.526V0.901884C155.884 1.47295 156.491 2.57959 156.775 3.40216C156.881 4.22474 156.988 5.36688 156.988 6.47351V19.543C156.988 20.6496 156.881 21.7918 156.775 22.6144C156.488 23.4369 155.881 24.5436 155.526 25.1146V25.3277H163.453V25.1146C163.095 24.5436 162.488 23.4369 162.204 22.6144C162.098 21.7918 161.991 20.6496 161.991 19.543V19.5401Z"></path><path d="M183.84 0.688843V0.901884C184.198 1.47295 184.805 2.57959 185.089 3.40216C185.195 4.22474 185.302 5.36688 185.302 6.47351V18.8625H185.231L174.593 0.688843H166.595V0.901884C166.953 1.47295 167.56 2.57959 167.844 3.40216C167.951 4.22474 168.057 5.36688 168.057 6.47351V19.543C168.057 20.6496 167.951 21.7918 167.844 22.6144C167.557 23.4369 166.951 24.5436 166.595 25.1146V25.3277H173.164V25.1146C172.806 24.5436 172.2 23.4369 171.916 22.6144C171.809 21.7918 171.703 20.6496 171.703 19.543V5.61543H171.774L183.485 25.3247H188.947V6.47351C188.947 5.36688 189.054 4.22474 189.16 3.40216C189.447 2.57959 190.054 1.47295 190.409 0.901884V0.688843H183.84Z"></path><path d="M201.283 25.8603C207.496 25.8603 209.958 22.1114 209.958 18.2559C209.958 14.0779 207.316 12.0777 203.531 10.8646L202.425 10.5065C200.034 9.72243 197.892 9.00638 197.892 6.68659C197.892 4.36681 200.211 3.3667 202.105 3.3667C204.854 3.3667 207.067 4.65086 208.709 6.61558L208.996 6.50906V2.08253C207.677 1.04691 205.141 0.15332 202.318 0.15332C197.463 0.15332 193.107 2.76012 193.107 7.58018C193.107 10.7225 194.962 13.1873 199.211 14.6845L200.425 15.1136C203.46 16.1847 205.245 16.8623 205.245 19.1495C205.245 21.4368 203.638 22.5759 201.283 22.5759C198.64 22.5759 195.498 21.1468 193.32 18.398L193.033 18.5045V23.3245C194.353 24.6442 197.105 25.8603 201.28 25.8603H201.283Z"></path></g><defs><clipPath id="clip0_5924_5517"><rect width="208.999" height="25.707" transform="translate(0.958984 0.15332)"></rect></clipPath></defs></svg>
+              </a>
+            </h1>
+            <ul id="top" class="clear"><!-- menu -->
+              <li class="category_li">
+                <a class="category_menu" a href="javascript:">PERFUME</a>
+              </li>
+              <li class="category_li">
+                <a class="category_menu" a href="javascript:">HAND&LIP</a>
+              </li>
+              <li class="category_li">
+                <a class="category_menu" a href="javascript:">BODY</a>
+              </li>
+              <li class="category_li">
+                <a class="category_menu" a href="javascript:">HOME FRAGRANCE</a>
+              </li>
+              <li class="category_li">
+                <a class="category_menu" href="javascript:;">STORE</a>
               </li>
             </ul>
-            <div class="header-etc">
-              <div class="all-menu fir">
-                <div class="humbuger" >
-                  <span class="material-symbols-outlined">
-                    menu
-                  </span>
+            <div class="hd-wrap">
+              <ul class="lang-box">
+                <li class="wrap">
+                  <div class="lang">
+                    <a class="kor" href="javascript:"> 
+                      KOR
+                    </a>
+                    <div class="eng">
+                      <ul>
+                        <li>
+                          <a href="javascript:">ENG</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="header-etc">
+                <div class="all-menu fir">
+                  <button id="menu_btn" type="button">
+                    <span class="btn_span"></span>
+                    <span class="btn_span"></span>
+                    <span class="btn_span"></span>
+                  </button>
                 </div>
-              </div>
-              <div class="all-menu sec">
-                <span class="material-symbols-outlined">
-                  search
-                </span>
+                <div class="search-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                    <path d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z"></path>
+                    </svg>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- <div class="category_li sub">
-          <div class="wrap">
-            <div class="sub-head clear">
-              <div class="sub-depth">
-                <ul class="clear">
-                  <li><a href="javascript:">전기 자동차</a></li>
-                  <li><a href="javascript:">플러그인 하이브리드</a></li>
-                  <li><a href="javascript:">Sedan</a></li>
-                  <li><a href="javascript:">SUV</a></li>
-                  <li><a href="javascript:">Hatchback</a></li>
-                  <li><a href="javascript:">Coupé</a></li>
-                  <li><a href="javascript:">Cabriolet & Roadster</a></li>
-                  <li><a href="javascript:">카탈로그</a></li>
-                  <li><a href="javascript:">가격표</a></li>
-                  <li><a href="javascript:">전시장 찾기</a></li>
-                  <li><a href="javascript:">시승 신청</a></li>
-                </ul>
-              </div>
-              <div class="sub-depth">
-                <ul class="clear">
-                  <li class=""><a href="javascript:">신제품·대표제품</a></li>
-                  <li class=""><a href="javascript:">작물보호제</a></li>
-                  <li class=""><a href="javascript:">작물보호제 원제</a></li>
-                  <li class=""><a href="javascript:">종자</a></li>
-                  <li class=""><a href="javascript:">비료</a></li>
-                  <li class=""><a href="javascript:">유기농업자재</a></li>
-                  <li class=""><a href="javascript:">기타</a></li>
-                  <li class=""><a href="javascript:">화공제품</a></li>
-                </ul>
-              </div>
-              <div class="sub-depth">
-                <ul class="clear">
-                  <li><a href="javascript:">영농정보</a></li>
-                  <li><a href="javascript:">영농자재의 이해</a></li>
-                  <li><a href="javascript:">작물별 영농정보</a></li>
-                  <li><a href="javascript:">병해충·잡초 도감</a></li>
-                  <li><a href="javascript:">영농 관련 사이트</a></li>
-                </ul>
-              </div>
-              <div class="sub-depth">
-                <ul class="clear">
-                  <li><a href="javascript:">팜한농 뉴스</a></li>
-                  <li><a href="javascript:">홍보 자료실</a></li>
-                </ul>
-              </div>
-              <div class="sub-depth">
-                <ul class="clear">
-                  <li><a href="javascript:">자주 묻는 질문</a></li>
-                  <li><a href="javascript:">1:1 문의 및 제안</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="etc ">
-              <div class="customer">
-                <span class="cs">고객상담센터</span>
-                <a href="tel:1644-0901" class="tel">1644-0901</a>
-              </div>
-            </div>
-          </div>
-        </div> -->
       </header>
       <div class="mo-header">
         <div class="inner">
@@ -177,15 +97,15 @@
               </a>
           </h1>
           <div class="mo-menu">
-            <div class="humbuger" >
-              <span class="material-symbols-outlined">
-                menu
-              </span>
-            </div>
+            <button id="menu_btn" type="button">
+              <span class="btn_span"></span>
+              <span class="btn_span"></span>
+              <span class="btn_span"></span>
+            </button>
             <div class="search-box">
-              <span class="material-symbols-outlined">
-                search
-              </span>
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                <path d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z"></path>
+                </svg>
             </div>
           </div>
         </div>
@@ -196,17 +116,14 @@
           <!-- 메인 영상 -->
           <section class="main-vis ">
             <div class="pc">
-              <!-- <iframe class="vid_pc" width="100%" height="100%" src="https://www.youtube.com/embed/THB5baWuUDI?si=zCw27bAKmxffAWr7?autoplay=1&mute=1&loop=1"   title="YouTube video player" frameborder="0"  allowfullscreen></iframe> -->
-              <!-- <iframe class="vid_pc" width="100%" height="100%"  src="https://www.youtube.com/embed/-4zsY28t76k?si=Zk_DUVPFEdtusvGm?start=10&autoplay=1&mute=1&loop=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>              <video src="./img/33.mp4" type="video/mp4" class="car-diffuser_main-video__src__ceIXu" id="video" height="100%" width="100%" loop="loop"  muted autoplay playsinline  poster="./img/pc_poster.jpg">
-            </video> -->
             <video autoplay muted src="./img/TAMBURINS x JENNIE  PERFUME - [SOLACE].mp4#t=17" class="car-diffuser_main-video__src__ceIXu" id="video" height="100%" width="100%" loop="loop" controls="0" muted type="video/mp4"/></video>  
             </div>
           </section>
-            <div class="bottom_btn">
-              <a href="#section1"  class="view_con2">
-                <img src="./img/scroll.png" alt="아래로 가기"/>
-              </a>
-            </div>
+          <div class="bottom_btn">
+            <a href="#section1"  class="view_con2">
+              <img src="./img/scroll.png" alt="아래로 가기"/>
+            </a>
+          </div>
           <!-- best seller-->
           <section class="prd-info clear">
             <div class="infor-inner clear">
@@ -371,6 +288,112 @@
               </div>
             </div>
           </section> <!-- //best seller-->
+          <!--한정 수량 특가 영역 -->
+          <section class="loop_prd_box">
+            <div class="loop swiper" dir="ltr">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="img_wrap">
+                    <img src="./img/new01.png" alt=""/>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img_wrap">
+                    <img src="./img/new02.png" alt=""/>
+                  </div>
+                </div>
+                  <div class="swiper-slide">
+                    <div class="img_wrap">
+                      <img src="./img/new03.png" alt=""/>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="img_wrap">
+                      <img src="./img/new01.png" alt=""/>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="img_wrap">
+                      <img src="./img/hover_before05.png" alt=""/>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="img_wrap">
+                      <img src="./img/hover_before03.png" alt=""/>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="img_wrap">
+                      <img src="./img/hover_before02.png" alt=""/>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="img_wrap">
+                      <img src="./img/hover_before04.png" alt=""/>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="img_wrap">
+                      <img src="./img/new04.png" alt=""/>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="title">
+              <h2 class="prd-tit info">한정수량 특가</h2>
+              <p class="prd-tit-subtxt en">다양한 이벤트를 통해 TAMBURINS와 함께 하세요.</p>
+              <a class="prd-tit-subtxt btn">바로 가기</a>
+            </div>
+            <div class="loop swiper" dir="rtl">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="img_wrap">
+                    <img src="./img/new01.png" alt=""/>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img_wrap">
+                    <img src="./img/new02.png" alt=""/>
+                  </div>
+                </div>
+                  <div class="swiper-slide">
+                    <div class="img_wrap">
+                      <img src="./img/new03.png" alt=""/>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="img_wrap">
+                      <img src="./img/new01.png" alt=""/>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="img_wrap">
+                      <img src="./img/hover_before05.png" alt=""/>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="img_wrap">
+                      <img src="./img/hover_before03.png" alt=""/>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="img_wrap">
+                      <img src="./img/hover_before02.png" alt=""/>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="img_wrap">
+                      <img src="./img/hover_before04.png" alt=""/>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="img_wrap">
+                      <img src="./img/new04.png" alt=""/>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </section>
           <!--new-experience  -->
           <section class="new-launch-prd clear">
             <div class="inner clear">
@@ -423,12 +446,12 @@
                     </a>
                   </div>
                 </div>
-                <div class="swiper-pagination"></div>
               </div>
               <div class="prd-txt clear">
                 <h2 class="prd-tit clear">HAND&LIP</h2>
                 <p class="prd-tit-subtxt en">home fragrance</p>
               </div>
+              <div class="swiper-pagination"></div>
             </div>
           </section>  <!--//new-experience  -->
           <!-- flip -->
@@ -584,101 +607,54 @@
                 </ul>
               </div>
             </div>
-              <div class="store-img">
-                <div id="tab-1" class="tab-content current">
-                  <div class="">
-                      <!-- Swiper -->
-                    <div class="swiper mySwiper">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <a class="store-link" href="javascript:;" >
-                            <img src="./img/seongsu01.jpg" alt=""/>
-                          </a>
-                        </div>
+            <div class="store-img">
+              <div id="tab-1" class="tab-content current">
+                <div class="inner tab_img">
+                    <!-- Swiper -->
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
                       <div class="swiper-slide">
-                          <a class="store-link" href="javascript:;">
-                            <img src="./img/seongsu02.jpg" alt=""/>
-                          </a>
+                        <a class="store-link" href="javascript:;" >
+                          <img src="./img/seongsu01.jpg" alt=""/>
+                        </a>
                       </div>
-                      <div class="swiper-slide">
-                          <a class="store-link" href="javascript:;">
-                            <img src="./img/pc_seongsu_03.jpg" alt=""/>
-                          </a>
-                      </div>
-                      <div class="swiper-slide">
-                          <a class="store-link" href="javascript:;">
-                            <img src="./img/pc_seongsu_4.jpg" alt=""/>
-                          </a>  
-                      </div>
-                      <div class="swiper-slide">
-                          <a class="store-link" href="javascript:;">
-                            <img src="./img/pc_seongsu_5.jpg" alt=""/>
-                          </a>
-                      </div>
-                      <div class="swiper-slide">
-                          <a class="store-link" href="javascript:;">
-                            <img src="./img/pc_seongsu_6.jpg" alt=""/>
-                          </a>
-                      </div>
-                      <div class="swiper-slide">
-                          <a class="store-link" href="javascript:;">
-                            <img src="./img/pc_seongsu_7.jpg" alt=""/>
-                          </a>
-                      </div>
-                      </div>
-                      <div class="swiper-scrollbar"></div>
+                    <div class="swiper-slide">
+                        <a class="store-link" href="javascript:;">
+                          <img src="./img/seongsu02.jpg" alt=""/>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="store-link" href="javascript:;">
+                          <img src="./img/pc_seongsu_03.jpg" alt=""/>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="store-link" href="javascript:;">
+                          <img src="./img/pc_seongsu_4.jpg" alt=""/>
+                        </a>  
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="store-link" href="javascript:;">
+                          <img src="./img/pc_seongsu_5.jpg" alt=""/>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="store-link" href="javascript:;">
+                          <img src="./img/pc_seongsu_6.jpg" alt=""/>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="store-link" href="javascript:;">
+                          <img src="./img/pc_seongsu_7.jpg" alt=""/>
+                        </a>
+                    </div>
                     </div>
                   </div>
+                  <div class="swiper-scrollbar"></div>
                 </div>
-                <div id="tab-2" class="tab-content">
-                  <div class="">
-                      <!-- Swiper -->
-                    <div class="swiper mySwiper">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <a class="store-link" href="javascript:;" >
-                            <video id="video"  width="100%"  height="100%" loop="loop"  muted autoplay playsinline>
-                              <source src="./img/pc_Dosan.mp4" type="video/mp4" >
-                            </video>
-                          </a>
-                        </div>
-                      <div class="swiper-slide">
-                          <a class="store-link" href="javascript:;">
-                            <img src="./img/pc_Dosan01.jpg" alt=""/>
-                          </a>
-                      </div>
-                      <div class="swiper-slide">
-                          <a class="store-link" href="javascript:;">
-                            <img src="./img/pc_Dosan02.jpg" alt=""/>
-                          </a>
-                      </div>
-                      <div class="swiper-slide">
-                          <a class="store-link" href="javascript:;">
-                            <img src="./img/pc_Dosan03.jpg" alt=""/>
-                          </a>  
-                      </div>
-                      <div class="swiper-slide">
-                          <a class="store-link" href="javascript:;">
-                            <img src="./img/pc_seongsu_5.jpg" alt=""/>
-                          </a>
-                      </div>
-                      <div class="swiper-slide">
-                          <a class="store-link" href="javascript:;">
-                            <img src="./img/pc_seongsu_6.jpg" alt=""/>
-                          </a>
-                      </div>
-                      <div class="swiper-slide">
-                          <a class="store-link" href="javascript:;">
-                            <img src="./img/pc_seongsu_7.jpg" alt=""/>
-                          </a>
-                      </div>
-                      </div>
-                      <div class="swiper-scrollbar"></div>
-                    </div>
-                  </div>
-                </div>
-                <div id="tab-3" class="tab-content">
-                  <div class="">
+              </div>
+              <div id="tab-2" class="tab-content">
+                <div class="inner tab_img">
                     <!-- Swiper -->
                   <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
@@ -720,152 +696,139 @@
                         </a>
                     </div>
                     </div>
-                    <div class="swiper-scrollbar"></div>
+
                   </div>
-                  </div>
-                </div>
-                <div id="tab-4" class="tab-content">
-                  <div class="">
-                    <!-- Swiper -->
-                  <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <a class="store-link" href="javascript:;" >
-                          <img src="./img/store_hannam_02.jpg" alt="">
-                        </a>
-                      </div>
-                    <div class="swiper-slide">
-                        <a class="store-link" href="javascript:;">
-                          <img src="./img/store_hannam_03.jpg" alt=""/>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a class="store-link" href="javascript:;">
-                          <img src="./img/store_hannam_04.jpg" alt=""/>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a class="store-link" href="javascript:;">
-                          <img src="./img/store_hannam_05.jpg" alt=""/>
-                        </a>  
-                    </div>
-                    <div class="swiper-slide">
-                        <a class="store-link" href="javascript:;">
-                          <img src="./img/store_hannam_06.jpg" alt=""/>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a class="store-link" href="javascript:;">
-                          <img src="./img/store_hannam_07.jpg" alt=""/>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a class="store-link" href="javascript:;">
-                          <img src="./img/store_hannam_08.jpg" alt=""/>
-                        </a>
-                    </div>
-                    </div>
-                    <div class="swiper-scrollbar"></div>
-                  </div>
-                  </div>
-                </div>
-                <div id="tab-5" class="tab-content">
-                  <div class="">
-                    <!-- Swiper -->
-                  <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <a class="store-link" href="javascript:;" >
-                          <img src="./img/samchung_fs_01.jpg" alt="">
-                        </a>
-                      </div>
-                    <div class="swiper-slide">
-                        <a class="store-link" href="javascript:;">
-                          <img src="./img/samchung_fs_02.jpg" alt=""/>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a class="store-link" href="javascript:;">
-                          <img src="./img/samchung_fs_03.jpg" alt=""/>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a class="store-link" href="javascript:;">
-                          <img src="./img/samchung_fs_04.jpg" alt=""/>
-                        </a>  
-                    </div>
-                    </div>
-                    <div class="swiper-scrollbar"></div>
-                  </div>
-                  </div>
+                  <div class="swiper-scrollbar"></div>
                 </div>
               </div>
-          </section>
-          <!--pop-up-store -->
-          <section class="pop-up-store" id="section1">
-            <div class="inner">
-              <div class="farm-txt clear">
-                <h2 class="prd-tit info">팝업 방문 예약하기</h2>
-                <p class="prd-tit-subtxt en">팝업 전시에서만 누릴 수 있는 다양한 혜택들을 만나보세요</p>
-              </div>
-              <div class="pop-up clear">
-                <div class="left">
+              <div id="tab-3" class="tab-content">
+                <div class="inner tab_img">
                   <!-- Swiper -->
-                  <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide object-fit">
-                        <img src="./img/popUp01.jpg" />
-                      </div>
-                      <div class="swiper-slide object-fit">
-                        <img src="./img/popUp02.jpg" />
-                      </div>
-                      <div class="swiper-slide object-fit">
-                        <img src="./img/popUp03.jpg" />
-                      </div>
-                      <div class="swiper-slide object-fit">
-                        <img src="./img/popUp04.jpg" />
-                      </div>
-                      <div class="swiper-slide object-fit">
-                        <img src="./img/popUp05.jpg" />
-                      </div>
-                      <div class="swiper-slide object-fit">
-                        <img src="./img/popUp06.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./img/popUp07.jpg" />
-                      </div>
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a class="store-link" href="javascript:;" >
+                        <video id="video"  width="100%"  height="100%" loop="loop"  muted autoplay playsinline>
+                          <source src="./img/pc_Dosan.mp4" type="video/mp4" >
+                        </video>
+                      </a>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                  <div class="swiper-slide">
+                      <a class="store-link" href="javascript:;">
+                        <img src="./img/pc_Dosan01.jpg" alt=""/>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a class="store-link" href="javascript:;">
+                        <img src="./img/pc_Dosan02.jpg" alt=""/>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a class="store-link" href="javascript:;">
+                        <img src="./img/pc_Dosan03.jpg" alt=""/>
+                      </a>  
+                  </div>
+                  <div class="swiper-slide">
+                      <a class="store-link" href="javascript:;">
+                        <img src="./img/pc_seongsu_5.jpg" alt=""/>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a class="store-link" href="javascript:;">
+                        <img src="./img/pc_seongsu_6.jpg" alt=""/>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a class="store-link" href="javascript:;">
+                        <img src="./img/pc_seongsu_7.jpg" alt=""/>
+                      </a>
+                  </div>
                   </div>
                 </div>
-                <div class="right">
-                  <div class="txt">
-                    <h2>팝업 전시에서만 누릴 수 있는<br/> 다양한 혜택들을 만나보세요</h2>
-                    <p class="sub-txt">카 프래그런스 태그</p>
-                    <p class="detail">카 프래그런스 태그(비가리코 향)를 증정해 드립니다. </br>*동반1인까지 증정되며 재고 소진시 프로모션이 종료될 수 있습니다.</p>
-                  </div>
-                  <div thumbsSlider="" class="swiper mySwiper ">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide object-fit">
-                        <img src="./img/popUp01.jpg" />
-                      </div>
-                      <div class="swiper-slide object-fit">
-                        <img src="./img/popUp02.jpg" />
-                      </div>
-                      <div class="swiper-slide object-fit">
-                        <img src="./img/popUp03.jpg" />
-                      </div>
-                      <div class="swiper-slide object-fit">
-                        <img src="./img/popUp04.jpg" />
-                      </div>
-                    </div>
-                  </div>
-                  <a href="javascript:;" class="shortcuts">
-                    <p>팝업 방문 예약하기</p>
-                  </a>
+                <div class="swiper-scrollbar"></div>
                 </div>
               </div>
+              <div id="tab-4" class="tab-content">
+                <div class="inner tab_img">
+                  <!-- Swiper -->
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a class="store-link" href="javascript:;" >
+                        <img src="./img/store_hannam_02.jpg" alt="">
+                      </a>
+                    </div>
+                  <div class="swiper-slide">
+                      <a class="store-link" href="javascript:;">
+                        <img src="./img/store_hannam_03.jpg" alt=""/>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a class="store-link" href="javascript:;">
+                        <img src="./img/store_hannam_04.jpg" alt=""/>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a class="store-link" href="javascript:;">
+                        <img src="./img/store_hannam_05.jpg" alt=""/>
+                      </a>  
+                  </div>
+                  <div class="swiper-slide">
+                      <a class="store-link" href="javascript:;">
+                        <img src="./img/store_hannam_06.jpg" alt=""/>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a class="store-link" href="javascript:;">
+                        <img src="./img/store_hannam_07.jpg" alt=""/>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a class="store-link" href="javascript:;">
+                        <img src="./img/store_hannam_08.jpg" alt=""/>
+                      </a>
+                  </div>
+                  </div>
+                </div>
+                <div class="swiper-scrollbar"></div>
+                </div>
+              </div>
+              <div id="tab-5" class="tab-content">
+                <div class="inner tab_img">
+                  <!-- Swiper -->
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a class="store-link" href="javascript:;" >
+                        <img src="./img/samchung_fs_01.jpg" alt="">
+                      </a>
+                    </div>
+                  <div class="swiper-slide">
+                      <a class="store-link" href="javascript:;">
+                        <img src="./img/samchung_fs_02.jpg" alt=""/>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a class="store-link" href="javascript:;">
+                        <img src="./img/samchung_fs_03.jpg" alt=""/>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                      <a class="store-link" href="javascript:;">
+                        <img src="./img/samchung_fs_04.jpg" alt=""/>
+                      </a>  
+                  </div>
+                  </div>
+                </div>
+                <div class="swiper-scrollbar"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="pop-up">
+            <div class="farm-txt clear">
+              <h2 class="prd-tit info">팝업 방문 예약하기</h2>
+              <p class="prd-tit-subtxt en">팝업 전시에서만 누릴 수 있는 다양한 혜택들을 만나보세요</p>
             </div>
           </section>
         </div>
@@ -1305,18 +1268,5 @@
         </section>
       </div>
     </aside><!-- Initialize Swiper -->
-    <script>
-      window.onload = function() {
-    // URL의 앵커를 가져옵니다.
-      var hash = window.location.hash;
-        // 앵커가 존재하는 경우 해당 앵커로 자동으로 이동합니다.
-        if (hash) {
-        var element = document.querySelector(hash);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' }); // 스크롤 부드럽게 이동
-        }
-        }
-      };
-    </script>
   </body>
 </html>

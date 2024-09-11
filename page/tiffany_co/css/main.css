@@ -472,7 +472,6 @@ main #container3 {
   /* web_award */
   .award_r_img .hover{position: absolute; top: 0; left:0; visibility: hidden; width: 100%; height: 0; opacity: 0;  transition:opacity .6s; overflow: hidden;}
   .hover span{width: calc(100% - 60px); margin: 0 auto; display: block;}
-
   .award_r1:hover .hover,
   .web_award .award_r .award_r2:hover .hover,
   .web_award .award_r .award_r3:hover .hover,
