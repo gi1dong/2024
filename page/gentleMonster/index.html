@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.3/purify.min.js"></script>
+<script>
+  const dirty = '<img src="x" onerror="alert(1)"> <b>bold</b>';
+  const clean = DOMPurify.sanitize(dirty);
+  document.getElementById('content').innerHTML = clean;
+</script>
   <link rel="stylesheet" href="./css/swiper.min.css">
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/main.css">

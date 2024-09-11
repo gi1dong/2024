@@ -3,9 +3,9 @@ window.onload = function(){
           if ($(".menu_btn").hasClass("open") && $(".aside").hasClass("open")) {
             $(this).removeClass("open");
             $(".aside").removeClass("open");
-            $(".nav_inner>li>a").removeClass("selected");
-            $(".nav_inner>li>a").parent().find("div").stop().animate({ height: "0" });
-            $(".nav_inner>li>a .arrow::after").css({transform:"rotate(135deg)"})
+            $(".list_item").removeClass("selected");
+            $(".list_item").parent().find("div").stop().animate({ height: "0" });
+            $(".list_item .arrow::after").css({transform:"rotate(135deg)"})
             $(".logo").removeClass("open");
             $(".dimed").stop().animate({right: "-100%" }, 300);
           } else {
@@ -15,18 +15,26 @@ window.onload = function(){
             $(".dimed").stop().animate({ right: "0" }, 300);
           }
         });
-      // 메인 swiper
-      //  function mainTxt(){ TweenMax.staggerFromTo(".txt02 i", 1,{opacity:0},{opacity:1}, 0.5);
-      // }
+      // 메인
       myTween2 = new TweenMax.to('.box2', 2, {opacity:1},{repeat:-1},{yoyo:true},{paused:true});
     myTween2.resume();
  
-        var mainSWiper = new Swiper(".main_area .swiper-container", {
+        let mainSWiper = new Swiper(".main_area .swiper-container", {
         direction: "vertical",
-        speed: 800,
-        loop: true,
+        speed:1000,
         mousewheel: {
-          invert: false
+          invert: false,
+        },
+        grabCursor: true,
+        loop:true,
+        effect: "creative",
+        creativeEffect: {
+          prev: {
+            translate: [0, 0, 0],
+          },
+          next: {
+            translate: [0, "100%", 0],
+          },
         },
         pagination: {
           el: ".main_area>.swiper-pagination",
@@ -35,10 +43,11 @@ window.onload = function(){
           navigation: {
           nextEl: ".main_area .next_btn",
           prevEl: ".main_area .prev_btn"
-          }
+          },
         });
+        
         // 메뉴
-        $(".aside nav .nav_inner>li>a").click(function () {
+        $(".list_item").click(function () {
           const showSubmenu =$(this).parent().find("ul").outerHeight();
           if($(this).hasClass("selected"))
           {         
@@ -46,7 +55,7 @@ window.onload = function(){
             $(this).parent().find("div").stop().animate({ height: "0" });
           }else{        
             $(".sub_menu").stop().animate({ height:"0"});
-            $(".aside nav .nav_inner>li>a").removeClass("selected");
+            $(".list_item").removeClass("selected");
           $(this).addClass("selected");
           $(this).parent().find("div").stop().animate({ height : showSubmenu });
           }
@@ -95,18 +104,6 @@ window.onload = function(){
   $(window).scroll(function(){
     var headWrap = $(".header");
 
-    //현재문서의 전체높이
-    // 그럼 현재스크롤바의 퍼센테이지를 구해내는 함수는 다음과같이 정의할수있다 .
-    
-    // function colorChang(){
-    // return ((scrollVal +scrollH) / (scrollBody * 100))
-    // };
 
-
-    // if(scrollVal>scrollH||scrollVal>scrollBody){
-    //   headWrap.addClass("open"); 
-    // }else{
-    //   headWrap.removeClass("open");
-    // }
   });
 }

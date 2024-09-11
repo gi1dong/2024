@@ -144,7 +144,7 @@ header .sub-head{ margin:0 auto 0; max-width: 975px; width: 100%; height: 50vh; 
 #right_menu.active,
 .search_cont.active{right: 0; opacity: 1; visibility: visible; transition:opacity 0.5s;}
 
-.btn_box{ position: relative;  top: 0; left: 0;   display: flex; justify-content: space-between; align-items: center; width: calc(100% - 60px); margin: 0 auto; height: 4rem; cursor: pointer;}
+.btn_box{ position: relative; z-index: 53;  top: 0; left: 0;   display: flex; justify-content: space-between; align-items: center; width: calc(100% - 60px); margin: 0 auto; height: 4rem; cursor: pointer;}
 .search_cont .btn_box{margin: 3rem auto 0; height: 60px;}
 /* back btn */
 .btn_box .back_btn{ display: block; width: 2rem;  color:#3d3d3d; font-weight: lighter;}
@@ -360,7 +360,7 @@ video::-webkit-media-controls-fullscreen-button {display: none !important;}
           }
           
           .loop .swiper-wrapper {
-            transition-timing-function: linear;
+            transition-timing-function: linear!important;
           }
           
           .loop .swiper-slide {
@@ -400,7 +400,7 @@ color: #fff; font-size: 22px; }
 .new-launch-prd .mySwiper.prd-slide .swiper-wrapper{width: 100%; height: 100%;}
 
 .new-launch-prd .mySwiper.prd-slide .swiper-slide a{display: block; width: 100%; height: 100%;}
-.new-launch-prd .mySwiper.prd-slide .swiper-slide a img{display: block; width: 100%; height: 100%; object-fit: cover;}
+.new-launch-prd .mySwiper.prd-slide .swiper-slide a img{display: block; border-radius: 15px; width: 100%;height: 100%; object-fit: cover; }
 
 .new-launch-prd .swiper-container-horizontal > .swiper-pagination-bullets,
 .new-launch-prd .swiper-pagination-custom,

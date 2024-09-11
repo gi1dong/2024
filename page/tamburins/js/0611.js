@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger)
   });
@@ -91,21 +92,6 @@ window.onload = function(){
     // 1280--------------------------------------------------------------------------------------------------------------------
     // 화면 너비가 1280px보다 작을 때 실행할 코드
     
-    // aside menu
-    $(".main_menu_list>.list_items").click(function () {
-      idx = $(this).index() + 1;
-      $(".sub_menu_box>div").removeClass("open");
-      if( $(".sub_menu_box").hasClass("active")){
-        $(".main_menu_list").addClass("disabled");
-        // $(".sub_menu_box>div").removeClass("open");
-      }
-      else{
-        $(".main_menu_list").removeClass("disabled");
-        $(".sub_menu_box").addClass("active");
-        $("#sub0"+idx).addClass("open");
-      }
-    });
-
     // 햄버거 클릭 시 메뉴 
     $(" .humbuger, .close").click(function () {
       $(".main_menu_list").removeClass("disabled");
@@ -225,7 +211,7 @@ window.onload = function(){
       $(".ftmore-pageul").addClass("on");}
     });
     }
-    // width 따라 다르게 적용 js 끝
+    // width 따라 다르게 적용 js 끝---------------------------------------------------------------------
 
   // 신상품 
   var experience = new Swiper(".new-launch-prd .mySwiper.prd-slide", {
@@ -260,16 +246,22 @@ window.onload = function(){
         slidesPerView: 5,
         breakpoints: {
           1379: {
-            slidesPerView: 3,
-            spaceBetween: 30
+            slidesPerView: 4,
+            spaceBetween: 0
           },
           1024: {
-            slidesPerView: 2,
-            spaceBetween: 30
+            slidesPerView: 4,
+            spaceBetween: 0
           },
           759: {
-            slidesPerView: 1,
-            spaceBetween: 0
+            slidesPerView: 3,
+            spaceBetween: 0,
+            speed: 2000
+          },
+          650: {
+            slidesPerView: 2,
+            spaceBetween: 0,
+            speed: 2000
           }
         }
       });
@@ -301,6 +293,57 @@ window.onload = function(){
       headWrap.removeClass("down");
     }
   });
+
+  // 햄버거 클릭 시 메뉴 
+  $(" #menu_btn").click(function () {
+    $(".main_menu_list").removeClass("disabled");
+    $(".sub_menu_box").removeClass("active");
+    $(".sub_menu").addClass("open");
+
+    if ( $("#right_menu").hasClass("active")) {
+      $("#right_menu").removeClass("active");
+      $(".dimmed_bg").removeClass("active");
+      $(".contents").css({overflow: "auto", height: "100%" });
+    } else {
+      $("#right_menu").addClass("active");
+      $(".dimmed_bg").addClass("active");
+      $(".contents").css({overflow: "hidden", height: "100vh" });
+    }
+  });
+  
+    // 검색
+    $(".hd-wrap .all-menu.sec , .mo-header .search-box").click(function () {
+      $(".search_cont").removeClass("active");
+      if ( $(".search_cont").hasClass("active")) {
+        $(".search_cont").removeClass("active");
+        $("#right_menu").css({right: "-100%" });
+        $(".dimmed_bg").removeClass("active");
+        $(".contents").css({overflow: "auto", height: "100%" });
+      } else {
+        $("#right_menu").addClass("active");
+        $(".search_cont").addClass("active");
+        $(".dimmed_bg").addClass("active");
+        $(".contents").css({overflow: "hidden", height: "100vh" });
+      }
+    });
+
+    $("#right_menu .close, .search_cont .btn_box").click(function () {
+      if ( $("#right_menu").hasClass("active")) {
+        $(".search_cont").removeClass("active");
+        $("#right_menu").removeClass("active");
+        $("#right_menu").css({right: "-100%" });
+        $(".dimmed_bg").removeClass("active");
+        $(".contents").css({overflow: "auto", height: "100%" });
+      } return false;
+      // 0: 정상 종료
+    });
+
+  // 뒤로 가기 버튼
+  $(".back_btn").click(function () {
+      $(".main_menu_list").removeClass("disabled");
+      $(".sub_menu_box").removeClass("active");
+  });
+
 }
 
 

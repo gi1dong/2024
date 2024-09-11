@@ -99,7 +99,7 @@ overflow: hidden;}
 .main_area>.swiper-container>.swiper-wrapper>.swiper-slide,
 .main_area>.swiper-container>.swiper-wrapper>.swiper-slide-active{z-index: 2;  position: relative; font-size: 18px; color:#fff; background: #000;/* Center slide text vertically */ display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; width: 100%; height: 100vh;}
 .main_area .swiper-slide .bg {-webkit-transform: scale(1.1) rotate(1deg); -moz-transform: scale(1.1) rotate(2deg); -ms-transform: scale(1.1) rotate(2deg); -o-transform: scale(1.1) rotate(2deg); transform: scale(1.1) rotate(2deg); -webkit-transition: all 1ms ease 1ms; -moz-transition: all 1s ease 0.1s; -o-transition: all 1ms ease 1ms; -ms-transition: all 1ms ease 1ms; transition: all 1ms ease 1ms; opacity: 1; background-position: center; background-size: cover; position: absolute; top: 50%;left: 50%; transform: translate(-50%,-50%); width: 100%; height: 100%;}
-
+    .box2{ opacity: 0.5;}
 /**cafe24**/
 .main_area .section03 .bg { background:rgba(0, 0, 0, 0.5);}
 /**btn_eff_*/
@@ -177,32 +177,36 @@ transform: rotate(0deg) }
 .main_area .section09 .bg {background:url(../img/hedn.png) no-repeat 100% center/cover;}
 
 /**common_con*/
-.main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro {z-index: 9; color: #fff; text-align: center; position: absolute; top: 50%; transform: translate(-50%,-50%); left: 50%; width: 100%; height: 100%; overflow:hidden; display: flex;  justify-content: center; flex-direction: column;}
+.main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro {z-index: 7; color: #fff; text-align: center; position: absolute; top: 50%; transform: translate(-50%,-50%); left: 50%; width: 100%; height: 100%; overflow:hidden; display: flex;  justify-content: center; flex-direction: column;}
 
 .main_area .swiper-container .txt01 { font-size: 18px;
   display: inline-block;transform: translate3d(-29px, 32px, 10px); 
-  -webkit-transition: all 0.4s ease-in-out 0.1s;
-  -moz-transition: all 0.4s ease-in-out 0.1s;
-  -o-transition: all 0.4s ease-in-out 0.1s;
-  -ms-transition: all 0.4s ease-in-out 0.1s;
-  transition: all 0.4s ease-in-out 0.1s;}
+  -webkit-transition: all 0.4s ease-in-out 0.4s;
+  -moz-transition: all 0.4s ease-in-out 0.4s;
+  -o-transition: all 0.4s ease-in-out 0.4s;
+  -ms-transition: all 0.4s ease-in-out 0.4s;
+  transition: all 0.4s ease-in-out 0.4s;}
 
 .main_intro .txt02{
 transform: translate3d(-29px, 32px, 10px);
--webkit-transition: all 0.4s ease-in-out 0.1s;
--moz-transition: all 0.4s ease-in-out 0.1s;
--o-transition: all 0.4s ease-in-out 0.1s;
--ms-transition: all 0.4s ease-in-out 0.1s;
-transition: all 0.4s ease-in-out 0.1s;}
+-webkit-transition: all 0.4s ease-in-out 0.4s;
+-moz-transition: all 0.4s ease-in-out 0.4s;
+-o-transition: all 0.4s ease-in-out 0.4s;
+-ms-transition: all 0.4s ease-in-out 0.4s;
+transition: all 0.4s ease-in-out 0.4s;}
 
-.main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro .txt02 strong{font-size: 50px; display: block; line-height: 1.6; font-weight: 700; padding: 30px 0;   -webkit-transition: all 0.4s ease-in-out 0.1s;
-  -moz-transition: all 0.4s ease-in-out 0.1s;
-  -o-transition: all 0.4s ease-in-out 0.1s;
-  -ms-transition: all 0.4s ease-in-out 0.1s;
-  transition: all 0.4s ease-in-out 0.1s;}
+.main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro .txt02 strong{font-size: 50px; display: block; line-height: 1.6; font-weight: 700; padding: 30px 0;   -webkit-transition: all 0.4s ease-in-out 0.4s;
+  -webkit-transition: all 0.4s ease-in-out 0.4s;
+  -moz-transition: all 0.4s ease-in-out 0.4s;
+  -o-transition: all 0.4s ease-in-out 0.4s;
+  -ms-transition: all 0.4s ease-in-out 0.4s;
+  transition: all 0.4s ease-in-out 0.4s;}
 
-.main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro .date { font-size: 18px;line-height: 1.7;color: #fff;font-weight: 300; padding: 20px 0; transform: translate3d(-29px, 32px, 10px); -webkit-transition: all 1s ease-in-out 0.1s;-moz-transition: all 1s ease-in-out 0.5s; -o-transition: all 1s ease-in-out 0.5s; -ms-transition: all 1s ease-in-out 0.5s;transition: all 1s ease-in-out 0.5s;}
-
+.main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro .date { font-size: 18px;line-height: 1.7;color: #fff;font-weight: 300; padding: 20px 0; transform: translate3d(-29px, 32px, 10px);   -webkit-transition: all 0.4s ease-in-out 0.4s;
+  -moz-transition: all 0.4s ease-in-out 0.4s;
+  -o-transition: all 0.4s ease-in-out 0.4s;
+  -ms-transition: all 0.4s ease-in-out 0.4s;
+  transition: all 0.4s ease-in-out 0.4s;}
 /* btn */
 .main_area .btn_wrap {transform: translate3d(-29px, 32px, 10px); -webkit-transition: all 1.2s ease-in-out 0.4s; -moz-transition: all 1.2s ease-in-out 0.4s; -o-transition: all 1.2s ease-in-out 0.4s; -ms-transition: all 1.2s ease-in-out 0.4s; transition: all 1.2s ease-in-out 0.4s;}
 .main_area .swiper-slide .bg_opac{position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 1; background: radial-gradient(circle at top left, rgba(0, 0, 0, 0) 17%, rgba(0, 0, 0, 0.9) 100%); -webkit-transition: all 2s ease 0.1s; -moz-transition: all 2s ease 0.1s; -o-transition: all 2s ease 0.1s; -ms-transition: all 2s ease 0.1s; transition: all 2s ease 0.1s; }
@@ -278,9 +282,9 @@ a:hover{text-decoration:none}
 .main_area .swiper-slide.react .bg_opac,
 .main_area .swiper-slide.react .bg{background: #426285;}
 
-.react img{display: flex;margin: 0 auto 30px;justify-content: center;height: 6em;padding: 1.5em;}
+.react svg{display: flex;margin: 0 auto 30px;justify-content: center;width: 6em; height: 6em;padding: 1.5em;}
 .react h2{cursor: pointer; font-size: 40px; color:#e6f7ff; margin: 0 auto 30px; font-weight: 800;}
-.react .btn_container{flex-direction: row; justify-content: space-between; flex-wrap: wrap;  align-items: center;  font-size: 18px; display: flex;  width: calc(100% - 60px); height: 40vh; margin: 0 auto;}
+.react .btn_container{flex-direction: row; justify-content: space-between; flex-wrap: wrap;  align-items: center;  font-size: 18px; display: flex;  width: calc(100% - 60px);  margin: 0 auto;}
 .btn_container a{display: block;background: rgba(255, 255, 255, 0.05); box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.16);  width: calc(33.3% - 10px); color: #e6f7ff; padding: 10px 20px; border-radius: 5px; margin: 10px auto 10px; }
 
 @keyframes logo-spin {
@@ -293,9 +297,8 @@ a:hover{text-decoration:none}
 }
 
 @media screen and (max-width: 1024px) {
-
   .main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro .date{font-size: 16px;}
-  .main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro{width: calc(100% - 60px);}
+  .main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro{padding: 0 30px;}
   .main_area .section11 .swiper-wrapper.flower>.swiper-slide .information,
   .main_area .section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .information{opacity: 1; visibility: visible;}
   .react img{margin: 0 auto 10px;}
@@ -319,8 +322,9 @@ a:hover{text-decoration:none}
   .aside nav .nav_inner>li .sub_menu ul li>a{font-size: 16px;}
   .main_area .main_intro .txt02 strong{font-size: 30px;}
 
+  .main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro .txt02 strong{font-size: 24px;}
   .main_area .date{font-size: 14px;}
   .main_area .section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide>div{position: relative; width: 100%; height: 100%;}
-  .react .btn_container{flex-direction: column; justify-content: center;}
+  .react .btn_container{flex-direction: column; justify-content: space-between;}
   .btn_container a{width: 100%;}
 }
