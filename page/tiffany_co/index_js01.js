@@ -1,6 +1,6 @@
+
 window.onload=function(){
   (function () {
-    AOS.init();
     $(".hamburger").click(function () {
       if ($(this).hasClass("on")) {
         $(this).removeClass("on");
@@ -60,5 +60,6 @@ window.onload=function(){
     .setTween(tween1)
     .addTo(controller)
   }());
+  AOS.init();
 }
 

@@ -1,3 +1,12 @@
+var str,
+element = document.getElementById('cal_preview');
+if (element != null) {
+    str = element.value;
+}
+else {
+    str = null;
+}
+
 window.onload = function () {
   $(".menu_btn").click(function () {
     if ($(".menu_btn").hasClass("open") && $(".aside").hasClass("open")) {

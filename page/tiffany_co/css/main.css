@@ -87,7 +87,6 @@ main .container_wrap #container1 .main_vis .main_r {
   padding: 20px;
 }
 
-
 .main_r .vertical_txt {
   display: inline-block;
   position: absolute;
@@ -129,8 +128,8 @@ main .container_wrap .main_icon .mv_number {
 #container2 {
   display: block;
   margin: 0 auto 0;
-  width: 100%;
-  padding: 120px 0;
+  width: 100%; overflow: hidden;
+  padding: 120px 0 0 0;
   /* position: relative; */
 }
 .ani_wrap01{width: 100%; margin: 120px auto 0;}
@@ -159,7 +158,7 @@ main .container_wrap .main_icon .mv_number {
 #container2 .content {
  display: flex;
  justify-content: space-between; align-items: center;
-  width: 100%;
+  width: calc(100% - 60px);
   margin: 0 auto;
 }
 
@@ -168,7 +167,8 @@ main .container_wrap .main_icon .mv_number {
   height: 100%;
 }
 
-#container2 .content:nth-child(2) .con1_l ,#container2 .content .con1_l{
+#container2 .content:nth-child(2) .con1_l ,
+#container2 .content .con1_l{
   width: 50%;
 }
 
@@ -230,13 +230,13 @@ main .container_wrap .main_icon .mv_number {
 main #container3 {
   display: block;
   background: #000;
-  width: 100%;height: 80vh;
-  text-align: center;  padding: 60px 0;
+  width: 100%;
+  text-align: center;  
 }
 
 #container3 .bk_bg {
-  color: #fff;
-  display: block;
+  color: #fff;padding: 60px 0;
+  display: block; box-sizing: border-box;
   width: 100%; 
 }
 
@@ -262,14 +262,13 @@ main #container3 {
   font-weight: bold;
   color: #fff;
   width: 100%;
-  margin: 2% auto;
+  margin: 0 auto;
   padding: 0 2%;
 }
 
 .bk_tit_1>p {
-  font-size: 105px;
-  line-height: 120px;
-  font-weight: 300;
+  font-size: 85px;
+  line-height: 1.2;
 }
 
 .bk_bg .bk_tit_1 .color_6666ff {
@@ -296,7 +295,7 @@ main #container3 {
   border: 1px solid #fff;
   font-size: 15px;
   background: #000; border-radius: 10px;
-  padding: 20px 60px;
+  padding: 10px 20px;
   margin: 0 auto;
 }
 
@@ -330,17 +329,13 @@ main #container3 {
 }
 
 .prd_wrap {
-  width: 100%;
-  display: block;
-  overflow: hidden;
-  margin: 120px auto 120px;
+  width: calc(100% - 60px); 
+  display: flex; justify-content: center; align-items: flex-start; flex-direction: row; padding: 120px 0;
+  overflow: hidden; flex-wrap: nowrap;
+  margin: 0 auto;
 }
 
-.prd_wrap .prd {
-  padding: 0 1%;
-  float: left;
-  width: calc(100% /4);
-}
+.prd_line.inner{margin: 0 auto 30px; display: flex; justify-content: space-between; align-items: flex-start; padding:0;}
 
 .prd_wrap .prd .prd_img {
   width: 100%;
@@ -399,7 +394,7 @@ main #container3 {
   margin: 0 auto;
 }
 .web_award .award_r .award_r2 > .award_r_txt > p{font-weight: 800;}
-.web_award{flex-wrap: wrap;  width: 100%; padding: 120px 0;}
+.web_award{flex-wrap: wrap;  width: 100%; padding: 120px 0; position: relative; z-index: 1;}
 .web_award .award_r .award_r1,
 .web_award .award_r .award_r2,
 .web_award .award_r .award_r3 {width: calc(100% - 30px);}
@@ -408,6 +403,7 @@ main #container3 {
 .web_award .prd_tit span{display: inline-block; font-size: 24px; line-height: 2; margin: 30px auto 0;}
 
 .web_award .inner{display: flex; justify-content: space-between; align-items: center;}
+
 .web_award .award_l,
 .web_award .award_r ,
 .web_award .award_r .award_r1>.award_r_txt,
@@ -463,9 +459,10 @@ main #container3 {
   width: calc(50% - 30px); padding-left: 30px;
 }
 @media (hover: hover)  { 
-  .main_btn:hover,#container2 .con1_btn:hover {
+  .main_btn:hover,
+  #container2 .con1_btn:hover {
     background: #81d8d0;
-    transition: all .6s;
+    transition: all .3s;
     color: #000;
   }
 
@@ -476,7 +473,6 @@ main #container3 {
   .web_award .award_r .award_r2:hover .hover,
   .web_award .award_r .award_r3:hover .hover,
   .award_raward_r_txt_img:hover .hover{visibility: visible;  display: flex; justify-content: center; align-items: center; height: 100%;  background: rgb(0,0,0,0.5); opacity: 0.8; font-size: 18px; text-align: left; color: #fff; line-height: 1.5; overflow: visible;}
-
 }
 
 @media screen and (max-width:1360px) {
@@ -495,11 +491,7 @@ main #container3 {
   #container2 .content .con1_txt>h1::after {
     left: 0;
   }
-  .prd_wrap .prd {
-    float: unset;
-    width: 70%;
-    margin: 2% auto;
-  }
+
 }
 @media screen and (max-width: 1220px) {
   #container2 .content .con1_txt .con1_txt_p1 {
@@ -558,10 +550,7 @@ main #container3 {
 }
 
 @media screen and (max-width:1023px) {
-  main #container1 .main_vis .main_l {
-    width: 30%;
-    top: 10%;
-  }
+
   main .container_wrap #container1 .main_vis .main_l .main_txt .mt_em {
     font-size: 60px;
     display: block;
@@ -579,28 +568,16 @@ main #container3 {
     letter-spacing: 0.055em;
   }
 
-  main #container1 .main_vis .main_r {
-    width: 70%;
-  }
-
-  main .container_wrap .main_icon {
-    display: none;
-  }
-
-  .main_vis .main_r .main_img {
-    width: 100%;
-    max-width: unset;
-  }
-
   .bk_tit_1>p {
     font-size: 42px;
     margin-top: 5%;
     line-height: 40px;
   }
-
+  .prd_wrap,
   .web_award .award_r .award_r1, 
   .web_award .award_r .award_r2, 
   .web_award .award_r .award_r3{flex-wrap: wrap;}
+
   .web_award .award_l{margin: 60px auto 60px;}
   .web_award .prd_tit{margin: 0 auto 30px;}
   .web_award .award_r .award_r2 > .award_r_txt > p{font-weight: 300;}
@@ -613,12 +590,6 @@ main #container3 {
   .web_award .award_r .award_r1, .web_award .award_r .award_r3{ width: 100%; }
   .web_award .award_r .award_r1 > .award_r_txt{width: calc(50% - 30px); margin: 0 auto;}
   .hover{display: none;}
-  .prd_wrap .prd {
-    float: unset;
-    margin: 5% auto;
-    width: 70%;
-  }
-
   .bk_tit_1>p {
     font-size: 42px;
     margin-top: 10px;
@@ -691,7 +662,7 @@ main #container3 {
   .prd_tit {
     font-size: 40px;
   }
-
+  .prd_line.inner{flex-wrap: wrap; gap: 30px;}
   #container2 .content{flex-wrap: wrap;}
   #container2 .con1_txt{justify-content: center; align-items: center; line-height: 2;}
 
@@ -749,7 +720,7 @@ main #container3 {
   .web_award .award_r .award_r1>.award_r_img, 
   .web_award .award_r .award_r3>.award_r_img,
   .web_award .award_r .award_r2 .award_r_img,
-  .award_r .award_r2>.award_r_txt {display: block;margin: 0 auto; width: 100%; padding:30px 0; text-align: center;}
+  .award_r .award_r2>.award_r_txt {display: block;margin: 0 auto; width: 100%; margin:30px 0; text-align: center;}
 
   #container2 .content:nth-child(2) .con1_r,
   #container2 .content:nth-child(2) .con1_l {

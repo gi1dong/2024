@@ -6,18 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <title>💍Tiffany & Co.</title>
-     <!-- Load jQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"  type="text/javascript"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.min.js"></script>
-<!--scrollmagic-->
-<script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js" ></script> 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-<!--aos-->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"  type="text/javascript"></script>
-<!-- Font Awesome -->
-<script src="https://kit.fontawesome.com/f8a0a95034.js"  type="text/javascript" crossorigin="anonymous"></script>
-<script src="js/index_js01.js"  type="text/javascript"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/main.css">
@@ -129,7 +118,7 @@
   <main>
     <div class="container_wrap">
       <div id="container1">
-        <div class="main_vis clear inner">
+        <div class="main_vis inner">
           <div class="main_l">
             <div class="main_txt">
               <p class="mt_p">웨딩 링을 첫번째로 선보인 브랜드</p>
@@ -144,7 +133,6 @@
           </div>
           <div class="main_r">
             <div class="main_img">
-              <!-- <img src="./images/ring_main.jpg" alt=""/> -->
               <img src="./images/ring_main02.png" alt=""/>
             </div>
           </div>
@@ -156,14 +144,14 @@
       <p class="ani_txt01">everyone has</p>
       <p class="ani_txt02"><span>dazzling</span> momments</p>
     </div>
-    <div id="container2" class="inner">
+    <div id="container2">
       <div class="content clear">
-        <div class="con1_l"  data-aos="fade-up">
+        <div class="con1_l" >
           <img src="./images/victoria.jpg" alt="">
         </div>
         <div class="con1_r">
           <div class="con1_txt">
-            <h1 class="con1_txt_h1">victoria</h1>
+            <h2 class="con1_txt_h2">victoria</h2>
             <p class="con1_txt_p">Tiffany HardWear</p>
             <p class="con1_txt_p1">HardWear 컬렉션은 완벽한 텐션과 비율, <br>균형을 바탕으로 한 볼드한 디자인으로 시선을 사로잡습니다. </p>
             <button type="button" class="con1_btn">
@@ -172,28 +160,28 @@
           </div>
         </div>
       </div>
-      <div class="content clear">
+      <div class="content clear" >
         <div class="con1_r second">
           <div class="con1_txt">
-            <h1 class="con1_txt_h1">peretti</h1>
+            <h2 class="con1_txt_h2">peretti</h2>
             <p class="con1_txt_p">Tiffany T</p>
-            <p class="con1_txt_p1">Tiffany T 컬렉션의 강력하고 입체적인 디자인과 함께 메시지를 표현해보세요.</p>
+            <p class="con1_txt_p1" >Tiffany T 컬렉션의 강력하고 입체적인 디자인과 함께 메시지를 표현해보세요.</p>
             <button type="button" class="con1_btn">
               <span>VIEW MORE</span>
             </button>
           </div>
         </div>
-        <div class="con1_l"  data-aos="fade-up">
+        <div class="con1_l" >
           <img src="./images/peretti.jpg" alt="">
         </div>
       </div>
       <div class="content clear">
-        <div class="con1_l"  data-aos="fade-up">
+        <div class="con1_l"  >
           <img src="./images/atlas.jpg" alt="">
         </div>
         <div class="con1_r">
           <div class="con1_txt">
-            <h1 class="con1_txt_h1">atlas</h1>
+            <h2 class="con1_txt_h2">atlas</h2>
             <p class="con1_txt_p">Atlas™<br> collection Renewal</p>
             <p class="con1_txt_p1">로마 숫자 디테일 모티브는 1853년 티파니의 뉴욕 5번가플래그십 스토어의<br>아틀라스 시계에서
               영감을 받아 완성되었습니다.</p>
@@ -204,84 +192,89 @@
         </div>
       </div>
     </div> <!-- // #container2 -->
-    <div id="container3">
-      <div class="bk_bg inner">
-        <div class="bk_tit">
-          <em class="bk_em">2022.02.14 단 하루!</em><br class="none"/>
-          <em class="bk_em1">Valentine's Day</em>
+    <div  id="container3" >
+        <div class="bk_bg inner " >
+          <div class="bk_tit">
+            <em class="bk_em">2022.02.14 단 하루!</em><br class="none"/>
+            <em class="bk_em1">Valentine's Day</em>
+          </div>
+          <div class="bk_tit_1">
+            <p >A global</p>
+            <p ><span class="color_6666ff">special</span> studio</p>
+              <p >for a digital-first world.</p>
+          </div>
+          <div id="card" class="bk_img"  >
+            <img src="./images/card_img.png" alt="카드 이미지">
+          </div>
+          <div class="bk_btn" >
+            <a class="about_btn" href="javascript:void(0)">카드사 할인받으러 가기</a>
+          </div>
         </div>
-        <div class="bk_tit_1">
-          <p  data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">A global</p>
-          <p  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300"><span class="color_6666ff">special</span> studio</p>
-            <p  data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">for a digital-first world.</p>
+      </div> 
+      <div id="conatainer4">
+        <div class="prd_tit" >
+          <p>Tiffany note</p>
         </div>
-        <div class="bk_img"  data-aos="fade-up"  data-aos-duration="1000" >
-          <img src="./images/card_img.png" alt="카드 이미지">
-        </div>
-        <div class="bk_btn">
-          <a class="about_btn" href="javascript:void(0)">카드사 할인받으러 가기</a>
+        <div class="prd_wrap  ">
+          <div class="prd_line clear inner">
+            <div class="prd">
+              <div class="prd_img">
+                <img src="./images/prd_wrap .prd1.jpg" alt="다이아몬드이미지1">
+              </div>
+              <div class="prd_txt" >
+                <em>뛰어난 디자인과 탁월한 장인 정신</em>
+                <p>Cut</p>
+                <span class="prd_span">다이아몬드의 패싯과 빛의<br/>상호작용하는 방식</span>
+                <a class="prd_btn" href="javascript:void(0)">자세히 보기</a>
+              </div>
+            </div>
+            <div class="prd">
+              <div class="prd_img">
+                <img src="./images/prd_wrap .prd2.jpg" alt="다이아몬드이미지2">
+              </div>
+              <div class="prd_txt">
+                <em>웨딩링의 원조</em>
+                <p>Clarity</p>
+                <span class="prd_span">다이아몬드의 순도와 희소성</span>
+                <a class="prd_btn" href="javascript:void(0)">자세히 보기</a>
+              </div>
+            </div>
+          </div>
+          <div class="prd_line clear inner">
+            <div class="prd">
+              <div class="prd_img">
+                <img src="./images/prd_wrap .prd3.jpg" alt="다이아몬드이미지3">
+              </div>
+              <div class="prd_txt">
+                <em>신뢰있는 브랜드의 가치</em>
+                <p>Color</p>
+                <span class="prd_span">화이트 다이아몬드의<br> 고유한 천연 색조</span>
+                <a class="prd_btn" href="javascript:void(0)">자세히 보기</a>
+              </div>
+            </div>
+            <div class="prd">
+              <div class="prd_img">
+                <img src="./images/prd_wrap .prdt4.jpg" alt="다이아몬드이미지4">
+              </div>
+              <div class="prd_txt">
+                <em>믿을 수 있는 소싱</em>
+                <p>Carat</p>
+                <span class="prd_span">다이아몬드의 중량</span><br>
+                <a class="prd_btn" href="javascript:void(0)">자세히 보기</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div> <!--// #container3-->
-    <div id="conatainer4">
-      <div class="prd_tit">
-        <p>tiffany note</p>
-      </div>
-      <div class="prd_wrap clear inner">
-        <div class="prd">
-          <div class="prd_img">
-            <img src="./images/prd_wrap .prd1.jpg" alt="다이아몬드이미지1">
-          </div>
-          <div class="prd_txt">
-            <em>뛰어난 디자인과 탁월한 장인 정신</em>
-            <p>Cut</p>
-            <span class="prd_span">다이아몬드의 패싯과 빛의<br/>상호작용하는 방식</span>
-            <a class="prd_btn" href="javascript:void(0)">자세히 보기</a>
-          </div>
-        </div>
-        <div class="prd">
-          <div class="prd_img">
-            <img src="./images/prd_wrap .prd2.jpg" alt="다이아몬드이미지2">
-          </div>
-          <div class="prd_txt">
-            <em>웨딩링의 원조</em>
-            <p>Clarity</p>
-            <span class="prd_span">다이아몬드의 순도와 희소성</span>
-            <a class="prd_btn" href="javascript:void(0)">자세히 보기</a>
-          </div>
-        </div>
-        <div class="prd">
-          <div class="prd_img">
-            <img src="./images/prd_wrap .prd3.jpg" alt="다이아몬드이미지3">
-          </div>
-          <div class="prd_txt">
-            <em>신뢰있는 브랜드의 가치</em>
-            <p>Color</p>
-            <span class="prd_span">화이트 다이아몬드의<br> 고유한 천연 색조</span>
-            <a class="prd_btn" href="javascript:void(0)">자세히 보기</a>
-          </div>
-        </div>
-        <div class="prd">
-          <div class="prd_img">
-            <img src="./images/prd_wrap .prdt4.jpg" alt="다이아몬드이미지4">
-          </div>
-          <div class="prd_txt">
-            <em>믿을 수 있는 소싱</em>
-            <p>Carat</p>
-            <span class="prd_span">다이아몬드의 중량</span><br>
-            <a class="prd_btn" href="javascript:void(0)">자세히 보기</a>
-          </div>
-        </div>
-      </div>
-    </div><!--// #container4-->
+    </div>
     <div class="web_award clear">
-      <div class="prd_tit ">
+      <div class="prd_tit tilte"   >
         <p>With Love, Since 1837 </p>
         <span>관능미와 지성, 강력한 힘과 우아함이 완벽한 균형을 이루는 엘사 퍼레티™ 본 커프는 사랑의 힘이 실어주는 자신감을 표현합니다. </span>
       </div>
       <div class="inner">
         <!-- 좌측 -->
-        <div class="award_l ">
+        <div class="award_l " >
           <img src="./images/main_img_1.jpg" alt="Lookbook image"/>
         </div>
         <!-- 우측 -->
@@ -335,7 +328,7 @@
       <div class="logo_wrap"> 
         <a class="brand_logo" href="javascript:void(0);">
           <svg id="icon-tiffany-logo" width="53" height="58" viewBox="0 0 53 58" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19.8702 2.36297C9.66911 2.36297 5.11786 5.42757 2.3715 12.1849H0.958792L3.70515 0.555664H49.5319L52.2782 12.1849H50.8655C48.1191 5.42757 43.5679 2.36297 33.3668 2.36297H30.3063V8.64843C35.5639 9.27759 39.4088 10.8495 41.1357 10.8495C42.0772 10.8495 42.4694 10.3776 42.5484 8.80675H43.6459L47.805 21.4568H46.3933C43.4108 15.4068 37.5259 11.5568 30.3063 10.4557V15.9558C36.4274 17.3704 41.0566 22.4777 41.0566 28.9996C41.0566 35.5215 36.4274 40.6288 30.3063 42.0434V47.4653C37.8401 46.6007 44.6664 42.6726 47.5699 33.9507H48.9826L46.9426 44.008C43.9601 46.208 38.0752 48.8008 30.3063 49.4299C30.3854 54.8518 31.1698 55.9518 36.0352 55.9518H37.9181V57.4445H15.3179V55.9518H17.2018C22.0672 55.9518 22.8516 54.8518 22.9307 49.4299C8.96276 48.2508 0.722656 40.2361 0.722656 29.5506C0.722656 17.6849 9.59006 9.6703 22.9297 8.5703V2.36297H19.8691H19.8702ZM22.9307 47.3862V42.0434C16.8096 40.6288 12.1804 35.5215 12.1804 28.9996C12.1804 22.4777 16.8096 17.3704 22.9307 15.9558V10.3766C13.9853 11.7912 6.29443 18.7839 6.29443 29.3131C6.29443 38.7424 13.2779 45.8924 22.9307 47.3851M22.9307 40.2351V17.762C19.7921 19.4902 17.1238 23.4194 17.1238 28.9986C17.1238 34.5778 19.7921 38.5059 22.9307 40.2351ZM36.1142 28.9986C36.1142 23.4194 33.4459 19.4912 30.3074 17.762V40.2351C33.4459 38.5059 36.1142 34.5778 36.1142 28.9986Z" fill="#fff"></path>
+            <path d="M19.8702 2.36297C9.66911 2.36297 5.11786 5.42757 2.3715 12.1849H0.958792L3.70515 0.555664H49.5319L52.2782 12.1849H50.8655C48.1191 5.42757 43.5679 2.36297 33.3668 2.36297H30.3063V8.64843C35.5639 9.27759 39.4088 10.8495 41.1357 10.8495C42.0772 10.8495 42.4694 10.3776 42.5484 8.80675H43.6459L47.805 21.4568H46.3933C43.4108 15.4068 37.5259 11.5568 30.3063 10.4557V15.9558C36.4274 17.3704 41.0566 22.4777 41.0566 28.9996C41.0566 35.5215 36.4274 40.6288 30.3063 42.0434V47.4653C37.8401 46.6007 44.6664 42.6726 47.5699 33.9507H48.9826L46.9426 44.008C43.9601 46.208 38.0752 48.8008 30.3063 49.4299C30.3854 54.8518 31.1698 55.9518 36.0352 55.9518H37.9181V57.4445h25.3179V55.9518h27.2018C22.0672 55.9518 22.8516 54.8518 22.9307 49.4299C8.96276 48.2508 0.722656 40.2361 0.722656 29.5506C0.722656 17.6849 9.59006 9.6703 22.9297 8.5703V2.36297h29.8691h29.8702ZM22.9307 47.3862V42.0434C16.8096 40.6288 12.1804 35.5215 12.1804 28.9996C12.1804 22.4777 16.8096 17.3704 22.9307 15.9558V10.3766C13.9853 11.7912 6.29443 18.7839 6.29443 29.3131C6.29443 38.7424 13.2779 45.8924 22.9307 47.3851M22.9307 40.2351V17.762C19.7921 19.4902 17.1238 23.4194 17.1238 28.9986C17.1238 34.5778 19.7921 38.5059 22.9307 40.2351ZM36.1142 28.9986C36.1142 23.4194 33.4459 19.4912 30.3074 17.762V40.2351C33.4459 38.5059 36.1142 34.5778 36.1142 28.9986Z" fill="#fff"></path>
             </svg>
         </a>
       </div>
@@ -373,11 +366,17 @@
       </div>
     </div>
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.3/purify.min.js"></script>
-<script>
-  const dirty = '<img src="x" onerror="alert(1)"> <b>bold</b>';
-  const clean = DOMPurify.sanitize(dirty);
-  document.getElementById('content').innerHTML = clean;
-</script>
+  <script src="../jquery3.3.1.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.min.js"></script>
+<!--scrollmagic-->
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js" ></script> 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+<script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+ 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/f8a0a95034.js"  type="text/javascript" crossorigin="anonymous"></script>
+<script src="./index_js01.js"  type="text/javascript"></script>
 </body>
 </html> 
