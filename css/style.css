@@ -185,7 +185,7 @@ transform: rotate(0deg) }
 
 /**cafe24**/
 .main_area .section03 .main_intro_wrap{width: 100%; top: 50%; transform: translateY(-50%); justify-content: center; flex-direction: column; align-items: center; display: flex; margin: 0 auto; position: absolute; left: 0;  height:100%;}
-.main_area .section03 .main_intro_wrap .txt01{ display: block; color: #fff; width: 100%; margin: 0 auto 60px; text-align: center; font-size: 18px; }
+.main_area .section03 .main_intro_wrap .txt01{ display: block;  transform:unset; color: #fff; width: 100%; margin: 0 auto 60px; text-align: center; font-size: 18px; }
 .cafe24_responsive_box{height: 50vh; width: 100%; position: relative;}
 .main_area .section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .txt02 strong{display: block; font-size: 23px; font-weight: 700; color: #fff; width: 100%; text-align: center;}
 .main_area .section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide p{width: 100%; display: block; font-size: 15px; line-height: 1.5; margin: 10px auto; text-align: center;}
@@ -216,13 +216,15 @@ transform: rotate(0deg) }
 /**common_con*/
 .main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro {z-index: 7; color: #fff; text-align: center; position: absolute; top: 50%; transform: translate(-50%,-50%); left: 50%; width: 100%; height: 100%; overflow:hidden; display: flex;  justify-content: center; flex-direction: column; margin: auto;}
 .logo{margin: 0 auto;}
-.main_area .swiper-container .txt01 { font-size: 18px;
+.main_area .txt01:not(.section03 .txt01) { font-size: 18px;
   display: inline-block;transform: translate3d(-29px, 32px, 10px); 
   -webkit-transition: all 0.4s ease-in-out 0.4s;
   -moz-transition: all 0.4s ease-in-out 0.4s;
   -o-transition: all 0.4s ease-in-out 0.4s;
   -ms-transition: all 0.4s ease-in-out 0.4s;
   transition: all 0.4s ease-in-out 0.4s;}
+
+
 
 .main_intro .txt02{
 transform: translate3d(-29px, 32px, 10px);
@@ -246,7 +248,7 @@ transition: all 0.4s ease-in-out 0.4s;}
   transition: all 0.4s ease-in-out 0.4s;}
 /* btn */
 .main_area .btn_wrap {transform: translate3d(-29px, 32px, 10px); -webkit-transition: all 1.2s ease-in-out 0.4s; -moz-transition: all 1.2s ease-in-out 0.4s; -o-transition: all 1.2s ease-in-out 0.4s; -ms-transition: all 1.2s ease-in-out 0.4s; transition: all 1.2s ease-in-out 0.4s;}
-.main_area .swiper-slide .bg_opac{position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 1; background: radial-gradient(circle at top left, rgba(0, 0, 0, 0) 17%, rgba(0, 0, 0, 0.9) 100%); -webkit-transition: all 2s ease 0.1s; -moz-transition: all 2s ease 0.1s; -o-transition: all 2s ease 0.1s; -ms-transition: all 2s ease 0.1s; transition: all 2s ease 0.1s; }
+.main_area .swiper-slide .bg_opac{position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 1; background: radial-gradient(circle at top left, rgba(0, 0, 0, 0) 17%, rgba(0, 0, 0, 0.5) 100%); -webkit-transition: all 2s ease 0.1s; -moz-transition: all 2s ease 0.1s; -o-transition: all 2s ease 0.1s; -ms-transition: all 2s ease 0.1s; transition: all 2s ease 0.1s; }
 .main_area .prev_btn {position: fixed; letter-spacing: 1px;}
 .main_area .prev_btn:before { content: ""; display: block; width: 0; height: 1px; position: absolute; bottom: -5px; left: 0; background: #fff; -webkit-transition: all .5s ease 0.1s; -moz-transition: all .5s ease 0.1s; -o-transition: all .5s ease 0.1s; -ms-transition: all .5s ease 0.1s; transition: all .5s ease 0.1s; }
 .main_area .next_btn {position: relative; letter-spacing: 1px; }
