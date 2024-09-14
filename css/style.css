@@ -216,7 +216,8 @@ transform: rotate(0deg) }
 /**common_con*/
 .main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro {z-index: 7; color: #fff; text-align: center; position: absolute; top: 50%; transform: translate(-50%,-50%); left: 50%; width: 100%; height: 100%; overflow:hidden; display: flex;  justify-content: center; flex-direction: column; margin: auto;}
 .logo{margin: 0 auto;}
-.main_area .txt01:not(.section03 .txt01) { font-size: 18px;
+
+.main_area .swiper-container .txt01:not(.main_area .swiper-container .section03 .txt01) { font-size: 18px;
   display: inline-block;transform: translate3d(-29px, 32px, 10px); 
   -webkit-transition: all 0.4s ease-in-out 0.4s;
   -moz-transition: all 0.4s ease-in-out 0.4s;
@@ -340,7 +341,11 @@ a:hover{text-decoration:none}
 }
 
 @media screen and (max-width: 1024px) {
-  .main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro .date{font-size: 16px;}
+
+    .main_area .section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .txt02 strong{font-size: 18px;}
+.main_area .section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide p{font-size: 14px;}
+    
+    .main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro .date{font-size: 16px;}
   .main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro{padding: 0 30px;}
   .main_area .section11 .swiper-wrapper.flower>.swiper-slide .information,
   .main_area .section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide .information{opacity: 1; visibility: visible;}
@@ -368,6 +373,6 @@ a:hover{text-decoration:none}
   .main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro .txt02 strong{font-size: 24px;}
   .main_area .date{font-size: 14px;}
   .main_area .section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide>div{position: relative; width: 100%; height: 100%;}
-
   .btn_container a{width: 100%;}
+    .main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro .date{font-size: 14px;}
 }
