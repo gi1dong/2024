@@ -363,4 +363,5 @@ a:hover{text-decoration:none}
   .main_area .section03 .main_intro_wrap .cafe24_responsive_box .mySwiper.cafe24 .swiper-wrapper .swiper-slide>div{position: relative; width: 100%; height: 100%;}
   .btn_container a{width: 100%;}
     .main_area .swiper-container .swiper-wrapper .swiper-slide .main_intro .date{font-size: 14px;}
+.main_area .section03 .main_intro_wrap .mySwiper.cafe24 .swiper-wrapper .swiper-slide .information .cafe24_button span{font-size: 12px;}
 }
