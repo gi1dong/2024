@@ -1328,11 +1328,10 @@ height: 100%;
 .brand_txt {
   width: 100%;
   height: 500px;
-  background-image: url(../images/bg_2.jpg);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #252525;z-index: 888;
+  background-image: url(./images/main_vis_7.jpg);
+  background-position: center; background-repeat: no-repeat; background-size: cover;
+  /* background: #F4E5CE; */
+  color: #252525;z-index: 88;
   position: relative;
   z-index: 1;
 }
