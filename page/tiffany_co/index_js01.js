@@ -1,4 +1,3 @@
-
 window.onload=function(){
   (function () {
     $(".hamburger").click(function () {
@@ -14,6 +13,9 @@ window.onload=function(){
     });
     $(".close_btn").click(function () {
       $("#left_menu").stop().animate({ left: "-100%" }, 600);
+    });
+    $(".header .hd_icon").click(function(){
+      $(".pop_up").addClass("active")
     });
     var controller = new ScrollMagic.Controller({
       globalSceneOptions: {
@@ -62,4 +64,3 @@ window.onload=function(){
   }());
   AOS.init();
 }
-

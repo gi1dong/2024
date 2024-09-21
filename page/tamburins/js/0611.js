@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", ()=> {
-  gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger);
 
  // page layout 
  const main = function (){
@@ -365,6 +365,8 @@ navigation: {
 }
 });
 
+});
+
 function collapse(element) {
   var before = document.getElementsByClassName("activ")[0]               // 기존에 활성화된 버튼
   if (before && document.getElementsByClassName("activ")[0] != element) {  // 자신 이외에 이미 활성화된 버튼이 있으면
@@ -380,6 +382,3 @@ function collapse(element) {
       content.style.maxHeight = content.scrollHeight + "px";  // 접혀있는 경우 펼치기
   }
 }
-
-});
-

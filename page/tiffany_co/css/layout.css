@@ -69,11 +69,12 @@ button{margin: 0; padding: 0; border: none; outline: none; background: transpare
 img{image-rendering: pixelated; display: block; width: 100%; max-width: 100%; height: 100%; object-fit: cover;}
 .clear{display: block; content: ''; clear: both;}
 .inner{ position: relative; max-width: 1520px;  width: 100%; margin: 0 auto;}
-.none{display: none;}
+.none, .mo{display: none;}
+
 body, html{width: 100%; height: 100%; line-height: 1;font-family: 'MapoFlowerIsland'; overflow-x: hidden;
   display: block; padding: 0; margin: 0; font-size: 14px;}
   
-body{overflow-x: hidden; min-width: 360px;} 
+body{overflow-x: hidden; min-width: 360px; } 
 body *{box-sizing: border-box; font-family: 'MapoFlowerIsland'; }
 
 header .header {
@@ -91,7 +92,7 @@ header .header .inner{height: 100%; width: calc(100% - 60px); margin: 0 auto;}
 
 /* 좌측 햄버거*/
 .header .hamburger {
-  position: absolute;
+  position: absolute; z-index: 99;
   width: 30px; height: 20px; cursor: pointer;
   top: 50%; 
   transform: translatey(-50%);
@@ -146,8 +147,10 @@ display: block;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 28px;
+  width: 30px;
 }
+
+.hd_icon svg{vertical-align: middle; object-fit: fill;}
 
 #left_menu {
   overflow-x: hidden;
@@ -240,13 +243,8 @@ display: block;
   width: 50%;
 }
 
-#left_menu .menu .menu_li {
-  color: #fff;
-  margin: 1px auto;
-  font-size: 50px;
-  display: block;
-  line-height: 1.5;
-}
+#left_menu .menu .menu_li>a{font-size: 40px;   font-size: 50px; color: #fff;
+  display: block; line-height: 1.5;}
 
 .menu_date {
   display: block;
@@ -334,6 +332,7 @@ display: block;
   opacity: 1;
 }
 
+
 /* footer */
 footer{background: #000;}
 .footer {font-size: 15px;position: relative;   width: 100%;  background: #000;  color: #636363;padding: 20px 20px 40px; overflow: hidden;}
@@ -377,7 +376,7 @@ footer .award_btn,
   background: #000;
   font-size: 13px;
   text-align: center; line-height: 1.5;
-  padding: 3% 6%; 
+  padding: 10px 20px; 
   min-width: 40%; border-radius: 10px;
   margin-top: 10px;
 }
@@ -402,11 +401,11 @@ footer .award_btn{background: #81d8d0;}
   .none{display: block;}
   .inner{padding: 0 30px; margin: 0 auto; height: 100%;}
   header .header{height: 60px; position: fixed; z-index: 99; background: #81d8d0; color: #fff; }
-  .header .logo{    height: auto;
-    max-width: 100%;
-    width: 176px;
+  .header .logo{  height: auto;
+    width: 100%; object-fit: contain;
+    max-width: 176px;
 }
-
+.right_txt{height: 50%; margin: 30px auto 0; text-align: left; width: 100%;}
   .right_txt .rt_1st_wrap .rt_1st>span,
   .right_txt .rt_1st_wrap .rt_1st>span {display: none;}
 
@@ -455,20 +454,23 @@ footer .award_btn{background: #81d8d0;}
 @media screen and (max-width: 860px) {
 }
 @media screen and (max-width: 780px) {
+ 
+  .mo{display: flex;}
+  .pc{display: none;}
   #left_menu .rm_icon .logo.bg_f {
    display: none;
   }
   .right_txt {
-    display: none;
+  height: auto;
   }
   #left_menu .aside .menu {
     width: 100%;
-    padding-top: 0;
+    padding-top: 0; text-align: left;
   }
 
   #left_menu .aside .menu .menu_ul .menu_li>a {
-    font-size: 50px;
-    text-align: center;
+    font-size: 34px;
+    text-align: left;
     width: 100%;
   }
 
@@ -487,9 +489,19 @@ footer .award_btn{background: #81d8d0;}
   footer .footer .info_wrap, .ft_bt{width: 100%;}
   .info_wrap{display: block;}
 }
+
 @media screen and (max-width: 620px) {
   #left_menu .aside .menu .menu_ul .menu_li>a {
-    font-size: 46px;
+    font-size: 30px;
   }
+
+
+
+}
+
+@media screen and (max-width: 450px) {
+#left_menu .aside .menu .menu_ul .menu_li>a {
+  font-size: 24px;
+}
 
 }
