@@ -107,11 +107,15 @@ window.onload = function(){
     if ($("#menu_btn").hasClass("on")) {
       $(this).removeClass("on");
       $("#right_menu").stop().animate({ right: "- 100%" }, 300);
+      $("html,body").css({overflow: "hidden", height: "100vh" });
+
+
     } else {
       $(this).addClass("on");
       $(".dimmed_bg").addClass("on");
       $("#container").addClass("close");
       $("#right_menu").stop().animate({ right: 0 }, 300);
+      $("html,body").css({overflow: "auto", height: "100%" });
     }
   });
   $(".close_btn").click(function () {
@@ -134,6 +138,8 @@ window.onload = function(){
         $(this).addClass("opentab");
         $(".sub_menu").stop().animate({ height: "0" });
         $(this).parent().find("div").stop().animate({ height : ctgHeught });
+        // $(this).parent().find("div").css({ "overflow-y" : "scroll" },{"overflow":"visible"});
+        $(" .#right_menu .menu_inner_wrap").css({ "overflow-y" : "scroll" })
       }
   });
   $(".bd_item .item_tit").click(function () {

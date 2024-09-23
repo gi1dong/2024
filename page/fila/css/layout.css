@@ -276,7 +276,7 @@ img {
 }
 
 .dimmed_bg.on {
-  z-index: 9;
+  z-index: 1000;
   opacity: 1; visibility: visible;
 }
 
@@ -483,10 +483,10 @@ header .header .hd_icon #menu_btn .btn_span:last-child {
   font-family: "NotoSansKR","Montserrat" sans-serif!important;
   position: fixed;
   background: #f5f5f5;
-  width: 80%;
-  height: 100vh;
-  z-index: 999; right: -100%;
-  top: 0%;
+  width: 80%; 
+  height: 100%;
+  z-index:1001; right: -100%;
+  top: 0;
   transition: all .6s;
   text-align: left;
   box-shadow: 0 0 20px rgb(0 0 0 / 10%);
@@ -555,26 +555,29 @@ header .header .hd_icon #menu_btn .btn_span:last-child {
   line-height: 2;
 }
 
-#right_menu .menu_inner_wrap {padding: 10px 30px; border-bottom: 1px solid #ddd; width: 100%;}
-#right_menu .menu_inner_wrap .main_menu_list .list_items{width: 100%;}
-#right_menu .menu_inner_wrap .main_menu_list .list_items .ctg_name {position: relative; display: block; width: 100%; line-height: 30px; font-size: 15px;}
-#right_menu .menu_inner_wrap .main_menu_list .list_items .ctg_name.opentab{width:100%;}
+#right_menu .menu_inner_wrap {padding: 10px 30px; width: 100%; height: 100%;  }
+#right_menu .menu_inner_wrap ul{overflow-y: scroll;}
+#right_menu .menu_inner_wrap .main_menu_list .list_items{width: 100%; height: 100%;}
+#right_menu .menu_inner_wrap .main_menu_list .list_items .ctg_name {position: relative; display: block; width: 100%; line-height: 30px; font-size: 15px; overflow: hidden;}
+#right_menu .menu_inner_wrap .main_menu_list .list_items .ctg_name.opentab{width:100%; height: 100%; }
 #right_menu .menu_inner_wrap .main_menu_list .list_items .ctg_name::before { content: ""; position: absolute;  display: block; position: absolute; right: 0; height: 2px; width: 20px;}
 #right_menu .menu_inner_wrap .main_menu_list .list_items .ctg_name::after {content: ""; position: absolute; right: 0px; color: #ddd; bottom: 40%; height: 7px; width: 7px; transform: rotate(45deg) scale(0.8); 
   border-style: solid; border-image: initial; border-width: 2px 2px 0px 0px;}
+  #right_menu .menu_inner_wrap .main_menu_list .list_items .ctg_name.opentab ~ #right_menu .menu_inner_wrap .main_menu_list .list_items .sub_menu{overflow-y: scroll; overflow: visible;}
+  
 /* 서브메뉴 div */
 #right_menu .menu_inner_wrap .main_menu_list .list_items .sub_menu {height: 0; width: 100%; overflow: hidden;}
 /* 서브메뉴 ul */
-#right_menu .menu_inner_wrap .main_menu_list .list_items .sub_menu .menu_list_wrap {color: #0b203f; padding: 0 10px; background: #f5f5f5; width: 100%; display: block; text-align: left;  font-size: 14px;  overflow-y: scroll;}
+#right_menu .menu_inner_wrap .main_menu_list .list_items .sub_menu .menu_list_wrap {color: #0b203f; padding:10px; background: #f5f5f5; width: 100%; display: block; text-align: left;  font-size: 14px; }
 
 #right_menu .menu_inner_wrap .main_menu_list .list_items .sub_menu .menu_list_wrap
 li{line-height: 1; padding: 10px 0;}
 #right_menu .guide {
-  width: 100%;
+  width: 100%;     border-bottom: 1px solid #ddd;
   display: block;
   text-align: left;
-  padding: 6% 4%;
-  border-bottom: 2px solid #ddd;
+  padding: 30px;
+  background: #f5f5f5;
 }
 
 #right_menu .guide .guide_p {
