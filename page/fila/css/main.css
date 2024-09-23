@@ -158,8 +158,7 @@ margin: 0 auto 30px;
 
 .product .prd_tit .prd_tit_p {
   font-family: "Noto Sans KR", sans-serif;
-  font-weight: bold;
-  display: inline-block;
+  font-weight: 800;
 }
 
 .product .prd_tit .prd_line {
@@ -229,8 +228,8 @@ margin: 0 auto 30px;
   margin: 0 auto;
   display: block;
 }
-.tab ul{width: calc(100% - 30px); display: flex; justify-content: space-between; align-items: center; margin: 0 auto;}
-.tab ul li {background: #0b203f;text-align: center; margin-right: 10px;padding: 2%; box-sizing: border-box; width:33.3%; cursor: pointer;}
+.tab ul{width: calc(100% - 60px); display: flex; justify-content: space-between; align-items: center; margin: 0 auto;}
+.tab ul li {background: #0b203f;text-align: center; margin-right: 10px;padding: 10px 0; box-sizing: border-box; width:33.3%; cursor: pointer;}
 .tab ul li:last-child {margin-right: 0; float: right;}
 .tab ul li span { display: inline-block; font-size: 15px;  color: #fff;}
 .tab ul li.on { background: #e1002a;}
@@ -581,9 +580,9 @@ top:50%; transform: translateY(-50%); right: 0;
 }
 
 .events .space_tit .mb_p {line-height: 48px; padding: 10px 20px; background: #fff;text-align: center;font-size: 16px; color: #2d2d2d;}
-.instagram {background-color: #ffff; width: 100%;color: #2d2d2d; padding: 10% 0;}
+.instagram {background-color: #ffff; width: 100%;color: #2d2d2d; padding: 60px 0;}
 .instagram .inst_tit>h3 {display: block;width: 100%; font-weight: 700;}
-.instagram .inst_tit .inst_main_title {font-size: 20px;text-align: center;line-height: 22px;color: #e1002a;}
+.instagram .inst_tit .inst_main_title {font-size: 20px;text-align: center;line-height: 1; color: #e1002a;}
 
 .instagram .inst_tit .inst_sub_titile {font-size: 30px; line-height: 35px;text-align: center;color: #2d2d2d; margin: 8px auto 32px;}
 .inst_content {display: block; height: 100%;width: 100%;
@@ -682,12 +681,9 @@ top:50%; transform: translateY(-50%); right: 0;
   color: #2d2d2d;
 }
 
-.content .con_title {font-size: 28px; padding:30px; margin-bottom: 5%;
-  width: 100%;
-  display: inline-block;
-  text-align: center;
-}
-.content .con_title .prd_line {color: #0b203f;}
+.content .con_title {font-size: 28px; padding:60px 30px 30px 30px;
+  width: 100%; text-align: center;}
+.content .con_title .prd_line {color: #2d2d2d;}
 .content .con_title .prd_line:last-child {color: #e1002a;}
 .content .con_title .con_p {
   font-weight: 800;
@@ -709,6 +705,7 @@ top:50%; transform: translateY(-50%); right: 0;
   width: 100px;
   font-size: 14px;
   margin-top: 12px;
+  line-height: 1.5;
   padding: 10px 15px 10px 0;
   position: relative;
   color: #2d2d2d;
@@ -720,7 +717,7 @@ top:50%; transform: translateY(-50%); right: 0;
   position: absolute;
   left: 0;
   bottom: 1px;
-  height: 1px;
+  height: 0.5px;
   content: "";
   width: 100%;
   background: #2d2d2d;
@@ -738,6 +735,8 @@ top:50%; transform: translateY(-50%); right: 0;
   border-width: 1px 1px 0 0;
   transform: rotate(45deg) translateY(-50%);
 }
+
+.text-notice{font-size: 16px;}
 
 .txt03 p, .txt04 p{padding: 60px 15px; font-size: 15px; }
 .txt01>div{width: calc(100% - 60px); margin: 0 auto;}
@@ -765,4 +764,15 @@ transform: translateY(0);
   -webkit-transform: translateX(0);
           transform: translateX(0);
   transition: all 0.6s;
+}
+
+
+@media screen and (max-width: 500px) {
+  .instagram .inst_tit .inst_main_title{font-size: 16px;}
+.instagram .inst_tit .inst_sub_titile,.instagram .inst_tit>h3,.con_title,.content .con_title,.events .space_tit .space_sp,.road_trip .space_tit .space_sp,.space .space_tit .space_sp,.video_area .video_txt,.product .prd_tit,.prd_tit,.awards_tit,.awards_days{font-size: 22px; font-weight: 800;}
+.content .contents .con_txt>p,
+.notice_btn{font-size: 14px;}
+.inst_content .inst_txt .inst_txtP,.more_btn p,.events .space_tit .space_p,.our_models .om_p{font-size: 16px;}
+.our_models .om_p{margin-top: 0;}
+.content .contents .con_txt>strong{font-size: 18px;}
 }

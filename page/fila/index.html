@@ -5,11 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.3/purify.min.js"></script>
-<script>
-  const dirty = '<img src="x" onerror="alert(1)"> <b>bold</b>';
-  const clean = DOMPurify.sanitize(dirty);
-  document.getElementById('content').innerHTML = clean;
-</script>
     <link rel="icon" type="icon" href="./images/fila-favicon.ico" />
     <title>FILA (mobile)</title>
     <link
@@ -950,10 +945,10 @@
             </div>
           </div>
         </div>
-        <div class="info_tit">
-          <p>이벤트 안내</p>
-        </div>
         <div class="ft_info">
+          <div class="info_tit">
+            <p>이벤트 안내</p>
+          </div>
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -1005,20 +1000,21 @@
               </div>
             </div>
           </div>
-        </div>
-        <a class="notice_btn" href="javascript:void(0);">
-          <p>더 많은 이벤트 보러가기</p>
-        </a>
-        <div class="info_tit">
-          <p>이달의 휠라 이슈</p>
+          <a class="notice_btn" href="javascript:void(0);">
+            <p>더 많은 이벤트 보러가기</p>
+          </a>
         </div>
         <div class="ft_menu">
+          <div class="info_tit">
+            <p>이달의 휠라 이슈</p>
+          </div>
           <div class="ft_menu_inner">
             <div class="menu_wrap">
               <ul class="menu_list">
                 <li class="bd_item">
                   <a href="javascript:void(0);" class="item_tit">
                     브랜드 새 지향점 담은 글로벌 캠페인 ‘벨리시모 캠페인' 전개
+                    <span class="gap"></span>
                     <span class="arrow"></span>
                   </a>
                   <!-- sub_menu area -->
@@ -1050,6 +1046,7 @@
                   <a href="javascript:void(0);" class="item_tit"
                     >후원 선수 크레이치코바 우승 기념 ‘테니스 스페셜 이벤트’
                     진행
+                    <span class="gap"></span>
                     <span class="arrow"></span>
                   </a>
                   <!-- sub_menu area -->
@@ -1113,7 +1110,9 @@
                 </li>
                 <li class="bd_item">
                   <a href="javascript:void(0);" class="item_tit"
-                    >글로벌 브랜드 앰버서더 헤일리 비버와 신규 캠페인 전개<span
+                    >글로벌 브랜드 앰버서더 헤일리 비버와 신규 캠페인 전개
+                    <span class="gap"></span>
+                    <span
                       class="arrow"
                     ></span
                   ></a>
@@ -1140,7 +1139,9 @@
                 <li class="bd_item">
                   <a href="javascript:void(0);" class="item_tit">
                     제품 선순환 구조와 공급망 투명성 향한 지속가능 여정
-                    ‘눈길’<span class="arrow"></span>
+                    ‘눈길’
+                    <span class="gap"></span>
+                    <span class="arrow"></span>
                   </a>
                   <!-- sub_menu area -->
                   <div class="sub_bd">
@@ -1172,7 +1173,9 @@
                 <li class="bd_item">
                   <a href="javascript:void(0);" class="item_tit"
                     >레브 탄주(Lev Tanju)와 글로벌 신규 프리미엄 라인
-                    ‘FILA+(휠라플러스)’ 론칭<span class="arrow"></span>
+                    ‘FILA+(휠라플러스)’ 론칭
+                    <span class="gap"></span>
+                    <span class="arrow"></span>
                   </a>
                   <!-- sub_menu area -->
                   <div class="sub_bd">
@@ -1201,6 +1204,7 @@
                 <li class="bd_item">
                   <a href="javascript:void(0);" class="item_tit"
                     >캄보디아 정수 시설 설치 지원…진정성있는 CSR 활동 지속
+                    <span class="gap"></span>
                     <span class="arrow"></span>
                   </a>
                   <!-- sub_menu area -->
