@@ -218,7 +218,7 @@ margin: 0 auto 30px;
   margin-top: 16px;
   padding: 20px 0;
   text-align: center;
-  font-family: "Noto Sans KR","Montserrat" sans-serif;
+  font-family: "NotoSansKR","Montserrat" sans-serif;
 }
 
 .tab {
@@ -285,7 +285,7 @@ margin: 0 auto 30px;
 .awards_tab .txt0 div {display: none;}
 .awards_tab .txt0 div.on {display: block;}
 
-.awards_days {color: #0B203F; font-weight: 700; text-align: center; display: block; margin: 5% auto; font-size: 25px; font-family: "Montserrat";}
+.awards_days {color: #1d1d1d; font-weight: 300; text-align: center; display: block; margin: 5% auto; font-size: 25px; font-family: "Montserrat";}
 .awards_info .sustainability{width:100%; margin: 0 auto; background: rgb(253,230,239);}
 .collaboration .txt_wrap p{ font-size: 15px;  line-height: 1.8;}
 .thug{background: #2d2d2d; color: #ededed; text-align: center;}
@@ -324,7 +324,7 @@ div[class^=txt0].on img{height: 100%; object-fit: cover; image-rendering: pixela
 .awards_tab .history_info table tbody tr td .table_content.fir{border-left: none;}
 .history_info table tbody tr{display: flex; flex-direction: row; width: 100%; background: transparent;}
 .awards_tab .sustainability_txt{margin: 20px auto; width: 100%;} 
-.awards_tab .sustainability_txt>p{font-size: 18px; font-family: "Montserrat"; display:block; font-weight: 600; }
+.awards_tab .sustainability_txt>p{font-size: 18px; font-family: "Montserrat"; display:block; font-weight: 300; }
 .awards_tab .sustainability_txt>span{display: block; text-align: left; font-size: 15px; line-height:1.5;}
 .awards_tab .sustainability_txt .tab02_title01{color: rgb(128,171,113);}
 .awards_tab .sustainability_txt .tab02_title02{color: rgb(207,144,107);}
