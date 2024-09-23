@@ -13,7 +13,6 @@ main .main_vis .mySwiper .swiper-wrapper .swiper-slide:nth-child(4) {background:
 main .main_vis .mySwiper .swiper-wrapper .swiper-slide:nth-child(5) {background: url(../images/main_vis2.jpg)no-repeat center/cover;background-position: center;}
 main .main_vis .mySwiper .swiper-wrapper .swiper-slide:nth-child(6) {background: url(../images/main_vis7.jpg)no-repeat center/cover;background-position: center;}
 main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner { margin: 0 auto;width: calc(100%  - 60px);height: 100%; position: relative; cursor: pointer;}
-
 main .main_vis .mySwiper .swiper-wrapper .swiper-slide .main_vis_inner .main_txt{position: absolute; bottom: 200px; left: 0;}
 
 /* main vis txt */
@@ -171,7 +170,7 @@ margin: 0 auto 30px;
 
 .product .mySwiper {
   position: relative; padding: 0 0 30px 0;
-  width: 100%; box-sizing: border-box;
+  width: 100%;
 }
 
 .product .mySwiper .swiper-initialized .swiper-horizontal {
@@ -229,7 +228,7 @@ margin: 0 auto 30px;
   display: block;
 }
 .tab ul{width: calc(100% - 60px); display: flex; justify-content: space-between; align-items: center; margin: 0 auto;}
-.tab ul li {background: #0b203f;text-align: center; margin-right: 10px;padding: 10px 0; box-sizing: border-box; width:33.3%; cursor: pointer;}
+.tab ul li {background: #0b203f;text-align: center; margin-right: 10px;padding: 10px 0;  width:33.3%; cursor: pointer;}
 .tab ul li:last-child {margin-right: 0; float: right;}
 .tab ul li span { display: inline-block; font-size: 15px;  color: #fff;}
 .tab ul li.on { background: #e1002a;}
@@ -243,7 +242,7 @@ margin: 0 auto 30px;
 }
 
 /* category_tab 영역 */
-.category_tab {width: 100%; margin: 0 auto 0; padding: 60px 0; box-sizing: border-box; display: flex; color: #2d2d2d; overflow: hidden;}
+.category_tab {width: 100%; margin: 0 auto 0; padding: 60px 0; display: flex; color: #2d2d2d; overflow: hidden;}
 .category_tab .mySwiper {display: flex; width: 100%; position: relative; background: #f5f5f5;}
 .category_tab .mySwiper .swiper-wrapper {width: 100%; background: #f5f5f5;}
 .category_tab .mySwiper .swiper-wrapper .swiper-slide{width: 100%; display: flex; flex-direction:column; }
@@ -318,7 +317,7 @@ div[class^=txt0].on img{height: 100%; object-fit: cover; image-rendering: pixela
 .awards_tab .history_info table{margin: 10px auto; width: 100%; display: block;}
 .awards_tab .history_info table tbody{margin: 10px auto; display: flex; flex-direction: column;}
 .awards_tab .history_info table tbody .content.first{display: flex; flex-direction: row;  width: 100%; background: transparent;}
-.awards_tab .history_info table tbody .content.first th{display:flex; justify-content: space-between; align-items: center; width: calc(100% - 40px); margin: 0 auto; text-align: center; border-left: 1px solid rgb(204,204,204);border-top: 1px solid rgb(204,204,204); box-sizing: border-box; }
+.awards_tab .history_info table tbody .content.first th{display:flex; justify-content: space-between; align-items: center; width: calc(100% - 40px); margin: 0 auto; text-align: center; border-left: 1px solid rgb(204,204,204);border-top: 1px solid rgb(204,204,204);}
 .awards_tab .history_info table tbody .content.first th .table_header{font-size: 15px; line-height: 1.5; width: 33.3%; border-right: 1px solid rgb(204,204,204); text-align: center;  padding: 10px 0; box-sizing:border-box;  font-weight: 500; background: transparent;}
 .awards_tab .history_info table tbody tr td {display: flex; flex-direction: row; width: calc(100% - 40px); margin: 0 auto;box-sizing: border-box; background: #f5f5f5; border: 1px solid rgb(204,204,204); overflow: hidden;}
 .awards_tab .history_info table tbody tr td .table_content{font-size: 12px; line-height: 1.5; text-align: center;  padding: 14px 0; box-sizing:border-box;  width: 33.3%;font-weight: 400;}
@@ -330,7 +329,7 @@ div[class^=txt0].on img{height: 100%; object-fit: cover; image-rendering: pixela
 .awards_tab .sustainability_txt .tab02_title01{color: rgb(128,171,113);}
 .awards_tab .sustainability_txt .tab02_title02{color: rgb(207,144,107);}
 .awards_tab .sustainability_txt .tab02_title03{color: rgb(136,187,216);}
-.awards_tab .sustainability_txt .more_btn_tab{display: block; text-align: left; padding: 5px 10px; box-sizing: border-box; margin:10px auto 0;}
+.awards_tab .sustainability_txt .more_btn_tab{display: block; text-align: left; padding: 5px 10px; margin:10px auto 0;}
 .awards_tab .sustainability_txt .more_btn_tab>span{font-size: 12px; color: #fff; display: block;}
 .awards_tab .sustainability_txt .more_btn_tab.one{ background: rgb(128,171,113);}
 .awards_tab .sustainability_txt .more_btn_tab.two{ background:rgb(207,144,107);}

@@ -234,7 +234,7 @@ img {
   
   @font-face {
 	font-family: "Montserrat";
-	font-weight: 300;
+	font-weight: 100 900;
 	font-style: normal;
 	src: url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 	unicode-range:U+0061-007A, U+0041-005A;
@@ -409,12 +409,10 @@ legend {
   margin: 1%;
   border: 1px solid #fff;
 }
-
 .searchForm {
   padding: 5% 0;
   position: absolute;
   top: 0;
-  box-sizing: border-box;
 }
 
 .fld {
@@ -800,7 +798,7 @@ footer .footer .ft_board .ft_bd_inner .ft_bd_list .bd_item {
   font-size: 14px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-footer .footer .ft_board .ft_bd_inner .ft_bd_list .bd_item>a{display: block; width: 100%; padding: 5px; box-sizing: border-box;}
+footer .footer .ft_board .ft_bd_inner .ft_bd_list .bd_item>a{display: block; width: 100%; padding: 5px;}
 footer .footer .ft_board .ft_bd_inner .ft_bd_list .bd_item>a .event_txt{display: inline-block;font-size: 15px; line-height: 1.5;}
 footer .footer .ft_board .ft_bd_inner .ft_bd_list .bd_item>a .arrow {position: absolute; top:50%; transform: translateY(-50%); right: 0; display:inline-block; z-index: 24;}
 footer .footer .ft_board .ft_bd_inner .ft_bd_list .bd_item>a .arrow .arrow_icon{position: relative; width:30px; height:30px; display:inline-block; z-index: 24;}
@@ -833,9 +831,9 @@ footer .footer .ft_board .ft_bd_inner .ft_bd_list .bd_item:last-child:hover:befo
 
 footer .bd_language {padding: 40px; overflow: hidden; width: 100%;margin: 0 auto; background: #2d2d2d;}
 footer .bd_language .bd_en {width:50%; padding: 4px 10px;border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: 0px 3px 6px rgba(0,0,0,0.16);  background-color: #000;color: #fff; float: left; text-align: center; font-size: 15px;}
-footer .bd_language .bd_ko {width:50%; padding: 5px 10px; box-sizing: border-box; float: right; text-align: center;font-size: 15px;color: #fff;background: #666;}
+footer .bd_language .bd_ko {width:50%; padding: 5px 10px; float: right; text-align: center;font-size: 15px;color: #fff;background: #666;}
 footer .bd_language .bd_ko>a{display: block; width: 100%;}
-footer .bd_language .bd_en>a{display: block; width: 100%; box-sizing: border-box;}
+footer .bd_language .bd_en>a{display: block; width: 100%; }
 footer .footer .ft_logo {width: 100%; background: #2d2d2d; box-shadow: 0% -60px 30px 5px #2d2d2d; padding: 20px;}
 footer .footer .ft_logo .logo_wrap {width: 100px; margin: 30px auto 30px; display: block;}
 
