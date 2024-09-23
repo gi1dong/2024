@@ -339,4 +339,5 @@ $(".fullMenu .close").click(function(){
       start: "top"
     },    stagger: .3, opacity: 1, y: 0, duration: .5
   });
+
 };
