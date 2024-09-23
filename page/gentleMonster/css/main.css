@@ -1965,6 +1965,8 @@ padding: 120px 0;
   .section05 .moreBtn {width: 40%; margin: 0 auto; font-size: 14px;}
   .section06 .swiper-slide .brandBtn{line-height: unset; font-size: 13px;}
   .section06.inner .collaborationWrap .collaborationMain .swiper-container .swiper-wrapper .swiper-slide .brandHome .brandImg{height: 250px;}
+
+  header .headerInner .logoH1{max-width: 130px; width: 100%;}
 }
 /*  */
 
@@ -2216,7 +2218,7 @@ footer .mofnb.on {
   footer .footerWrap .ftInfo {
     width: 100%;
     display: block; padding-top: 0;
-    margin: 60px auto 0;
+    margin: 0 auto 0;
   }
 
   footer .footerWrap .ftInfo ul {
@@ -2226,7 +2228,7 @@ footer .mofnb.on {
     width: 100%;
     margin: 30px auto 0;
   }
-
+  footer .footerWrap .clear{padding: 60px 0 0 0;}
   footer .footerWrap .iconWrap a {
     margin-right: 10px;
   }
