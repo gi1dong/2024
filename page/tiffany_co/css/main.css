@@ -488,7 +488,7 @@ main #container3 {
   box-sizing: inherit;
 }
 
-rainbow {
+.rainbow {
   width: 100%;
   height: 100%;
   -webkit-animation: o-rotate-360 linear 8s infinite;
@@ -887,7 +887,7 @@ h3 {
 
   .web_award .award_l{margin: 60px auto 60px;}
   .web_award .prd_tit{margin: 0 auto 30px;}
-  .web_award .award_r .award_r2 > .award_r_txt > p{font-weight: 300;}
+  .web_award .award_r .award_r2 > .award_r_txt > p:not(.bold){font-weight: 300;}
  .web_award .award_r .award_r1>.award_r_img, 
  .web_award .award_r .award_r3>.award_r_img, 
  .web_award .award_r .award_r2 .award_r_img,
@@ -907,6 +907,10 @@ h3 {
   
 }
 @media screen and (max-width: 900px) {
+  #container2 .content.clear.third .con1_txt .con1_txt_p{line-height: 1;}
+  #container2 .content.clear.third{margin: 0 auto 30px;}
+  #container2 .content.clear.third .pc{display: none;}
+  
   main .container_wrap #container1 .main_vis .main_l {
     position: none;
     text-align: center;
@@ -990,7 +994,6 @@ h3 {
 
 
   #container2 .content .con1_txt .con1_btn{ font-size: 12px;padding: 10px 20px;}
-
   .web_award .award_r .award_r1>.award_r_txt>p,
   .web_award .award_r .award_r2>.award_r_txt>p,
   .web_award .award_r .award_r3>.award_r_txt>p {
