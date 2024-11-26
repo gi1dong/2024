@@ -877,7 +877,7 @@ color: #767676;}
   .store-img{display: none;}
   .store-wrap.sub{background: #E8E2CA;}
   .store-wrap.sub .store-wrap .inner{width: 100%;}
-  .store-wrap.sub .store-txt{margin: 1rem auto 0; color: #1d1d1d;}
+  .store-wrap.sub .store-txt{margin: 1rem auto 0; color: #1d1d1d; font-size: 1.2rem;}
   .store-wrap.sub .tab-content{padding: 0;}
   .new-launch-prd .mySwiper.prd-slide{height: 50vh;}
   .loop .swiper-slide{padding: 0; margin: 0;}
