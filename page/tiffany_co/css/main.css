@@ -405,7 +405,7 @@ main #container3 {
 .web_award .award_r .award_r1,
 .web_award .award_r .award_r2,
 .web_award .award_r .award_r3 {width: calc(100% - 30px);}
-.web_award .prd_tit{ display: block; width: calc(100% - 30px); text-align: center; margin: 0 auto 60px;}
+.web_award .prd_tit{ overflow-x: hidden; display: block; width: calc(100% - 30px); text-align: center; margin: 0 auto 60px;}
 .web_award .prd_tit p { font-size: 80px;text-transform: capitalize; font-weight: 800;letter-spacing: 1px;}
 .web_award .prd_tit span{display: inline-block; font-size: 24px; line-height: 2; margin: 30px auto 0;}
 

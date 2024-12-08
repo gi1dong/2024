@@ -1283,6 +1283,7 @@ main .arrow .arrowWrap::after {
 }
 
 /*  메인 영역 : Section02 layoutWrap */
+.mainWrap{width: 100%; margin: 0 auto; overflow-x: hidden;}
 .section02 {
   position: relative;
   width: 100%;
@@ -1603,7 +1604,7 @@ padding: 120px 0;
   width: 100%;
 }
 .section03 .boxArea {
-  margin: 0 auto;
+  margin: 0 auto; overflow-x: hidden;
   display: block;
   width: 100%;
 }
